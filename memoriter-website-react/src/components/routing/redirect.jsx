@@ -1,4 +1,4 @@
-//This component redirects you to the signup page
+//This component redirects you from the empty default page to the product page
 
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ const Redirect = () => {
     
     const navigate = useNavigate();
 
-    useEffect(() => { //if no user is signed in and this page loads, you are redirected to the signup page
+    useEffect(() => { //you are redirected to the product page when entering of the default page
         navigate('/product');
     });
 
