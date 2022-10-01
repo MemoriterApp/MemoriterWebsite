@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, ChangeEvent, useState } from 'react';
 
 interface props { //type definitions for props
     onAnimation: React.CSSProperties;
@@ -21,8 +21,8 @@ const NewsletterUnsubscribe: FC<props> = ({ onAnimation, onCloseUnsubscribe }: p
         setEmail(''); //clears email input field
     };
 
-    const unsubscribe = (e: { preventDefault: () => void; }) => { //function for sending password reset email
-        e.preventDefault(); //removes the default html submit
+    const unsubscribe = (event: { preventDefault: () => void; }) => { //function for sending password reset email
+        event.preventDefault(); //removes the default html submit
 
         displayError('Functionality not implemented yet!')
     };
@@ -48,7 +48,7 @@ const NewsletterUnsubscribe: FC<props> = ({ onAnimation, onCloseUnsubscribe }: p
                 {/*email input*/}
                 <p className='newsletter-unsubscribe-enter-email'>Please enter your email address:</p>
                 <input className='newsletter-unsubscribe-input' id='email' type='email' placeholder='Email Address' value={email}
-                    onChange={(e) => setEmail(e.target.value)}/>
+                    onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}/>
                 <p className='newsletter-unsubscribe-text'>We will send you a confirmation email to the given email address.</p>
 
                 {/*send email button*/}

@@ -1,18 +1,20 @@
-import React, { FC, useState } from 'react';
+import React, { FC, ChangeEvent, FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const NewsletterSubscribe: FC = () => {
 
     const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the subscribe button
 
+    const [email, setEmail] = useState<string>(''); //entered email address
     const [acceptedPrivacy, setAcceptedPrivacy] = useState<boolean>(false); //value if the privacy policy is accepted
 
     return (
         <section>
-            <form className='newsletter-subscribe' onSubmit={(e) => e.preventDefault()}>
+            <form className='newsletter-subscribe' onSubmit={(event: FormEvent<HTMLFormElement>) => event.preventDefault()}>
                 <p className='newsletter-subscribe-label'>Enter your Email Address</p>
 
-                <input className='newsletter-subscribe-input' id='email' type='email' placeholder='Email Address'/>
+                <input className='newsletter-subscribe-input' id='email' type='email' placeholder='Email Address'
+                onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}/>
 
                 {/*button for subscribing to newsletter*/}
                 <label>
