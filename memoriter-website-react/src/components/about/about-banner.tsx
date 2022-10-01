@@ -12,7 +12,7 @@ const AboutBanner: FC = () => {
         setScrollProgress(scrolled);
     };
 
-    useEffect(() => { //the useEffect is important for getting the value if it is scrolling
+    useEffect((): any => { //the useEffect is important for getting the value if it is scrolling
         window.addEventListener('scroll', onScroll);
 
         return () => window.removeEventListener('scroll', onScroll);

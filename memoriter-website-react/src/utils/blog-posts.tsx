@@ -2,10 +2,12 @@
 The list is used by the blog main component.
 If a new post is created, the link must be put in here or the post will not be shown on the blog page*/
 
+import React from 'react';
 import ExampleBlogPost from '../components/blog/blog-posts/example-blog-post';
 import exampleBlogPostImage from '../images/blog/example-blog-post/example-blog-post.jpeg';
 
-const blogs = [ //variable for listing all blog posts
+//variable for listing all blog posts
+const blogs: {topic: string, date: string, dateShortened: string, author: string, title: string, description: string, content: React.ReactNode, image: React.ReactNode, link: string, linkedBlogs: string[]}[] = [
     {
         topic: 'Miscellaneous', //the topic/category for the filter option (Company, Productivity, Technology or Miscellaneous)
         date: 'August 17th, 2022', //date of publication (syntax: August 17th, 2022)

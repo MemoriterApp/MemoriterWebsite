@@ -13,7 +13,7 @@ const FaqQuestion: FC<props> = ({ question, onOpenQuestion }: props) => {
     const [questionHeight, setQuestionHeight] = useState<number>(32); //gets height of the question text
     const [answerHeight, setAnswerHeight] = useState<number>(0); //gets height of the answer text
 
-    useEffect(() => { //useEffect is needed to fix an issue where the value cannot is read before the component renderes, resulted in an error
+    useEffect((): void => { //useEffect is needed to fix an issue where the value cannot is read before the component renderes, resulted in an error
         setQuestionHeight(questionText.current.clientHeight); //defines the question text height
         setAnswerHeight(answerText.current.clientHeight); //defines the answer text height
     }, []);

@@ -13,7 +13,7 @@ const ScrollReset: FC<props> = ({ children }: props) => {
     
     const location = useLocation(); //does not work without this
 
-    useEffect(() => {
+    useEffect((): void => {
         window.scrollTo(0, 0); //scrolls to top
     }, [location]);
 

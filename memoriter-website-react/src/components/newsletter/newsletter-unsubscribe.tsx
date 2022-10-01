@@ -21,7 +21,7 @@ const NewsletterUnsubscribe: FC<props> = ({ onAnimation, onCloseUnsubscribe }: p
         setEmail(''); //clears email input field
     };
 
-    const unsubscribe = (event: { preventDefault: () => void; }) => { //function for sending password reset email
+    const unsubscribe = (event: {preventDefault: () => void}) => { //function for sending password reset email
         event.preventDefault(); //removes the default html submit
 
         displayError('Functionality not implemented yet!')
