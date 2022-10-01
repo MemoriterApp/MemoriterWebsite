@@ -1,3 +1,6 @@
+import React, { FC } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Product from './pages/product';
 import About from './pages/about';
 import Blog from './pages/blog';
@@ -19,11 +22,10 @@ import ThemeProvider from './components/theme-provider';
 import ScrollReset from './components/routing/scroll-reset';
 import Redirect from './components/routing/redirect';
 
-import { Routes, Route } from 'react-router-dom';
 import blogs from './utils/blog-posts';
 
 //routing (connections to different sub-pages)
-function App() {
+const App: FC = () => {
   return (
     <ScrollReset> {/*ScrollReset forces scrolling to top on navigation (fixes issue where the page kept beeing scrolled down)*/} 
       <ThemeProvider> {/*ThemeProvider is responsible for the dark and light theme*/}

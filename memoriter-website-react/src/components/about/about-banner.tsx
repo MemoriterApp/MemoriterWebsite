@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
-const AboutBanner = () => {
+const AboutBanner: FC = () => {
 
-    const [scrollProgress, setScrollProgress] = useState(0); //value for the scroll progress
-    const onScroll = () => { //getting the scroll data
-        const scroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const [scrollProgress, setScrollProgress] = useState<number>(0); //value for the scroll progress
+    const onScroll = (): void => { //getting the scroll data
+        const scroll: number = document.documentElement.scrollTop;
+        const height: number = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-        const scrolled = (scroll / height) * 100;
+        const scrolled: number = (scroll / height) * 100;
 
         setScrollProgress(scrolled);
     };

@@ -1,7 +1,8 @@
-import placeholderImage from '../../images/about/placeholder.jpeg';
+import React, { FC } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import placeholderImage from '../../images/about/placeholder.jpeg';
 
-const AboutMain = () => {
+const AboutMain: FC = () => {
     return (
         <section className='about-main'> {/*main parts with texts and images*/}
 
