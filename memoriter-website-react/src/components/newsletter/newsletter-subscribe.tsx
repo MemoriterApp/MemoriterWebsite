@@ -14,7 +14,7 @@ const NewsletterSubscribe: FC = () => {
                 <p className='newsletter-subscribe-label'>Enter your Email Address</p>
 
                 <input className='newsletter-subscribe-input' id='email' type='email' placeholder='Email Address'
-                onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}/>
+                    value={email} onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}/>
 
                 {/*button for subscribing to newsletter*/}
                 <label>
