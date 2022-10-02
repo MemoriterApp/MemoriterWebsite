@@ -56,6 +56,7 @@ const Faq: FC = () => {
         <WebsiteWrapper
             title='FAQ'
             description='Frequently asked questions about the Memoriter app.'
+            currentPage=''
         >
 
             {/*main body*/}

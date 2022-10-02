@@ -44,6 +44,7 @@ const Newsletter: FC = () => {
         <WebsiteWrapper
             title='Newsletter'
             description='Sign Up to our Email Newsletter!'
+            currentPage=''
         >
 
             <section className='newsletter-main'>

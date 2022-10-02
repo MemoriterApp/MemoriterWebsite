@@ -8,6 +8,7 @@ const Support: FC = () => {
         <WebsiteWrapper
             title='Support'
             description='Here you can find more information if you need help.'
+            currentPage=''
         >
 
             <h1>Support</h1>

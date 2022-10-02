@@ -6,6 +6,7 @@ const Terms: FC = () => {
         <WebsiteWrapper
             title='Terms of Use'
             description='This page contains information about the legal agreement between Memoriter and customers.'
+            currentPage=''
         >
 
             {/*main body with text*/}

@@ -6,6 +6,7 @@ const Privacy: FC = () => {
         <WebsiteWrapper
             title='Privacy Policy'
             description='This page contains information regarding how Memoriter uses and processes personal data.'
+            currentPage=''
         >
 
             {/*main body with text*/}

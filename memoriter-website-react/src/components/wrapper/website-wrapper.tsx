@@ -14,7 +14,7 @@ interface props { //type definitions for props
     children: React.ReactNode;
     title: string;
     description: string;
-    currentPage?: string;
+    currentPage: string;
 };
 
 const WebsiteWrapper: FC<props> = ({ children, title, description, currentPage }: props) => {

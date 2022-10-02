@@ -8,6 +8,7 @@ const Bugs: FC = () => {
         <WebsiteWrapper
             title='Bug Report'
             description='If you find any technical issues, you can report them here.'
+            currentPage=''
         >
 
             <h1>Bug Report</h1>

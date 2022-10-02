@@ -7,8 +7,8 @@ interface props { //type definitions for props
 
 const FaqQuestion: FC<props> = ({ question, onOpenQuestion }: props) => {
 
-    const questionText = useRef(null); //reference to the question text
-    const answerText = useRef(null); //reference to the answer text
+    const questionText = useRef<any>(null); //reference to the question text
+    const answerText = useRef<any>(null); //reference to the answer text
 
     const [questionHeight, setQuestionHeight] = useState<number>(32); //gets height of the question text
     const [answerHeight, setAnswerHeight] = useState<number>(0); //gets height of the answer text

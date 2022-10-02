@@ -6,6 +6,7 @@ const Impressum: FC = () => {
         <WebsiteWrapper
             title='Impressum'
             description='Where to contact us'
+            currentPage=''
         >
 
             {/*main body with text*/}

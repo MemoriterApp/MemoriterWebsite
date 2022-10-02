@@ -6,6 +6,7 @@ const Cookies: FC = () => {
         <WebsiteWrapper
             title='Cookie Policy'
             description='This page contains further information how Memoriter uses cookies.'
+            currentPage=''
         >
 
             {/*main body with text*/}
