@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
@@ -5,9 +6,16 @@ import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
 import emailIcon from '../../images/icons/email-icon.svg';
 
-const BlogPostHeader = ({ title, date, author, topic }) => {
+interface props { //type definitions of props
+    title: string;
+    date: string;
+    author: string;
+    topic: string;
+};
 
-    const wordCount = useSelector((state) => state.wordCount.value); //(slightly inaccurate) number of words of the main part, used for reading time calculation
+const BlogPostHeader: FC<props> = ({ title, date, author, topic }: props) => {
+
+    const wordCount: number = useSelector((state: any) => state.wordCount.value); //(slightly inaccurate) number of words of the main part, used for reading time calculation
 
     return (
         <section>

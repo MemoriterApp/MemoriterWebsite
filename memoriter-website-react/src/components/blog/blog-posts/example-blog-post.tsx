@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { updateWordCount } from '../../../features/word-count-slice';
 import exampleBlogPost from '../../../images/blog/example-blog-post/example-blog-post.jpeg';
 import BlogPostEmbeddedVideo from '../blog-post-embedded-video';
@@ -7,13 +8,13 @@ import BlogPostCallout from '../blog-post-callout';
 import BlogPostCodeBlock from '../blog-post-code-block';
 import BlogPostInlineCode from '../blog-post-inline-code';
 
-const ExampleBlogPost = () => {
+const ExampleBlogPost: FC = () => {
 
-    const dispatch = useDispatch(); //used to manipulate global state (react redux)
+    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
 
-    const blogPostMain = useRef(null); //reference to the content
+    const blogPostMain = useRef<any>(null); //reference to the content
 
-    const [postContent, setPostContent] = useState(''); //gets the text of the post
+    const [postContent, setPostContent] = useState<string>(''); //gets the text of the post
 
     useEffect(() => { //useEffect is needed to fix an issue where the value cannot is read before the component renderes, resulted in an error
         setPostContent(blogPostMain.current.innerText); //counts the words of the text (every word in the <article/> tag)
@@ -69,7 +70,7 @@ const ExampleBlogPost = () => {
 
             <h3>Example Code</h3>
             <BlogPostCodeBlock>{[
-                'const pi = 3.14;',
+                'const pi: number = 3.14;',
                 'console.log(pi);',
                 'return(<div>Hello!</div>);'
             ]}</BlogPostCodeBlock>

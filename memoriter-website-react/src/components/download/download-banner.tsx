@@ -10,7 +10,7 @@ const DownloadBanner: FC = () => {
     const [squareTransition, setSquareTransition] = useState<string>('none'); //variable for background animation transition (this does not trigger when scrolling)
 
     const [scrollProgress, setScrollProgress] = useState<number>(0); //value for the scroll progress
-    const onScroll = () => { //getting the scroll data
+    const onScroll = (): void => { //getting the scroll data
         const scroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 

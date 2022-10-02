@@ -1,21 +1,27 @@
+import React, { FC, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { AnyAction, Dispatch } from '@reduxjs/toolkit';
+import { changeTheme } from '../../features/theme-slice';
 import memoriterLogo from '../../images/memoriter-logo.svg';
 import languageIcon from '../../images/icons/language-icon.svg';
 import lightModeIcon from '../../images/icons/light-mode-icon.svg';
 import darkModeIcon from '../../images/icons/dark-mode-icon.svg';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
 
-const WebsiteHeader = ({ currentPage, onOpenLanguageSelect }) => {
+interface props { //type definitions of props
+    currentPage: string;
+    onOpenLanguageSelect: () => void;
+};
 
-    const dispatch = useDispatch(); //used to manipulate global state (react redux)
+const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) => {
 
-    const [onHover, setOnHover] = useState('brightness(1)'); //variable for the hover effect for the register button
-    const [onHoverAlt, setOnHoverAlt] = useState('brightness(1)'); //hover effect for alternative mobile register button
+    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
 
-    const [mobileSidebar, setMobileSidebar] = useState('-280px'); //variable if the mobile nav sidebar is open or not
+    const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the register button
+    const [onHoverAlt, setOnHoverAlt] = useState<string>('brightness(1)'); //hover effect for alternative mobile register button
+
+    const [mobileSidebar, setMobileSidebar] = useState<string>('-280px'); //variable if the mobile nav sidebar is open or not
     function toggleMobileSidebar() { //function for opening and closing the mobile nav sidebar
         if (mobileSidebar === '-280px') { //if else condition is for opening and closing correctly
             setMobileSidebar('0');
@@ -24,25 +30,25 @@ const WebsiteHeader = ({ currentPage, onOpenLanguageSelect }) => {
         };
     };
 
-    const [scrollProgress, setScrollProgress] = useState(0); //value for the scroll progress
-    const onScroll = () => { //getting the scroll data
+    const [scrollProgress, setScrollProgress] = useState<number>(0); //value for the scroll progress
+    const onScroll = (): void => { //getting the scroll data
         const scroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-        const scrolled = (scroll / height) * 100;
+        const scrolled: number = (scroll / height) * 100;
 
         setScrollProgress(scrolled);
     };
 
-    useEffect(() => { //the useEffect is important for getting the value if it is scrolling
+    useEffect((): any => { //the useEffect is important for getting the value if it is scrolling
         window.addEventListener('scroll', onScroll);
 
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const themeIcon = useSelector((state) => state.theme.value); //current light or dark mode icon based on theme
+    const themeIcon: string = useSelector((state: any) => state.theme.value); //current light or dark mode icon based on theme
 
-    function onChangeTheme(theme) { //function to swap the current theme
+    const onChangeTheme = (theme: string): void => { //function to swap the current theme
         dispatch(changeTheme(theme)); //changes the theme
 
         if (JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted

@@ -1,6 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, Slice } from '@reduxjs/toolkit';
 
-export const wordCountSlice = createSlice({ //global state to calculate the word count of the current blog post
+//global state to calculate the word count of the current blog post
+export const wordCountSlice: Slice<{value: number}, { updateWordCount: (state: {value: number}, action: {payload: number}) => void}, 'word-count'> = createSlice({
     name: 'word-count', //name (required for identification)
     initialState: { value: 0 }, //default value (empty)
     reducers: {

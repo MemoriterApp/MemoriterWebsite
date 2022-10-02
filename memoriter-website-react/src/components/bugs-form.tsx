@@ -1,4 +1,6 @@
-const BugsForm = () => {
+import React, { FC } from 'react';
+
+const BugsForm: FC = () => {
     return (
         <section>
             <p>

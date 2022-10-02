@@ -1,14 +1,18 @@
 //This wrapper component is responsible for the visual mode theme (dark and light mode).
 
-import { useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-const ThemeProvider = ({ children }) => {
+interface props { //type definitions for props
+    children: React.ReactNode;
+};
 
-    const currentTheme = useSelector((state) => state.theme.value); //stored state (react redux)
+const ThemeProvider: FC<props> = ({ children }: props) => {
 
-    const [theme, setTheme] = useState('dark'); //visual mode (used as html id to connect to different css ids)
-    const [backgroundColor, setBackgroundColor] = useState('#202020'); //body background color
+    const currentTheme: string = useSelector((state: any) => state.theme.value); //stored state (react redux)
+
+    const [theme, setTheme] = useState<string>('dark'); //visual mode (used as html id to connect to different css ids)
+    const [backgroundColor, setBackgroundColor] = useState<string>('#202020'); //body background color
 
     useEffect(() => { //dynamically changes the page background color and visual mode based on global state
         if (currentTheme) { //checks if a value is stored as global state to change the visual mode

@@ -1,6 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, Slice } from '@reduxjs/toolkit';
 
-export const themeSlice = createSlice({ //global state for the light and dark theme
+//global state for the light and dark theme
+export const themeSlice: Slice<{value: string}, { changeTheme: (state: {value: string}, action: {payload: string}) => void}, 'theme'> = createSlice({
     name: 'theme', //name (required for identification)
     initialState: { value: localStorage.getItem('theme') }, //default value from localStorage (if none it is treated as dark)
     reducers: {

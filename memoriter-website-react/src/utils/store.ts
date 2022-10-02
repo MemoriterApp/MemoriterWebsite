@@ -1,11 +1,12 @@
 //storage for globally saved state
 
-import { configureStore } from '@reduxjs/toolkit';
+import { EnhancedStore, configureStore } from '@reduxjs/toolkit';
 import themeReducer from '../features/theme-slice';
 import authenticationSuccessReducer from '../features/authentication-success-slice';
 import wordCountReducer from '../features/word-count-slice';
 
-export const store = configureStore({ //global store
+//global store
+export const store: EnhancedStore<{theme: {value: string}, authenticationSuccess: {value: string}, wordCount: {value: number}}> = configureStore({
     reducer: {
         theme: themeReducer, //current theme (light or dark mode)
         authenticationSuccess: authenticationSuccessReducer, //message if the user signed out or deletes their account

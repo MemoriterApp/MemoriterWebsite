@@ -1,19 +1,26 @@
+import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { AnyAction, Dispatch } from '@reduxjs/toolkit';
+import { changeTheme } from '../../features/theme-slice';
 import youtubeIcon from '../../images/icons/youtube-icon.svg';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import instagramIcon from '../../images/icons/instagram-icon.svg';
 import newsletterIcon from '../../images/icons/email-icon.svg';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
 
-const WebsiteFooter = ({ onOpenLanguageSelect, onOpenCookieSettings }) => {
+interface props { //type definition for props
+    onOpenLanguageSelect: () => void;
+    onOpenCookieSettings: () => void;
+};
 
-    const dispatch = useDispatch(); //used to manipulate global state (react redux)
+const WebsiteFooter: FC<props> = ({ onOpenLanguageSelect, onOpenCookieSettings }: props) => {
 
-    const themeText = useSelector((state) => state.theme.value); //current light or dark mode text based on theme
+    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
 
-    function onChangeTheme(theme) { //function to swap the current theme
+    const themeText: string = useSelector((state: any) => state.theme.value); //current light or dark mode text based on theme
+
+    const onChangeTheme = (theme: string): void => { //function to swap the current theme
         dispatch(changeTheme(theme)); //changes the theme
 
         if (JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted
