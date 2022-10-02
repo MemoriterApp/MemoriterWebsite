@@ -1,8 +1,13 @@
+import React, { FC } from 'react';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import BlogPostHeader from '../components/blog/blog-post-header';
 import BlogPostFooter from '../components/blog/blog-post-footer';
 
-const BlogPost = ({ blog }) => {
+interface props { //type definitions for props
+    blog: {topic: string, date: string, author: string, title: string, description: string, content: React.ReactNode, linkedBlogs: string[]};
+};
+
+const BlogPost: FC<props> = ({ blog }: props) => {
 
     //general blog post data (used for the post header)
     const topic = blog.topic; //the topic/category for the filter option (Company, Productivity, Technology or Miscellaneous)

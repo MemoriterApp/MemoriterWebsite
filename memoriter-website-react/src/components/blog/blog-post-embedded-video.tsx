@@ -1,17 +1,23 @@
-const BlogPostEmbeddedVideo = ({ videoId }) => {
+import React, { FC } from 'react';
 
-    const embeddedVideoContainer = { //styles for a necessary container creating a 16:9 format
+interface props { //type definitions of props
+    videoId: string;
+};
+
+const BlogPostEmbeddedVideo: FC<props> = ({ videoId }: props) => {
+
+    const embeddedVideoContainer: React.CSSProperties = { //styles for a necessary container creating a 16:9 format
         position: 'relative',
         paddingBottom: '56.25%',
         marginBottom: '10px'
-    }
+    };
 
-    const embeddedVideoStyles = { //styles for the video itself
+    const embeddedVideoStyles: React.CSSProperties = { //styles for the video itself
         position: 'absolute',
         width: '100%',
         height: '100%',
         borderRadius: '10px'
-    }
+    };
 
     return (
         <div style={embeddedVideoContainer}>

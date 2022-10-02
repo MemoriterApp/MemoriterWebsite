@@ -1,8 +1,9 @@
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
-import githubIcon from '../images/icons/github-icon.svg';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
+import githubIcon from '../images/icons/github-icon.svg';
+import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
-const Support = () => {
+const Support: FC = () => {
     return (
         <WebsiteWrapper
             title='Support'

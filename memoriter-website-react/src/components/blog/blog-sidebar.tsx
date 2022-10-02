@@ -1,6 +1,11 @@
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-const BlogSidebar = ({ topic }) => {
+interface props { //type definitions of props
+    topic: string;
+};
+
+const BlogSidebar: FC<props>  = ({ topic }: props) => {
 
     return (
         <aside className='blog-sidebar'>

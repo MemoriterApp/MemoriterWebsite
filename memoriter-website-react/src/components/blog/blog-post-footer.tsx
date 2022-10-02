@@ -1,11 +1,17 @@
+import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
 import emailIcon from '../../images/icons/email-icon.svg';
-import { Link } from 'react-router-dom';
 import blogs from '../../utils/blog-posts';
 
-const BlogPostFooter = ({ title, linkedBlogs }) => {
+interface props { //type definitions of props
+    title: string;
+    linkedBlogs: string[];
+};
+
+const BlogPostFooter: FC<props> = ({ title, linkedBlogs }: props) => {
 
     return (
         <section className='blog-post-footer'>

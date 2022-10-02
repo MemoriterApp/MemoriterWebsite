@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import blogs from '../../utils/blog-posts';
 
-const BlogMain = ({ topic }) => {
+interface props { //type definitions of props
+    topic: string;
+};
+
+const BlogMain: FC<props> = ({ topic }: props) => {
 
     const [loadedBlogs, setLoadedBlogs] = useState(8); //number of blog posts shown before clicking on the load more button
 

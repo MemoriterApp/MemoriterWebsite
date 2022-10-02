@@ -1,8 +1,9 @@
+import React, { FC } from 'react';
+import githubIcon from '../images/icons/github-icon.svg';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import BugsForm from '../components/bugs-form';
-import githubIcon from '../images/icons/github-icon.svg';
 
-const Bugs = () => {
+const Bugs: FC = () => {
     return (
         <WebsiteWrapper
             title='Bug Report'

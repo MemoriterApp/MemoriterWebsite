@@ -15,11 +15,11 @@ const Backdrop: FC<props> = ({ onFade, onClick }: props) => {
         backgroundColor: 'var(--color-backdrop)',
         width: '100%',
         height: '100%',
-        top: '0',
         left: '0',
+        top: '0',
         opacity: opacity, //dynamic style
         transition: 'opacity 800ms'
-    }
+    };
 
     return (
         <div style={backdropStyles} onClick={() => onClick()}/>

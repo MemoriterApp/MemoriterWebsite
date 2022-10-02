@@ -1,8 +1,13 @@
+import React, { FC } from 'react';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import BlogSidebar from '../components/blog/blog-sidebar';
 import BlogMain from '../components/blog/blog-main';
 
-const Blog = ({ topic }) => {
+interface props { //type definitions for props
+    topic: string;
+};
+
+const Blog: FC<props> = ({ topic }: props) => {
 
     const filter = topic; //variable for filtering the blog posts
 
