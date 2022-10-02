@@ -1,17 +1,13 @@
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
 import emailIcon from '../../images/icons/email-icon.svg';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const BlogPostHeader = ({ title, date, author, topic }) => {
 
-    const [wordCount, setWordCount] = useState(0); //(slightly inaccurate) number of words of the main part, used for reading time calculation
-
-    useEffect(() => { //useefect triggers if the word count changes, needed to auto set the reading time
-        setWordCount(sessionStorage.getItem('current-blog-word-count')); //sets the word count to a value from session storage
-    }, [wordCount]);
+    const wordCount = useSelector((state) => state.wordCount.value); //(slightly inaccurate) number of words of the main part, used for reading time calculation
 
     return (
         <section>

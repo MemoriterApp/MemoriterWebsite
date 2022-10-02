@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const themeSlice = createSlice({ //global state for the sign out (or delete account) success message
+export const themeSlice = createSlice({ //global state for the light and dark theme
     name: 'theme', //name (required for identification)
     initialState: { value: localStorage.getItem('theme') }, //default value from localStorage (if none it is treated as dark)
     reducers: {

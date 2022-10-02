@@ -1,11 +1,15 @@
+import { useState, useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { updateWordCount } from '../../../features/word-count-slice';
 import exampleBlogPost from '../../../images/blog/example-blog-post/example-blog-post.jpeg';
 import BlogPostEmbeddedVideo from '../blog-post-embedded-video';
 import BlogPostCallout from '../blog-post-callout';
 import BlogPostCodeBlock from '../blog-post-code-block';
 import BlogPostInlineCode from '../blog-post-inline-code';
-import { useState, useEffect, useRef } from 'react';
 
 const ExampleBlogPost = () => {
+
+    const dispatch = useDispatch(); //used to manipulate global state (react redux)
 
     const blogPostMain = useRef(null); //reference to the content
 
@@ -13,9 +17,9 @@ const ExampleBlogPost = () => {
 
     useEffect(() => { //useEffect is needed to fix an issue where the value cannot is read before the component renderes, resulted in an error
         setPostContent(blogPostMain.current.innerText); //counts the words of the text (every word in the <article/> tag)
-    }, []);
+        dispatch(updateWordCount(postContent.split(' ').length)); //calculates number of words and saves it to session storage on page load
+    }, [dispatch, postContent]);
 
-    sessionStorage.setItem('current-blog-word-count', postContent.split(' ').length); //calculates number of words and saves it to session storage on page load
 
     return (
         <article ref={blogPostMain}>
