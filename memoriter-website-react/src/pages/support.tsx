@@ -23,12 +23,15 @@ const Support: FC = () => {
             isOpen: false
         },
         {
-            question: 'I want to report a bug.',
-            answer: 'Answer 4',
+            question: 'I want to report a bug',
+            answer:
+                <p>
+                    If you found an issue you want to report, please check out our <Link className='help-question-answer-link' to='/bugs'>bug report</Link> page for further information on how and where to report them.
+                </p>,
             isOpen: false
         },
         {
-            question: 'I need different help.',
+            question: 'I need different help',
             answer: <p>Please check out the <Link className='help-question-answer-link' to='/faq'>frequently asked questions</Link>.</p>,
             isOpen: false
         }
