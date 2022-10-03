@@ -4,7 +4,7 @@ const ReleaseV10: FC = () => {
     return (
         <article className='old-release'>
 
-            <p style={{color: 'var(--color-font-gray)', textAlign: 'left'}}>June 12th, 2022</p> {/*release date*/}
+            <p style={{color: 'var(--color-font-gray)', textAlign: 'left'}}>June 13th, 2022</p> {/*release date*/}
             
             {/*small introduction*/}
             <h2>Memoriter v1.0</h2>

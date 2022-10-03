@@ -21,7 +21,7 @@ import './styles/releases/releases-main.css';
 import './styles/releases/current-release.css';
 import './styles/releases/old-release.css';
 import './styles/legal.css';
-import './styles/faq.css';
+import './styles/help.css';
 import './styles/newsletter/newsletter.css';
 import './styles/newsletter/newsletter-subscribe.css';
 import './styles/newsletter/newsletter-unsubscribe.css';

@@ -1,9 +1,51 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import githubIcon from '../images/icons/github-icon.svg';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import HelpQuestion from '../components/help-question';
 
 const Support: FC = () => {
+
+    //array with all questions with answers, answers can be typed as string or html objects
+    const [questions, setQuestions] = useState<{question: string, answer: string | React.ReactNode, isOpen: boolean}[]>([
+        {
+            question: 'Question 1',
+            answer: 'Answer 1',
+            isOpen: false
+        },
+        {
+            question: 'Question 2',
+            answer: 'Answer 2',
+            isOpen: false
+        },
+        {
+            question: 'Question 3',
+            answer: 'Answer 3',
+            isOpen: false
+        },
+        {
+            question: 'I want to report a bug.',
+            answer: 'Answer 4',
+            isOpen: false
+        },
+        {
+            question: 'I need different help.',
+            answer: <p>Please check out the <Link className='help-question-answer-link' to='/faq'>frequently asked questions</Link>.</p>,
+            isOpen: false
+        }
+    ]);
+
+const openQuestion = (openedQuestion: string): void => { //function is called when a question is clicked
+    setQuestions((questions) => questions.map((question) => //question array is changed
+        question.question === openedQuestion && !question.isOpen ? { 
+            ...question, isOpen: true //clicked question opens if it is closed
+        } : question.question === openedQuestion && question.isOpen ? {
+            ...question, isOpen: false //clicked question closes if it is open
+        } : {
+            ...question, isOpen: false //all other questions are closing, only one can be opened at the same time
+        }
+    ))
+};
+
     return (
         <WebsiteWrapper
             title='Support'
@@ -11,24 +53,17 @@ const Support: FC = () => {
             currentPage=''
         >
 
-            <h1>Support</h1>
+            {/*main body*/}
+            <section className='help-main'>
 
-            <section>
-                <p>
-                    For quick help, please also check out the <Link to='/faq'>FAQ</Link>.
-                    If you found a reproducible technical issue, please use the <Link to='/bugs'>bug report</Link> page.
-                </p>
-                <p>
-                    If you need specific help, you can always send an email to <a href='mailto:'>support@memoriter.de</a>.
-                </p>
-                <p>
-                    You can also check out our discussions on <a href='https://github.com/MemoriterApp/Memoriter/' target='_blank' rel='noreferrer'>
-                    <img src={githubIcon} alt='github-icon'/>GitHub</a>.
-                </p>
-            </section>
+                <h1 className='help-main-heading'>Support</h1>
+                <hr className='help-main-heading-bottom-space'/>
 
-            <section>
-                <h2>Help Guides</h2>
+                {/*displays the list of questions*/}
+                {questions.map((question) => (
+                    <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
+                ))}
+
             </section>
 
         </WebsiteWrapper>

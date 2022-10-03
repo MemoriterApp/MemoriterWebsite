@@ -45,11 +45,11 @@
     margin-bottom: 0;
 }
 .legal-main a { /*all html links (<a/>) of legal-main*/
-    color: var(--color-font);
+    color: var(--color-font-gray);
     transition: color 200ms;
 }
-.legal-main a:hover{ /*hover effect for all html links (<a/>) of legal-main*/
-    color: var(--color-font-gray);
+.legal-main a:hover { /*hover effect for all html links (<a/>) of legal-main*/
+    color: var(--color-font);
 }
 .legal-main-table-container { /*container for tables enabling x-axis scrolling on smaller screens*/
     width: 100%;

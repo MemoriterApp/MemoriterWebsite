@@ -7,7 +7,7 @@ const ReleaseV11 = () => {
             <p style={{color: 'var(--color-font-gray)', textAlign: 'left'}}>Month XXth, 2022</p> {/*release date*/}
             
             {/*small introduction*/}
-            <h2>Memoriter v1.01</h2>
+            <h2>Memoriter v1.1</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo diam id ante ultrices, vel pharetra urna vestibulum. Ut mattis congue magna vulputate congue. Vivamus sed dui nec urna lacinia finibus nec in sem. Praesent ex nibh, luctus et tempus ut, facilisis pharetra ante. Sed vel blandit elit, id aliquet mi. Integer et neque imperdiet, varius sem at, sagittis libero. Aenean a porttitor arcu, ut dapibus ante. Donec vestibulum ligula et luctus venenatis. Nulla vulputate mattis sodales. Sed hendrerit ex vitae magna ultricies rutrum. Aliquam sodales, justo nec condimentum vulputate, arcu ipsum efficitur quam, id venenatis velit justo id eros.
             </p>
