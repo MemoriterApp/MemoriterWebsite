@@ -54,14 +54,14 @@ const FaqQuestion: FC<props> = ({ question, onOpenQuestion }: props) => {
     };
 
     return (
-        <article className='help-question' style={{height: open, transition: openAnimation}} onClick={() => onOpenQuestion(question.question)}>
+        <section className='help-question' style={{height: open, transition: openAnimation}} onClick={() => onOpenQuestion(question.question)}>
 
             <h3 className='help-question-question' ref={questionText}>{question.question}</h3>
-            <div className='help-question-answer' ref={answerText} style={{opacity: answerOpen}}>{question.answer}</div>
+            <article className='help-question-answer' ref={answerText} style={{opacity: answerOpen}}>{question.answer}</article>
 
             <div className='help-question-open' style={{transform: arrowRotation, opacity: arrowOpacity}}/> {/*arrow at the top right*/}
 
-        </article>
+        </section>
     );
 }
 

@@ -22,13 +22,43 @@ const Bugs: FC = () => {
             isOpen: false
         },
         {
-            question: 'I want to report a security vulnerability.',
-            answer: 'Answer 4',
+            question: 'I want to report a security vulnerability',
+            answer:
+                <>
+                    <p>
+                        Please report security issues to <a className='help-question-answer-link' href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+                    </p>
+                    <p>
+                        Fixing security vulnerabilities is very important, even if they cannot directly be exploited.
+                        Therefore we would appreciate security reviews for Memoriter.
+                        When searching for issues, please try to minimize negative side effects on other users like spam or network speed.
+                    </p>
+                </>,
             isOpen: false
         },
         {
-            question: 'I want to report a different bug.',
-            answer: 'Answer 5',
+            question: 'I want to report a different bug',
+            answer:
+                <>
+                    <p>
+                        If you found a new issue, you may report it. Please make sure the issue is reproducible. There are multiple ways to report a bug:
+                    </p>
+                    <ul>
+                        <li>
+                            Report a web application issue on <a href='https://github.com/MemoriterApp/Memoriter/issues' target='_blank' rel='noreferrer'>GitHub</a>
+                        </li>
+                        <li>
+                            Discuss issues on our GitHub <a href='https://github.com/MemoriterApp/Memoriter/discussions/categories/general' target='_blank' rel='noreferrer'>discussion forum</a>
+                        </li>
+                        <li>
+                            Send us an email regarding the problem to <a className='help-question-answer-link' href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
+                        </li>
+                    </ul>
+                    <p>
+                        When reporting an issue, please make sure you describe it as accurate as possible, as well where and how the bug occurs.
+                        Please also provide steps to reproduce the issue and attach on wich web browser or device type (e.g. PC, smartphone etc.) the bug happens.
+                    </p>
+                </>,
             isOpen: false
         }
     ]);
