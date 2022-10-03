@@ -21,10 +21,10 @@ const BlogPostInlineCode: FC<props> = ({ children }: props) => {
 
     return ( //a library for syntax highlighting is used, children refers to the content inside the wrapper
         <> {/*the highlighting theme is dynamic (changes alongside global theme)*/}
-            {theme === 'dark' && <SyntaxHighlighter language={'tsx'} style={atomOneDark} customStyle={inlineCodeStyles} wrapLongLines={true}>
+            {theme === 'dark' && <SyntaxHighlighter language='tsx' style={atomOneDark} customStyle={inlineCodeStyles} wrapLongLines={true}>
                 {children}
             </SyntaxHighlighter>}
-            {theme === 'light' && <SyntaxHighlighter language={'tsx'} style={atomOneLight} customStyle={inlineCodeStyles} wrapLongLines={true}>
+            {theme === 'light' && <SyntaxHighlighter language='tsx' style={atomOneLight} customStyle={inlineCodeStyles} wrapLongLines={true}>
                 {children}
             </SyntaxHighlighter>}
         </>

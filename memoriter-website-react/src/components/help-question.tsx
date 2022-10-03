@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, useRef } from 'react';
 
 interface props { //type definitions for props
-    question: {question: string, answer: string, isOpen: boolean};
+    question: {question: string, answer: string | React.ReactNode, isOpen: boolean};
     onOpenQuestion: (openedQuestion: string) => void;
 };
 
@@ -54,12 +54,12 @@ const FaqQuestion: FC<props> = ({ question, onOpenQuestion }: props) => {
     };
 
     return (
-        <article className='faq-question' style={{height: open, transition: openAnimation}} onClick={() => onOpenQuestion(question.question)}>
+        <article className='help-question' style={{height: open, transition: openAnimation}} onClick={() => onOpenQuestion(question.question)}>
 
-            <h3 className='faq-question-question' ref={questionText}>{question.question}</h3>
-            <p className='faq-question-answer' ref={answerText} style={{opacity: answerOpen}}>{question.answer}</p>
+            <h3 className='help-question-question' ref={questionText}>{question.question}</h3>
+            <div className='help-question-answer' ref={answerText} style={{opacity: answerOpen}}>{question.answer}</div>
 
-            <div className='faq-question-open' style={{transform: arrowRotation, opacity: arrowOpacity}}/> {/*arrow at the top right*/}
+            <div className='help-question-open' style={{transform: arrowRotation, opacity: arrowOpacity}}/> {/*arrow at the top right*/}
 
         </article>
     );

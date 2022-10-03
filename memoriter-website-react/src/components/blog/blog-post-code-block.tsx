@@ -21,10 +21,10 @@ const BlogPostCodeBlock: FC<props> = ({ children }: props) => {
 
     return ( //a library for syntax highlighting is used
         <>
-            {theme === 'dark' && <SyntaxHighlighter language={'tsx'} style={atomOneDark} customStyle={codeBlockStyles} wrapLongLines={true}>
+            {theme === 'dark' && <SyntaxHighlighter language='tsx' style={atomOneDark} customStyle={codeBlockStyles} wrapLongLines={true}>
                 {children.join('\n')} {/*children refers to the content inside the wrapper, .join('\n) creates line breaks, the content needs to be an array*/}
             </SyntaxHighlighter>}
-            {theme === 'light' && <SyntaxHighlighter language={'tsx'} style={atomOneLight} customStyle={codeBlockStyles} wrapLongLines={true}>
+            {theme === 'light' && <SyntaxHighlighter language='tsx' style={atomOneLight} customStyle={codeBlockStyles} wrapLongLines={true}>
                 {children.join('\n')} {/*children refers to the content inside the wrapper, .join('\n) creates line breaks, the content needs to be an array*/}
             </SyntaxHighlighter>}
         </>

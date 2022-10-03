@@ -1,6 +1,6 @@
 /*all styles for the faq page and its components*/
 
-.faq-main { /*main container*/
+.help-main { /*main container*/
     position: relative;
     left: 50%;
     top: 120px;
@@ -11,7 +11,7 @@
     margin-bottom: 360px;
 }
 
-.faq-main-header { /*the page heading/title*/
+.help-main-heading { /*the page heading/title*/
     font-size: 2.8rem;
     font-family: var(--font-heading);
     margin-bottom: -100px;
@@ -20,8 +20,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
 }
+.help-main-heading-bottom-space {
+    margin-top: 60px;
+    border: none;
+}
 
-.faq-main-sub-heading { /*sub headings dividing the page in different sections*/
+.help-main-sub-heading { /*sub headings dividing the page in different sections*/
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-font);
@@ -30,14 +34,14 @@
     margin-bottom: -80px;
 }
 
-.faq-question { /*styles for the question component*/
+.help-question { /*styles for the question component*/
     position: relative;
     left: 50%;
     top: 120px;
     transform: translate(-50%);
     width: 100%;
     max-width: 2400px;
-    padding-top: 32px;
+    padding-top: 40px;
     margin-bottom: 32px;
     background-color: var(--color-container);
     border-radius: 12px;
@@ -45,18 +49,18 @@
     cursor: pointer;
     transition: background-color 200ms;
 }
-.faq-question:hover { /*hover effect for question box*/
+.help-question:hover { /*hover effect for question box*/
     background-color: var(--color-hover-button);
 }
-.faq-question-question { /*question title*/
+.help-question-question { /*question title*/
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-default);
-    line-height: 2rem;
-    margin: -22px 56px 32px 16px;
+    line-height: 2.4rem;
+    margin: -26px 64px 32px 20px;
 }
-.faq-question-answer { /*answer test*/
+.help-question-answer { /*answer text*/
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -66,20 +70,27 @@
     margin: -12px 20px 12px 20px;
     transition: opacity 400ms;
 }
-.faq-question-open { /*arrow to show the answer*/
+.help-question-answer-link { /*links embedded in answer texts*/
+    color: var(--color-font-gray);
+    transition: color 200ms;
+}
+.help-question-answer-link:hover { /*link hover effect*/
+    color: var(--color-font);
+}
+.help-question-open { /*arrow to show the answer*/
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 24px;
+    top: 30px;
     transform: translate(0, -50%) rotate(45deg);
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-bottom: 2px solid var(--color-font-gray);
     border-right: 2px solid var(--color-font-gray);
     transition: opacity 400ms;
 }
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/
-    .faq-main {
+    .help-main {
         top: 60px;
         width: calc(100% - 40px);
         padding: 40px 0 80px 0;
@@ -87,7 +98,7 @@
 }
 
 @media (max-width: 240px) { /*hides the content on too small screens (when the warning modal is open)*/
-    .faq-main {
+    .help-main {
         display: none;
     }
 }

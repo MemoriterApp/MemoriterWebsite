@@ -1,9 +1,50 @@
-import React, { FC } from 'react';
-import githubIcon from '../images/icons/github-icon.svg';
+import React, { FC, useState } from 'react';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
-import BugsForm from '../components/bugs-form';
+import HelpQuestion from '../components/help-question';
 
 const Bugs: FC = () => {
+
+    //array with all questions with answers
+    const [questions, setQuestions] = useState<{question: string, answer: string | React.ReactNode, isOpen: boolean}[]>([
+        {
+            question: 'Question 1',
+            answer: 'Answer 1',
+            isOpen: false
+        },
+        {
+            question: 'Question 2',
+            answer: 'Answer 2',
+            isOpen: false
+        },
+        {
+            question: 'Question 3',
+            answer: 'Answer 3',
+            isOpen: false
+        },
+        {
+            question: 'I want to report a security vulnerability.',
+            answer: 'Answer 4',
+            isOpen: false
+        },
+        {
+            question: 'I want to report a different bug.',
+            answer: 'Answer 5',
+            isOpen: false
+        }
+    ]);
+
+    const openQuestion = (openedQuestion: string): void => { //function is called when a question is clicked
+        setQuestions((questions) => questions.map((question) => //question array is changed
+            question.question === openedQuestion && !question.isOpen ? { 
+                ...question, isOpen: true //clicked question opens if it is closed
+            } : question.question === openedQuestion && question.isOpen ? {
+                ...question, isOpen: false //clicked question closes if it is open
+            } : {
+                ...question, isOpen: false //all other questions are closing, only one can be opened at the same time
+            }
+        ))
+    };
+
     return (
         <WebsiteWrapper
             title='Bug Report'
@@ -11,23 +52,17 @@ const Bugs: FC = () => {
             currentPage=''
         >
 
-            <h1>Bug Report</h1>
-            
-            {/*bug report form*/}
-            <BugsForm/>
+            {/*main body*/}
+            <section className='help-main'>
 
-            {/*links at the bottom*/}
-            <section>
-                <p>
-                    If you find any issues or technical problems, please report them to us.
-                </p>
-                <p>
-                    You can also send us an email regarding the problem to <a href='mailto:'>bugs@memoriter.de</a>.
-                </p>
-                <p>
-                    If you are fimiliar with the platform, you can also open an issue on <a href='https://github.com/MemoriterApp/Memoriter/issues' target='_blank' rel='noreferrer'>
-                    <img src={githubIcon} alt='github-icon'/>GitHub</a>.
-                </p>
+                <h1 className='help-main-heading'>Bug Report</h1>
+                <hr className='help-main-heading-bottom-space'/>
+
+                {/*displays a list for a section of questions*/}
+                {questions.map((question) => (
+                    <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
+                ))}
+
             </section>
 
         </WebsiteWrapper>
