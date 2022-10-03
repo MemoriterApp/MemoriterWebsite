@@ -20,7 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
 }
-.help-main-heading-bottom-space {
+.help-main-heading-bottom-space { /*When no subheading exists, the space under the heading needs to be artificially created.*/
     margin-top: 60px;
     border: none;
 }

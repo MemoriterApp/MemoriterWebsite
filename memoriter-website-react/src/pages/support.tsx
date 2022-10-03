@@ -59,7 +59,7 @@ const openQuestion = (openedQuestion: string): void => { //function is called wh
                 <h1 className='help-main-heading'>Support</h1>
                 <hr className='help-main-heading-bottom-space'/>
 
-                {/*displays a list for a section of questions*/}
+                {/*displays the list of questions*/}
                 {questions.map((question) => (
                     <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
                 ))}

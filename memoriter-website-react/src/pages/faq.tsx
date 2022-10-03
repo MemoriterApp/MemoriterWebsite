@@ -4,7 +4,7 @@ import HelpQuestion from '../components/help-question';
 
 const Faq: FC = () => {
 
-    //array with all questions with answers
+    //array with all questions with answers, answers can be typed as string or html objects
     const [questions, setQuestions] = useState<{question: string, answer: string, isOpen: boolean}[]>([
         //Sub Heading
         {

@@ -4,7 +4,7 @@ import HelpQuestion from '../components/help-question';
 
 const Bugs: FC = () => {
 
-    //array with all questions with answers
+    //array with all questions with answers, answers can be typed as string or html objects
     const [questions, setQuestions] = useState<{question: string, answer: string | React.ReactNode, isOpen: boolean}[]>([
         {
             question: 'Question 1',
@@ -58,7 +58,7 @@ const Bugs: FC = () => {
                 <h1 className='help-main-heading'>Bug Report</h1>
                 <hr className='help-main-heading-bottom-space'/>
 
-                {/*displays a list for a section of questions*/}
+                {/*displays the list of questions*/}
                 {questions.map((question) => (
                     <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
                 ))}
