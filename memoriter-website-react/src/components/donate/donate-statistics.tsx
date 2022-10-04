@@ -8,10 +8,10 @@ const DonateStatistics: FC = () => {
                 radius={20}
                 lineWidth={30}
                 data={[
-                    { title: 'One', value: 35, color: 'var(--color-highlight-gradient-green)' },
+                    { title: 'One', value: 35, color: 'var(--color-highlight-gradient-blue)' },
                     { title: 'Four', value: 30, color: 'var(--color-container-button)' },
                     { title: 'Three', value: 20, color: 'var(--color-container)' },
-                    { title: 'Two', value: 15, color: 'var(--color-highlight-gradient-blue)' }
+                    { title: 'Two', value: 15, color: 'var(--color-highlight-gradient-green)' }
                 ]}
             />
         </section>
