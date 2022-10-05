@@ -5,7 +5,7 @@ import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import coldarkDark from 'react-syntax-highlighter/dist/esm/styles/prism/coldark-dark';
 import coldarkCold from 'react-syntax-highlighter/dist/esm/styles/prism/coldark-cold';
 
-SyntaxHighlighter.registerLanguage('tsx', tsx);
+SyntaxHighlighter.registerLanguage('tsx', tsx); //adding programming language for syntax highlighting
 
 interface props { //type definitions of props
     children: string;
