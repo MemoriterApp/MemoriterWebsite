@@ -30,8 +30,8 @@
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
-    margin-top: 160px;
-    margin-bottom: -80px;
+    margin-top: 180px;
+    margin-bottom: -90px;
 }
 
 .help-question { /*styles for the question component*/
@@ -41,8 +41,8 @@
     transform: translate(-50%);
     width: 100%;
     max-width: 2400px;
-    padding-top: 40px;
-    margin-bottom: 32px;
+    padding-top: 36px;
+    margin-bottom: 36px;
     background-color: var(--color-container);
     border-radius: 12px;
     overflow: hidden;
@@ -58,7 +58,7 @@
     color: var(--color-font);
     font-family: var(--font-default);
     line-height: 2.4rem;
-    margin: -26px 64px 32px 20px;
+    margin: -24px 64px 32px 20px;
 }
 .help-question-answer { /*answer text*/
     font-size: 1.1rem;
@@ -84,7 +84,7 @@
 .help-question-open { /*arrow to show the answer*/
     position: absolute;
     right: 24px;
-    top: 30px;
+    top: 26px;
     transform: translate(0, -50%) rotate(45deg);
     width: 14px;
     height: 14px;
