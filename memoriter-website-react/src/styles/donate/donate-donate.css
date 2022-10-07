@@ -1,0 +1,13 @@
+/*This stylesheet provides the design for the actual donation section.*/
+
+.donate-donate-select {
+    display: flex;
+    margin: 40px;
+    background-color: var(--color-container);
+    border: none;
+    border-radius: 8px;
+}
+
+.donate-donate-select > * {
+    cursor: pointer;
+}

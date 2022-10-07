@@ -12,11 +12,13 @@ const Donate: FC = () => {
             currentPage='donate'
         >
 
+        <section>
             {/*main content and texts*/}
             <DonateMain/>
 
             {/*section for donating*/}
             <DonateDonate/>
+        </section>
 
             {/*statistics where the money goes (for transparency reasons)*/}
             <DonateStatistics/>
