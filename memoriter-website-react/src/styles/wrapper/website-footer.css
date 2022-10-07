@@ -84,7 +84,7 @@
     white-space: nowrap;
 }
 
-.website-footer-bottom-box-language {
+.website-footer-bottom-box-language { /*language select at the bottom of the footer*/
     position: absolute;
     right: 160px;
     top: 20px;
@@ -98,7 +98,7 @@
     color: var(--color-font);
 }
 
-.website-footer-bottom-box-theme {
+.website-footer-bottom-box-theme { /*the text to change the theme at the bootom of the footer*/
     position: absolute;
     right: 30px;
     top: 20px;
