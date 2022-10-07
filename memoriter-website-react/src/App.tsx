@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 import Product from './pages/product';
 import About from './pages/about';
@@ -27,58 +28,60 @@ import blogs from './utils/blog-posts';
 //routing (connections to different sub-pages)
 const App: FC = () => {
   return (
-    <ScrollReset> {/*ScrollReset forces scrolling to top on navigation (fixes issue where the page kept beeing scrolled down)*/} 
-      <ThemeProvider> {/*ThemeProvider is responsible for the dark and light theme*/}
-        <Routes>
+    <HelmetProvider> {/*HelmetProvider enables using dynamic metadata*/}
+      <ScrollReset> {/*ScrollReset forces scrolling to top on navigation (fixes issue where the page kept beeing scrolled down)*/} 
+        <ThemeProvider> {/*ThemeProvider is responsible for the dark and light theme*/}
+          <Routes>
 
-          <Route path='/' element={<Redirect/>}/>
+            <Route path='/' element={<Redirect/>}/>
 
-          <Route path='/product' element={<Product/>}/>
+            <Route path='/product' element={<Product/>}/>
 
-          <Route path='/about' element={<About/>}/>
+            <Route path='/about' element={<About/>}/>
 
-          <Route path='/blog' element={<Blog topic='Latest'/>}/> {/*blog topics are different routes with the same page, but with filtered content*/}
+            <Route path='/blog' element={<Blog topic='Latest'/>}/> {/*blog topics are different routes with the same page, but with filtered content*/}
 
-          <Route path='/blog/topic/company' element={<Blog topic='Company'/>}/>
+            <Route path='/blog/topic/company' element={<Blog topic='Company'/>}/>
 
-          <Route path='/blog/topic/productivity' element={<Blog topic='Productivity'/>}/>
+            <Route path='/blog/topic/productivity' element={<Blog topic='Productivity'/>}/>
 
-          <Route path='/blog/topic/technology' element={<Blog topic='Technology'/>}/>
+            <Route path='/blog/topic/technology' element={<Blog topic='Technology'/>}/>
 
-          <Route path='/blog/topic/miscellaneous' element={<Blog topic='Miscellaneous'/>}/>
+            <Route path='/blog/topic/miscellaneous' element={<Blog topic='Miscellaneous'/>}/>
 
-          {/*blog posts (are mapped from the blog-posts.js file array)*/}
-          {blogs.map((blog) => (
-            <Route path={`/blog/${blog.link}`} element={<BlogPost blog={blog}/>} key={blog.title}/>
-          ))}
+            {/*blog posts (are mapped from the blog-posts.js file array)*/}
+            {blogs.map((blog) => (
+              <Route path={`/blog/${blog.link}`} element={<BlogPost blog={blog}/>} key={blog.title}/>
+            ))}
 
-          <Route path='/download' element={<Download/>}/>
+            <Route path='/download' element={<Download/>}/>
 
-          <Route path='/donate' element={<Donate/>}/>
+            <Route path='/donate' element={<Donate/>}/>
 
-          <Route path='/releases' element={<Releases/>}/>
+            <Route path='/releases' element={<Releases/>}/>
 
-          <Route path='/impressum' element={<Impressum/>}/>
+            <Route path='/impressum' element={<Impressum/>}/>
 
-          <Route path='/terms' element={<Terms/>}/>
+            <Route path='/terms' element={<Terms/>}/>
 
-          <Route path='/privacy' element={<Privacy/>}/>
+            <Route path='/privacy' element={<Privacy/>}/>
 
-          <Route path='/cookies' element={<Cookies/>}/>
+            <Route path='/cookies' element={<Cookies/>}/>
 
-          <Route path='/support' element={<Support/>}/>
+            <Route path='/support' element={<Support/>}/>
 
-          <Route path='/faq' element={<Faq/>}/>
+            <Route path='/faq' element={<Faq/>}/>
 
-          <Route path='/bugs' element={<Bugs/>}/>
+            <Route path='/bugs' element={<Bugs/>}/>
 
-          <Route path='/newsletter' element={<Newsletter/>}/>
+            <Route path='/newsletter' element={<Newsletter/>}/>
 
-          <Route path='*' element={<PageNotFound/>}/> {/*loads page not found page for all unset routes*/}
+            <Route path='*' element={<PageNotFound/>}/> {/*loads page not found page for all unset routes*/}
 
-        </Routes>
-      </ThemeProvider>
-    </ScrollReset>
+          </Routes>
+        </ThemeProvider>
+      </ScrollReset>
+    </HelmetProvider>
   );
 };
 
