@@ -1,0 +1,29 @@
+/*styles for the promoting text for donating*/
+
+.donate-main { /*main container*/
+    flex-basis: 50%;
+    position: relative;
+    left: 10px;
+    top: 120px;
+    width: 50%;
+    max-width: 2400px;
+    padding: 40px 60px 80px 60px;
+}
+
+.donate-main-heading { /*the page heading/title*/
+    font-size: 3.2rem;
+    font-family: var(--font-heading);
+    text-align: center;
+    background: var(--color-highlight-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-transparent);
+}
+
+.donate-main-content { /*text paragraph*/
+    font-size: 1.4rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2.4rem;
+    text-align: center;
+}

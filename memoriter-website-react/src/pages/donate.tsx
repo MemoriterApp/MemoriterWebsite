@@ -12,7 +12,7 @@ const Donate: FC = () => {
             currentPage='donate'
         >
 
-        <section>
+        <section style={{display: 'flex'}}>
             {/*main content and texts*/}
             <DonateMain/>
 

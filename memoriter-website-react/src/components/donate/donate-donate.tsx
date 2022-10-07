@@ -5,9 +5,9 @@ const DonateDonate: FC = () => {
     const [currency, setCurrency] = useState<string>('€'); //currently selected currency
 
     return (
-        <section>
+        <section className='donate-donate'>
             <form>
-                <fieldset className='donate-donate-select'>
+                <fieldset>
                     <input type='radio' id='monthly' name='donation-type'/>
                     <label htmlFor='monthly'>Monthly</label>
                     <input type='radio' id='one-time' name='donation-type'/>
