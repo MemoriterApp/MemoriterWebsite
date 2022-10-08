@@ -1,7 +1,9 @@
 import React, { FC, useState } from 'react';
+import paypalLogo from '../../images/donate/paypal-logo.svg';
 
 const DonateDonate: FC = () => {
 
+    const [currencySelector, setCurrencySelector] = useState<boolean>(false); //variable for enabling the selector to change currencies
     const [currency, setCurrency] = useState<string>('€'); //currently selected currency
 
     return (
@@ -25,7 +27,7 @@ const DonateDonate: FC = () => {
                 </fieldset>
 
                 {/*amount of money you want to donate*/}
-                <fieldset className='donate-donate-select'>
+                <fieldset>
                     <label className='donate-donate-select'>
                         <input type='radio' id='eur5' name='donation-amount'/>
                         <div className='donate-donate-select-button donate-donate-select-button-left'> {/*two classes*/}
@@ -49,14 +51,18 @@ const DonateDonate: FC = () => {
                 </fieldset>
 
                 <fieldset>
-                    <button>Credit Card</button>
-                    <button>PayPal</button>
+                    <button className='donate-donate-credit-card'>Credit Card</button>
+                    <button className='donate-donate-paypal'>
+                        <img src={paypalLogo} alt='paypal-logo'/>
+                    </button>
+                </fieldset>
 
-                    <button>Change Currency</button>
-                    <select id='change-currency' name='change-currency'>
+                <fieldset>
+                    <button className='donate-donate-change-currency' onClick={() => setCurrencySelector(!currencySelector)}>Change Currency</button>
+                    {currencySelector && <select className='donate-donate-change-currency-select' id='change-currency' name='change-currency'>
                         <option value='euro'>€ Euro</option>
                         <option value='us-dollar'>$ US Dollar</option>
-                    </select>
+                    </select>}
                 </fieldset>
             </form>
         </section>

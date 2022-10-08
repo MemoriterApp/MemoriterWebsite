@@ -3,7 +3,7 @@
 .donate-donate { /*main container*/
     position: relative;
     flex-basis: 50%;
-    top: 80px;
+    top: 120px;
     align-self: center;
 }
 
@@ -51,4 +51,39 @@
 .donate-donate-select-button-right { /*border radius for the right button*/
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.donate-donate-credit-card { /*button to donate with credit card*/
+    width: 60%;
+    height: 52px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.donate-donate-paypal { /*button to donate with paypal*/
+    width: 40%;
+    height: 52px;
+    margin-left: 20px;
+    background-color: var(--color-paypal);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.donate-donate-paypal img { /*paypal logo on the button*/
+    height: 60%;
+    margin-top: 4px;
+}
+
+.donate-donate-change-currency {
+    display: block;
+    margin-top: -20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.donate-donate-change-currency-select {
+    margin-left: auto;
+    margin-top: -20px;
+    background-color: var(--color-background);
 }
