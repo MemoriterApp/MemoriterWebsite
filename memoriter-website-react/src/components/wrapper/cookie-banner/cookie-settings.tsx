@@ -9,32 +9,35 @@ interface props { //type definitions for props
 
 const CookieSettings: FC<props> = ({ onAnimation, onCloseCookieSettings }: props) => {
 
-    const [onHover, setOnHover] = useState('brightness(1)'); //variable for the hover effect for the accept all button
+    const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the accept all button
 
     const animationStyles = onAnimation; //gets styles for animation from the parent component
-
-    const [acceptedCookies, setAcceptedCookies] = useState({ //variable stored as a cookie for saving the accepted cookie types for later
+    
+    //variable stored as a cookie for saving the accepted cookie types for later
+    const [acceptedCookies, setAcceptedCookies] = useState<{necessary: boolean, functional: boolean, analytics: boolean, advertising: boolean}>({
         necessary: true,
         functional: false,
         analytics: false,
         advertising: false
     });
 
-    function saveCurrentCookies() { //item is set in local storage for cookie banner not showng again if accepted
+    const saveCurrentCookies = (): void => { //item is set in local storage for cookie banner not showng again if accepted
         const expires = new Date(); //cookie expiration date
         expires.setTime(+ expires + (365 * 86400000)); //sets expiration date (in one year)
         cookies.setCookie('accepted-cookies', JSON.stringify(acceptedCookies), expires) //sets cookie
         onCloseCookieSettings();
     };
 
-    function acceptAllCookies() {
-        const acceptedAllCookies = { //variable stored as a cookie for saving the accepted cookie types for later (sets value to all accepted)
+    const acceptAllCookies = (): void => { //function to set all cookies to true
+        //variable stored as a cookie for saving the accepted cookie types for later (sets value to all accepted)
+        const acceptedAllCookies: {necessary: boolean, functional: boolean, analytics: boolean, advertising: boolean} = {
+            necessary: true,
             functional: true,
             analytics: true,
             advertising: true
         };
         
-        const expires = new Date(); //cookie expiration date
+        const expires: Date = new Date(); //cookie expiration date
         expires.setTime(+ expires + (365 * 86400000)); //sets expiration date (in one year)
         cookies.setCookie('accepted-cookies', JSON.stringify(acceptedAllCookies), expires) //sets cookie
         onCloseCookieSettings();

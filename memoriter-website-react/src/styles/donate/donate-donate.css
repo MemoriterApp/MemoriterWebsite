@@ -4,3 +4,30 @@
     flex-basis: 50%;
     align-self: center;
 }
+
+.donate-donate fieldset { /*removes the borders of select rows*/
+    display: flex;
+    width: 80%;
+    border: none;
+}
+
+.donate-donate-select { /*option select button*/
+    display: inline-block;
+    flex-basis: 50%; /*maximum size of the button*/
+    cursor: pointer;
+}
+.donate-donate-select label { /*option select label text*/
+    cursor: pointer;
+}
+.donate-donate-select input { /*hides default radio button*/
+    display: none; 
+}
+.donate-donate-select-button { /*radio select background shape*/
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: red;
+}
+.donate-donate-select input:checked + .donate-donate-select-button { /*background color change on toggle*/
+    background-color: green
+}

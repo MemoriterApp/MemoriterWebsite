@@ -7,11 +7,11 @@ interface props { //type definitions for props
 
 const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
 
-    const [onHover, setOnHover] = useState('brightness(1)'); //variable for the hover effect for the accept button
+    const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the accept button
     
-    const accepted = cookies.getCookie('accepted-cookies'); //used for if the banner is first dieplayed or not
+    const accepted: string = cookies.getCookie('accepted-cookies'); //used for if the banner is first dieplayed or not
 
-    const [display, setDisplay] = useState('-180px'); //variable for showing the cookie banner and the move animation
+    const [display, setDisplay] = useState<string>('-180px'); //variable for showing the cookie banner and the move animation
     if (accepted) { //if else is for only displaying it before accepting cookies
         if (display === '0') {
             setDisplay('-180px'); //if accepted, the banner is hidden
@@ -20,15 +20,16 @@ const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
         setTimeout(() => {setDisplay('0'); }, 600); //executing move animation
     };
 
-    function acceptCookies() { //item is set in local storage for cookie banner not showng again if accepted
-        const acceptedAllCookies = { //variable stored as a cookie for saving the accepted cookie types for later
+    const acceptCookies = (): void => { //item is set in local storage for cookie banner not showng again if accepted
+        //variable stored as a cookie for saving the accepted cookie types for later
+        const acceptedAllCookies: {necessary: boolean, functional: boolean, analytics: boolean, advertising: boolean} = {
             necessary: true,
             functional: true,
             analytics: true,
             advertising: true
         };
         
-        const expires = new Date(); //cookie expiration date
+        const expires: Date = new Date(); //cookie expiration date
         expires.setTime(+ expires + (365 * 43200000)); //sets expiration date (in six months)
         cookies.setCookie('accepted-cookies', JSON.stringify(acceptedAllCookies), expires) //sets cookie
     };
