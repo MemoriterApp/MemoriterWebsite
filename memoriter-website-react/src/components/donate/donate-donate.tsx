@@ -11,13 +11,14 @@ const DonateDonate: FC = () => {
                 <fieldset>
                     <label className='donate-donate-select'>
                         <input type='radio' id='monthly' name='donation-type'/>
-                        <div className='donate-donate-select-button'>
+                        <div className='donate-donate-select-button donate-donate-select-button-left'> {/*two classes*/}
                             <label htmlFor='monthly'>Monthly</label>
                         </div>
                     </label>
+                    
                     <label className='donate-donate-select'>
                         <input type='radio' id='one-time' name='donation-type'/>
-                        <div className='donate-donate-select-button'>
+                        <div className='donate-donate-select-button donate-donate-select-button-right'> {/*two classes*/}
                             <label htmlFor='one-time'>One-time</label>
                         </div>
                     </label>
@@ -26,22 +27,23 @@ const DonateDonate: FC = () => {
                 {/*amount of money you want to donate*/}
                 <fieldset className='donate-donate-select'>
                     <label className='donate-donate-select'>
-                        <input type='radio' id='EUR5' name='donation-amount'/>
-                        <div className='donate-donate-select-button'>
-                            <label htmlFor='EUR5'>{currency}5.00</label>
+                        <input type='radio' id='eur5' name='donation-amount'/>
+                        <div className='donate-donate-select-button donate-donate-select-button-left'> {/*two classes*/}
+                            <label htmlFor='eur5'>{currency}5.00</label>
                         </div>
                     </label>
 
                     <label className='donate-donate-select'>
-                        <input type='radio' id='EUR10' name='donation-amount'/>
+                        <input type='radio' id='eur10' name='donation-amount'/>
                         <div className='donate-donate-select-button'>
-                            <label htmlFor='EUR10'>{currency}10.00</label>
+                            <label htmlFor='eur10'>{currency}10.00</label>
                         </div>
                     </label>
+
                     <label className='donate-donate-select'>
-                        <input type='radio' id='EUR20' name='donation-amount'/>
-                        <div className='donate-donate-select-button'>
-                            <label htmlFor='EUR20'>{currency}20.00</label>
+                        <input type='radio' id='eur20' name='donation-amount'/>
+                        <div className='donate-donate-select-button donate-donate-select-button-right'> {/*two classes*/}
+                            <label htmlFor='eur20'>{currency}20.00</label>
                         </div>
                     </label>
                 </fieldset>
