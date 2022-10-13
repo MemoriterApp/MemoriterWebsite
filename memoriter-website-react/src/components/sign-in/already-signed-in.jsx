@@ -48,7 +48,7 @@ const AlreadySignedIn = ({ title }) => {
                 <button className='sign-in-main-button' style={{backgroundColor: 'var(--color-transparent)'}}
                     onMouseEnter={() => setOnHoverReturn('brightness(0.82)')} onMouseLeave={() => setOnHoverReturn('brightness(1)')}>
                     {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css and the background animation.*/}
-                    <Link to='/product'>
+                    <Link to='/'>
                         <div className='sign-in-main-button-background-gray' 
                             style={{transform: 'translate(-8px)', width: 'calc(100% + 16px)', filter: onHoverReturn}}/>
                         <span className='sign-in-main-button-text'>Return to Website</span>

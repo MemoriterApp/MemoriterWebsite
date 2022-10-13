@@ -103,13 +103,21 @@
 
 .donate-donate-change-currency { /*button to enable the currency selector*/
     display: block;
-    margin-top: -20px;
-    background-color: transparent;
+    transform: translate(0, -10px);
+    font-size: 0.9rem;
+    color: var(--color-font-gray);
+    margin-left: -4px;
+    background-color: var(--color-transparent);
     border: none;
     cursor: pointer;
 }
 .donate-donate-change-currency-select { /*currency selector*/
+    font-size: 0.9rem;
+    color: var(--color-font-gray);
+    padding: 6px 4px 6px 8px;
     margin-left: auto;
     margin-top: -20px;
     background-color: var(--color-background);
+    border-radius: 6px;
+    outline: none;
 }

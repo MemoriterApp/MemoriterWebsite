@@ -49,7 +49,7 @@ const WebsiteFooter: FC<props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
                 <nav>
                     <p className='website-footer-header'>Company</p>
-                    <Link className='website-footer-link' to='/product'>Product</Link>
+                    <Link className='website-footer-link' to='/'>Product</Link>
                     <Link className='website-footer-link' to='/about'>About</Link>
                     <Link className='website-footer-link' to='/blog'>Blog</Link>
                     <Link className='website-footer-link' to='/donate'>Donate</Link>

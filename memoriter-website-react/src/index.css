@@ -2,119 +2,120 @@
 
 /*font imports*/
 @font-face { /*Inter: basic font for most text*/
-    font-family: 'Inter';
-    font-weight: 300;
-    src: url('./fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
+  font-family: 'Inter';
+  font-weight: 300;
+  src: url('./fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
 }
 @font-face { /*Rubik: larger font for subheadings or buttons*/
-    font-family: 'Rubik';
-    font-weight: 400;
-    src: url('./fonts/rubik/Rubik-VariableFont_wght.ttf');
+  font-family: 'Rubik';
+  font-weight: 400;
+  src: url('./fonts/rubik/Rubik-VariableFont_wght.ttf');
 }
 @font-face { /*Heebo: large font for page headings*/
-    font-family: 'Heebo';
-    font-weight: 800;
-    src: url('./fonts/heebo/Heebo-VariableFont_wght.ttf');
+  font-family: 'Heebo';
+  font-weight: 800;
+  src: url('./fonts/heebo/Heebo-VariableFont_wght.ttf');
 }
 @font-face { /*Kaisei HarunoUmi: italic serif font for the product page*/
-    font-family: 'Kaisei HarunoUmi';
-    font-weight: 400;
-    src: url('./fonts/kaisei-haruno-umi/KaiseiHarunoUmi-Regular.ttf');
+  font-family: 'Kaisei HarunoUmi';
+  font-weight: 400;
+  src: url('./fonts/kaisei-haruno-umi/KaiseiHarunoUmi-Regular.ttf');
 }
 @font-face { /*BIZ UDPGothic: font for quotation mark at product stories*/
-    font-family: 'BIZ UDPGothic';
-    font-weight: 700;
-    src: url('./fonts/biz-udp-gothic/BIZUDPGothic-Bold.ttf');
+  font-family: 'BIZ UDPGothic';
+  font-weight: 700;
+  src: url('./fonts/biz-udp-gothic/BIZUDPGothic-Bold.ttf');
 }
 @font-face { /*IBM Plex Serif: serif font for the blog posts*/
-    font-family: 'IBM Plex Serif';
-    font-weight: 400;
-    src: url('./fonts/ibm-plex-serif/IBMPlexSerif-Regular.ttf');
+  font-family: 'IBM Plex Serif';
+  font-weight: 400;
+  src: url('./fonts/ibm-plex-serif/IBMPlexSerif-Regular.ttf');
 }
 @font-face { /*Quantico: question mark font for the page not found page*/
-    font-family: 'Quantico';
-    font-weight: 400;
-    src: url('./fonts/quantico/Quantico-Regular.ttf');
+  font-family: 'Quantico';
+  font-weight: 400;
+  src: url('./fonts/quantico/Quantico-Regular.ttf');
 }
 
 :root { /*global fixed colors and fonts*/
-    /*colors*/
-    --color-highlight-gradient: linear-gradient(45deg, #23aaaa, #28b97d);
-    --color-highlight-gradient-blue: #23aaaa;
-    --color-highlight-gradient-green: #26b294;
-    --color-backdrop: #000000bf;
-    --color-table: #646464;
-    --color-shadow: #00000066;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-red-light: #ff2828;
-    --color-green-light: #14b414;
-    --color-transparent: #00000000;
-    --color-google-hover: #dddddd;
-    --color-apple-hover: #121212;
-    --color-facebook: #4267b2;
-    --color-facebook-hover: #3c5f9b;
-    --color-github: #6e5494;
-    --color-github-hover: #645087;
-    --color-paypal: #0070ba;
-    --color-paypal-hover: #005994;
-    /*values for correcting svg colors*/
-    --svg-invert-white: invert(1);
-    /*font families*/
-    --font-default: 'Inter', sans-serif;
-    --font-highlight: 'Rubik', sans-serif;
-    --font-heading: 'Heebo', sans-serif;
-    --font-serif: 'Kaisei HarunoUmi', serif;
-    --font-large-quotation: 'BIZ UDPGothic', serif;
-    --font-blog: 'IBM Plex Serif', serif;
-    --font-large-question: 'Quantico', sans-serif;
+  /*colors*/
+  --color-font-code: #ff3838;
+  --color-highlight-gradient: linear-gradient(45deg, #23aaaa, #28b97d);
+  --color-highlight-gradient-blue: #23aaaa;
+  --color-highlight-gradient-green: #26b294;
+  --color-backdrop: #000000bf;
+  --color-table: #646464;
+  --color-shadow: #00000066;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-red-light: #ff2828;
+  --color-green-light: #14b414;
+  --color-transparent: #00000000;
+  --color-google-hover: #dddddd;
+  --color-apple-hover: #121212;
+  --color-facebook: #4267b2;
+  --color-facebook-hover: #3c5f9b;
+  --color-github: #6e5494;
+  --color-github-hover: #645087;
+  --color-paypal: #0070ba;
+  --color-paypal-hover: #005994;
+  /*values for correcting svg colors*/
+  --svg-invert-white: invert(1);
+  /*font families*/
+  --font-default: 'Inter', sans-serif;
+  --font-highlight: 'Rubik', sans-serif;
+  --font-heading: 'Heebo', sans-serif;
+  --font-serif: 'Kaisei HarunoUmi', serif;
+  --font-large-quotation: 'BIZ UDPGothic', serif;
+  --font-blog: 'IBM Plex Serif', serif;
+  --font-large-question: 'Quantico', sans-serif;
 }
 
 /*global color variables for different visual modes (can be used with the var() expression)*/
 #dark { /*dark mode (default)*/
-    --color-font: #ffffff;
-    --color-font-gray: #c8c8c8;
-    --color-background: #202020;
-    --color-hover: #373737bf;
-    --color-hover-light: #37373780;
-    --color-hover-button: #373737a6;
-    --color-hover-input: #2a2a2a;
-    --color-container: #373737;
-    --color-container-button: #505050;
-    --color-background-dark: #121212;
-    --color-background-dark-plus: #0a0a0a;
-    --color-red-dark: #5a2828;
-    --color-green-dark: #144b14;
-    --color-cookies: #3c3c3c99;
-    --color-cookies-hover: #464646bf;
-    --color-banner-gradient: linear-gradient(#242424, #36363c);
-    --color-banner-triangle-light: #36363c80;
-    --color-banner-triangle-dark: #24242480;
-    /*values for correcting svg colors*/
-    --svg-invert: invert(1);
-    --svg-invert-gray: invert(0.78431372549019607843137254901961);
+  --color-font: #ffffff;
+  --color-font-gray: #c8c8c8;
+  --color-background: #202020;
+  --color-hover: #373737bf;
+  --color-hover-light: #37373780;
+  --color-hover-button: #373737a6;
+  --color-hover-input: #2a2a2a;
+  --color-container: #373737;
+  --color-container-button: #505050;
+  --color-background-dark: #121212;
+  --color-background-dark-plus: #0a0a0a;
+  --color-red-dark: #5a2828;
+  --color-green-dark: #144b14;
+  --color-cookies: #3c3c3c99;
+  --color-cookies-hover: #464646bf;
+  --color-banner-gradient: linear-gradient(#242424, #36363c);
+  --color-banner-triangle-light: #36363c80;
+  --color-banner-triangle-dark: #24242480;
+  /*values for correcting svg colors*/
+  --svg-invert: invert(1);
+  --svg-invert-gray: invert(0.78431372549019607843137254901961);
 }
 
 #light { /*light mode*/
-    --color-font: #000000;
-    --color-font-gray: #373737;
-    --color-background: #e0e0e0;
-    --color-hover: #b5b5b5bf;
-    --color-hover-light: #a0a0a0bf;
-    --color-hover-button: #858585bf;
-    --color-hover-input: #cbcbcb;
-    --color-container: #b5b5b5;
-    --color-container-button: #929292;
-    --color-background-dark: #cbcbcb;
-    --color-background-dark-plus: #bbbbbb;
-    --color-red-dark: #802828;
-    --color-green-dark: #146814;
-    --color-cookies: #1c1c1c99;
-    --color-cookies-hover: #505050bf;
-    --color-banner-gradient: linear-gradient(#bababa, #8f8f96);
-    --color-banner-triangle-light: #8f8f9680;
-    --color-banner-triangle-dark: #bababa80;
-    /*values for correcting svg colors*/
-    --svg-invert: invert(0);
-    --svg-invert-gray: invert(0.21568627450980392156862745098039);
+  --color-font: #000000;
+  --color-font-gray: #373737;
+  --color-background: #e0e0e0;
+  --color-hover: #b5b5b5bf;
+  --color-hover-light: #a0a0a0bf;
+  --color-hover-button: #858585bf;
+  --color-hover-input: #cbcbcb;
+  --color-container: #b5b5b5;
+  --color-container-button: #929292;
+  --color-background-dark: #cbcbcb;
+  --color-background-dark-plus: #bbbbbb;
+  --color-red-dark: #802828;
+  --color-green-dark: #146814;
+  --color-cookies: #1c1c1c99;
+  --color-cookies-hover: #505050bf;
+  --color-banner-gradient: linear-gradient(#bababa, #8f8f96);
+  --color-banner-triangle-light: #8f8f9680;
+  --color-banner-triangle-dark: #bababa80;
+  /*values for correcting svg colors*/
+  --svg-invert: invert(0);
+  --svg-invert-gray: invert(0.21568627450980392156862745098039);
 }

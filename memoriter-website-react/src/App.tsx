@@ -20,8 +20,7 @@ import Newsletter from './pages/newsletter';
 import PageNotFound from './pages/page-not-found';
 
 import ThemeProvider from './components/theme-provider';
-import ScrollReset from './components/routing/scroll-reset';
-import Redirect from './components/routing/redirect';
+import ScrollReset from './components/scroll-reset';
 
 import blogs from './utils/blog-posts';
 
@@ -33,9 +32,7 @@ const App: FC = () => {
         <ThemeProvider> {/*ThemeProvider is responsible for the dark and light theme*/}
           <Routes>
 
-            <Route path='/' element={<Redirect/>}/>
-
-            <Route path='/product' element={<Product/>}/>
+            <Route path='/' element={<Product/>}/>
 
             <Route path='/about' element={<About/>}/>
 

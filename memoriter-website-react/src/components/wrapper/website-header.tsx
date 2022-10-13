@@ -60,7 +60,7 @@ const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) 
         <header className='website-header'>
 
             {/*If you click the logo, you will be redirected to the product page.*/}
-            <Link to='/product'><img className='website-header-logo' src={memoriterLogo} alt='memoriter-logo'/></Link>
+            <Link to='/'><img className='website-header-logo' src={memoriterLogo} alt='memoriter-logo'/></Link>
 
             {/*button for expanding side bar for small screens*/}
             <button className='website-header-mobile-sidebar-button' onClick={toggleMobileSidebar}>
@@ -69,7 +69,7 @@ const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) 
 
             {/*quicklinks (navigation bar)*/}
             <nav className='website-header-quicklink-box' style={{right: mobileSidebar}}> {/*expandable mobile nav sidebar, displays when button is clicked (changes className)*/}
-                <Link className='website-header-quicklink' to='/product'>
+                <Link className='website-header-quicklink' to='/'>
                     {currentPage === 'product' ? <span className='website-header-text-gradient'>Product</span> : <span>Product</span>}
                 </Link>
                 <Link className='website-header-quicklink' to='/about'>

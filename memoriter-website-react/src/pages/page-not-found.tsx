@@ -38,7 +38,7 @@ const PageNotFound: FC = () => {
 
                     {/*button redirects to product page*/}
                     <Link
-                        className='page-not-found-button' to='/product'
+                        className='page-not-found-button' to='/'
                         onMouseEnter={() => setOnHover('brightness(0.75)')} onMouseLeave={() => setOnHover('brightness(1)')}>
                         {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css*/}
                         <div className='page-not-found-button-background' style={{filter: onHover}}/>

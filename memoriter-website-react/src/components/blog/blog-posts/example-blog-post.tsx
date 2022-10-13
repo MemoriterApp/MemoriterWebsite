@@ -6,7 +6,6 @@ import exampleBlogPost from '../../../images/blog/example-blog-post/example-blog
 import BlogPostEmbeddedVideo from '../blog-post-embedded-video';
 import BlogPostCallout from '../blog-post-callout';
 import BlogPostCodeBlock from '../blog-post-code-block';
-import BlogPostInlineCode from '../blog-post-inline-code';
 
 const ExampleBlogPost: FC = () => {
 
@@ -70,12 +69,14 @@ const ExampleBlogPost: FC = () => {
 
             <h3>Example Code</h3>
             <BlogPostCodeBlock>{[
-                'const pi: number = 3.14;',
-                'console.log(pi);',
-                'return(<div>Hello!</div>);'
+                'const func = (name: string): void => {',
+                '  const pi: number = 3.14;',
+                '  console.log(pi);',
+                '  return(<div>{`Hello, ${name}`}</div>);',
+                '};'
             ]}</BlogPostCodeBlock>
 
-            <div>It also works inline: <BlogPostInlineCode>{'return 3.14;'}</BlogPostInlineCode></div>
+            <p>It also works inline: <code>return 3.14;</code></p>
 
         </article>
     );
