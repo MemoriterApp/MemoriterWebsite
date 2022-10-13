@@ -3,12 +3,14 @@ import paypalLogo from '../../images/donate/paypal-logo.svg';
 
 const DonateDonate: FC = () => {
 
+    const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the donate with credit card button
+
     const [currencySelector, setCurrencySelector] = useState<boolean>(false); //variable for enabling the selector to change currencies
     const [currency, setCurrency] = useState<string>('€'); //currently selected currency
 
     return (
         <section className='donate-donate'>
-            <form>
+            <form onSubmit={(event: React.FormEvent<HTMLFormElement>) => event.preventDefault()}>
                 {/*option to select if you want toi donate monthly or one-time*/}
                 <fieldset>
                     <label className='donate-donate-select'>
@@ -51,7 +53,14 @@ const DonateDonate: FC = () => {
                 </fieldset>
 
                 <fieldset>
-                    <button className='donate-donate-credit-card'>Credit Card</button>
+                    {/*button to donate with credit card or other methods*/}
+                    <button className='donate-donate-credit-card' type='submit'
+                        onMouseEnter={() => setOnHover('brightness(0.75)')} onMouseLeave={() => setOnHover('brightness(1)')}>
+                        {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css and the background animation*/}
+                        <div className='donate-donate-credit-card-background' style={{filter: onHover}}/>
+                        <span className='donate-donate-credit-card-text'>Credit Card</span>
+                    </button>
+                    {/*button to nonate via paypal*/}
                     <button className='donate-donate-paypal'>
                         <img src={paypalLogo} alt='paypal-logo'/>
                     </button>
