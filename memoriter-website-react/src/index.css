@@ -39,7 +39,7 @@
 
 :root { /*global fixed colors and fonts*/
   /*colors*/
-  --color-font-code: #ff3838;
+  --color-font-code: #ff4444;
   --color-highlight-gradient: linear-gradient(45deg, #23aaaa, #28b97d);
   --color-highlight-gradient-blue: #23aaaa;
   --color-highlight-gradient-green: #26b294;
