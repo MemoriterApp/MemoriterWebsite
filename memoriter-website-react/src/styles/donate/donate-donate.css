@@ -3,7 +3,7 @@
 .donate-donate { /*main container*/
     position: relative;
     flex-basis: 50%;
-    top: 120px;
+    top: 140px;
     align-self: center;
 }
 
@@ -57,7 +57,7 @@
     position: relative;
     width: 58%;
     height: 53px;
-    margin-right: 16px;
+    margin-right: 12px;
     margin-top: -0.5px;
     background-color: var(--color-transparent);
     border: none;
@@ -86,7 +86,7 @@
 .donate-donate-paypal { /*button to donate with paypal*/
     width: 42%;
     height: 52px;
-    margin-left: 16px;
+    margin-left: 12px;
     background-color: var(--color-paypal);
     border: none;
     border-radius: 10px;
@@ -98,6 +98,7 @@
 }
 .donate-donate-paypal img { /*paypal logo on the button*/
     height: 60%;
+    margin-left: -2px;
     margin-top: 4px;
 }
 
@@ -117,7 +118,30 @@
     padding: 6px 4px 6px 8px;
     margin-left: auto;
     margin-top: -20px;
-    background-color: var(--color-background);
+    background-color: var(--color-background-dark);
     border-radius: 6px;
     outline: none;
+}
+
+@media (max-width: 1160px) { /*changes the gap between text and donation settings on smaller screens*/
+    .donate-donate fieldset {
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 960px) { /*changes the layout on small screens*/
+    .donate-donate {
+        width: calc(100% - 20px);
+    }
+    .donate-donate fieldset {
+        width: calc(100% - 32px);
+    }
+}
+
+
+@media (max-width: 400px) { /*changes the layout on small screens*/
+    .donate-donate {
+        transform: scale(0.75);
+        width: 140%;
+    }
 }

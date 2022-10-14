@@ -1,5 +1,11 @@
 /*styles for the promoting text for donating*/
 
+.donate-main-container { /*flex container with donate-main and donate-donate inside*/
+    position: relative;
+    display: flex;
+    gap: 100px;
+}
+
 .donate-main { /*main container*/
     flex-basis: 50%;
     position: relative;
@@ -26,4 +32,42 @@
     font-family: var(--font-default);
     line-height: 2.4rem;
     text-align: center;
+}
+
+@media (max-width: 1160px) { /*changes the gap between text and donation settings on smaller screens*/
+    .donate-main-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 960px) { /*changes the layout on small screens*/
+    .donate-main-container {
+        flex-direction: column;
+    }
+
+    .donate-main {
+        left: 50%;
+        transform: translate(-50%);
+        width: calc(100% - 40px);
+        padding: 0;
+    }
+}
+
+@media (max-width: 560px) { /*makes some text font size samller for better readability on small screens*/
+    .donate-main {
+        width: calc(100% - 8px);
+    }
+    .donate-main-heading {
+        font-size: 2.8rem;
+    }
+    .donate-main-text {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 240px) { /*hodes everything on too small screens*/
+    .donate-main-container {
+        display: none;
+    }
 }
