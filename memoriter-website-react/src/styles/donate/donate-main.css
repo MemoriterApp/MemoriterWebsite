@@ -1,8 +1,11 @@
 /*styles for the promoting text for donating*/
 
 .donate-main-container { /*flex container with donate-main and donate-donate inside*/
-    position: relative;
     display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 2400px;
     gap: 100px;
 }
 
@@ -12,7 +15,6 @@
     left: 10px;
     top: 120px;
     width: 50%;
-    max-width: 2400px;
     padding: 40px 60px 80px 60px;
 }
 

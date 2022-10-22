@@ -55,9 +55,9 @@
 
 .donate-donate-credit-card { /*button to donate with credit card*/
     position: relative;
-    width: 58%;
+    width: 60%;
     height: 53px;
-    margin-right: 12px;
+    margin-right: 14px;
     margin-top: -0.5px;
     background-color: var(--color-transparent);
     border: none;
@@ -84,9 +84,9 @@
 
 
 .donate-donate-paypal { /*button to donate with paypal*/
-    width: 42%;
+    width: 40%;
     height: 52px;
-    margin-left: 12px;
+    margin-left: 14px;
     background-color: var(--color-paypal);
     border: none;
     border-radius: 10px;

@@ -1,1 +1,8 @@
 /*styles for the pie chart below the main page*/
+
+.donate-statistics-chart {
+    position: relative;
+    max-width: 400px;
+    margin: 200px 60px;
+    transition: color 400ms;
+}
