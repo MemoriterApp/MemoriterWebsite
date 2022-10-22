@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
-import FaqQuestion from '../components/faq-question';
+import HelpQuestion from '../components/help-question';
 
 const Faq: FC = () => {
 
-    //array with all questions with answers
+    //array with all questions with answers, answers can be typed as string or html objects
     const [questions, setQuestions] = useState<{question: string, answer: string, isOpen: boolean}[]>([
         //Sub Heading
         {
@@ -60,20 +60,20 @@ const Faq: FC = () => {
         >
 
             {/*main body*/}
-            <section className='faq-main'>
+            <section className='help-main'>
 
-                <h1 className='faq-main-header'>Frequently Asked Questions</h1>
+                <h1 className='help-main-heading'>Frequently Asked Questions</h1>
 
-                <h2 className='faq-main-sub-heading'>Sub Heading</h2>
+                <h2 className='help-main-sub-heading'>Sub Heading</h2>
                 {/*displays a list for a section of questions*/}
                 {questions.slice(0, 3).map((question) => (
-                    <FaqQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
+                    <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
                 ))}
 
-                <h2 className='faq-main-sub-heading'>Sub Heading</h2>
+                <h2 className='help-main-sub-heading'>Sub Heading</h2>
                 {/*displays a list for a section of questions*/}
                 {questions.slice(3, 6).map((question) => (
-                    <FaqQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
+                    <HelpQuestion key={question.question} question={question} onOpenQuestion={openQuestion}/>
                 ))}
 
             </section>
