@@ -7,7 +7,7 @@
     transform: translate(-50%);
     width: 100%;
     max-width: 1400px;
-    margin-bottom: 360px;
+    margin-bottom: 380px;
 }
 
 .donate-statistics-chart { /*pie chart positioning*/
@@ -90,7 +90,7 @@
     font-family: var(--font-highlight);
     line-height: 2.4rem;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px;
     margin-bottom: -8px;
     background-color: var(--color-container);
     border-radius: 10px;
@@ -98,7 +98,8 @@
 
 .donate-statistics-section-bottom-text { /*text at the bottom of the page*/
     position: absolute;
-    bottom: -140px;
+    bottom: -60px;
+    transform: translate(0, 100%);
     font-size: 1.2rem;
     color: var(--color-font);
     font-family: var(--font-default);
@@ -112,4 +113,52 @@
 }
 .donate-statistics-section-bottom-text-link:hover { /*link hover effect*/
     color: var(--color-font);
+}
+
+@media (max-width: 1160px) { /*changes the layout on smaller screens*/
+    .donate-statistics {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        margin-bottom: 220px;
+    }
+
+    .donate-statistics-chart-label {
+        left: 50%;
+    }
+
+    .donate-statistics-section {
+        max-width: 800px;
+    }
+    .donate-statistics-section-bottom-text {
+        position: relative;
+        bottom: unset;
+        transform: translate(0);
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 420px) { /*changes the margin of the chart on very small screens*/
+    .donate-statistics {
+        margin-bottom: 160px;
+    }
+    
+    .donate-statistics-chart {
+        max-width: calc(100% - 40px);
+        margin-bottom: 200px;
+    }
+    .donate-statistics-chart-label {
+        top: calc(100vw + 60px);
+    }
+
+    .donate-statistics-section-bottom-text {
+        margin-inline: 20px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 240px) { /*hides everything on too small screens*/
+    .donate-statistics {
+        display: none;
+    }
 }
