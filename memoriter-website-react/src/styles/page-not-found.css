@@ -45,6 +45,7 @@
     width: 212px;
     height: 42px;
     text-align: center;
+    overflow: hidden;
     cursor: pointer;
 }
 .page-not-found-button-text { /*text which is not supposed to change color*/

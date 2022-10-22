@@ -176,7 +176,7 @@
 }
 .cookie-settings-switch input:checked + .cookie-settings-switch-slider { /*background color change on toggle*/
     background-color: var(--color-highlight-gradient-blue);
-} 
+}
 .cookie-settings-switch input:checked + .cookie-settings-switch-slider:before { /*knob position change on toggle*/
     transform: translateX(16px);
 }

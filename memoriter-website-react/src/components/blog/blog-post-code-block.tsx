@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark, atomOneLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import coldarkDark from 'react-syntax-highlighter/dist/esm/styles/prism/coldark-dark';
+import coldarkCold from 'react-syntax-highlighter/dist/esm/styles/prism/coldark-cold';
+
+SyntaxHighlighter.registerLanguage('tsx', tsx); //adding programming language for syntax highlighting
 
 interface props { //type definitions of props
     children: string[];
@@ -9,10 +13,11 @@ interface props { //type definitions of props
 
 const BlogPostCodeBlock: FC<props> = ({ children }: props) => {
 
-    const codeBlockStyles: React. CSSProperties = { //modifications to pre built syntax highlighter (from a library)
+    const codeBlockStyles: React.CSSProperties = { //modifications to pre built syntax highlighter (from a library), used for the dark theme
         fontSize: '1.2rem',
         lineHeight: '2rem',
-        padding: '12px 16px 12px 16px',
+        padding: '12px 16px',
+        marginBottom: '20px',
         backgroundColor: 'var(--color-hover)',
         borderRadius: '10px'
     };
@@ -21,10 +26,10 @@ const BlogPostCodeBlock: FC<props> = ({ children }: props) => {
 
     return ( //a library for syntax highlighting is used
         <>
-            {(theme === 'dark' || !theme) && <SyntaxHighlighter language='tsx' style={atomOneDark} customStyle={codeBlockStyles} wrapLongLines={true}>
+            {theme === 'dark' && <SyntaxHighlighter className='blog-post-main-code' language='tsx' style={coldarkDark} customStyle={codeBlockStyles} wrapLongLines={true}>
                 {children.join('\n')} {/*children refers to the content inside the wrapper, .join('\n) creates line breaks, the content needs to be an array*/}
             </SyntaxHighlighter>}
-            {theme === 'light' && <SyntaxHighlighter language='tsx' style={atomOneLight} customStyle={codeBlockStyles} wrapLongLines={true}>
+            {theme === 'light' && <SyntaxHighlighter language='tsx' style={coldarkCold} customStyle={codeBlockStyles} wrapLongLines={true}>
                 {children.join('\n')} {/*children refers to the content inside the wrapper, .join('\n) creates line breaks, the content needs to be an array*/}
             </SyntaxHighlighter>}
         </>
