@@ -6,7 +6,7 @@
     left: 50%;
     transform: translate(-50%);
     width: 100%;
-    max-width: 2400px;
+    max-width: 1400px;
     margin-top: 40px;
     margin-bottom: 240px;
 }
@@ -14,12 +14,12 @@
 .donate-statistics-chart { /*pie chart positioning*/
     position: relative;
     max-width: 400px;
-    margin-inline: 60px;
+    margin-inline: 40px;
     transition: color 400ms;
 }
 .donate-statistics-chart-label { /*label in the center of the chart*/
     position: absolute;
-    left: 260px;
+    left: 240px;
     top: 200px;
     transform: translate(-50%, -50%);
     width: 220px;
@@ -39,4 +39,40 @@
     font-family: var(--font-default);
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+.donate-statistics-section { /*content sections next to the chart*/
+    flex-basis: 50%;
+    margin-inline: 40px;
+}
+.donate-statistics-section h2 { /*section heading*/
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+}
+.donate-statistics-section p, ul { /*section content*/
+    font-size: 1.4rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2.4rem;
+    list-style: none; /*hides the default list bullet points*/
+    list-style-position: outside;
+}
+.donate-statistics-section li::before { /*bullet point replacement*/
+    content: '\2B24'; /*larger circle*/
+    margin-left: -40px;
+    margin-right: 16px;
+}
+.donate-statistics-section-0::before {
+    color: var(--color-highlight-gradient-green);
+}
+.donate-statistics-section-1::before {
+    color: var(--color-highlight-gradient-blue);
+}
+.donate-statistics-section-2::before {
+    color: var(--color-container-button);
+}
+.donate-statistics-section-3::before {
+    color: var(--color-container);
 }

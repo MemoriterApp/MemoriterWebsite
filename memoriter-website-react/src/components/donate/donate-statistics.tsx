@@ -15,46 +15,35 @@ const DonateStatistics: FC = () => {
 
     const data: {value: number, color: string}[] = [ //data and configuration used by the pie chart
         {
-            value: 200, //amount of money
-            color: 'var(--color-highlight-gradient-blue)' //color of the data
+            value: 4, //amount of money (in €)
+            color: 'var(--color-highlight-gradient-green)' //color of the data
         },
         {
-            value: 120,
+            value: 3,
+            color: 'var(--color-highlight-gradient-blue)'
+        },
+        {
+            value: 2,
             color: 'var(--color-container-button)'
         },
         {
-            value: 80,
+            value: 1,
             color: 'var(--color-container)'
-        },
-        {
-            value: 150,
-            color: 'var(--color-highlight-gradient-green)'
         }
     ];
 
     const dataSum = data.reduce((index: number, items: {value: number, color: string}) => index + items.value, 0); //sum of all data values
 
     const [onHover, setOnHover] = useState<number | null>(null); //state if a section of the chart is hovered over
-    const [label, setLabel] = useState<React.ReactNode>( //state to set the current label
-        <><h3>{dataSum}€</h3><p>Total Spending</p></>
-    );
+    const [changeContent, setChangeContent] = useState<number | null>(null); //state to set the current label and content section
     const [contentSet, setContentSet] = useState<boolean>(true); //state to check if the content is set to prevent an infite loop
 
-    //conditional statement to set the label based on the section hovered over
-    if (onHover === 0 && ! contentSet) {
-        setLabel(<><h3 style={{color : data[0].color}}>{data[0].value}€</h3><p>Spending</p></>);
-        setContentSet(true);
-    } else if (onHover === 1 && ! contentSet) {
-        setLabel(<><h3 style={{color : data[1].color}}>{data[1].value}€</h3><p>Spending</p></>);
-        setContentSet(true);
-    } else if (onHover === 2 && ! contentSet) {
-        setLabel(<><h3 style={{color : data[2].color}}>{data[2].value}€</h3><p>Spending</p></>);
-        setContentSet(true);
-    } else if (onHover === 3 && ! contentSet) {
-        setLabel(<><h3 style={{color : data[3].color}}>{data[3].value}€</h3><p>Spending</p></>);
+    //conditional statement to set the label and section based on the section hovered over
+    if (onHover !== null && !contentSet) {
+        setChangeContent(onHover);
         setContentSet(true);
     } else if (!contentSet) {
-        setLabel(<><h3>{dataSum}€</h3><p>Total Spending</p></>);
+        setChangeContent(null);
         setContentSet(true);
     };
 
@@ -63,6 +52,7 @@ const DonateStatistics: FC = () => {
             {/*interactive pie chart*/}
             <PieChart
                 className='donate-statistics-chart'
+                startAngle={-90}
                 radius={50}
                 lineWidth={28}
                 segmentsStyle={(index: number) => (
@@ -81,17 +71,55 @@ const DonateStatistics: FC = () => {
             />
             {/*chart label*/}
             <article className='donate-statistics-chart-label'>
-                {label}
+                {changeContent === 0 ? (<>
+                    <h3 style={{color : data[0].color}}>{data[0].value}€</h3><p>Spending</p>
+                </>) : changeContent === 1 ? (<>
+                    <h3 style={{color : data[1].color}}>{data[1].value}€</h3><p>Spending</p>
+                </>) : changeContent === 2 ? (<>
+                    <h3 style={{color : data[2].color}}>{data[2].value}€</h3><p>Spending</p>
+                </>) : changeContent === 3 ? (<>
+                    <h3 style={{color : data[3].color}}>{data[3].value}€</h3><p>Spending</p>
+                </>) : (<>
+                    <h3>{dataSum}€</h3><p>Total Spending</p>
+                </>)}
             </article>
 
             {/*content next to the chart*/}
-            <article>
-                <h2>LOL</h2>
-                <p>LOL</p>
+            <article className='donate-statistics-section'>
+                {changeContent === 0 ? (<>
+                
+                </>) : changeContent === 1 ? (<>
+                    
+                </>) : changeContent === 2 ? (<>
+                    
+                </>) : changeContent === 3 ? (<>
+                    
+                </>) : (<>
+                    <h2>Placehloder</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit:
+                    </p>
+                    <ul>
+                        <li className='donate-statistics-section-0'>
+                            Category 0: <b>{data[0].value}€</b>
+                        </li>
+                        <li className='donate-statistics-section-1'>
+                            Category 1: <b>{data[1].value}€</b>
+                        </li>
+                        <li className='donate-statistics-section-2'>
+                            Category 2: <b>{data[2].value}€</b>
+                        </li>
+                        <li className='donate-statistics-section-3'>
+                            Category 3: <b>{data[3].value}€</b>
+                        </li>
+                    </ul>
+                </>)}
             </article>
-            <article>
-                <h2>LOL</h2>
-                <p>LOL</p>
+            <article className='donate-statistics-section'>
+                <h2>Placeholder</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit, nam commodi dolorem dignissimos obcaecati quae. Neque, libero.
+                </p>
             </article>
         </section>
     );
