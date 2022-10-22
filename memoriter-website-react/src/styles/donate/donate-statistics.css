@@ -1,8 +1,40 @@
 /*styles for the pie chart below the main page*/
 
-.donate-statistics-chart {
+.donate-statistics { /*container with content*/
+    display: flex; /*needed for the column layout*/
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 2400px;
+}
+
+.donate-statistics-chart { /*pie chart positioning*/
     position: relative;
     max-width: 400px;
-    margin: 200px 60px;
+    margin: 0 60px 200px 60px;
     transition: color 400ms;
+}
+.donate-statistics-chart-label { /*label in the center of the chart*/
+    position: absolute;
+    left: 260px;
+    top: 200px;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    text-align: center;
+}
+.donate-statistics-chart-label h3 { /*label heading*/
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.donate-statistics-chart-label p { /*label description*/
+    font-size: 1.6rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    margin-top: 10px;
+    margin-bottom: 0;
 }

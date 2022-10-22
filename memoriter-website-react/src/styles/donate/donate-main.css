@@ -7,6 +7,7 @@
     transform: translate(-50%);
     max-width: 2400px;
     gap: 100px;
+    margin-bottom: 200px;
 }
 
 .donate-main { /*main container*/
