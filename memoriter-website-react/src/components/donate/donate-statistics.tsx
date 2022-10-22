@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { PieChart } from 'react-minimal-pie-chart';
 
 const DonateStatistics: FC = () => {
@@ -84,18 +85,74 @@ const DonateStatistics: FC = () => {
                 </>)}
             </article>
 
-            {/*content next to the chart*/}
+            {/*variable content next to the chart*/}
             <article className='donate-statistics-section'>
                 {changeContent === 0 ? (<>
-                
+                    <h2 style={{color: data[0].color}}>Placeholder</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <ul>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                    </ul>
                 </>) : changeContent === 1 ? (<>
-                    
+                    <h2 style={{color: data[1].color}}>Placeholder</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <ul>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                    </ul>
                 </>) : changeContent === 2 ? (<>
-                    
+                    <h2 style={{color: data[2].color}}>Placeholder</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <ul>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                    </ul>
                 </>) : changeContent === 3 ? (<>
-                    
+                    <h2 style={{color: data[3].color}}>Placeholder</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                    <ul>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                        <li className='donate-statistics-section-default'>
+                            Text
+                        </li>
+                    </ul>
                 </>) : (<>
-                    <h2>Placehloder</h2>
+                    <h2>Placeholder</h2>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit:
                     </p>
@@ -113,12 +170,32 @@ const DonateStatistics: FC = () => {
                             Category 3: <b>{data[3].value}€</b>
                         </li>
                     </ul>
+                    <p style={{color: 'var(--color-font-gray)'}}>
+                        Hover over the chart for more details.
+                    </p>
                 </>)}
             </article>
+
+            {/*fixed description*/}
             <article className='donate-statistics-section'>
                 <h2>Placeholder</h2>
+                <div className='donate-statistics-section-box'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </div>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit, nam commodi dolorem dignissimos obcaecati quae. Neque, libero.
+                    Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit,
+                    nam commodi dolorem dignissimos obcaecati quae. Neque, libero.
+                </p>
+            </article>
+
+            {/*text at the bottom*/}
+            <article className='donate-statistics-section-bottom-text'>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit,
+                    nam commodi dolorem dignissimos obcaecati quae. Neque, libero. <Link
+                        className='donate-statistics-section-bottom-text-link' to='/faq'>
+                    Please check out our FAQ</Link>.
                 </p>
             </article>
         </section>
