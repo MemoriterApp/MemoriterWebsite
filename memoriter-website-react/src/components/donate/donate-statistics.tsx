@@ -15,19 +15,19 @@ const DonateStatistics: FC = () => {
 
     const data: {value: number, color: string}[] = [ //data and configuration used by the pie chart
         {
-            value: 35, //amount of money
+            value: 200, //amount of money
             color: 'var(--color-highlight-gradient-blue)' //color of the data
         },
         {
-            value: 30,
+            value: 120,
             color: 'var(--color-container-button)'
         },
         {
-            value: 20,
+            value: 80,
             color: 'var(--color-container)'
         },
         {
-            value: 15,
+            value: 150,
             color: 'var(--color-highlight-gradient-green)'
         }
     ];
@@ -64,7 +64,7 @@ const DonateStatistics: FC = () => {
             <PieChart
                 className='donate-statistics-chart'
                 radius={50}
-                lineWidth={25}
+                lineWidth={28}
                 segmentsStyle={(index: number) => (
                     index !== onHover && onHover !== null ? sectionStylesHover : sectionStyles
                 )}
