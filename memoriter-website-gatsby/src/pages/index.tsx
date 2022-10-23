@@ -1,5 +1,6 @@
-import * as React from "react"
-import type { HeadFC } from "gatsby"
+import React from 'react';
+import type { HeadFC } from 'gatsby';
+import '../styles/index.css';
 
 const IndexPage = () => {
   return (
