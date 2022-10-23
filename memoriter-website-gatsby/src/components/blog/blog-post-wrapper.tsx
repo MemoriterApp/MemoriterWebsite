@@ -27,7 +27,7 @@ const BlogPost: FC<props> = ({ blog, children }: props) => {
         setPostContent(blogPostMain.current.innerText); //counts the words of the text (every word in the <article/> tag)
     }, [postContent]);
 
-    const minutesRead = (postContent.length / 250).toFixed() //(slightly inaccurate) number of words, 250 is an estimation for average words read per minute
+    const minutesRead = (postContent.split(' ').length / 250).toFixed() //(slightly inaccurate) number of words, 250 is an estimation for average words read per minute
 
     return (
         <WebsiteWrapper
