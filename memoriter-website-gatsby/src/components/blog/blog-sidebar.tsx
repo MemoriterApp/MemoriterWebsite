@@ -24,24 +24,24 @@ const BlogSidebar: FC<props>  = ({ topic }: props) => {
                     <Link className='blog-sidebar-topics-link' to='/blog'>Latest</Link>
                 </li>)}
                 {topic === 'Company' ? (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/company'><strong style={{color: 'var(--color-font)'}}>Company</strong></Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#company'><strong style={{color: 'var(--color-font)'}}>Company</strong></Link>
                 </li>) : (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/company'>Company</Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#company'>Company</Link>
                 </li>)}
                 {topic === 'Productivity' ? (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/productivity'><strong style={{color: 'var(--color-font)'}}>Productivity</strong></Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#productivity'><strong style={{color: 'var(--color-font)'}}>Productivity</strong></Link>
                 </li>) : (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/productivity'>Productivity</Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#productivity'>Productivity</Link>
                 </li>)}
                 {topic === 'Technology' ? (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/technology'><strong style={{color: 'var(--color-font)'}}>Technology</strong></Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#technology'><strong style={{color: 'var(--color-font)'}}>Technology</strong></Link>
                 </li>) : (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/technology'>Technology</Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#technology'>Technology</Link>
                 </li>)}
                 {topic === 'Miscellaneous' ? (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/miscellaneous'><strong style={{color: 'var(--color-font)'}}>Miscellaneous</strong></Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#miscellaneous'><strong style={{color: 'var(--color-font)'}}>Miscellaneous</strong></Link>
                 </li>) : (<li>
-                    <Link className='blog-sidebar-topics-link' to='/blog/miscellaneous'>Miscellaneous</Link>
+                    <Link className='blog-sidebar-topics-link' to='/blog#miscellaneous'>Miscellaneous</Link>
                 </li>)}
             </ul>
             

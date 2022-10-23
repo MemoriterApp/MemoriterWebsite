@@ -1,10 +1,25 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
 import WebsiteWrapper from '../../components/wrapper/website-wrapper';
 import BlogSidebar from '../../components/blog/blog-sidebar';
 import BlogMain from '../../components/blog/blog-main';
 
 const Blog: FC = () => {
+
+    const [topic, setTopic] = useState<string>(''); //currently selected topic filter
+
+    //checks selected topic based on the url hash
+    if(location.hash === '#company' && topic !== 'Company') {
+        setTopic('Company');
+    } else if (location.hash === '#productivity' && topic !== 'Productivity') {
+        setTopic('Productivity');
+    } else if (location.hash === '#technology' && topic !== 'Technology') {
+        setTopic('Technology');
+    } else if (location.hash === '#miscellaneous' && topic !== 'Miscellaneous') {
+        setTopic('Miscellaneous');
+    } else if (!location.hash && topic !== 'Latest') {
+        setTopic('Latest');
+    };
 
     return (
         <WebsiteWrapper
@@ -17,10 +32,10 @@ const Blog: FC = () => {
             <section className='blog-main-body'>
 
                 {/*sidebar with filter options*/}
-                <BlogSidebar topic='Latest'/>
+                <BlogSidebar topic={topic}/>
 
                 {/*main part with blog posts*/}
-                <BlogMain topic='Latest'/>
+                <BlogMain topic={topic}/>
 
             </section>
             
