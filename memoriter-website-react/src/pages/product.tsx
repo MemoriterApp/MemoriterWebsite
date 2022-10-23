@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import ProductWrapper from '../components/wrapper/website-wrapper';
+import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import ProductBanner from '../components/product/product-banner';
 import ProductMain from '../components/product/product-main';
 import ProductStories from '../components/product/product-stories';
 
 const Product: FC = () => {
     return (
-        <ProductWrapper
+        <WebsiteWrapper
             title='The all-in-one learning environment'
             description=''
             currentPage='product'
@@ -21,7 +21,7 @@ const Product: FC = () => {
             {/*slider with customer stories*/}
             <ProductStories/>
 
-        </ProductWrapper>
+        </WebsiteWrapper>
     );
 }
 
