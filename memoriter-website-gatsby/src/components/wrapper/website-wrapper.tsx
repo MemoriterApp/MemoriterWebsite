@@ -10,14 +10,14 @@ import CookieSettings from './cookie-banner/cookie-settings';
 import WindowSizeAlert from './window-size-alert';
 import Backdrop from '../backdrop';
 
-interface props { //type definitions for props
+interface Props { //type definitions for props
     children: React.ReactNode;
     title: string;
     description: string;
     currentPage: string;
 };
 
-const WebsiteWrapper: FC<props> = ({ children, title, description, currentPage }: props) => {
+const WebsiteWrapper: FC<Props> = ({ children, title, description, currentPage }: Props) => {
 
     const [languageSelect, setLanguageSelect] = useState<boolean>(false); //opens or closes language select modal
 
@@ -81,8 +81,10 @@ const WebsiteWrapper: FC<props> = ({ children, title, description, currentPage }
         //setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
     };
 
+    document.body.style.backgroundColor = '#202020'; //page background color, cannot be accessed otherwise
+
     return (
-        <>
+        <div id='dark'>
 
             {/*head*/}
             {/*<WebsiteHead title={title} description={description}/>*/}
@@ -117,7 +119,7 @@ const WebsiteWrapper: FC<props> = ({ children, title, description, currentPage }
             {/*alert for too small screens*/}
             <WindowSizeAlert/>
             
-        </>
+        </div>
     );
 };
 

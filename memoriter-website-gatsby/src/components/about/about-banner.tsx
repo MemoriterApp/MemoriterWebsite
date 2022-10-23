@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import '../../styles/about/about-banner.css';
 
 const AboutBanner: FC = () => {
 
