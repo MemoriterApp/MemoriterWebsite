@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import '../../styles/donate/donate-donate.css';
 import paypalLogo from '../../images/donate/paypal-logo.svg';
 
 const DonateDonate: FC = () => {

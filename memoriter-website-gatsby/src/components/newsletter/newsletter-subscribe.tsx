@@ -1,5 +1,6 @@
 import React, { FC, ChangeEvent, FormEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
+import '../../styles/newsletter/newsletter-subscribe.css';
 
 const NewsletterSubscribe: FC = () => {
 

@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect, useRef } from 'react';
+import '../styles/help.css';
 
 interface props { //type definitions for props
     question: {question: string, answer: string | React.ReactNode, isOpen: boolean};

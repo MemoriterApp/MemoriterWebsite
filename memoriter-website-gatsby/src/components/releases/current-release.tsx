@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import '../../styles/releases/current-release.css';
 
 const CurrentRelease: FC = () => {
     return (

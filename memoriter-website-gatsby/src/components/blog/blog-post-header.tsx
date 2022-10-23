@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link } from 'gatsby';
+import '../../styles/blog/blog-post-header.css';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
@@ -11,11 +11,10 @@ interface props { //type definitions of props
     date: string;
     author: string;
     topic: string;
+    minutesRead: string;
 };
 
-const BlogPostHeader: FC<props> = ({ title, date, author, topic }: props) => {
-
-    const wordCount: number = useSelector((state: any) => state.wordCount.value); //(slightly inaccurate) number of words of the main part, used for reading time calculation
+const BlogPostHeader: FC<props> = ({ title, date, author, topic, minutesRead }: props) => {
 
     return (
         <section>
@@ -38,8 +37,8 @@ const BlogPostHeader: FC<props> = ({ title, date, author, topic }: props) => {
 
             {/*average reading time (*is calculated with the word count)*/}
             <p className='blog-post-header-reading-time'>
-                 {(wordCount / 250).toFixed()} {(wordCount / 250).toFixed() === '1' ? ('minute') : ('minutes')} read</p>
-            {/*250 is an estimation for average words read per minute, .toFixed() rounds the number, the condition checks if the singular or plural of minute needs to be displayed*/}
+                {minutesRead} {minutesRead === '1' ? ('minute') : ('minutes')} read</p>
+            {/*the condition checks if the singular or plural of minute needs to be displayed*/}
 
             {/*share links, the links are using the title variable and the current url (window.location)*/}
             <div className='blog-post-header-share'>

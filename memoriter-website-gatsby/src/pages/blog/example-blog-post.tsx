@@ -1,28 +1,23 @@
-import React, { FC, useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { AnyAction, Dispatch } from '@reduxjs/toolkit';
-import { updateWordCount } from '../../../features/word-count-slice';
-import exampleBlogPost from '../../../images/blog/example-blog-post/example-blog-post.jpeg';
-import BlogPostEmbeddedVideo from '../blog-post-embedded-video';
-import BlogPostCallout from '../blog-post-callout';
-import BlogPostCodeBlock from '../blog-post-code-block';
+import React, { FC } from 'react';
+import BlogPostWrapper from '../../components/blog/blog-post-wrapper';
+import exampleBlogPost from '../../images/blog/example-blog-post/example-blog-post.jpeg';
+import BlogPostEmbeddedVideo from '../../components/blog/blog-post-embedded-video';
+import BlogPostCallout from '../../components/blog/blog-post-callout';
+import BlogPostCodeBlock from '../../components/blog/blog-post-code-block';
 
 const ExampleBlogPost: FC = () => {
-
-    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
-
-    const blogPostMain = useRef<any>(null); //reference to the content
-
-    const [postContent, setPostContent] = useState<string>(''); //gets the text of the post
-
-    useEffect(() => { //useEffect is needed to fix an issue where the value cannot is read before the component renderes, resulted in an error
-        setPostContent(blogPostMain.current.innerText); //counts the words of the text (every word in the <article/> tag)
-        dispatch(updateWordCount(postContent.split(' ').length)); //calculates number of words and saves it to session storage on page load
-    }, [dispatch, postContent]);
-
-
     return (
-        <article ref={blogPostMain}>
+        <BlogPostWrapper blog={
+            {
+                topic: 'Miscellaneous', //the topic/category for the filter option (Company, Productivity, Technology or Miscellaneous)
+                date: 'August 17th, 2022', //date of publication (syntax: August 17th, 2022)
+                author: 'Simon Hubert', //your name
+                title: 'Example Blog Post', //title of the post
+                description: //small description of the content of the posts
+                    'This post is an example placeholder blog page. It will be replaced by the first real blog post.',
+                linkedBlogs: ['Example Blog Post'] //blog posts you want to link at the bottom of the text, write titles in an array (three posts is optimal)
+            }
+        }>
 
             <p>
                 This post is an example placeholder blog page. It will be replaced by the first real blog post.
@@ -78,7 +73,7 @@ const ExampleBlogPost: FC = () => {
 
             <p>It also works inline: <code>return 3.14;</code></p>
 
-        </article>
+        </BlogPostWrapper>
     );
 }
 

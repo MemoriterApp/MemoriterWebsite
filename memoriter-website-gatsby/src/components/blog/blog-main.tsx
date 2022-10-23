@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
+import '../../styles/blog/blog-main.css';
 import blogs from '../../utils/blog-posts';
 
 interface props { //type definitions of props

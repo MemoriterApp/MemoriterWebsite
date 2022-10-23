@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
+import '../../styles/download/download-banner.css';
 import windowsIcon from '../../images/icons/windows-icon.svg';
 import appleIcon from '../../images/icons/apple-icon.svg';
 import downloadIcon from '../../images/download/download.svg';

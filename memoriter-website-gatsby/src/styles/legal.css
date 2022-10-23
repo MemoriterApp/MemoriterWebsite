@@ -42,7 +42,9 @@
     font-family: var(--font-default);
     line-height: 1.8rem;
     text-align: justify;
+    margin-left: -16px;
     margin-bottom: 0;
+    list-style: disc;
 }
 .legal-main a { /*all html links (<a/>) of legal-main*/
     color: var(--color-font-gray);

@@ -3,7 +3,7 @@ The list is used by the blog main component.
 If a new post is created, the link must be put in here or the post will not be shown on the blog page*/
 
 import React from 'react';
-import ExampleBlogPost from '../components/blog/blog-posts/example-blog-post';
+import ExampleBlogPost from '../pages/blog/example-blog-post';
 import exampleBlogPostImage from '../images/blog/example-blog-post/example-blog-post.jpeg';
 
 //variable for listing all blog posts

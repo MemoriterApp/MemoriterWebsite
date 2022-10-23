@@ -29,4 +29,4 @@ const Product: FC = () => {
 
 export default Product;
 
-export const Head: HeadFC = () => <title>Memoriter | The all-in-one learning environment</title>
+export const Head: HeadFC = () => <title>Memoriter | The all-in-one learning environment</title>;

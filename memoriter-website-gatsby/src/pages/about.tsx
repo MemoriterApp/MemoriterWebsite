@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { HeadFC } from 'gatsby';
 import ProductWrapper from '../components/wrapper/website-wrapper';
 import AboutBanner from '../components/about/about-banner';
 import AboutMain from '../components/about/about-main';
@@ -22,3 +23,5 @@ const About: FC = () => {
 }
 
 export default About;
+
+export const Head: HeadFC = () => <title>Memoriter | About</title>;

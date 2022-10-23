@@ -44,12 +44,13 @@
 .blog-sidebar-topics { /*filter links*/
     position: relative;
     left: -40px;
-    top: 130px;
+    top: 118px;
     width: fit-content;
     list-style: none; /*removes bullet points*/
 }
 .blog-sidebar-topics li { /*list items*/
     width: fit-content;
+    line-height: 1.4rem;
     margin-top: 8px;
     cursor: pointer;
 }

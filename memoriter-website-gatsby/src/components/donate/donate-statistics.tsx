@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import { PieChart } from 'react-minimal-pie-chart';
+import '../../styles/donate/donate-statistics.css';
 
 const DonateStatistics: FC = () => {
 

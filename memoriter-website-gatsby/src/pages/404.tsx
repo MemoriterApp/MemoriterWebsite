@@ -59,4 +59,4 @@ const PageNotFound: FC = () => {
 
 export default PageNotFound;
 
-export const Head: HeadFC = () => <title>Memoriter | Page not found</title>
+export const Head: HeadFC = () => <title>Memoriter | Page not found</title>;
