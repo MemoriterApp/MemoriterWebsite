@@ -1,14 +1,14 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import '../../styles/wrapper/website-header.css';
-//import { useSelector, useDispatch } from 'react-redux';
-//import { AnyAction, Dispatch } from '@reduxjs/toolkit';
-//import { changeTheme } from '../../features/theme-slice';
+import { useSelector, useDispatch } from 'react-redux';
+import { AnyAction, Dispatch } from '@reduxjs/toolkit';
+import { changeTheme } from '../../utils/theme-slice';
 import memoriterLogo from '../../images/memoriter-logo.svg';
 import languageIcon from '../../images/icons/language-icon.svg';
-//import lightModeIcon from '../../images/icons/light-mode-icon.svg';
-//import darkModeIcon from '../../images/icons/dark-mode-icon.svg';
-//import cookies from '../../utils/cookies';
+import lightModeIcon from '../../images/icons/light-mode-icon.svg';
+import darkModeIcon from '../../images/icons/dark-mode-icon.svg';
+import cookies from '../../utils/cookies';
 
 interface props { //type definitions of props
     currentPage: string;
@@ -17,7 +17,7 @@ interface props { //type definitions of props
 
 const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) => {
 
-    //const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
+    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
 
     const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the register button
     const [onHoverAlt, setOnHoverAlt] = useState<string>('brightness(1)'); //hover effect for alternative mobile register button
@@ -47,15 +47,15 @@ const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) 
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    //const themeIcon: string = useSelector((state: any) => state.theme.value); //current light or dark mode icon based on theme
+    const themeIcon: string = useSelector((state: any) => state.theme.value); //current light or dark mode icon based on theme
 
-    /*const onChangeTheme = (theme: string): void => { //function to swap the current theme
+    const onChangeTheme = (theme: string): void => { //function to swap the current theme
         dispatch(changeTheme(theme)); //changes the theme
 
         if (JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted
             localStorage.setItem('theme', theme); //if functional cookies are accepted, then the theme can be saved to localStorage
         };
-    };*/
+    };
 
     return (
         <header className='website-header'>
@@ -88,12 +88,12 @@ const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) 
                 {/*the if else conditions changes the color of the links depending on the current open page*/}
 
                 {/*light and dark mode buttons, icon depends on the current mode*/}
-                {/*{(themeIcon === 'dark' || !themeIcon) && <button className='website-header-theme-button' onClick={() => onChangeTheme('light')}>
+                {(themeIcon === 'dark' || !themeIcon) && <button className='website-header-theme-button' onClick={() => onChangeTheme('light')}>
                     <img className='website-header-icon' src={lightModeIcon} alt='light-mode-icon'/>
                 </button>}
                 {themeIcon === 'light' && <button className='website-header-theme-button' onClick={() => onChangeTheme('dark')}>
                     <img className='website-header-icon' src={darkModeIcon} alt='dark-mode-icon'/>
-                </button>}*/}
+                </button>}
 
                 {/*change language button*/}
                 <button className='website-header-language-button'>

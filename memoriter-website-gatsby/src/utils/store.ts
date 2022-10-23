@@ -1,7 +1,7 @@
 //storage for globally saved state
 
 import { EnhancedStore, configureStore } from '@reduxjs/toolkit';
-import themeReducer from '../features/theme-slice';
+import themeReducer from './theme-slice';
 
 //global store
 export const store: EnhancedStore<{theme: {value: string | null}}> = configureStore({

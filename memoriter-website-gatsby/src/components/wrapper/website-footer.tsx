@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import '../../styles/wrapper/website-footer.css';
-//import { useSelector, useDispatch } from 'react-redux';
-//import { AnyAction, Dispatch } from '@reduxjs/toolkit';
-//import { changeTheme } from '../../features/theme-slice';
+import { useSelector, useDispatch } from 'react-redux';
+import { AnyAction, Dispatch } from '@reduxjs/toolkit';
+import { changeTheme } from '../../utils/theme-slice';
 import youtubeIcon from '../../images/icons/youtube-icon.svg';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import instagramIcon from '../../images/icons/instagram-icon.svg';
 import newsletterIcon from '../../images/icons/email-icon.svg';
-//import cookies from '../../utils/cookies';
+import cookies from '../../utils/cookies';
 
 interface props { //type definition for props
     onOpenLanguageSelect: () => void;
@@ -17,17 +17,17 @@ interface props { //type definition for props
 
 const WebsiteFooter: FC<props> = ({ onOpenLanguageSelect, onOpenCookieSettings }: props) => {
 
-    //const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
+    const dispatch: Dispatch<AnyAction> = useDispatch(); //used to manipulate global state (react redux)
 
-    //const themeText: string = useSelector((state: any) => state.theme.value); //current light or dark mode text based on theme
+    const themeText: string = useSelector((state: any) => state.theme.value); //current light or dark mode text based on theme
 
-    /*const onChangeTheme = (theme: string): void => { //function to swap the current theme
+    const onChangeTheme = (theme: string): void => { //function to swap the current theme
         dispatch(changeTheme(theme)); //changes the theme
 
         if (JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted
             localStorage.setItem('theme', theme); //if functional cookies are accepted, then the theme can be saved to localStorage
         };
-    };*/
+    };
 
     return (
         <footer className='website-footer'>
@@ -91,12 +91,12 @@ const WebsiteFooter: FC<props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
                     className='website-footer-bottom-box-text website-footer-bottom-box-language'
                     onClick={onOpenLanguageSelect}
                 >Language: English</p>
-                {/*{(themeText === 'dark' || !themeText) && <p className='website-footer-bottom-box-text website-footer-bottom-box-theme'
+                {(themeText === 'dark' || !themeText) && <p className='website-footer-bottom-box-text website-footer-bottom-box-theme'
                     onClick={() => onChangeTheme('light')}
                 >Theme: Dark</p>}
                 {themeText === 'light' && <p className='website-footer-bottom-box-text website-footer-bottom-box-theme'
                     onClick={() => onChangeTheme('dark')}
-                >Theme: Light</p>}*/}
+                >Theme: Light</p>}
 
                 {/*social media icons*/}
                 <div className='website-footer-bottom-box-social-media-box'>

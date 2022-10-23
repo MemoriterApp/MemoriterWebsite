@@ -17,16 +17,15 @@ const PageNotFound: FC = () => {
 
   const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the get started button
 
-  document.body.style.backgroundColor = '#202020'; //page background color, cannot be accessed otherwise
-
   return (
     <>
+
       {/*head*/}
       {/*<WebsiteHead title={title} description={description}/>*/}
       {/*title property is for displaying a custom page title, description is for a custom meta description*/}
       
       {/*container with content*/}
-      <main className='page-not-found' id='dark'>
+      <main className='page-not-found'>
         {/*large question mark next to the text*/}
         <section className='page-not-found-question-mark'>?</section>
 
@@ -53,6 +52,7 @@ const PageNotFound: FC = () => {
       </main>
       {/*alert for too small screens*/}
       <WindowSizeAlert/>
+      
     </>
   );
 };
