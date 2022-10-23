@@ -35,6 +35,23 @@
     margin-top: 42px;
 }
 
+.blog-post-main article ul { /*lists*/
+    font-size: 1.3rem;
+    color: var(--color-font);
+    font-family: var(--font-blog);
+    line-height: 2.2rem;
+    margin-left: -16px;
+    list-style: disc;
+}
+.blog-post-main article ol { /*lists*/
+    font-size: 1.3rem;
+    color: var(--color-font);
+    font-family: var(--font-blog);
+    line-height: 2.2rem;
+    margin-left: -16px;
+    list-style: decimal;
+}
+
 .blog-post-main article a { /*links to third party websites*/
     color: var(--color-font);
     text-decoration: underline 1px;

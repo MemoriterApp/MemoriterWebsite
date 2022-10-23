@@ -50,7 +50,7 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
     margin-bottom: 8px;
-    list-style-type: '\2713   '; /*changes list indicator dots to checkmarks*/
+    list-style: '\2713    '; /*changes list indicator dots to checkmarks*/
 }
 
 .download-mobile-phone-image { /*container for the mobile phone image*/
