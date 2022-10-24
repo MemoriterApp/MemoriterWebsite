@@ -1,0 +1,42 @@
+{
+  "name": "memoriter-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "memoriter-website",
+  "author": "q-Sci",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.1.5",
+    "@reduxjs/toolkit": "^1.8.6",
+    "@types/react-animate-on-scroll": "^2.1.5",
+    "@types/react-redux": "^7.1.24",
+    "gatsby": "^4.24.4",
+    "gatsby-plugin-manifest": "^4.24.0",
+    "gatsby-plugin-mdx": "^4.3.0",
+    "gatsby-plugin-sitemap": "^5.24.0",
+    "gatsby-source-filesystem": "^4.24.0",
+    "react": "^18.1.0",
+    "react-animation-on-scroll": "^5.1.0",
+    "react-dom": "^18.1.0",
+    "react-minimal-pie-chart": "^8.3.0",
+    "react-redux": "^8.0.4",
+    "react-syntax-highlighter": "^15.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-syntax-highlighter": "^15.5.5",
+    "typescript": "^4.8.3"
+  }
+}
