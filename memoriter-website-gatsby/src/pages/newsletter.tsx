@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/newsletter/newsletter.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import NewsletterSubscribe from '../components/newsletter/newsletter-subscribe';
 import NewsletterUnsubscribe from '../components/newsletter/newsletter-unsubscribe';
@@ -43,11 +44,7 @@ const Newsletter: FC = () => {
     };
 
     return (
-        <WebsiteWrapper
-            title='Newsletter'
-            description='Sign Up to our Email Newsletter!'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             <section className='newsletter-main'>
 
@@ -80,4 +77,13 @@ const Newsletter: FC = () => {
 
 export default Newsletter;
 
-export const Head: HeadFC = () => <title>Memoriter | Newsletter</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Newsletter'
+            description='Sign Up to our Email Newsletter!'
+            keywords='newsletter, news, email, subscribe'
+            type='website'
+        />
+    );
+};

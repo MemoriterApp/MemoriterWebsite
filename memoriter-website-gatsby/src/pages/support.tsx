@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC, Link } from 'gatsby';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import HelpQuestion from '../components/help-question';
 
@@ -50,11 +51,7 @@ const openQuestion = (openedQuestion: string): void => { //function is called wh
 };
 
     return (
-        <WebsiteWrapper
-            title='Support'
-            description='Here you can find more information if you need help.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body*/}
             <section className='help-main'>
@@ -75,4 +72,13 @@ const openQuestion = (openedQuestion: string): void => { //function is called wh
 
 export default Support;
 
-export const Head: HeadFC = () => <title>Memoriter | Support</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='FAQ'
+            description='Here you can find more information if you need help.'
+            keywords='support, help'
+            type='website'
+        />
+    );
+};

@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import HelpQuestion from '../components/help-question';
 
@@ -54,11 +55,7 @@ const Faq: FC = () => {
     };
 
     return (
-        <WebsiteWrapper
-            title='FAQ'
-            description='Frequently asked questions about the Memoriter app.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body*/}
             <section className='help-main'>
@@ -85,4 +82,13 @@ const Faq: FC = () => {
 
 export default Faq;
 
-export const Head: HeadFC = () => <title>Memoriter | FAQ</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='FAQ'
+            description='Frequently asked questions about the Memoriter project.'
+            keywords='faq, help'
+            type='website'
+        />
+    );
+};

@@ -30,11 +30,7 @@ const BlogPost: FC<props> = ({ blog, children }: props) => {
     const minutesRead = (postContent.split(' ').length / 250).toFixed() //(slightly inaccurate) number of words, 250 is an estimation for average words read per minute
 
     return (
-        <WebsiteWrapper
-            title={title}
-            description={description}
-            currentPage='blog'
-        >
+        <WebsiteWrapper currentPage='blog'>
 
             <section className='blog-post-main'>
 

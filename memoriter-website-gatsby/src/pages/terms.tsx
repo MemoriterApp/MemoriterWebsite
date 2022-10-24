@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
 const Terms: FC = () => {
     return (
-        <WebsiteWrapper
-            title='Terms of Use'
-            description='This page contains information about the legal agreement between Memoriter and customers.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body with text*/}
             <article className='legal-main'>
@@ -30,4 +27,13 @@ const Terms: FC = () => {
 
 export default Terms;
 
-export const Head: HeadFC = () => <title>Memoriter | Terms of use</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Terms of Use'
+            description='This page contains information about the legal agreement between Memoriter and customers.'
+            keywords='terms, conditions, legal'
+            type='website'
+        />
+    );
+};

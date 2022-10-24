@@ -2,10 +2,10 @@ import React, { FC, useState } from 'react'
 import { Link, HeadFC } from 'gatsby';
 import '../styles/404.css';
 import memoriterLogo from '../images/memoriter-logo.svg';
-//import WebsiteHead from '../components/wrapper/website-head';
+import WebsiteHead from '../components/website-head';
 import WindowSizeAlert from '../components/wrapper/window-size-alert';
 
-const PageNotFound: FC = () => {
+const PageNotFound: FC = (): React.ReactElement => {
 
   const PageNotFoundBottomSpace: React.CSSProperties = { //styles for extra space at the bottom on page scroll
     position: 'absolute',
@@ -13,16 +13,12 @@ const PageNotFound: FC = () => {
     top: '42px',
     width: '100%',
     height: '40px'
-  }
+  };
 
   const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the get started button
 
   return (
     <>
-
-      {/*head*/}
-      {/*<WebsiteHead title={title} description={description}/>*/}
-      {/*title property is for displaying a custom page title, description is for a custom meta description*/}
       
       {/*container with content*/}
       <main className='page-not-found'>
@@ -56,7 +52,15 @@ const PageNotFound: FC = () => {
     </>
   );
 };
-
 export default PageNotFound;
 
-export const Head: HeadFC = () => <title>Memoriter | Page not found</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+  return (
+    <WebsiteHead
+      title='Page not found'
+      description='This URL does not match any page.'
+      keywords='404, error, not found'
+      type='website'
+    />
+  );
+};

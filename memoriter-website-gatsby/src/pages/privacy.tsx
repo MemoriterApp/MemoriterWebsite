@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
 const Privacy: FC = () => {
     return (
-        <WebsiteWrapper
-            title='Privacy Policy'
-            description='This page contains information regarding how Memoriter uses and processes personal data.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body with text*/}
             <article className='legal-main'>
@@ -80,4 +77,13 @@ const Privacy: FC = () => {
 
 export default Privacy;
 
-export const Head: HeadFC = () => <title>Memoriter | Privacy Policy</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Privacy Policy'
+            description='This page contains information regarding how Memoriter uses and processes personal data.'
+            keywords='privacy, data protection, policy, legal'
+            type='website'
+        />
+    );
+};

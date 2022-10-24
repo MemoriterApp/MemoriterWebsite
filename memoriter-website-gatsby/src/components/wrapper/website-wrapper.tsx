@@ -12,12 +12,10 @@ import Backdrop from '../backdrop';
 
 interface Props { //type definitions for props
     children: React.ReactNode;
-    title: string;
-    description: string;
     currentPage: string;
 };
 
-const WebsiteWrapper: FC<Props> = ({ children, title, description, currentPage }: Props) => {
+const WebsiteWrapper: FC<Props> = ({ children, currentPage }: Props) => {
 
     const [languageSelect, setLanguageSelect] = useState<boolean>(false); //opens or closes language select modal
 
@@ -82,11 +80,7 @@ const WebsiteWrapper: FC<Props> = ({ children, title, description, currentPage }
     };
 
     return (
-        <>
-
-            {/*head*/}
-            {/*<WebsiteHead title={title} description={description}/>*/}
-            {/*title property is for displaying a custom page title, description is for a custom meta description*/}
+        <>          
 
             {/*header*/}
             <WebsiteHeader currentPage={currentPage} onOpenLanguageSelect={openLanguageSelect}/>

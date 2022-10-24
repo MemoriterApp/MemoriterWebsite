@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import BlogPostWrapper from '../../components/blog/blog-post-wrapper';
+import { HeadFC } from 'gatsby';
 import exampleBlogPost from '../../images/blog/example-blog-post/example-blog-post.jpeg';
+import WebsiteHead from '../../components/website-head';
+import BlogPostWrapper from '../../components/blog/blog-post-wrapper';
 import BlogPostEmbeddedVideo from '../../components/blog/blog-post-embedded-video';
 import BlogPostCallout from '../../components/blog/blog-post-callout';
 import BlogPostCodeBlock from '../../components/blog/blog-post-code-block';
@@ -75,6 +77,16 @@ const ExampleBlogPost: FC = () => {
 
         </BlogPostWrapper>
     );
-}
-
+};
 export default ExampleBlogPost;
+
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Example Blog Post'
+            description='his post is an example placeholder blog page. It will be replaced by the first real blog post.'
+            keywords='blog, example blog post'
+            type='article'
+        />
+    );
+};

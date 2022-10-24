@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
 const Impressum: FC = () => {
     return (
-        <WebsiteWrapper
-            title='Impressum'
-            description='Where to contact us'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body with text*/}
             <article className='legal-main'>
@@ -40,4 +37,13 @@ const Impressum: FC = () => {
 
 export default Impressum;
 
-export const Head: HeadFC = () => <title>Memoriter | Impressum</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Impressum'
+            description='How to contact us.'
+            keywords='impressum, legal'
+            type='website'
+        />
+    );
+};

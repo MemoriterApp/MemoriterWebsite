@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/releases/releases-main.css';
 import '../styles/releases/old-release.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
 import CurrentRelease from '../components/releases/current-release';
@@ -18,11 +19,7 @@ const Releases: FC = () => {
     const [loadedReleases, setLoadedReleases] = useState<number>(5); //number of releases shown before clicking on the load more button
 
     return (
-        <WebsiteWrapper
-            title='Release Notes'
-            description='A list of which features were added or changed in the past.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body*/}
             <section className='releases-main'>
@@ -46,4 +43,13 @@ const Releases: FC = () => {
 
 export default Releases;
 
-export const Head: HeadFC = () => <title>Memoriter | Release Notes</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Release Notes'
+            description='A list of which features were added or changed in the past.'
+            keywords='releases, patch notes, update'
+            type='website'
+        />
+    );
+};

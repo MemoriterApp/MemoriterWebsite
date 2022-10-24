@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
+import WebsiteHead from '../../components/website-head';
 import WebsiteWrapper from '../../components/wrapper/website-wrapper';
 import BlogSidebar from '../../components/blog/blog-sidebar';
 import BlogMain from '../../components/blog/blog-main';
@@ -22,11 +23,7 @@ const Blog: FC = () => {
     };
 
     return (
-        <WebsiteWrapper
-            title='Blog'
-            description='Thoughts, inspirations and stories by the people creating Memoriter.'
-            currentPage='blog'
-        >
+        <WebsiteWrapper currentPage='blog'>
 
             {/*style is needed for two column layout*/}
             <section className='blog-main-body'>
@@ -41,8 +38,16 @@ const Blog: FC = () => {
             
         </WebsiteWrapper>
     );
-}
-
+};
 export default Blog;
 
-export const Head: HeadFC = () => <title>Memoriter | Blog</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Blog'
+            description='Thoughts, inspirations and stories by the people creating Memoriter.'
+            keywords='blog'
+            type='website'
+        />
+    );
+};

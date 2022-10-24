@@ -1,15 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.css';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
 const Cookies: FC = () => {
     return (
-        <WebsiteWrapper
-            title='Cookie Policy'
-            description='This page contains further information how Memoriter uses cookies.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body with text*/}
             <section className='legal-main'>
@@ -76,4 +73,13 @@ const Cookies: FC = () => {
 
 export default Cookies;
 
-export const Head: HeadFC = () => <title>Memoriter | Cookie Policy</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Cookie Policy'
+            description='This page contains further information how Memoriter uses cookies.'
+            keywords='cookies, policy, legal'
+            type='website'
+        />
+    );
+};

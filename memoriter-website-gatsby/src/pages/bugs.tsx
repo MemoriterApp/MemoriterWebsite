@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
+import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import HelpQuestion from '../components/help-question';
 
@@ -77,11 +78,7 @@ const Bugs: FC = () => {
     };
 
     return (
-        <WebsiteWrapper
-            title='Bug Report'
-            description='If you find any technical issues, you can report them here.'
-            currentPage=''
-        >
+        <WebsiteWrapper currentPage=''>
 
             {/*main body*/}
             <section className='help-main'>
@@ -102,4 +99,13 @@ const Bugs: FC = () => {
 
 export default Bugs;
 
-export const Head: HeadFC = () => <title>Memoriter | Bug Report</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='Bug Report'
+            description='If you find any technical issues, you can report them here.'
+            keywords='bugs, report, help'
+            type='website'
+        />
+    );
+};

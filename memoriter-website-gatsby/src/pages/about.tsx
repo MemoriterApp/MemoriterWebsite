@@ -1,16 +1,13 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
-import ProductWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/website-head';
+import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import AboutBanner from '../components/about/about-banner';
 import AboutMain from '../components/about/about-main';
 
 const About: FC = () => {
     return (
-        <ProductWrapper
-            title='About'
-            description='Find out who we are and about our vision.'
-            currentPage='about'
-        >
+        <WebsiteWrapper currentPage='about'>
             
             {/*banner with introduction*/}
             <AboutBanner/>
@@ -18,10 +15,19 @@ const About: FC = () => {
             {/*basic main layout and texts*/}
             <AboutMain/>
 
-        </ProductWrapper>
+        </WebsiteWrapper>
     );
 }
 
 export default About;
 
-export const Head: HeadFC = () => <title>Memoriter | About</title>;
+export const Head: HeadFC = (): React.ReactElement => {
+    return (
+        <WebsiteHead
+            title='About'
+            description='Find out who we are and about our vision.'
+            keywords='about, company, vision'
+            type='website'
+        />
+    );
+};
