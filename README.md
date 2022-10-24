@@ -14,11 +14,12 @@ This repository only contains the informational website about the project. The a
 
 ## Contributing
 
-### Languages
+### Languages and Technologies
 [![html](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
 [![css](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
-[![react](https://img.shields.io/badge/ReactJS-16181D?style=flat&logo=react&logoColor=61DAFB)](https://www.reactjs.org)
+[![react](https://img.shields.io/badge/React-16181D?style=flat&logo=react&logoColor=61DAFB)](https://www.reactjs.org)
 [![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![gatsby](https://img.shields.io/badge/Gatsby-663399?style=flat&logo=gatsby&logoColor=white)](https://www.gatsbyjs.com/)
 
 ### Pull Requests, Issues and Discussions
 Memoriter is a more personal project of our small team and the informational website won't be changed much in the future, so we are unlikely to accept any pull requests, yet feel free to report issues or propose changes. Our main focus lies on the actual web application repository, so please consider reporting issues there instead in this repository. You will find our [GitHub discussion forum](https://github.com/MemoriterApp/Memoriter/discussions) there too. Please also check out our own [bug report page](https://www.memoriter.de/bugs).
