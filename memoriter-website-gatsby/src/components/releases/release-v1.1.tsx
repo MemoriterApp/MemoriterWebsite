@@ -4,7 +4,7 @@ const ReleaseV11 = () => {
     return (
         <article className='old-release'>
 
-            <p style={{color: 'var(--color-font-gray)', textAlign: 'left'}}>Month XXth, 2022</p> {/*release date*/}
+            <p style={{color: 'var(--color-font-gray)', textAlign: 'left'}}>October 12th, 2022</p> {/*release date*/}
             
             {/*small introduction*/}
             <h2>Memoriter v1.1</h2>
