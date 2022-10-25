@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Provider } from 'react-redux';
 import { store } from './src/utils/store';
+import './src/styles/index.scss';
 import ThemeProvider from './src/components/theme-provider';
 
 interface Props { // type definitions for props

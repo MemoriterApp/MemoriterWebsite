@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '../../styles/donate/donate-main.css';
+import '../../styles/donate/donate-main.scss';
 
 const DonateMain: FC = () => {
     return (

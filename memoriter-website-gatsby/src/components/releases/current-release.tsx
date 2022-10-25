@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '../../styles/releases/current-release.css';
+import '../../styles/releases/current-release.scss';
 
 const CurrentRelease: FC = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { FC, ChangeEvent, useState } from 'react';
-import '../../styles/newsletter/newsletter-unsubscribe.css';
+import '../../styles/newsletter/newsletter-unsubscribe.scss';
 
 interface props { //type definitions for props
     onAnimation: React.CSSProperties;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import '../../styles/product/product-main.css';
+import '../../styles/product/product-main.scss';
 import lightBulbIconGradient from '../../images/product/light-bulb.svg';
 import placeholderImage from '../../images/product/placeholder.jpeg';
 

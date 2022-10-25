@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
-import '../styles/newsletter/newsletter.css';
+import '../styles/newsletter/newsletter.scss';
 import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import NewsletterSubscribe from '../components/newsletter/newsletter-subscribe';

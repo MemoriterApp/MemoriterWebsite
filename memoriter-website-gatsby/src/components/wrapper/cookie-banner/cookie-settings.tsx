@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Link } from 'gatsby';
-import '../../../styles/wrapper/cookie-banner/cookie-settings.css';
+import '../../../styles/wrapper/cookie-banner/cookie-settings.scss';
 import cookies from '../../../utils/cookies';
 
 interface props { //type definitions for props

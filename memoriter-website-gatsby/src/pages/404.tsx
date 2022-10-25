@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import { Link, HeadFC } from 'gatsby';
-import '../styles/404.css';
+import '../styles/404.scss';
 import memoriterLogo from '../images/memoriter-logo.svg';
 import WebsiteHead from '../components/website-head';
 import WindowSizeAlert from '../components/wrapper/window-size-alert';

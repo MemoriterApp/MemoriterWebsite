@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import '../../../styles/wrapper/cookie-banner/cookie-banner.css';
+import '../../../styles/wrapper/cookie-banner/cookie-banner.scss';
 import cookies from '../../../utils/cookies';
 
 interface props { //type definitions for props

@@ -15,10 +15,9 @@ This repository only contains the informational website about the project. The a
 ## Contributing
 
 ### Languages and Technologies
-[![html](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![css](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
-[![react](https://img.shields.io/badge/React-16181D?style=flat&logo=react&logoColor=61DAFB)](https://www.reactjs.org)
 [![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![react](https://img.shields.io/badge/React-16181D?style=flat&logo=react&logoColor=61DAFB)](https://www.reactjs.org)
+[![scss](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)](https://sass-lang.com/)
 [![gatsby](https://img.shields.io/badge/Gatsby-663399?style=flat&logo=gatsby&logoColor=white)](https://www.gatsbyjs.com/)
 
 ### Pull Requests, Issues and Discussions

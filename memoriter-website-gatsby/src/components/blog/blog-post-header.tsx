@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import '../../styles/blog/blog-post-header.css';
+import '../../styles/blog/blog-post-header.scss';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';

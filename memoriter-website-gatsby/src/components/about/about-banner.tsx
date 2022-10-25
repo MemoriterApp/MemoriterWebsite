@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import '../../styles/about/about-banner.css';
+import '../../styles/about/about-banner.scss';
 
 const AboutBanner: FC = () => {
 
