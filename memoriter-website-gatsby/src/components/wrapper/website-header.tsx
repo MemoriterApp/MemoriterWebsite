@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import '../../styles/wrapper/website-header.css';
+import '../../styles/wrapper/website-header.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { changeTheme } from '../../utils/theme-slice';

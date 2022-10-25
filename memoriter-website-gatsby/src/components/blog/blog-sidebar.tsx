@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import '../../styles/blog/blog-sidebar.css';
+import '../../styles/blog/blog-sidebar.scss';
 
 interface props { //type definitions of props
     topic: string;

@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import '../../styles/blog/blog-post-main.css';
+import '../../styles/blog/blog-post-main.scss';
 import WebsiteWrapper from '../wrapper/website-wrapper';
 import BlogPostHeader from '../blog/blog-post-header';
 import BlogPostFooter from '../blog/blog-post-footer';

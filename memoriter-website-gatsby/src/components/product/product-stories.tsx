@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import '../../styles/product/product-stories.css';
+import '../../styles/product/product-stories.scss';
 
 const ProductStories: FC = () => {
 

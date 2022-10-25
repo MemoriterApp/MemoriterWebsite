@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
-import '../styles/legal.css';
+import '../styles/legal.scss';
 import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 

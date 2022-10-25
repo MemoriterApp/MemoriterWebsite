@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
-import '../styles/releases/releases-main.css';
-import '../styles/releases/old-release.css';
+import '../styles/releases/releases-main.scss';
+import '../styles/releases/old-release.scss';
 import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 
