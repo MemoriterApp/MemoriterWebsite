@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import type { HeadFC } from 'gatsby';
-import '../styles/index.css';
 import WebsiteHead from '../components/website-head';
 import WebsiteWrapper from '../components/wrapper/website-wrapper';
 import ProductBanner from '../components/product/product-banner';
