@@ -49,6 +49,17 @@
     margin-left: -20px;
     list-style: disc;
 }
+.current-release ol { /*all html ordered lists (<ol/>) of current-release*/
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 1.8rem;
+    text-align: justify;
+    margin-bottom: 0;
+    margin-left: -20px;
+    list-style: decimal;
+}
 .current-release img { // all html images (<img/>) of current-release
     position: relative;
     left: 50%;

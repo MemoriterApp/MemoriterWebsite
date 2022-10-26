@@ -4,20 +4,24 @@ date: 2022-10-12
 
 # Memoriter v1.1
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo diam id ante ultrices, vel pharetra urna vestibulum. Ut mattis congue magna vulputate congue. Vivamus sed dui nec urna lacinia finibus nec in sem. Praesent ex nibh, luctus et tempus ut, facilisis pharetra ante. Sed vel blandit elit, id aliquet mi. Integer et neque imperdiet, varius sem at, sagittis libero. Aenean a porttitor arcu, ut dapibus ante. Donec vestibulum ligula et luctus venenatis. Nulla vulputate mattis sodales. Sed hendrerit ex vitae magna ultricies rutrum. Aliquam sodales, justo nec condimentum vulputate, arcu ipsum efficitur quam, id venenatis velit justo id eros.
+This update a few new features were added, as well as visual improvements. The main focus has been that the way to study with Memoriter is improved. Therefore a new study mode to practice flashcards was implemented. Furthermore the overall user experience, as well as the application performance, was improved.
 
 ## New Features
 
-Duis metus ex, luctus eget massa vel, congue placerat risus. Pellentesque eget tincidunt elit. Aenean quis consectetur elit, elementum suscipit turpis. Donec ac neque dolor. Proin consequat varius nisl, eu tristique enim pretium id. Nulla laoreet fringilla erat condimentum tempor. Aliquam et felis magna. Sed pretium pellentesque ligula ut volutpat. Pellentesque pharetra, sem eget consequat varius, arcu metus faucibus nulla, sit amet varius sem sapien eu mi. Quisque nec augue euismod tortor gravida dapibus. Morbi sit amet sapien velit. Nunc bibendum dui at lacus eleifend, non lacinia turpis sagittis. Suspendisse volutpat risus ipsum, ut euismod nisl euismod vitae. Maecenas rutrum neque a laoreet commodo. Vestibulum erat nisl, molestie at eros non, sagittis ullamcorper justo. Curabitur eleifend ex id ligula imperdiet, vitae dictum odio commodo.
+The main feature of the update is the study mode. On the flashcard overview page a button is now displayed to use it. With this mode, you can query, study and repeat flashcards in a random order. When entering the study mode, a random flashcard of this folder will be shown, but only the title is shown, the answer is hidden. When clicking the flashcard, you have the option to mark a card as either correct to remove it from the session or incorrect to repeat it again later.
+
+Next to the study mode we now provide the option to hide the flashcard content by default and only show it when hovering or selecting the card.
+
+Next to the studying related features, a few other features were implemented to improve the user experience. Firstly the flashcard text editor was improved, now allowing some formatting options to highlight certain parts of the text. Next to the text editing options, more account management options were added. Now it is possible to change your email address or password or to send a password reset link if you forgot it.
 
 ## Minor Changes
 
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
+- Some aspects of the visual design of the application were changed and improved, for isnatance an optional light theme was added.
+- The sizes of flashcards are dynamically changing based on the text length for a better looking layout and better usage of space.
+- The release notes were implemented to document changes.
+- We have added a form at the bottom of each page to report issues.
 
 ## Bugfixes and Tweaks
 
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
+- Queries from the database were dramatically reduced, leading to faster loading times and less bandwidth usage.
+- Some parts of the application are better optimized for mobile devices (even though we created some new issues).

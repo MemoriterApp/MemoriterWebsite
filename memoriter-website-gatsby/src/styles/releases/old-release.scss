@@ -28,26 +28,36 @@
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
-    margin: 40px 40px 12px 40px;
+    margin: 40px 40px 24px 40px;
 }
 .old-release p { /*all html text paragraps (<p/>) of old-release*/
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-default);
-    line-height: 1.8rem;
+    line-height: 1.9rem;
     text-align: justify;
-    margin: 20px 40px 0 40px;
+    margin: 12px 40px 0 40px;
 }
 .old-release ul { /*all html unordered lists (<ul/>) of old-release*/
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-default);
-    line-height: 1.8rem;
+    line-height: 1.9rem;
     text-align: justify;
-    margin: 20px 40px 0 20px;
+    margin: 12px 40px 0 20px;
     list-style: disc;
+}
+.old-release ol { /*all html ordered lists (<ol/>) of old-release*/
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 1.9rem;
+    text-align: justify;
+    margin: 12px 40px 0 20px;
+    list-style: decimal;
 }
 .old-release img { // all html mages (<img/>) of old-release
     position: relative;
