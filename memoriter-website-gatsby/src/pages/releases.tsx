@@ -13,8 +13,6 @@ interface Props {
 
 const Releases: FC<Props> = ({ data }: Props) => {
 
-  console.log(data)
-
   const releases = data.allMarkdownRemark.nodes; // list of all releases
 
   const [loadedReleases, setLoadedReleases] = useState<number>(5); //number of releases shown before clicking on the load more button

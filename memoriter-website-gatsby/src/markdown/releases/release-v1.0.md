@@ -20,6 +20,7 @@ The features of the application were few and simple. You had the option to creat
 - the worst database optimization I have ever seen (seriously, when data was requested, all pieces of data from the servers were sent to your device to pick the right ones, resulting in downloading way too much unnecessary content. At least no one was using the app at this point and is was still better than an issue occurring while developing version 1.1, resulting in crashing the entire database until all invalid pieces of data were removed manually),
 - an informational page wich was also bad because it was made in only a week or so which oushed me into spending hundrets of hours to create this site (see the screenshot above)...
 
-Even though our first attempt was not that good we were able to create a foundation to build on and to create something awesome. We all have gained a LOT of experience working on this project and for me it was the beginning of my interest in web development and programming in general. It was (and still is) extremely fun working on Memoriter... Thanks for reading!
+Even though our first attempt was not that good we were able to create a foundation to build on and to create something awesome. We all have gained a LOT of experience working on this project and for me it was the beginning of my interest in web development and programming in general. It was (and still is) extremely fun working on Memoriter...
 
-The release note author and main developer
+Thanks for reading!  
+&dash; The release note author and main developer
