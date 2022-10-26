@@ -49,10 +49,41 @@
     margin-left: -20px;
     list-style: disc;
 }
+.current-release img { // all html images (<img/>) of current-release
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(100% - 100px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.current-release figcaption { // all html image caption (<figcaption/>) of current-release
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-font-gray);
+    font-family: var(--font-default);
+    line-height: 1.8rem;
+    text-align: justify;
+    margin: -20px 50px 20px 50px;
+}
+.current-release code { // all html inline code (<code/>) of current-release
+    font-size: 1.1rem;
+    color: var(--color-font-code);
+    padding: 2px 4px;
+    background-Color: var(--color-hover);
+    border-Radius: 4px;
+}
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/
     .current-release {
         width: calc(100% - 40px);
         padding: 40px 0 80px 0;
+    }
+    .old-release img {
+        width: 100%;
+    }
+    .old-release figcaption {
+        margin: -20px 20px 20px 20px;
     }
 }

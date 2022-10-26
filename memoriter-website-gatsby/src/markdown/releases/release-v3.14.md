@@ -8,7 +8,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo diam i
 
 ## New Features
 
-Duis metus ex, luctus eget massa vel, congue placerat risus. Pellentesque eget tincidunt elit. Aenean quis consectetur elit, elementum suscipit turpis. Donec ac neque dolor. Proin consequat varius nisl, eu tristique enim pretium id. Nulla laoreet fringilla erat condimentum tempor. Aliquam et felis magna. Sed pretium pellentesque ligula ut volutpat. Pellentesque pharetra, sem eget consequat varius, arcu metus faucibus nulla, sit amet varius sem sapien eu mi. Quisque nec augue euismod tortor gravida dapibus. Morbi sit amet sapien velit. Nunc bibendum dui at lacus eleifend, non lacinia turpis sagittis. Suspendisse volutpat risus ipsum, ut euismod nisl euismod vitae. Maecenas rutrum neque a laoreet commodo. Vestibulum erat nisl, molestie at eros non, sagittis ullamcorper justo. Curabitur eleifend ex id ligula imperdiet, vitae dictum odio commodo.
+Duis metus ex, luctus eget massa vel, congue placerat risus. Pellentesque eget tincidunt elit. Aenean quis consectetur elit, elementum suscipit turpis. Donec ac neque dolor. Proin consequat varius nisl, eu tristique enim pretium id. Nulla laoreet fringilla erat condimentum tempor. Aliquam et felis magna. Sed pretium pellentesque ligula ut volutpat. Pellentesque pharetra, sem eget consequat varius, arcu metus faucibus nulla, sit amet varius sem sapien eu mi. Quisque nec augue euismod tortor gravida dapibus. Morbi sit amet sapien velit.
+Nunc bibendum dui at lacus eleifend, non lacinia turpis sagittis. Suspendisse volutpat risus ipsum, ut euismod nisl euismod vitae. Maecenas rutrum neque a laoreet commodo. Vestibulum erat nisl, molestie at eros non, sagittis ullamcorper justo. Curabitur eleifend ex id ligula imperdiet, vitae dictum odio commodo.
 
 ## Minor Changes
 

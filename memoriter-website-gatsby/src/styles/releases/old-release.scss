@@ -16,21 +16,21 @@
     color: var(--color-font-gray);
     text-align: left;
 }
-.old-release h1 { /*all html headings (<h1/>) of current-release*/
+.old-release h1 { /*all html headings (<h1/>) of old-release*/
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
     margin: 20px 40px 32px 40px;
 }
-.old-release h2 { /*all html sub headings (<h2/>) of current-release*/
+.old-release h2 { /*all html sub headings (<h2/>) of old-release*/
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
     margin: 40px 40px 12px 40px;
 }
-.old-release p { /*all html text paragraps (<p/>) of current-release*/
+.old-release p { /*all html text paragraps (<p/>) of old-release*/
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -39,7 +39,7 @@
     text-align: justify;
     margin: 20px 40px 0 40px;
 }
-.old-release ul { /*all html unordered lists (<ul/>) of current-release*/
+.old-release ul { /*all html unordered lists (<ul/>) of old-release*/
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -48,6 +48,31 @@
     text-align: justify;
     margin: 20px 40px 0 20px;
     list-style: disc;
+}
+.old-release img { // all html mages (<img/>) of old-release
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(100% - 80px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.old-release figcaption { // all html image captions (<figcaption/>) of old-release
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-font-gray);
+    font-family: var(--font-default);
+    line-height: 1.8rem;
+    text-align: justify;
+    margin: -20px 80px 20px 80px;
+}
+.old-release code { // all html inline code (<code/>) of old-release
+    font-size: 1.1rem;
+    color: var(--color-font-code);
+    padding: 2px 4px;
+    background-Color: var(--color-container-button);
+    border-Radius: 4px;
 }
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/
@@ -66,5 +91,11 @@
     }
     .old-release ul {
         margin: 20px 20px 0 20px;
+    }
+    .current-release img {
+        width: 100%;
+    }
+    .current-release figcaption {
+        margin: -20px 20px 20px 20px;
     }
 }
