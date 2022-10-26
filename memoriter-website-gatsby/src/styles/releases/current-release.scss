@@ -9,16 +9,11 @@
     max-width: 2400px;
     padding: 40px 60px 80px 60px;
 }
-.current-release h1 { /*the big page heading (<h1/>) of current-release*/
-    font-size: 2.8rem;
-    font-family: var(--font-heading);
-    margin-bottom: 40px;
-    background: var(--color-highlight-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--color-transparent);
+.current-release-date span { // date at the top of the section
+    color: var(--color-font-gray);
+    text-align: left;
 }
-.current-release h2 { /*all html sub headings (<h2/>) of current-release*/
+.current-release h1 { /*all html sub headings (<h2/>) of current-release*/
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-font);
@@ -26,7 +21,7 @@
     margin-top: 20px;
     margin-bottom: 32px;
 }
-.current-release h3 { /*all html sub headings (<h2/>) of current-release*/
+.current-release h2 { /*all html sub headings (<h2/>) of current-release*/
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-font);
@@ -51,6 +46,8 @@
     line-height: 1.8rem;
     text-align: justify;
     margin-bottom: 0;
+    margin-left: -20px;
+    list-style: disc;
 }
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/

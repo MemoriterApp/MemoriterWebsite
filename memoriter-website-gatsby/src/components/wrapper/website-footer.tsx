@@ -24,7 +24,7 @@ const WebsiteFooter: FC<props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
     const onChangeTheme = (theme: string): void => { //function to swap the current theme
         dispatch(changeTheme(theme)); //changes the theme
 
-        if (JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted
+        if (cookies.getCookie('accepted-cookies') && JSON.parse(cookies.getCookie('accepted-cookies')).functional) { //checks if functional cookies are accepted
             localStorage.setItem('theme', theme); //if functional cookies are accepted, then the theme can be saved to localStorage
         };
     };

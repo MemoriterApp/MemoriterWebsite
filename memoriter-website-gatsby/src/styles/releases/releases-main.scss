@@ -4,6 +4,22 @@
     margin-bottom: 250px;
 }
 
+.releases-main-title { /*the big page heading*/
+    position: relative;
+    left: 50%;
+    top: 160px;
+    transform: translate(-50%);
+    width: calc(100% - 320px);
+    max-width: 2400px;
+    font-size: 2.8rem;
+    font-family: var(--font-heading);
+    margin-bottom: 40px;
+    background: var(--color-highlight-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-transparent);
+}
+
 .releases-main-button { /*load more button*/
     position: relative;
     top: 60px;

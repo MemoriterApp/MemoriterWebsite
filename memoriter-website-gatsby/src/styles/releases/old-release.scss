@@ -7,19 +7,23 @@
     transform: translate(-50%);
     width: calc(100% - 320px);
     max-width: 2400px;
-    padding: 40px 0 80px 0;
+    padding: 24px 0 80px 0;
     margin-bottom: 120px;
     background-color: var(--color-container);
     border-radius: 12px;
 }
-.old-release h2 { /*all html sub headings (<h2/>) of current-release*/
+.old-release-date span { // date at the top of the section
+    color: var(--color-font-gray);
+    text-align: left;
+}
+.old-release h1 { /*all html headings (<h1/>) of current-release*/
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
     margin: 20px 40px 32px 40px;
 }
-.old-release h3 { /*all html sub headings (<h2/>) of current-release*/
+.old-release h2 { /*all html sub headings (<h2/>) of current-release*/
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-font);
@@ -42,7 +46,8 @@
     font-family: var(--font-default);
     line-height: 1.8rem;
     text-align: justify;
-    margin: 20px 40px 0 40px;
+    margin: 20px 40px 0 20px;
+    list-style: disc;
 }
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/
