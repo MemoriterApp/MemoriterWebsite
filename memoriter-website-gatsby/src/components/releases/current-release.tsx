@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
 import '../../styles/releases/current-release.scss';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import coldarkDark from 'react-syntax-highlighter/dist/esm/styles/prism/coldark-dark';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 
 interface Props {
     date: string;
     html: string;
 }
+
+SyntaxHighlighter.registerLanguage('tsx', tsx); //adding programming language for syntax highlighting
 
 const CurrentRelease: FC<Props> = ({ date, html }: Props) => {
     

@@ -84,6 +84,13 @@
     background-Color: var(--color-container-button);
     border-Radius: 4px;
 }
+.old-release pre { // code block container
+    margin: 40px 40px 40px 40px;
+}
+.old-release pre code { // code blocks
+    color: unset;
+    background-color: unset;
+}
 
 @media (max-width: 960px) { /*removes space at the sides on small screens*/
     .old-release {
