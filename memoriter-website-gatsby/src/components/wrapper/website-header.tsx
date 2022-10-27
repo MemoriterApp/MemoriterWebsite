@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import '../../styles/wrapper/website-header.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
-import { changeTheme } from '../../utils/theme-slice';
+import { changeTheme } from '../../features/theme-slice';
 import memoriterLogo from '../../images/memoriter-logo.svg';
 import languageIcon from '../../images/icons/language-icon.svg';
 import lightModeIcon from '../../images/icons/light-mode-icon.svg';

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import '../../styles/wrapper/website-footer.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
-import { changeTheme } from '../../utils/theme-slice';
+import { changeTheme } from '../../features/theme-slice';
 import youtubeIcon from '../../images/icons/youtube-icon.svg';
 import twitterIcon from '../../images/icons/twitter-icon.svg';
 import instagramIcon from '../../images/icons/instagram-icon.svg';

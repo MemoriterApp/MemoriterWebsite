@@ -1,11 +1,24 @@
 import React, { FC, useState } from 'react';
-import { HeadFC } from 'gatsby';
-import WebsiteHead from '../../components/website-head';
-import WebsiteWrapper from '../../components/wrapper/website-wrapper';
-import BlogSidebar from '../../components/blog/blog-sidebar';
-import BlogMain from '../../components/blog/blog-main';
+import { HeadFC, graphql } from 'gatsby';
+import WebsiteHead from '../components/website-head';
+import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import BlogSidebar from '../components/blog/blog-sidebar';
+import BlogMain from '../components/blog/blog-main';
 
-const Blog: FC = () => {
+interface Props { //type definitions of props
+    data: {allMarkdownRemark: {nodes: {frontmatter: {
+        link: string,
+        topic: string,
+        image: string,
+        date: string,
+        author: string,
+        title: string,
+        description: string,
+        linkedBlogs: string[]
+    }, id: string}[]}};
+}
+
+const Blog: FC<Props> = ({ data }: Props) => {
 
     const [topic, setTopic] = useState<string>(''); //currently selected topic filter
 
@@ -32,7 +45,7 @@ const Blog: FC = () => {
                 <BlogSidebar topic={topic}/>
 
                 {/*main part with blog posts*/}
-                <BlogMain topic={topic}/>
+                <BlogMain topic={topic} data={data}/>
 
             </section>
             
@@ -51,3 +64,24 @@ export const Head: HeadFC = (): React.ReactElement => {
         />
     );
 };
+
+export const query = graphql`
+    query BlogPostsQuery {
+        allMarkdownRemark(
+            sort: {fields: frontmatter___date, order: DESC}
+            filter: {fileAbsolutePath: {regex: "/(blog-posts)/"}}
+            ) {
+            nodes {
+                frontmatter {
+                date
+                description
+                image
+                link
+                title
+                topic
+                }
+                id
+            }
+        }
+    }
+`
