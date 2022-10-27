@@ -11,10 +11,11 @@ interface props { //type definitions for props
     title: string;
     linkedBlogs: string[];
     wordCount: number;
+    allBlogPosts: any;
     children: React.ReactNode;
 };
 
-const BlogPost: FC<props> = ({ topic, date, author, title, linkedBlogs, wordCount, children }: props) => {
+const BlogPost: FC<props> = ({ topic, date, author, title, linkedBlogs, wordCount, allBlogPosts, children }: props) => {
 
     const minutesRead = (wordCount / 250).toFixed() //(slightly inaccurate) number of words, 250 is an estimation for average words read per minute
 
@@ -32,7 +33,7 @@ const BlogPost: FC<props> = ({ topic, date, author, title, linkedBlogs, wordCoun
             </section>
 
             {/*footer with the read more links, share options etc.*/}
-            <BlogPostFooter title={title} linkedBlogs={linkedBlogs}/>
+            <BlogPostFooter title={title} linkedBlogs={linkedBlogs} allBlogPosts={allBlogPosts}/>
 
         </WebsiteWrapper>
     );

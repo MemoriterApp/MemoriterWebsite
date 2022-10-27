@@ -6,7 +6,7 @@ date: 2022-08-17
 author: Simon Hubert
 title: Example Blog Post
 description: This post is an example placeholder blog page. It will be replaced by the first real blog post.
-linkedBlogs: ['Example Blog Post']
+linkedBlogs: ['example-blog-post']
 ---
 
 This post is an example placeholder blog page. It will be replaced by the first real blog post.
@@ -28,24 +28,20 @@ Suspendisse efficitur tempus mattis. Quisque sagittis, nisl semper vestibulum co
 
 Donec vel tempus magna. Nulla et pellentesque odio. Etiam dictum vulputate ullamcorper. Etiam mattis rhoncus venenatis. Quisque in imperdiet ligula. Pellentesque id ligula massa. Nullam semper, metus non laoreet eleifend, quam tellus faucibus nisi, vel vestibulum odio neque sed odio. Etiam suscipit in metus at viverra. Nulla finibus porta nunc quis cursus. Praesent porttitor ut neque ut rhoncus. Aenean vel tincidunt augue, et posuere ipsum. Morbi facilisis consequat elit, id varius ipsum porta a.
 
-<figure>
-  <BlogPostEmbeddedVideo videoId='WXuK6gekU1Y'/>
-  <figcaption>Embedded YouTube Video</figcaption>
-</figure>
-
 Phasellus volutpat non dolor at ullamcorper. Ut tempor tortor diam, in dictum diam sagittis et. Sed vitae dui mauris. Cras arcu turpis, venenatis sed consequat elementum, cursus in enim. Mauris luctus nulla tincidunt dignissim molestie. Pellentesque bibendum auctor risus, porta finibus tellus viverra in. Nunc scelerisque lorem quis fermentum iaculis. Suspendisse imperdiet, tortor nec iaculis ullamcorper, nunc mauris aliquam neque, in ultrices nunc nibh eu lectus. Ut mauris ipsum, fermentum nec tristique vitae, consectetur vestibulum tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed mi nulla, dapibus sit amet purus eget, tincidunt dapibus arcu. Nullam dignissim lacus ac sem pellentesque lacinia.
 
 ### Example Callout
-<BlogPostCallout>
+
+<blockquote class='callout'>
 Phasellus volutpat non dolor at ullamcorper.
-</BlogPostCallout>
+</blockquote>
 
 ### Example Code
 ```tsx
 const func = (name: string): void => {
   const pi: number = 3.14;
   console.log(pi);
-  return(<div>{`Hello, ${name}`}</div>);
+  return(<div>{`Hello, ${name}!`}</div>);
 };
 ```
 

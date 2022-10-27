@@ -4,7 +4,16 @@ import WebsiteHead from '../components/website-head';
 import BlogPostWrapper from '../components/blog/blog-post-wrapper';
 
 interface Props {
-  data: {markdownRemark: {
+  data: {allMarkdownRemark: {nodes: {frontmatter: {
+    link: string,
+    topic: string,
+    image: string,
+    date: string,
+    author: string,
+    title: string,
+    description: string,
+    linkedBlogs: string[]
+    }, id: string}[]}, markdownRemark: {
     html: string, frontmatter: {
     topic: string,
     date: string,
@@ -34,6 +43,7 @@ const BlogPost: FC<Props> = ({ data }: Props) => {
       title={title}
       linkedBlogs={linkedBlogs}
       wordCount={words}
+      allBlogPosts={data.allMarkdownRemark.nodes}
     >
       <div dangerouslySetInnerHTML={{ __html: html }}/>
     </BlogPostWrapper>
@@ -59,6 +69,22 @@ export const Head: HeadFC<object> = ({ data }: any): React.ReactElement => {
 
 export const query = graphql`
   query BlogPostContentQuery($slug: String) {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___date, order: DESC}
+      filter: {fileAbsolutePath: {regex: "/(blog-posts)/"}}
+      ) {
+      nodes {
+        frontmatter {
+        date
+        description
+        image
+        link
+        title
+        topic
+        }
+        id
+      }
+    }
     markdownRemark(frontmatter: {link: {eq: $slug}}) {
       html
       frontmatter {

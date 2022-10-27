@@ -24,9 +24,13 @@ const BlogPostHeader: FC<props> = ({ title, date, author, topic, minutesRead }: 
             
             <div className='blog-post-header-content'>
                 <p className='blog-post-header-data'>
-                    Published on {date} in <Link
+                    Published on {new Date(date).toLocaleString('en-us', {
+                        month: 'long',
+                        year: 'numeric',
+                        day: 'numeric'
+                    })} in <Link
                         className='blog-post-header-data-link'
-                        to={`/blog/topic/${topic.replace(/([A-Z])/g, '$1').toLowerCase()}`}
+                        to={`/blog#${topic.replace(/([A-Z])/g, '$1').toLowerCase()}`}
                         //.replace(/([A-Z])/g, '$1').toLowerCase() changes the first letter of the topic from capitalized to lower case letter
                     >{topic}</Link>
                 </p>

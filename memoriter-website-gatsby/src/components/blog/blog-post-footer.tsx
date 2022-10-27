@@ -9,10 +9,10 @@ import emailIcon from '../../images/icons/email-icon.svg';
 interface props { //type definitions of props
     title: string;
     linkedBlogs: string[];
+    allBlogPosts: any;
 };
 
-const BlogPostFooter: FC<props> = ({ title, linkedBlogs }: props) => {
-
+const BlogPostFooter: FC<props> = ({ title, linkedBlogs, allBlogPosts }: props) => {
     return (
         <section className='blog-post-footer'>
             
@@ -48,7 +48,36 @@ const BlogPostFooter: FC<props> = ({ title, linkedBlogs }: props) => {
             {/*link to all blog posts*/}
             <Link className='blog-post-footer-all-posts' to='/blog'>All posts &#129046;</Link> {/*&#129044; is a unicode arrow symbol*/}
 
-            
+            <div> {/*it is checked if one of all blog posts matches the title of one of the linked blogs*/}
+                {allBlogPosts.filter((
+                    blogPost: any
+                ) => blogPost.frontmatter.link === linkedBlogs.find(item => item === blogPost.frontmatter.link)).map((
+                    blogPost: any
+                ) => (
+                    <Link className='blog-post-footer-linked-blog' to={`/blog/${blogPost.frontmatter.link}`} key={blogPost.id}>
+                        
+                        <p className='blog-post-footer-linked-blog-outside'>{blogPost.frontmatter.topic}</p>
+                        <p className='blog-post-footer-linked-blog-date blog-post-footer-linked-blog-outside' style={{lineHeight: '1rem'}}> {/*two classes*/}
+                            {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
+                                month: 'short',
+                                year: 'numeric',
+                                day: 'numeric'
+                            })}</p>
+                        
+                        <div style={{display: 'flex', gap: '20px'}}>
+                            
+                            <div className='blog-post-footer-linked-blog-box'>
+                                <h3>{blogPost.frontmatter.title}</h3>
+                                <p>{blogPost.frontmatter.description}</p>
+                            </div>
+
+                            {blogPost.frontmatter.image}
+
+                        </div>
+
+                    </Link>
+                ))}
+            </div>
 
         </section>
     );
