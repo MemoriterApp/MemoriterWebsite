@@ -21,22 +21,22 @@
     line-height: 2.2rem;
     margin-bottom: 80px;
 
-    h1 {
-      display: none; // h1 is not allowed, the frontmatter title is already used
-    }
-
-    h2 {
-      // all sub headings
+    h1 { // all headings
       font-size: 2.2rem;
       font-family: var(--font-heading);
       margin-top: 48px;
     }
 
-    h3 {
-      // sub sub headings
+    h2 { // all sub headings
       font-size: 1.7rem;
       font-family: var(--font-heading);
       margin-top: 42px;
+    }
+
+    h3 { // sub sub headings
+      font-size: 1.4rem;
+      font-family: var(--font-heading);
+      margin-top: 36px;
     }
   }
 }
