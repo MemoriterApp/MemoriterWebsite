@@ -34,8 +34,6 @@ const BlogPost: FC<Props> = ({ data }: Props) => {
   const { words } = data.markdownRemark.wordCount;
 
   return (
-    <>
-    <h1>HELLO, WORLD!</h1>
     <BlogPostWrapper
       topic={topic}
       date={date}
@@ -47,7 +45,6 @@ const BlogPost: FC<Props> = ({ data }: Props) => {
     >
       <div dangerouslySetInnerHTML={{ __html: html }}/>
     </BlogPostWrapper>
-    </>
   );
 };
 export default BlogPost;
