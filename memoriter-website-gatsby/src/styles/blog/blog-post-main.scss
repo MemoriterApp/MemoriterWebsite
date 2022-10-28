@@ -132,9 +132,15 @@
   border-left: none !important; // !important overwrites all other conflicting CSS
   border-radius: 10px;
 
-  &::before {
-    // emoji inserted before
+  &[icon]::before { // emoji inserted before the text
     content: attr(icon); // the emoji is set based on the icon attribute
+    position: absolute;
+    font-size: 2.2rem;
+    margin-left: -50px;
+  }
+
+  &:not([icon])::before { // default icon if none was selected
+    content: '\1F4A1'; // light bulb emoji
     position: absolute;
     font-size: 2.2rem;
     margin-left: -50px;
