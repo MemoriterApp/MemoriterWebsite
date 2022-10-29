@@ -7,24 +7,34 @@ import HelpQuestion from '../components/help-question';
 const Bugs: FC = () => {
 
     //array with all questions with answers, answers can be typed as string or html objects
-    const [questions, setQuestions] = useState<{question: string, answer: string | React.ReactNode, isOpen: boolean}[]>([
+    const [questions, setQuestions] = useState<{question: string, answer: React.ReactNode, isOpen: boolean}[]>([
         {
-            question: 'Question 1',
-            answer: 'Answer 1',
+            question: 'Responsiveness and optimization issues on phones',
+            answer:
+                <p>
+                    We are aware of those issues. The application wasn't tested properly for those issues for a long time,
+                    but now we are already trying to get rid of them to make a good experience on all devices possible.
+                </p>,
             isOpen: false
         },
         {
-            question: 'Question 2',
-            answer: 'Answer 2',
+            question: 'Error messages or page content not showing',
+            answer:
+                <>
+                    <p>
+                        Please check your internet connection and if the URL of the page was etered correctly.
+                        Certain errors can also occur on the server side and might be resolved automatically after a short amount of time.
+                        When encountering error messages or not loading pages or content, checking the browser's developer tools (console) is always a good option.
+                    </p>
+                    <p>
+                        If you still want to report the issue, please look at the 'I want to report a different bug'-section.
+                        It is then useful to provide any unknown error codes to us.
+                    </p>
+                </>,
             isOpen: false
         },
         {
-            question: 'Question 3',
-            answer: 'Answer 3',
-            isOpen: false
-        },
-        {
-            question: 'I want to report a security vulnerability',
+            question: 'Security vulnerabilities',
             answer:
                 <>
                     <p>
@@ -53,7 +63,7 @@ const Bugs: FC = () => {
                             Discuss issues on our GitHub <a href='https://github.com/MemoriterApp/Memoriter/discussions/categories/general' target='_blank' rel='noreferrer'>discussion forum</a>
                         </li>
                         <li>
-                            Send us an email regarding the problem to <a className='help-question-answer-link' href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
+                            Send us an email regarding the problem to <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
                         </li>
                     </ul>
                     <p>

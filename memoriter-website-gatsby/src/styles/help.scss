@@ -78,11 +78,11 @@
     list-style: disc;
 }
 
-.help-question-answer-link, a { /*links embedded in answer texts*/
+.help-question-answer a { /*links embedded in answer texts*/
     color: var(--color-font-gray);
     transition: color 200ms;
 }
-.help-question-answer-link:hover, a:hover { /*link hover effect*/
+.help-question-answer a:hover { /*link hover effect*/
     color: var(--color-font);
 }
 .help-question-open { /*arrow to show the answer*/

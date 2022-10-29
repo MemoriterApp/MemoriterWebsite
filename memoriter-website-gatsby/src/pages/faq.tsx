@@ -29,7 +29,7 @@ const Faq: FC = () => {
                     Memoriter is a tool for students by students.
                     It was originally started as a school project by a small team of German students in 2021,
                     but we moved on afterwards and are now a still small, but international organization.
-                    Head over to our <Link className='help-question-answer-link' to='/about'>About page</Link> to find out more.
+                    Head over to our <Link to='/about'>About page</Link> to find out more.
                 </p>,
             isOpen: false
         },
@@ -41,7 +41,7 @@ const Faq: FC = () => {
                     Yes! The application is completely free to use at the moment.
                     Memoriter is currently a non profit project, we do not have an incentive to make money off of it.
                     With the project beeing very small at the moment, our operative costs are little, so we are able to do so.
-                    If you still want to support us financially, please consider <Link className='help-question-answer-link' to='/donate'>donating</Link>.
+                    If you still want to support us financially, please consider <Link to='/donate'>donating</Link>.
                 </p>,
             isOpen: false
         },
@@ -53,6 +53,18 @@ const Faq: FC = () => {
                     There are already good note taking and study programs,
                     but there isn't really a good tool which combines or provides both aspects in one app.
                     Therefore we tried to provide multiple aspects of learning and use those scientific principles to create an all-in-one study experience.
+                </p>,
+            isOpen: false
+        },
+        {
+            section: 'general',
+            question: 'Why are there so many inconsistencies in the visual design?',
+            answer: 
+                <p>
+                    There are multiple reasons for this. Firstly we are mostly developers with little design experience
+                    and we hadn't a person creating a proper deisgn in the for a long time, but now the situation should get better.
+                    Secondly the beginning of development was very unorganized and everyone implemented their own ideas, 
+                    leading to different design choices before we acquired a person doing all the visual stuff.
                 </p>,
             isOpen: false
         },
@@ -83,8 +95,8 @@ const Faq: FC = () => {
             question: 'Can I cancel my monthly subscription?',
             answer:
                 <p>
-                    Yes, you can do it any time from the <Link className='help-question-answer-link' to='/donate'>
-                    Donate page</Link> or by writing an email to <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+                    Yes, you can do it any time from the <Link to='/donate'>Donate page</Link> or
+                    by writing an email to <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
                 </p>,
             isOpen: false
         },
@@ -95,7 +107,7 @@ const Faq: FC = () => {
                 <p>
                     We use the money to cover or operative costs and to expand the project.
                     That means that we are using some of it to speed up development or for marketing reasons,
-                    but most of it will be used to cover cloud service and server costs. On the <Link className='help-question-answer-link' to='/donate'>
+                    but most of it will be used to cover cloud service and server costs. On the <Link to='/donate'>
                     Donate page</Link> there is a more detailed report on that.
                 </p>,
             isOpen: false
@@ -152,7 +164,7 @@ const Faq: FC = () => {
                     Sure, you can use the source code of Memoriter for your own pupuses.
                     That is one part of the aspects of open source. Please remember the code is licensed under the <a
                         href='https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE' target='_blank' rel='noreferrer'>
-                    GNU General Public License v3.0</a>. We would also encourage attribution when using our work.
+                    GNU General Public License v3.0</a>. We would also appreciate attribution when using our work.
 
                 </p>,
             isOpen: false
