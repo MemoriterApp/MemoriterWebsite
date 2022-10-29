@@ -28,7 +28,7 @@ const Bugs: FC = () => {
             answer:
                 <>
                     <p>
-                        Please report security issues to <a className='help-question-answer-link' href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+                        Please report security issues to <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
                     </p>
                     <p>
                         Fixing security vulnerabilities is very important, even if they cannot directly be exploited.

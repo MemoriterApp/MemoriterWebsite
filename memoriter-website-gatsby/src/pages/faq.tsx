@@ -45,30 +45,71 @@ const Faq: FC = () => {
                 </p>,
             isOpen: false
         },
+        {
+            section: 'general',
+            question: 'Why is Memoriter structured in this way?',
+            answer: 
+                <p>
+                    There are already good note taking and study programs,
+                    but there isn't really a good tool which combines or provides both aspects in one app.
+                    Therefore we tried to provide multiple aspects of learning and use those scientific principles to create an all-in-one study experience.
+                </p>,
+            isOpen: false
+        },
         // Account
         {
             section: 'account',
-            question: 'Question 4',
-            answer: 'Answer 4',
+            question: 'Can I delete my user data?',
+            answer:
+                <p>
+                    All your folders and flashcards get removed if you delete your account.
+                    If you just want to clear your user data, you can then reopen an account with the same email address.
+                </p>,
+            isOpen: false
+        },
+        {
+            section: 'account',
+            question: 'Is it possible to reopen an account and restore my data?',
+            answer:
+                <p>
+                    Sadly no. Once an account is closed, all corresponding user data is deleted.
+                    It is possible opening an account with the same email address though.
+                </p>,
             isOpen: false
         },
         // Donating
         {
             section: 'donating',
-            question: 'Question 5',
-            answer: 'Answer 5',
+            question: 'Can I cancel my monthly subscription?',
+            answer:
+                <p>
+                    Yes, you can do it any time from the <Link className='help-question-answer-link' to='/donate'>
+                    Donate page</Link> or by writing an email to <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+                </p>,
             isOpen: false
         },
         {
             section: 'donating',
-            question: 'Question 6',
-            answer: 'Answer 6',
+            question: 'What is the money used for?',
+            answer: 
+                <p>
+                    We use the money to cover or operative costs and to expand the project.
+                    That means that we are using some of it to speed up development or for marketing reasons,
+                    but most of it will be used to cover cloud service and server costs. On the <Link className='help-question-answer-link' to='/donate'>
+                    Donate page</Link> there is a more detailed report on that.
+                </p>,
             isOpen: false
         },
         {
             section: 'donating',
-            question: 'Question 7',
-            answer: 'Answer 7',
+            question: 'Are some features reserved for donors only?',
+            answer: <p>No, All features are free!</p>,
+            isOpen: false
+        },
+        {
+            section: 'donating',
+            question: 'Are there other methods of donation?',
+            answer: <p>At the moment it is only possible to donate via credit card or PayPal.</p>,
             isOpen: false
         },
         // Open Source
@@ -103,23 +144,28 @@ const Faq: FC = () => {
                 </p>,
             isOpen: false
         },
+        {
+            section: 'open-source',
+            question: 'Can I build an own project based on Memoriter?',
+            answer:
+                <p>
+                    Sure, you can use the source code of Memoriter for your own pupuses.
+                    That is one part of the aspects of open source. Please remember the code is licensed under the <a
+                        href='https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE' target='_blank' rel='noreferrer'>
+                    GNU General Public License v3.0</a>. We would also encourage attribution when using our work.
+
+                </p>,
+            isOpen: false
+        },
         // Legal
         {
             section: 'legal',
             question: 'What is the current legal status of Memoriter?',
-            answer: 'There is no. The Project is represented by us individual people.',
-            isOpen: false
-        },
-        {
-            section: 'legal',
-            question: 'Question 13',
-            answer: 'Answer 13',
-            isOpen: false
-        },
-        {
-            section: 'legal',
-            question: 'Question 14',
-            answer: 'Answer 14',
+            answer: 
+                <p>
+                    There is no. Currently the Project is represented by us individual people,
+                    but we might create a formal organization in the future.
+                </p>,
             isOpen: false
         }
     ]);

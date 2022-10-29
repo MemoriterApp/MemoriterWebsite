@@ -195,8 +195,8 @@ const DonateStatistics: FC = () => {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit,
                     nam commodi dolorem dignissimos obcaecati quae. Neque, libero. <Link
-                        className='donate-statistics-section-bottom-text-link' to='/faq'>
-                    Please check out our FAQ</Link>.
+                        className='donate-statistics-section-bottom-text-link' to='/faq#donating'>
+                    Please check out the FAQ</Link>.
                 </p>
             </article>
         </section>
