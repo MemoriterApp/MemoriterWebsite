@@ -6,9 +6,6 @@ date: 2022-06-13
 
 Interesting that you have scrolled down so far down... Anyways, this was the first version of Memoriter, created in the span of less than a year by some students with almost no programming experience. Therefore, the code was a completely mess and the application was buggy as hell.
 
-![Website screenshot](../../images/releases/startpage.jpg)
-<figcaption>Screenshot from the first informational site of Memoriter</figcaption>
-
 ## Features
 
 The features of the application were few and simple. You had the option to create folders and flashcards and that was it, but there is other stuff worth mentioning). Yes here are the main features:
