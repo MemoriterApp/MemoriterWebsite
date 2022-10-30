@@ -28,8 +28,9 @@
     margin-bottom: 60px;
 }
 .blog-main-new-blog-container > * { /*children of the container, used for equally sized items*/
-    flex: 1;
+    max-width: calc(50% - 20px);
 }
+
 .blog-main-new-blog { /*new blog post preview*/
     text-decoration: none;
     cursor: pointer;
@@ -138,6 +139,10 @@
 @media (max-width: 660px) { /*optimizes layout mobile devices*/
     .blog-main-new-blog-container {
         flex-direction: column;
+    }
+    .blog-main-new-blog-container > * {
+        flex: 1;
+        max-width: 100%;
     }
 
     .blog-main-old-blog img {

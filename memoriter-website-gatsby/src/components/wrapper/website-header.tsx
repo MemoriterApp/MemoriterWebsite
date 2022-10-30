@@ -105,10 +105,9 @@ const WebsiteHeader: FC<props> = ({ currentPage, onOpenLanguageSelect }: props) 
                     <span className='website-header-text-gradient'>Sign in</span>
                 </a>
                 <a className='website-header-register' href='https://app.memoriter.de/signup'
-                    onMouseEnter={() => setOnHover('brightness(0.75)')} onMouseLeave={() => setOnHover('brightness(1)')}>
-                    {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css*/}
-                    <div className='website-header-register-background' style={{filter: onHover}}/>
-                    <span className='website-header-register-text'>Register</span>
+                    onMouseEnter={() => setOnHover('brightness(0.75)')} onMouseLeave={() => setOnHover('brightness(1)')}
+                >
+                    Register <div className='website-header-register-background' style={{filter: onHover}}/>
                 </a>
                 
                 <div className='website-header-quicklink-box-space'/> {/*space at the end for scrolling at the nav sidebar*/}

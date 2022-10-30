@@ -48,9 +48,7 @@ const ProductBanner: FC = () => {
                     onMouseEnter={() => {setOnHover('brightness(0.75)'); setTriangleEffect('10'); setTriangleTransition('400ms');}}
                     onMouseLeave={() => {setOnHover('brightness(1)'); setTriangleEffect('0'); setTimeout(() => {setTriangleTransition('none')}, 400);}}
                 >
-                {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css and the background animation*/}
-                    <div className='product-banner-get-started-background' style={{filter: onHover}}/>
-                    <span className='product-banner-get-started-text'>Get Started!</span>
+                    Get Started <div className='product-banner-get-started-background' style={{filter: onHover}}/>
                 </a>
             </article>
 
