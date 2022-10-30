@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import '../../styles/about/about-main.scss';
-import placeholderImage from '../../images/about/placeholder.jpeg';
+import placeholderImage from '../../images/about/placeholder.jpg';
 
 const AboutMain: FC = () => {
     return (

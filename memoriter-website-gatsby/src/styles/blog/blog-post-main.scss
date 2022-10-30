@@ -74,40 +74,47 @@
   color: var(--color-font-gray);
 }
 
-.blog-post-main article img {
-  /*image inside figure*/
-  width: calc(100% + 40px);
-  margin: 60px -20px 40px -20px;
+// images
+.blog-post-main article .gatsby-resp-image-wrapper {
+  width: calc(100% + 80px) !important;
+  margin: 48px -40px 48px -40px !important;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-.blog-post-main article figcaption {
-  /*figures with image or video and caption*/
+.blog-post-main article iframe {
+  width: calc(100% + 80px);
+  aspect-ratio: 16 / 9;
+  margin: 24px -40px 40px -40px;
+  background-color: var(--color-transparent);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-post-main article figcaption { // image or video and captions
   font-size: 1.1rem;
   color: var(--color-font-gray);
   font-family: var(--font-default);
-  margin-inline: -20px;
-  margin-top: -60px;
-  margin-bottom: 40px;
+  margin-inline: -40px;
+  margin-top: -40px;
+  margin-bottom: 32px;
 }
 
-.blog-post-main article blockquote {
-  /*blockquotes with line at the left*/
+.blog-post-main article blockquote { /*blockquotes with line at the left*/
   padding-left: 24px;
   margin: 40px 0 40px 0;
   border-left: 4px solid var(--color-font);
 }
 
-.blog-post-main article code {
-  // inline code styles
+.blog-post-main article code { // inline code styles
   font-size: 1.2rem;
   color: var(--color-font-code);
   padding: 4px 6px;
   background-color: var(--color-hover);
   border-radius: 4px;
 }
-.blog-post-main article pre {
-  // code blocks
+.blog-post-main article pre { // code blocks
   font-size: 1.2rem;
   line-height: 1.8rem;
   padding: 20px 24px;
@@ -157,9 +164,13 @@
 
 @media (max-width: 700px) {
   /*fixes images breaking content margin*/
-  .blog-post-main article img {
+  .blog-post-main article .gatsby-resp-image-wrapper {
+    width: 100% !important;
+    margin: 40px 0 48px 0 !important;
+  }
+  .blog-post-main article iframe {
     width: 100%;
-    margin: 60px 0 40px 0;
+    margin: 40px 0 48px 0;
   }
   .blog-post-main article figcaption {
     margin-inline: 0;

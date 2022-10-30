@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import '../../styles/download/download-mobile.scss';
 import phone from '../../images/download/phone.png';
-import phoneContent from '../../images/download/phone-content.jpeg';
+import phoneContent from '../../images/download/phone-content.jpg';
 import googlePlayButton from '../../images/download/google-play-button.svg';
 import appStoreButton from '../../images/download/app-store-button.svg';
 

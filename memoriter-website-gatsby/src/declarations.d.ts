@@ -10,7 +10,7 @@ declare module '*.png' { //png images
     export default path;
 };
 
-declare module '*.jpeg' { //jpeg images
+declare module '*.jpg' { //jpg images
     const path: string;
     export default path;
 };

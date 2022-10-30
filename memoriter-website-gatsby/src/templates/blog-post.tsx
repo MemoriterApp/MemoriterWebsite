@@ -7,7 +7,7 @@ interface Props {
   data: {allMarkdownRemark: {nodes: {frontmatter: {
     link: string,
     topic: string,
-    image: string,
+    thumb: object,
     date: string,
     author: string,
     title: string,
@@ -69,15 +69,19 @@ export const query = graphql`
     allMarkdownRemark(
       sort: {fields: frontmatter___date, order: DESC}
       filter: {fileAbsolutePath: {regex: "/(blog-posts)/"}}
-      ) {
+    ) {
       nodes {
         frontmatter {
-        date
-        description
-        image
-        link
-        title
-        topic
+          date
+          description
+          link
+          title
+          topic
+          thumb {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
       }

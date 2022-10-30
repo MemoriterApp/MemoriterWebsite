@@ -140,3 +140,10 @@
         left: 20px;
     }
 }
+
+@media (max-width: 240px) {
+    /*hides everything on too small screens*/
+    .blog-post-header {
+      display: none;
+    }
+}

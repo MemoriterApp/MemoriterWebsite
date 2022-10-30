@@ -3,7 +3,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import '../../styles/download/download-main.scss';
 import windowsIcon from '../../images/icons/windows-icon.svg';
 import appleIcon from '../../images/icons/apple-icon.svg';
-import placeholderImage from '../../images/download/placeholder.jpeg';
+import placeholderImage from '../../images/download/placeholder.jpg';
 
 const DownloadMain: FC = () => {
     

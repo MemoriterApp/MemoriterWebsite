@@ -113,7 +113,7 @@
     text-align: justify;
     margin-inline: 16px;
 }
-.blog-post-footer-linked-blog img { /*old blog preview image*/
+.blog-post-footer-linked-blog-image { /*old blog preview image*/
     display: inline-block;
     width: 200px;
     object-fit: cover; /*optimizes image scaling*/
@@ -128,7 +128,7 @@
 }
 
 @media (max-width: 660px) { /*removes too large images on small screens for better readability*/
-    .blog-post-footer-linked-blog img {
+    .blog-post-footer-linked-blog-image {
         display: none;
     }
 }
@@ -150,5 +150,12 @@
     .blog-post-footer-linked-blog-date {
         text-align: left;
         margin-top: -10px;
+    }
+}
+
+@media (max-width: 240px) {
+    /*hides everything on too small screens*/
+    .blog-post-footer {
+      display: none;
     }
 }

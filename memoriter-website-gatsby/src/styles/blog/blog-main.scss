@@ -40,7 +40,7 @@
     transform: scale(0.98);
     filter: brightness(0.75);
 }
-.blog-main-new-blog img { /*image for new blog preview*/
+.blog-main-new-blog-image { /*image for new blog preview*/
     width: 100%;
     margin-top: -8px;
     border-radius: 6px;
@@ -96,7 +96,7 @@
     text-align: justify;
     margin-inline: 16px;
 }
-.blog-main-old-blog img { /*old blog preview image*/
+.blog-main-old-blog-image { /*old blog preview image*/
     display: inline-block;
     width: 200px;
     object-fit: cover; /*optimizes image scaling*/

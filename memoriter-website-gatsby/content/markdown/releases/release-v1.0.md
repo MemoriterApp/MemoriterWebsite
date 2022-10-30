@@ -6,7 +6,7 @@ date: 2022-06-13
 
 Interesting that you have scrolled down so far down... Anyways, this was the first version of Memoriter, created in the span of less than a year by some students with almost no programming experience. Therefore, the code was a completely mess and the application was buggy as hell.
 
-![Website screenshot](../../images/releases/startpage.png)
+![Website screenshot](../../images/releases/startpage.jpg)
 <figcaption>Screenshot from the first informational site of Memoriter</figcaption>
 
 ## Features

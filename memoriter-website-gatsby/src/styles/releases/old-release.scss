@@ -59,14 +59,13 @@
     margin: 12px 40px 0 20px;
     list-style: decimal;
 }
-.old-release img { // all html mages (<img/>) of old-release
+.old-release .gatsby-resp-image-wrapper { // all locally saved html images (<img/>) of old-release
     position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: calc(100% - 80px);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: calc(100% - 80px) !important;
+    margin-top: 40px !important;
+    margin-bottom: 48px !important;
+    border-radius: 10px !important;
+    overflow: hidden;
 }
 .old-release figcaption { // all html image captions (<figcaption/>) of old-release
     font-size: 1.1rem;
@@ -75,7 +74,7 @@
     font-family: var(--font-default);
     line-height: 1.8rem;
     text-align: justify;
-    margin: -20px 80px 20px 80px;
+    margin: -40px 80px 20px 80px;
 }
 .old-release code { // all html inline code (<code/>) of old-release
     font-size: 1.1rem;
@@ -98,22 +97,26 @@
         width: calc(100% - 40px);
         padding: 10px 0 56px 0;
     }
-    .old-release h2 {
+    .old-release h1 {
         margin: 20px 20px 32px 20px;
     }
-    .old-release h3 {
+    .old-release h2 {
         margin: 40px 20px 12px 20px;
     }
     .old-release p {
         margin: 20px 20px 0 20px;
     }
     .old-release ul {
-        margin: 20px 20px 0 20px;
+        margin: 20px 0 0 0;
     }
-    .current-release img {
-        width: 100%;
+    .old-release ol {
+        margin: 20px 0 0 0;
     }
-    .current-release figcaption {
-        margin: -20px 20px 20px 20px;
+    .old-release .gatsby-resp-image-wrapper, .old-release img {
+        width: 100% !important;
+    }
+    .old-release figcaption {
+        transform: translate(0, -20px);
+        margin: -24px 20px 20px 20px;
     }
 }

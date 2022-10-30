@@ -13,34 +13,68 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sitemap',
     {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          placeholder: 'none'
+        }
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: 'src/images/favicon.ico',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown',
-        path: './src/markdown/'
+        path: './content/markdown/',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './content/images/',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          placeholder: 'none'
+        }
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-images',
             options: {
-              classPrefix: "language-",
+              maxWidth: 1200,
+              backgroundColor: 'none',
+              linkImagesToOriginal: false
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
               inlineCodeMarker: null,
-              aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: 'superscript',
+                  extend: 'javascript',
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -52,8 +86,8 @@ const config: GatsbyConfig = {
                 },
               ],
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
               escapeEntities: {},
@@ -62,7 +96,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
-  ]
+  ],
 };
 
 export default config;
