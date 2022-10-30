@@ -21,7 +21,7 @@ This repository only contains the informational website about the project. The a
 [![gatsby](https://img.shields.io/badge/Gatsby-663399?style=flat&logo=gatsby&logoColor=white)](https://www.gatsbyjs.com/)
 
 ### Pull Requests, Issues and Discussions
-Memoriter is a more personal project of our small team and the informational website won't be changed much in the future, so we are unlikely to accept any pull requests, yet feel free to report issues or propose changes. Our main focus lies on the actual web application repository, so please consider reporting issues there instead in this repository. You will find our [GitHub discussion forum](https://github.com/MemoriterApp/Memoriter/discussions) there too. Please also check out our own [bug report page](https://www.memoriter.de/bugs).
+Memoriter is a more personal project of our small team and the informational website won't be changed much in the future, so we are unlikely to accept any pull requests, yet feel free to report issues or propose changes. Our main focus lies on the actual web application repository, so please consider reporting issues there instead in this repository. You will find our [GitHub discussions](https://github.com/MemoriterApp/Memoriter/discussions) there too. Please also check out our own [bug report page](https://www.memoriter.de/bugs).
 
 ### Contributing Guidelines
 Before contributing to this project, please read our [contributing guidelines](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/CONTRIBUTING.md). To create a respectful atmosphere for everyone, please follow the [code of conduct](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/CODE_OF_CONDUCT.md) when posting or submitting anything to this site.

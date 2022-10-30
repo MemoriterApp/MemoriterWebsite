@@ -14,7 +14,7 @@ const Support: FC = () => {
                 <>
                     <p>
                         You can change most of your account data or delete your account on the profile page.
-                        If you forgot your password, you can get a password reset link from the sign in page
+                        If you forgot your password, you can request a password reset link from the sign in page
                         (just click on 'Forgot password?' for further instructions).
                     </p>
                     <p>
