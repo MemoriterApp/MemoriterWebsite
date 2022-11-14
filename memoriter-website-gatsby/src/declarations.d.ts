@@ -1,16 +1,21 @@
-//This file is needed to specify the types of some items (like images) in typescript.
+// This file is needed to specify the types of some items (like images) in typescript.
 
-declare module '*.svg' { //vector graphics
+declare module '*.scss' { // stylesheets
+    const content: {[className: string]: string};
+    export = content;
+}
+
+declare module '*.svg' { // vector graphics
     const path: string;
     export default path;
 };
 
-declare module '*.png' { //png images
+declare module '*.png' { // png images
     const path: string;
     export default path;
 };
 
-declare module '*.jpg' { //jpg images
+declare module '*.jpg' { // jpg images
     const path: string;
     export default path;
 };

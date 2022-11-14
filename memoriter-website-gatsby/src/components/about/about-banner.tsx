@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import '../../styles/about/about-banner.scss';
+import * as styles from '../../styles/about/about-banner.module.scss';
 
 const AboutBanner: FC = () => {
 
@@ -20,28 +20,28 @@ const AboutBanner: FC = () => {
     }, []);
 
     return (
-        <section className='about-banner'>
+        <section className={styles.about_banner}>
 
             {/*background circles*/}
             <div
-                className='about-banner-background-circle-top'
+                className={styles.about_banner_circle_top}
                 style={{left: `calc(-1 * ${scrollProgress}vh - 50vh`}}
             />
             <div
-                className='about-banner-background-circle-bottom'
+                className={styles.about_banner_circle_bottom}
                 style={{right: `calc(-1 * ${scrollProgress}vh - 50vh`}}
             />
             {/*the size of the circles changes a bit when you scroll down*/}
 
             {/*content*/}
-            <p className='about-banner-content'>
+            <p className={styles.about_banner_content}>
                 Lorem <span>ipsum</span> dolor sit amet, consetetur <span>sadipscing</span> elitr.
             </p>
 
             {/*transition shape at the bottom*/}
-            <div className='about-banner-bottom-transition'/>
-            <div className='about-banner-bottom-transition-shape-left'/>
-            <div className='about-banner-bottom-transition-shape-right'/>
+            <div className={styles.about_banner_transition} />
+            <div className={styles.about_banner_transition_left}/>
+            <div className={styles.about_banner_transition_right}/>
             
         </section>
     );
