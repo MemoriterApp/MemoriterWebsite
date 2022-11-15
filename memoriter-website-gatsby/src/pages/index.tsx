@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import type { HeadFC } from 'gatsby';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import ProductBanner from '../components/product/product-banner';
 import ProductMain from '../components/product/product-main';
 import ProductStories from '../components/product/product-stories';
 
 const Product: FC = (): React.ReactElement => {
   return (
-    <WebsiteWrapper currentPage='product'>
+    <WebsiteLayout currentPage='product'>
         
       {/*banner with slogan and get started button*/}
       <ProductBanner/>
@@ -19,7 +19,7 @@ const Product: FC = (): React.ReactElement => {
       {/*slider with customer stories*/}
       <ProductStories/>
 
-    </WebsiteWrapper>
+    </WebsiteLayout>
   );
 };
 export default Product;

@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/newsletter/newsletter.scss';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import NewsletterSubscribe from '../components/newsletter/newsletter-subscribe';
 import NewsletterUnsubscribe from '../components/newsletter/newsletter-unsubscribe';
 import Backdrop from '../components/backdrop';
@@ -44,7 +44,7 @@ const Newsletter: FC = () => {
     };
 
     return (
-        <WebsiteWrapper currentPage=''>
+        <WebsiteLayout currentPage=''>
 
             <section className='newsletter-main'>
 
@@ -71,7 +71,7 @@ const Newsletter: FC = () => {
                 <Backdrop onFade={backdropAnimation} onClick={closeUnsubscribe}/>
             </>}
 
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 

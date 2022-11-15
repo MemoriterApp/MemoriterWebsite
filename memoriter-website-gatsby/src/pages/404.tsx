@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react'
 import { Link, HeadFC } from 'gatsby';
-import '../styles/404.scss';
+import * as styles from '../styles/404.module.scss';
 import memoriterLogo from '../images/memoriter-logo.svg';
-import WebsiteHead from '../components/website-head';
-import WindowSizeAlert from '../components/wrapper/window-size-alert';
+import WebsiteHead from '../components/layout/website-head';
+import WindowSizeAlert from '../components/layout/window-size-alert';
 
 const PageNotFound: FC = (): React.ReactElement => {
 
@@ -21,27 +21,27 @@ const PageNotFound: FC = (): React.ReactElement => {
     <>
       
       {/*container with content*/}
-      <main className='page-not-found'>
+      <main className={styles.page_not_found}>
         {/*large question mark next to the text*/}
-        <section className='page-not-found-question-mark'>?</section>
+        <section className={styles.page_not_found_question_mark}>?</section>
 
         {/*extra div is important for layout*/}
         <section>
           {/*logo above the content*/}
-          <img className='page-not-found-logo' src={memoriterLogo} alt='memoriter-logo'/>
+          <img className={styles.page_not_found_logo} src={memoriterLogo} alt='Memoriter'/>
 
           {/*text*/}
-          <h1 className='page-not-found-heading'>Page Not Found!</h1>
-          <p className='page-not-found-text'>This URL does not match any page. Please use another link or go back to an existing page.</p>
+          <h1 className={styles.page_not_found_heading}>Page Not Found!</h1>
+          <p className={styles.page_not_found_text}>This URL does not match any page. Please use another link or go back to an existing page.</p>
 
           {/*button redirects to product page*/}
           <Link
-            className='page-not-found-button' to='/'
+            className={styles.page_not_found_button} to='/'
             onMouseEnter={() => setOnHover('brightness(0.75)')}
             onMouseLeave={() => setOnHover('brightness(1)')}
           > {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css*/}
-            <div className='page-not-found-button-background' style={{filter: onHover}}/>
-            <span className='page-not-found-button-text'>Return to Website!</span>
+            <div className={styles.page_not_found_button_background} style={{filter: onHover}}/>
+            <span className={styles.page_not_found_button_text}>Return to Website!</span>
             <div style={PageNotFoundBottomSpace}/> {/*space at the bottom on page scroll*/}
           </Link>
         </section>

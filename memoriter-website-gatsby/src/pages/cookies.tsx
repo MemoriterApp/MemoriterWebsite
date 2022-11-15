@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.scss';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 
 const Cookies: FC = () => {
     return (
-        <WebsiteWrapper currentPage=''>
+        <WebsiteLayout currentPage=''>
 
             {/*main body with text*/}
             <section className='legal-main'>
@@ -67,7 +67,7 @@ const Cookies: FC = () => {
                 </article>
             </section>
             
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { HeadFC, graphql } from 'gatsby';
-import WebsiteHead from '../components/website-head';
-import BlogPostWrapper from '../components/blog/blog-post-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import BlogPostLayout from '../components/blog/blog-post-layout';
 
 interface Props {
   data: {allMarkdownRemark: {nodes: {frontmatter: {
@@ -34,7 +34,7 @@ const BlogPost: FC<Props> = ({ data }: Props) => {
   const { words } = data.markdownRemark.wordCount;
 
   return (
-    <BlogPostWrapper
+    <BlogPostLayout
       topic={topic}
       date={date}
       author={author}
@@ -44,7 +44,7 @@ const BlogPost: FC<Props> = ({ data }: Props) => {
       allBlogPosts={data.allMarkdownRemark.nodes}
     >
       <div dangerouslySetInnerHTML={{ __html: html }}/>
-    </BlogPostWrapper>
+    </BlogPostLayout>
   );
 };
 export default BlogPost;

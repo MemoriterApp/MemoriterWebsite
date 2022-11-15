@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react';
 import { HeadFC, graphql } from 'gatsby';
 import '../styles/releases/releases-main.scss';
 import '../styles/releases/old-release.scss';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import CurrentRelease from '../components/releases/current-release';
 import OldRelease from '../components/releases/old-release';
 
@@ -18,7 +18,7 @@ const Releases: FC<Props> = ({ data }: Props) => {
   const [loadedReleases, setLoadedReleases] = useState<number>(5); //number of releases shown before clicking on the load more button
 
   return (
-    <WebsiteWrapper currentPage=''>
+    <WebsiteLayout currentPage=''>
 
       {/*main body*/}
       <section className='releases-main'>
@@ -48,7 +48,7 @@ const Releases: FC<Props> = ({ data }: Props) => {
 
       </section>
             
-    </WebsiteWrapper>
+    </WebsiteLayout>
   );
 };
 export default Releases;

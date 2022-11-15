@@ -1,5 +1,13 @@
 // These styles are used for the syntax highlighting colors of code blocks
 
+// consistant colors
+:root {
+  --syntax-highlighting-add: #1aff5b26;
+  --syntax-highlighting-add-select: #38e06240;
+  --syntax-highlighting-delete: #ff526626;
+  --syntax-highlighting-delete-select: #fb566940;
+}
+
 // dark mode colors
 #dark {
   --syntax-highlighting-orange: #d19a66;
@@ -34,16 +42,7 @@
   --syntax-highlighting-select: #383a420d;
 }
 
-// consistant colors
-:root {
-  --syntax-highlighting-add: #1aff5b26;
-  --syntax-highlighting-add-select: #38e06240;
-  --syntax-highlighting-delete: #ff526626;
-  --syntax-highlighting-delete-select: #fb566940;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*='language-'], pre[class*='language-'] {
   background: var(--color-hover);
   color: var(--color-font-gray);
   text-shadow: var(--color-shadow);

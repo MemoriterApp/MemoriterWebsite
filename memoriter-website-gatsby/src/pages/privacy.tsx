@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import '../styles/legal.scss';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 
 const Privacy: FC = () => {
     return (
-        <WebsiteWrapper currentPage=''>
+        <WebsiteLayout currentPage=''>
 
             {/*main body with text*/}
             <article className='legal-main'>
@@ -71,7 +71,7 @@ const Privacy: FC = () => {
 
             </article>
             
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 

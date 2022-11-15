@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { HeadFC } from 'gatsby';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 
 const Bugs: FC = () => {
@@ -88,7 +88,7 @@ const Bugs: FC = () => {
     };
 
     return (
-        <WebsiteWrapper currentPage=''>
+        <WebsiteLayout currentPage=''>
 
             {/*main body*/}
             <section className='help-main'>
@@ -103,7 +103,7 @@ const Bugs: FC = () => {
 
             </section>
 
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 

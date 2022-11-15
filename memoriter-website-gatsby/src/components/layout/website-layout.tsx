@@ -15,7 +15,7 @@ interface Props { //type definitions for props
     currentPage: string;
 };
 
-const WebsiteWrapper: FC<Props> = ({ children, currentPage }: Props) => {
+const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
     const [languageSelect, setLanguageSelect] = useState<boolean>(false); //opens or closes language select modal
 
@@ -115,4 +115,4 @@ const WebsiteWrapper: FC<Props> = ({ children, currentPage }: Props) => {
     );
 };
 
-export default WebsiteWrapper;
+export default WebsiteLayout;

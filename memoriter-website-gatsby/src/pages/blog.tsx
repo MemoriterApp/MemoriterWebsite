@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { HeadFC, graphql } from 'gatsby';
 import * as styles from '../styles/blog/blog-main.module.scss';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import BlogSidebar from '../components/blog/blog-sidebar';
 import BlogMain from '../components/blog/blog-main';
 
@@ -44,7 +44,7 @@ const Blog: FC<Props> = ({ data }: Props) => {
   }
 
   return (
-    <WebsiteWrapper currentPage='blog'>
+    <WebsiteLayout currentPage='blog'>
       {/*style is needed for two column layout*/}
       <section className={styles.blog_body}>
         {/*sidebar with filter options*/}
@@ -53,7 +53,7 @@ const Blog: FC<Props> = ({ data }: Props) => {
         {/*main part with blog posts*/}
         <BlogMain topic={topic} data={data} />
       </section>
-    </WebsiteWrapper>
+    </WebsiteLayout>
   );
 };
 export default Blog;

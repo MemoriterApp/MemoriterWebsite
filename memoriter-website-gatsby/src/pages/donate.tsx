@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import DonateMain from '../components/donate/donate-main';
 import DonateDonate from '../components/donate/donate-donate';
 import DonateStatistics from '../components/donate/donate-statistics';
 
 const Donate: FC = () => {
     return (
-        <WebsiteWrapper currentPage='donate'>
+        <WebsiteLayout currentPage='donate'>
 
         <section className='donate-main-container'>
             {/*main content and texts*/}
@@ -21,7 +21,7 @@ const Donate: FC = () => {
             {/*statistics where the money goes (for transparency reasons)*/}
             <DonateStatistics/>
 
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 
