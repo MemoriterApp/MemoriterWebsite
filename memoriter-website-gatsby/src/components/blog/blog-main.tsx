@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import '../../styles/blog/blog-main.scss';
+import * as styles from '../../styles/blog/blog-main.module.scss';
 
 interface Props { //type definitions of props
   data: {allMarkdownRemark: {nodes: {frontmatter: {
@@ -24,10 +24,10 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
   const [loadedBlogPosts, setLoadedBlogPosts] = useState(8); //number of blog posts shown before clicking on the load more button
 
   return (
-    <section className='blog-main'>
+    <section className={styles.blog_main}>
 
       {/*four newest blog posts, divided in to two parts for the layout*/}
-      <div className='blog-main-new-blog-container'>
+      <div className={styles.blog_main_new_blog_container}>
         {blogPosts.filter((
           blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
         ) => topic !== 'Latest' ? blogPost.frontmatter.topic === topic : blogPost.frontmatter.topic !== topic).slice(0, 2).map((
@@ -37,10 +37,10 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
           const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
           
           return (
-            <Link className='blog-main-new-blog' key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+            <Link className={styles.blog_main_new_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
                               
               <p style={{lineHeight: '1rem'}}>{blogPost.frontmatter.topic}</p>
-              <p className='blog-main-blog-date' style={{lineHeight: '1rem'}}>
+              <p className={styles.blog_main_blog_date} style={{lineHeight: '1rem'}}>
                 {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
                   month: 'short',
                   year: 'numeric',
@@ -48,7 +48,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                 })}
               </p>
                               
-              <GatsbyImage className='blog-main-new-blog-image' image={thumb} alt={blogPost.frontmatter.title}/>
+              <GatsbyImage className={styles.blog_main_new_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
                               
               <h2>{blogPost.frontmatter.title}</h2>
               <p>{blogPost.frontmatter.description}</p>
@@ -58,7 +58,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
         })}
       </div>
 
-      <div className='blog-main-new-blog-container'>
+      <div className={styles.blog_main_new_blog_container}>
         {blogPosts.filter((
           blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
         ) => topic !== 'Latest' ? blogPost.frontmatter.topic === topic : blogPost.frontmatter.topic !== topic).slice(2, 4).map((
@@ -68,10 +68,10 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
           const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
 
           return (
-            <Link className='blog-main-new-blog' key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+            <Link className={styles.blog_main_new_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
                               
               <p style={{lineHeight: '1rem'}}>{blogPost.frontmatter.topic}</p>
-              <p className='blog-main-blog-date' style={{lineHeight: '1rem'}}>
+              <p className={styles.blog_main_blog_date} style={{lineHeight: '1rem'}}>
                 {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
                   month: 'short',
                   year: 'numeric',
@@ -79,7 +79,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                 })}
               </p>
                               
-              <GatsbyImage className='blog-main-new-blog-image' image={thumb} alt={blogPost.frontmatter.title}/>
+              <GatsbyImage className={styles.blog_main_new_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
                               
               <h2>{blogPost.frontmatter.title}</h2>
               <p>{blogPost.frontmatter.description}</p>
@@ -100,10 +100,10 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
           const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
           
           return (
-            <Link className='blog-main-old-blog' key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+            <Link className={styles.blog_main_old_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
                               
-              <p className='blog-main-old-blog-outside'>{blogPost.frontmatter.topic}</p>
-              <p className='blog-main-blog-date blog-main-old-blog-outside' style={{lineHeight: '1rem'}}> {/*two classes*/}
+              <p className={styles.blog_main_old_blog_outside}>{blogPost.frontmatter.topic}</p>
+              <p className={`${styles.blog_main_blog_date} ${styles.blog_main_old_blog_outside}`} style={{lineHeight: '1rem'}}> {/*two classes*/}
                 {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
                   month: 'short',
                   year: 'numeric',
@@ -113,12 +113,12 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                               
               <div style={{display: 'flex', gap: '20px'}}>
 
-                <div className='blog-main-old-blog-box'>
+                <div className={styles.blog_main_old_blog_box}>
                   <h2>{blogPost.frontmatter.title}</h2>
                   <p>{blogPost.frontmatter.description}</p>
                 </div>
 
-                <GatsbyImage className='blog-main-old-blog-image' image={thumb} alt={blogPost.frontmatter.title}/>
+                <GatsbyImage className={styles.blog_main_old_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
 
               </div>
 
@@ -131,7 +131,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
       {loadedBlogPosts <= blogPosts.filter((
         blogPost: any
       ) => topic !== 'Latest' ? blogPost.topic === topic : blogPost.topic !== topic).length - 1 ? (
-        <button className='blog-main-button' onClick={() => setLoadedBlogPosts(loadedBlogPosts + 8)}>Load More...</button>) : (<div/>)
+        <button className={styles.blog_main_button} onClick={() => setLoadedBlogPosts(loadedBlogPosts + 8)}>Load More...</button>) : (<div/>)
       }
 
     </section>
