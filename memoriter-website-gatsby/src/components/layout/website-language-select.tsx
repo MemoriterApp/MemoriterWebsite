@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '../../styles/wrapper/website-language-select.scss';
+import '../../styles/layout/website-language-select.scss';
 
 interface props { //type definitions for props
     onAnimation: React.CSSProperties;

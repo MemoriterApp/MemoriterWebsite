@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import '../../styles/wrapper/website-footer.scss';
+import '../../styles/layout/website-footer.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { changeTheme } from '../../features/theme-slice';

@@ -202,8 +202,8 @@ const Faq: FC = () => {
       question: 'What is the current legal status of Memoriter?',
       answer: (
         <p>
-          There is no. Currently the Project is represented by us individual people, but we might
-          create a formal organization in the future.
+          We are no formal organization yet. Currently the Project is represented by us individual
+          people, but we might create one in the future.
         </p>
       ),
       isOpen: false,
