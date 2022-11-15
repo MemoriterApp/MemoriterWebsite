@@ -1,0 +1,121 @@
+// all styles for the faq page and its components
+
+.help_main { // main container
+  position: relative;
+  left: 50%;
+  top: 120px;
+  transform: translate(-50%);
+  width: calc(100% - 320px);
+  max-width: 2400px;
+  padding: 40px 60px 80px 60px;
+  margin-bottom: 360px;
+
+  h1 { // the page heading/title
+    font-size: 2.8rem;
+    font-family: var(--font-heading);
+    margin-bottom: -100px;
+    background: var(--color-highlight-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-transparent);
+  }
+
+  hr { // When no subheading exists, the space under the heading needs to be artificially created.
+    margin-top: 60px;
+    border: none;
+  }
+
+  h2 { // sub headings dividing the page in different sections
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    margin-top: 180px;
+    margin-bottom: -90px;
+  }
+}
+
+.help_question { // styles for the question component
+  position: relative;
+  left: 50%;
+  top: 120px;
+  transform: translate(-50%);
+  width: 100%;
+  max-width: 2400px;
+  padding-top: 36px;
+  margin-bottom: 36px;
+  background-color: var(--color-container);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 200ms;
+
+  &:hover { // hover effect for question box
+    background-color: var(--color-hover-button);
+  }
+
+  h3 { // question title
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2.4rem;
+    margin: -24px 64px 32px 20px;
+  }
+
+  article { // answer text
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 1.8rem;
+    text-align: justify;
+    margin: -12px 20px 8px 20px;
+    transition: opacity 400ms;
+
+    ul { // extra styles for lists inside the answer texts
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      margin-left: -16px;
+      margin-bottom: 8px;
+      list-style: disc;
+    }
+
+    a {
+      // links embedded in answer texts
+      color: var(--color-font-gray);
+      transition: color 200ms;
+
+      &:hover {
+        // link hover effect
+        color: var(--color-font);
+      }
+    }
+  }
+
+  &_arrow { // arrow to show the answer
+    position: absolute;
+    right: 24px;
+    top: 26px;
+    transform: translate(0, -50%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid var(--color-font-gray);
+    border-right: 2px solid var(--color-font-gray);
+    transition: opacity 400ms;
+  }
+}
+
+@media (max-width: 960px) { // removes space at the sides on small screens
+  .help_main {
+    top: 60px;
+    width: calc(100% - 40px);
+    padding: 40px 0 80px 0;
+  }
+}
+
+@media (max-width: 240px) { // hides the content on too small screens (when the warning modal is open)
+  .help_main {
+    display: none;
+  }
+}

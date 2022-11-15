@@ -25,7 +25,7 @@
   --syntax-highlighting-select: #99bbff0a;
 }
 
-//light mode colors
+// light mode colors
 #light {
   --syntax-highlighting-orange: #b76b01;
   --syntax-highlighting-purple: #a626a4;
@@ -62,7 +62,7 @@ code[class*='language-'], pre[class*='language-'] {
   hyphens: none;
 }
 
-/* Print */
+// print page
 @media print {
   code[class*='language-'],
   pre[class*='language-'] {
@@ -70,24 +70,15 @@ code[class*='language-'], pre[class*='language-'] {
   }
 }
 
-.token.comment,
-.token.prolog,
-.token.cdata {
+.token.comment, .token.prolog, .token.cdata {
   color: var(--syntax-highlighting-gray);
 }
 
-.token.doctype,
-.token.punctuation,
-.token.entity {
+.token.doctype, .token.punctuation, .token.entity {
   color: var(--color-font-gray);
 }
 
-.token.attr-name,
-.token.class-name,
-.token.boolean,
-.token.constant,
-.token.number,
-.token.atrule {
+.token.attr-name, .token.class-name, .token.boolean, .token.constant, .token.number, .token.atrule {
   color: var(--syntax-highlighting-orange);
 }
 
@@ -95,11 +86,7 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-purple);
 }
 
-.token.property,
-.token.tag,
-.token.symbol,
-.token.deleted,
-.token.important {
+.token.property, .token.tag, .token.symbol, .token.deleted, .token.important {
   color: var(--syntax-highlighting-pink);
 }
 

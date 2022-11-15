@@ -69,11 +69,12 @@
       }
     }
 
-    .gatsby-resp-image-wrapper { // images
+    [class='gatsby-resp-image-wrapper'] { // images
       width: calc(100% + 80px) !important;
       margin: 48px -40px 48px -40px !important;
-      border-radius: 10px;
+      border-radius: 10px; 
       overflow: hidden;
+      fill: invert(1);
     }
 
     iframe { // embedded youtube videos
