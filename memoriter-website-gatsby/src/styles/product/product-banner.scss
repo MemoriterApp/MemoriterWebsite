@@ -43,7 +43,18 @@
     font-size: 3rem;
     font-family: var(--font-serif);
     text-align: center;
-    margin: 0 0 5rem 0;
+    margin: 0 0 2.4rem 0;
+}
+
+.product-banner-text-sub { // text under the main text
+    color: var(--color-font);
+    width: 80vw;
+    max-width: 800px;
+    font-size: 1.4rem;
+    font-family: var(--font-default);
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 80px;
 }
 
 .product-banner-get-started { /*get started button, needed to be split in multiple classes, this class is for the positionig of the button*/
@@ -110,6 +121,9 @@
 @media (max-width: 720px) { /*adjusting too big text*/
     .product-banner-text {
         font-size: 2.2rem;
+    }
+    .product-banner-text-sub {
+        font-size: 1.2rem;
     }
     .product-banner-get-started {
         font-size: 1.4rem;

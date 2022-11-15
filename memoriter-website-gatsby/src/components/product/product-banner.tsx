@@ -40,8 +40,12 @@ const ProductBanner: FC = () => {
             {/*content*/}
             <article className='product-banner-content'>
                 {/*slogan*/}
-                <p className='product-banner-text'>Study better faster smarter - study with Memoriter</p>
-                <p className='product-main-overview-text' style={{width:'100%', marginBottom:'75px'}}>Work with Memoriter effective memorizing, tools to quickly achieve successful results. </p>
+                <p className='product-banner-text'>
+                    Study Better, Faster, Smarter - Study with Memoriter!
+                </p>
+                <p className='product-banner-text-sub'>
+                    Work with Memoriter effective memorizing, tools to quickly achieve successful results.
+                </p>
 
                 {/*get started button for redirecting to register page*/}
                 <a
