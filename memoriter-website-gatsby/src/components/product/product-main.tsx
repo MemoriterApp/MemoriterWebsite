@@ -5,6 +5,7 @@ import '../../styles/product/product-main.scss';
 import lightBulbIconGradient from '../../images/product/light-bulb.svg';
 import handShakeIcon from '../../images/product/handshake.svg';
 import remember from '../../images/product/remember.svg';
+import free from '../../images/product/free.svg';
 
 const ProductMain: FC = () => {
   return (
@@ -33,6 +34,13 @@ const ProductMain: FC = () => {
           <img className='product-main-overview-image' src={remember} alt='placeholder' />
           <p className='product-main-overview-text'>
             Remeber everything with spaced repetition
+          </p>
+        </article>
+
+        <article>
+          <img className='product-main-overview-image' src={free} alt='placeholder' />
+          <p className='product-main-overview-text'>
+            The best part: It's only free.99
           </p>
         </article>
       </section>
@@ -106,6 +114,28 @@ const ProductMain: FC = () => {
             src='../../images/product/placeholder.jpg'
             alt='placeholder'
           />
+        </div>
+      </article>
+
+      <article className='product-main-container'>
+        <div className='product-main-container-sub-image'>
+          <StaticImage
+            className='product-main-image'
+            src='../../images/product/placeholder.jpg'
+            alt='placeholder'
+          />
+        </div>
+        <div className='product-main-container-sub'>
+          <AnimationOnScroll
+            animateIn='product-main-animation-fade-in-left'
+            animateOut='product-main-animation-fade-out-left'
+          >
+            <h1 className='product-main-heading'>It's only free.99 </h1>
+            <p className='product-main-text'>
+              Food is always beetter when it's free, same goes for software. We strictly believe in the idea that education
+              and the things around it should be made affordable. That's why we decided to make Memoriter free.99.
+            </p>
+          </AnimationOnScroll>
         </div>
       </article>
     </section>
