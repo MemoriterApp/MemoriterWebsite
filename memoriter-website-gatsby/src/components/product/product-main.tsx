@@ -3,9 +3,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { StaticImage } from 'gatsby-plugin-image';
 import '../../styles/product/product-main.scss';
 import lightBulbIconGradient from '../../images/product/light-bulb.svg';
-import handShakeIcon from '../../images/product/handshake.png'
-import remember from '../../images/product/remember.png'
-import placeholderImage from '../../images/product/placeholder.jpg';
+import handShakeIcon from '../../images/product/handshake.svg';
+import remember from '../../images/product/remember.svg';
 
 const ProductMain: FC = () => {
   return (
@@ -48,7 +47,7 @@ const ProductMain: FC = () => {
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className='product-main-heading'>Accumalate knowledge faster</h1>
             <p className='product-main-text'>
-            Flashcards have proven to be <span style={{fontWeight:'600'}}>150% more effective</span> if you want to accumalte knowledge faster. 
+            Flashcards have proven to be <strong >150% more effective</strong> if you want to accumalte knowledge faster. 
             Instead of memorizing your notes passively, save time using flashcards. When studying with flashcards 
             the algorithm will notice your mistakes and help you study more where your knowledge is lacking!
             </p>
