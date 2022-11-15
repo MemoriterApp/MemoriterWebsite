@@ -3,6 +3,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { StaticImage } from 'gatsby-plugin-image';
 import '../../styles/product/product-main.scss';
 import lightBulbIconGradient from '../../images/product/light-bulb.svg';
+import handShakeIcon from '../../images/product/handshake.png'
+import remember from '../../images/product/remember.png'
 import placeholderImage from '../../images/product/placeholder.jpg';
 
 const ProductMain: FC = () => {
@@ -17,21 +19,21 @@ const ProductMain: FC = () => {
             alt='light-bulb'
           />
           <p className='product-main-overview-text'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            Accumulate knowledge faster with flashcards
           </p>
         </article>
 
         <article>
-          <img className='product-main-overview-image' src={placeholderImage} alt='placeholder' />
+          <img className='product-main-overview-image' src={handShakeIcon} alt='placeholder' />
           <p className='product-main-overview-text'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            Study with friends and share your knowledge
           </p>
         </article>
 
         <article>
-          <img className='product-main-overview-image' src={placeholderImage} alt='placeholder' />
+          <img className='product-main-overview-image' src={remember} alt='placeholder' />
           <p className='product-main-overview-text'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            Remeber everything with spaced repetition
           </p>
         </article>
       </section>
@@ -44,11 +46,11 @@ const ProductMain: FC = () => {
             animateOut='product-main-animation-fade-out-right'
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className='product-main-heading'>The all-in-one learning environment.</h1>
+            <h1 className='product-main-heading'>Accumalate knowledge faster</h1>
             <p className='product-main-text'>
-              Memoriter is a program combining the information storage capacity of a note-taking
-              tool with the practical advantages of a flashcard learning system, creating the
-              ultimate all-in-one learning environment.
+            Flashcards have proven to be <span style={{fontWeight:'600'}}>150% more effective</span> if you want to accumalte knowledge faster. 
+            Instead of memorizing your notes passively, save time using flashcards. When studying with flashcards 
+            the algorithm will notice your mistakes and help you study more where your knowledge is lacking!
             </p>
           </AnimationOnScroll>
         </div>
@@ -75,10 +77,11 @@ const ProductMain: FC = () => {
             animateOut='product-main-animation-fade-out-left'
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className='product-main-heading'>Placeholder Heading</h1>
+            <h1 className='product-main-heading'>Study with friends</h1>
             <p className='product-main-text'>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            Study together and you will always find the motivation to suceed. 
+            You can help each other out and share your notes, techniques and structure. 
+            That way you will save time and hard work.
             </p>
           </AnimationOnScroll>
         </div>
@@ -91,10 +94,10 @@ const ProductMain: FC = () => {
             animateOut='product-main-animation-fade-out-right'
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className='product-main-heading'>Placeholder Heading</h1>
+            <h1 className='product-main-heading'>Remember everything with spaced repetition</h1>
             <p className='product-main-text'>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              By using the scientic method of spaced repetition, we will remind you to regularly review important flashcards 
+              that way you can remember thousands of flashcards with minimal effort.
             </p>
           </AnimationOnScroll>
         </div>
