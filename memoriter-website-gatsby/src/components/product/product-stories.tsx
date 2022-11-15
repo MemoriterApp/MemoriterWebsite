@@ -6,18 +6,18 @@ const ProductStories: FC = () => {
     const stories: {number: number, author: string, quote: string}[] = [ //array with all story data
         {
             number: 0,
-            author: 'Placeholder',
-            quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,'
+            author: 'Felix',
+            quote: 'I used to struggle a lot with latin in school. Every week our Teacher would give us a huge list of words to study. I would spend hours memorizing them, but when using memoriter I was able to learn them in a fraction of the time, thanks to the different learning methods.'
         },
         {
             number: 1,
-            author: 'Placeholder',
-            quote: 'no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et'
+            author: 'Lucas',
+            quote: 'When studying in med. school it is imporant to remember everything over a longer period of time. Memoriter helped me to learn the most important things for my exams. I was able to learn everything in a short amount of time and to remember it for a long time by using spaced repetition.'
         },
         {
             number: 2,
-            author: 'Placeholder',
-            quote: 'accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+            author: 'Peter',
+            quote: 'I often times studieded in groups. Memoriter helped us to study together and to share our knowledge. We were able to create our own flashcards and to study them together. This way we were able to learn everything faster and to remember it for a longer time.'
         },
     ];
 
