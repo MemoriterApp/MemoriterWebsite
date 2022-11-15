@@ -138,20 +138,20 @@
 }
 
 @media (max-width: 1160px) { // optimizes space usage for medium sized screens (e.g. smaller laptops or large tablets)
-  .blog-main-body {
+  .blog_body {
     width: calc(100% - 40px);
     gap: 40px;
   }
 }
 
 @media (max-width: 960px) { // optimizes layout for small screens
-  .blog-main-body {
+  .blog_body {
     flex-direction: column;
   }
 }
 
 @media (max-width: 660px) { // optimizes layout mobile devices
-  .blog-main-new-blog-container {
+  .blog_main_new_blog_container {
     flex-direction: column;
 
     > * {
@@ -160,20 +160,20 @@
     }
   }
 
-  .blog-main-old-blog_imgage {
+  .blog_main_old_blog_imgage {
     display: none;
   }
 }
 
 @media (max-width: 280px) { // small visual fix (removes overlapping topic and date in some cases)
-  .blog-main-blog-date {
+  .blog_main_blog_date {
     text-align: left;
     margin-top: -10px;
   }
 }
 
 @media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
-  .blog-main {
+  .blog_main {
     display: none;
   }
 }

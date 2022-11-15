@@ -1,7 +1,6 @@
 import React, { FC, useState } from 'react';
 import { HeadFC, graphql } from 'gatsby';
-import '../styles/releases/releases-main.scss';
-import '../styles/releases/old-release.scss';
+import * as styles from '../styles/releases/releases-main.module.scss';
 import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
 import CurrentRelease from '../components/releases/current-release';
@@ -15,15 +14,15 @@ const Releases: FC<Props> = ({ data }: Props) => {
 
   const releases = data.allMarkdownRemark.nodes; // list of all releases
 
-  const [loadedReleases, setLoadedReleases] = useState<number>(5); //number of releases shown before clicking on the load more button
+  const [loadedReleases, setLoadedReleases] = useState<number>(5); // number of releases shown before clicking on the load more button
 
   return (
     <WebsiteLayout currentPage=''>
 
       {/*main body*/}
-      <section className='releases-main'>
+      <section className={styles.releases_main}>
 
-      <h1 className='releases-main-title'>Release Notes</h1>
+      <h1 className={styles.releases_main_title}>Release Notes</h1>
 
       {/*current version with other style*/}
       {releases.slice(0, 1).map(
@@ -32,16 +31,16 @@ const Releases: FC<Props> = ({ data }: Props) => {
         )
       )}
 
-      {/*older versions, gets data from the releases array, where all components are stored, just gets a part of the array*/}
+      {/* older versions, gets data from the releases array, where all components are stored, just gets a part of the array */}
       {releases.slice(1, loadedReleases).map(
         (release: {id: string, frontmatter: {date: string}, html: string}) => (
           <OldRelease key={release.id} date={release.frontmatter.date} html={release.html}/>
         )
       )}
 
-      {/*load more button, onClick just adds five to the number of the maximum of shown releases. The button is just shown if necessary.*/}
+      {/* load more button, onClick just adds five to the number of the maximum of shown releases. The button is just shown if necessary. */}
       {loadedReleases <= releases.length - 1 ? (
-        <button className='releases-main-button' onClick={() => setLoadedReleases(loadedReleases + 5)}>Load More...</button>
+        <button className={styles.releases_main_button} onClick={() => setLoadedReleases(loadedReleases + 5)}>Load More...</button>
         ) : (
         <div/>
       )}

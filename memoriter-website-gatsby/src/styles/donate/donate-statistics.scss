@@ -1,7 +1,7 @@
-/*styles for the pie chart below the main page*/
+// styles for the pie chart below the main page
 
-.donate-statistics { /*container with content*/
-    display: flex; /*needed for the column layout*/
+.donate-statistics { // container with content
+    display: flex; // needed for the column layout
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -10,13 +10,13 @@
     margin-bottom: 380px;
 }
 
-.donate-statistics-chart { /*pie chart positioning*/
+.donate-statistics-chart { // pie chart positioning
     position: relative;
     max-width: 400px;
     margin-inline: 40px;
     transition: color 400ms;
 }
-.donate-statistics-chart-label { /*label in the center of the chart*/
+.donate-statistics-chart-label { // label in the center of the chart
     position: absolute;
     left: 240px;
     top: 200px;
@@ -24,7 +24,7 @@
     width: 220px;
     text-align: center;
 }
-.donate-statistics-chart-label h3 { /*label heading*/
+.donate-statistics-chart-label h3 { // label heading
     font-size: 2.4rem;
     font-weight: 500;
     color: var(--color-font);
@@ -32,7 +32,7 @@
     margin-top: 0;
     margin-bottom: 10px;
 }
-.donate-statistics-chart-label p { /*label description*/
+.donate-statistics-chart-label p { // label description
     font-size: 1.6rem;
     color: var(--color-font);
     font-family: var(--font-default);
@@ -40,51 +40,51 @@
     margin-bottom: 0;
 }
 
-.donate-statistics-section { /*content sections next to the chart*/
+.donate-statistics-section { // content sections next to the chart
     flex-basis: 50%;
     margin-inline: 40px;
 }
-.donate-statistics-section h2 { /*section heading*/
+.donate-statistics-section h2 { // section heading
     font-size: 2.4rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
     margin-top: 0;
 }
-.donate-statistics-section p, ul { /*section content*/
+.donate-statistics-section p, .donate-statistics-section ul { // section content
     font-size: 1.4rem;
     color: var(--color-font);
     font-family: var(--font-default);
     line-height: 2.4rem;
     margin-bottom: -8px;
-    list-style: none; /*hides the default list bullet points*/
+    list-style: none; // hides the default list bullet points
     list-style-position: outside;
 }
-.donate-statistics-section li::before { /*bullet point replacement*/
+.donate-statistics-section li::before { // bullet point replacement
     margin-left: -40px;
     margin-right: 16px;
 }
-.donate-statistics-section-0::before { /*list style color*/
-    content: '\2B24'; /*larger circle*/
+.donate-statistics-section-0::before { // list style color
+    content: '\2B24'; // larger circle
     color: var(--color-highlight-gradient-green);
 }
-.donate-statistics-section-1::before { /*list style color*/
-    content: '\2B24'; /*larger circle*/
+.donate-statistics-section-1::before { // list style color
+    content: '\2B24'; // larger circle
     color: var(--color-highlight-gradient-blue);
 }
-.donate-statistics-section-2::before { /*list style color*/
-    content: '\2B24'; /*larger circle*/
+.donate-statistics-section-2::before { // list style color
+    content: '\2B24'; // larger circle
     color: var(--color-container-button);
 }
-.donate-statistics-section-3::before { /*list style color*/
-    content: '\2B24'; /*larger circle*/
+.donate-statistics-section-3::before { // list style color
+    content: '\2B24'; // larger circle
     color: var(--color-container);
 }
-.donate-statistics-section-default::before { /*list style replacement for details*/
+.donate-statistics-section-default::before { // list style replacement for details
     content: '\2022';
 }
 
-.donate-statistics-section-box { /*highlighted box*/
+.donate-statistics-section-box { // highlighted box
     font-size: 1.4rem;
     color: var(--color-font);
     font-family: var(--font-highlight);
@@ -96,7 +96,7 @@
     border-radius: 10px;
 }
 
-.donate-statistics-section-bottom-text { /*text at the bottom of the page*/
+.donate-statistics-section-bottom-text { // text at the bottom of the page
     position: absolute;
     bottom: -60px;
     transform: translate(0, 100%);
@@ -107,15 +107,15 @@
     text-align: center;
     margin-inline: 40px;
 }
-.donate-statistics-section-bottom-text-link { /*link in the text at the bottom of the page*/
+.donate-statistics-section-bottom-text-link { // link in the text at the bottom of the page
     color: var(--color-font-gray);
     transition: color 200ms;
 }
-.donate-statistics-section-bottom-text-link:hover { /*link hover effect*/
+.donate-statistics-section-bottom-text-link:hover { // link hover effect
     color: var(--color-font);
 }
 
-@media (max-width: 1160px) { /*changes the layout on smaller screens*/
+@media (max-width: 1160px) { // changes the layout on smaller screens
     .donate-statistics {
         flex-direction: column;
         align-items: center;
@@ -138,7 +138,7 @@
     }
 }
 
-@media (max-width: 420px) { /*changes the margin of the chart on very small screens*/
+@media (max-width: 420px) { // changes the margin of the chart on very small screens
     .donate-statistics {
         margin-bottom: 160px;
     }
@@ -157,7 +157,7 @@
     }
 }
 
-@media (max-width: 240px) { /*hides everything on too small screens*/
+@media (max-width: 240px) { // hides everything on too small screens
     .donate-statistics {
         display: none;
     }

@@ -1,28 +1,28 @@
-/*This stylesheet provides the design for the actual donation section.*/
+// This stylesheet provides the design for the actual donation section.
 
-.donate-donate { /*main container*/
+.donate-donate { // main container
     position: relative;
     flex-basis: 50%;
     top: 140px;
     align-self: center;
 }
 
-.donate-donate fieldset { /*removes the borders of select rows*/
+.donate-donate fieldset { // removes the borders of select rows
     display: flex;
     width: 65%;
     margin-bottom: 28px;
     border: none;
 }
 
-.donate-donate-select { /*option select button*/
+.donate-donate-select { // option select button
     display: inline-block;
-    flex-basis: 50%; /*maximum size of the button*/
+    flex-basis: 50%; // maximum size of the button
     cursor: pointer;
 }
-.donate-donate-select input { /*hides default radio button*/
+.donate-donate-select input { // hides default radio button
     display: none; 
 }
-.donate-donate-select-button { /*radio select background shape*/
+.donate-donate-select-button { // radio select background shape
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -32,28 +32,28 @@
     cursor: pointer;
     transition: background-color 200ms;
 }
-.donate-donate-select-button:hover { /*hover effect for select option*/
+.donate-donate-select-button:hover { // hover effect for select option
     background-color: var(--color-hover-button);
 }
-.donate-donate-select-button label { /*option select label text*/
+.donate-donate-select-button label { // option select label text
     font-size: 1.3rem;
     color: var(--color-font);
     font-family: var(--font-highlight);
     cursor: pointer;
 }
-.donate-donate-select input:checked + .donate-donate-select-button { /*background color change on toggle*/
+.donate-donate-select input:checked + .donate-donate-select-button { // background color change on toggle
     background-color: var(--color-container-button);
 }
-.donate-donate-select-button-left { /*border radius for the left button*/
+.donate-donate-select-button-left { // border radius for the left button
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.donate-donate-select-button-right { /*border radius for the right button*/
+.donate-donate-select-button-right { // border radius for the right button
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.donate-donate-credit-card { /*button to donate with credit card*/
+.donate-donate-credit-card { // button to donate with credit card
     position: relative;
     width: 60%;
     height: 53px;
@@ -64,7 +64,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.donate-donate-credit-card-text { /*text which is not supposed to change color*/
+.donate-donate-credit-card-text { // text which is not supposed to change color
     position: absolute;
     left: 50%;
     top: 0.7rem;
@@ -74,7 +74,7 @@
     font-family: var(--font-highlight);
     white-space: nowrap;
 }
-.donate-donate-credit-card-background { /*the hover background was done in React because it did not work in CSS*/
+.donate-donate-credit-card-background { // the hover background was done in React because it did not work in CSS
     height: 100%;
     margin-inline: -6px;
     border-radius: 10px;
@@ -83,7 +83,7 @@
 }
 
 
-.donate-donate-paypal { /*button to donate with paypal*/
+.donate-donate-paypal { // button to donate with paypal
     width: 40%;
     height: 52px;
     margin-left: 14px;
@@ -93,16 +93,16 @@
     cursor: pointer;
     transition: background-color 200ms;
 }
-.donate-donate-paypal:hover { /*hover effect for paypal button*/
+.donate-donate-paypal:hover { // hover effect for paypal button
     background-color: var(--color-paypal-hover);
 }
-.donate-donate-paypal img { /*paypal logo on the button*/
+.donate-donate-paypal img { // paypal logo on the button
     height: 60%;
     margin-left: -2px;
     margin-top: 4px;
 }
 
-.donate-donate-change-currency { /*button to enable the currency selector*/
+.donate-donate-change-currency { // button to enable the currency selector
     display: block;
     transform: translate(0, -10px);
     font-size: 0.9rem;
@@ -112,7 +112,7 @@
     border: none;
     cursor: pointer;
 }
-.donate-donate-change-currency-select { /*currency selector*/
+.donate-donate-change-currency-select { // currency selector
     font-size: 0.9rem;
     color: var(--color-font-gray);
     padding: 6px 4px 6px 8px;
@@ -123,13 +123,13 @@
     outline: none;
 }
 
-@media (max-width: 1160px) { /*changes the gap between text and donation settings on smaller screens*/
+@media (max-width: 1160px) { // changes the gap between text and donation settings on smaller screens
     .donate-donate fieldset {
         width: calc(100% - 60px);
     }
 }
 
-@media (max-width: 960px) { /*changes the layout on small screens*/
+@media (max-width: 960px) { // changes the layout on small screens
     .donate-donate {
         width: calc(100% - 20px);
     }
@@ -139,7 +139,7 @@
 }
 
 
-@media (max-width: 400px) { /*changes the layout on small screens*/
+@media (max-width: 400px) { // changes the layout on small screens
     .donate-donate {
         transform: scale(0.75);
         width: 140%;

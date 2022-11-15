@@ -1,10 +1,9 @@
-/*some extra styles for the layout and load more button of the release notes page*/
+// some extra styles for the layout and load more button of the release notes page
 
-.releases-main { /*layout container for the content*/
-    margin-bottom: 250px;
-}
+.releases_main { // layout container for the content
+  margin-bottom: 250px;
 
-.releases-main-title { /*the big page heading*/
+  &_title { // the big page heading
     position: relative;
     left: 50%;
     top: 160px;
@@ -18,9 +17,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
-}
+  }
 
-.releases-main-button { /*load more button*/
+  &_button { // load more button
     position: relative;
     top: 60px;
     left: 50%;
@@ -32,16 +31,18 @@
     padding: 8px 6px 8px 6px;
     border: none;
     border-radius: 4px;
-    background-color: var(--color-transparent);;
+    background-color: var(--color-transparent);
     cursor: pointer;
     transition: background-color 200ms;
-}
-.releases-main-button:hover { /*for the fading background box on hover*/
-    background-color: var(--color-hover);
+
+    &:hover { // for the fading background box on hover
+      background-color: var(--color-hover);
+    }
+  }
 }
 
-@media (max-width: 240px) { /*hides the content on too small screens (when the warning modal is open)*/
-    .releases-main {
-        display: none;
-    }
+@media (max-width: 240px) { // hides the content on too small screens (when the warning modal is open)
+  .releases-main {
+    display: none;
+  }
 }

@@ -152,30 +152,30 @@
 }
 
 @media (max-width: 1160px) { // optimizes layout for smaller screens for better readability
-  .blog-post-main article {
+  .blog_post_main article {
     width: 600px;
     max-width: calc(100% - 40px);
   }
 }
 
 @media (max-width: 700px) { // fixes images breaking content margin
-  .blog-post-main article .gatsby-resp-image-wrapper {
+  .blog_post_main article [class='gatsby-resp-image-wrapper'] {
     width: 100% !important;
     margin: 40px 0 48px 0 !important;
   }
 
-  .blog-post-main article iframe {
+  .blog_post_main article iframe {
     width: 100%;
     margin: 40px 0 48px 0;
   }
 
-  .blog-post-main article figcaption {
+  .blog_post_main article figcaption {
     margin-inline: 0;
   }
 }
 
 @media (max-width: 240px) { // hides everything on too small screens
-  .blog-post-main {
+  .blog_post_main {
     display: none;
   }
 }

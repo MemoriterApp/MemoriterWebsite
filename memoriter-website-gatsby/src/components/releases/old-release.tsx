@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import * as styles from '../../styles/releases/old-release.module.scss';
 
 interface Props {
     date: string;
@@ -15,10 +16,10 @@ const ReleaseV10: FC<Props> = ({ date, html }: Props) => {
     });
 
     return (
-        <section className='old-release'>
+        <section className={styles.old_release}>
 
             {/*release date*/}
-            <p className='old-release-date'><span>{convertedDate}</span></p>
+            <p className={styles.old_release_date}>{convertedDate}</p>
             
             {/*content*/}
             <article dangerouslySetInnerHTML={{ __html: html }}/>

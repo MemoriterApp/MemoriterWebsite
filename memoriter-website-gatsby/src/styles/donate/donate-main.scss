@@ -1,6 +1,6 @@
-/*styles for the promoting text for donating*/
+// styles for the promoting text for donating
 
-.donate-main-container { /*flex container with donate-main and donate-donate inside*/
+.donate-main-container { // flex container with donate-main and donate-donate inside
     display: flex;
     position: relative;
     left: 50%;
@@ -10,7 +10,7 @@
     margin-bottom: 200px;
 }
 
-.donate-main { /*main container*/
+.donate-main { // main container
     flex-basis: 50%;
     position: relative;
     left: 10px;
@@ -19,7 +19,7 @@
     padding: 40px 60px 80px 60px;
 }
 
-.donate-main-heading { /*the page heading/title*/
+.donate-main-heading { // the page heading/title
     font-size: 3.2rem;
     font-family: var(--font-heading);
     text-align: center;
@@ -29,7 +29,7 @@
     -webkit-text-fill-color: var(--color-transparent);
 }
 
-.donate-main-content { /*text paragraph*/
+.donate-main-content { // text paragraph
     font-size: 1.4rem;
     color: var(--color-font);
     font-family: var(--font-default);
@@ -37,13 +37,13 @@
     text-align: center;
 }
 
-@media (max-width: 1160px) { /*changes the gap between text and donation settings on smaller screens*/
+@media (max-width: 1160px) { // changes the gap between text and donation settings on smaller screens
     .donate-main-container {
         gap: 20px;
     }
 }
 
-@media (max-width: 960px) { /*changes the layout on small screens*/
+@media (max-width: 960px) { // changes the layout on small screens
     .donate-main-container {
         flex-direction: column;
     }
@@ -56,7 +56,7 @@
     }
 }
 
-@media (max-width: 560px) { /*makes some text font size samller for better readability on small screens*/
+@media (max-width: 560px) { // makes some text font size samller for better readability on small screens
     .donate-main {
         width: calc(100% - 8px);
     }
@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-width: 240px) { /*hodes everything on too small screens*/
+@media (max-width: 240px) { // hodes everything on too small screens
     .donate-main-container {
         display: none;
     }

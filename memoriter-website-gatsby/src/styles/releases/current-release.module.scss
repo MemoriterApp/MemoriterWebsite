@@ -1,35 +1,38 @@
-/*here are the styles used for the current version in the release notes, older versions are using a seperate stylesheet*/
+// here are the styles used for the current version in the release notes, older versions are using a seperate stylesheet
 
-.current-release { /*main container*/
-    position: relative;
-    left: 50%;
-    top: 120px;
-    transform: translate(-50%);
-    width: calc(100% - 320px);
-    max-width: 2400px;
-    padding: 40px 60px 80px 60px;
-}
-.current-release-date span { // date at the top of the section
-    color: var(--color-font-gray);
+.current_release { // main container
+  position: relative;
+  left: 50%;
+  top: 120px;
+  transform: translate(-50%);
+  width: calc(100% - 320px);
+  max-width: 2400px;
+  padding: 40px 60px 80px 60px;
+
+  &_date { // date at the top of the section
+    color: var(--color-font-gray) !important;
     text-align: left;
-}
-.current-release h1 { /*all html sub headings (<h2/>) of current-release*/
+  }
+
+  h1 { // all html sub headings (<h2/>) of current-release
     font-size: 2rem;
     font-weight: 500;
     color: var(--color-font);
     font-family: var(--font-highlight);
     margin-top: 20px;
     margin-bottom: 32px;
-}
-.current-release h2 { /*all html sub headings (<h2/>) of current-release*/
+  }
+
+  h2 { // all html sub headings (<h2/>) of current-release
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color-font);
     font-family:  var(--font-highlight);
     margin-top: 40px;
     margin-bottom: 12px;
-}
-.current-release p { /*all html text paragraps (<p/>) of current-release*/
+  }
+
+  p { // all html text paragraps (<p/>) of current-release
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -37,8 +40,9 @@
     line-height: 1.8rem;
     text-align: justify;
     margin-bottom: 0;
-}
-.current-release ul { /*all html unordered lists (<ul/>) of current-release*/
+  }
+
+  ul { // all html unordered lists (<ul/>) of current-release
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -48,8 +52,9 @@
     margin-bottom: 0;
     margin-left: -20px;
     list-style: disc;
-}
-.current-release ol { /*all html ordered lists (<ol/>) of current-release*/
+  }
+
+  ol { // all html ordered lists (<ol/>) of current-release
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font);
@@ -59,16 +64,18 @@
     margin-bottom: 0;
     margin-left: -20px;
     list-style: decimal;
-}
-.current-release .gatsby-resp-image-wrapper { // all html images (<img/>) of current-release
+  }
+
+  [class='gatsby-resp-image-wrapper'] { // all html images (<img/>) of current-release
     position: relative;
     width: calc(100% - 100px);
     margin-top: 32px;
     margin-bottom: 32px;
     border-radius: 10px;
     overflow: hidden;
-}
-.current-release figcaption { // all html image caption (<figcaption/>) of current-release
+  }
+
+  figcaption { // all html image caption (<figcaption/>) of current-release
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-font-gray);
@@ -76,34 +83,40 @@
     line-height: 1.8rem;
     text-align: justify;
     margin: -24px 50px 32px 50px;
-}
-.current-release code { // all html inline code (<code/>) of current-release
+  }
+
+  code { // all html inline code (<code/>) of current-release
     font-size: 1.1rem;
     color: var(--color-font-code);
     padding: 2px 4px;
     background-Color: var(--color-hover);
     border-Radius: 4px;
-}
-.current-release pre { // code block container
+  }
+
+  pre { // code block container
     padding: 20px;
     margin: 40px 0 40px 0;
     border-radius: 10px;
-}
-.current-release pre code { // code blocks
+  }
+
+  pre code { // code blocks
     color: unset;
     padding: 4px 0;
     background-color: unset;
+  }
 }
 
-@media (max-width: 960px) { /*removes space at the sides on small screens*/
-    .current-release {
-        width: calc(100% - 40px);
-        padding: 40px 0 80px 0;
+@media (max-width: 960px) { // removes space at the sides on small screens
+  .current-release {
+    width: calc(100% - 40px);
+    padding: 40px 0 80px 0;
+
+    [class='gatsby-resp-image-wrapper'] {
+      width: 100%;
     }
-    .current-release .gatsby-resp-image-wrapper {
-        width: 100%;
+
+    figcaption {
+      margin: -24px 0 32px 0;
     }
-    .current-release figcaption {
-        margin: -24px 0 32px 0;
-    }
+  }
 }

@@ -111,13 +111,13 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-cyan);
 }
 
-/* HTML overrides */
+// html overrides
 .token.attr-value > .token.punctuation.attr-equals,
 .token.special-attr > .token.attr-value > .token.value.css {
   color: var(--color-font-gray);
 }
 
-/* CSS overrides */
+// css overrides
 .language-css .token.selector {
   color: var(--syntax-highlighting-pink);
 }
@@ -140,7 +140,7 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-purple);
 }
 
-/* JS overrides */
+// js overrides
 .language-javascript .token.operator {
   color: var(--syntax-highlighting-purple);
 }
@@ -152,7 +152,7 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-red);
 }
 
-/* JSON overrides */
+// JSON overrides
 .language-json .token.operator {
   color: var(--color-font-gray);
 }
@@ -161,7 +161,7 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-orange);
 }
 
-/* MD overrides */
+// md overrides
 .language-markdown .token.url,
 .language-markdown .token.url > .token.operator,
 .language-markdown .token.url-reference.url > .token.string {
@@ -202,7 +202,7 @@ code[class*='language-'], pre[class*='language-'] {
   color: var(--syntax-highlighting-pink);
 }
 
-/* General */
+// general
 .token.bold {
   font-weight: bold;
 }
@@ -220,10 +220,10 @@ code[class*='language-'], pre[class*='language-'] {
   opacity: 0.8;
 }
 
-/* Plugin overrides */
-/* Selectors should have higher specificity than those in the plugins' default stylesheets */
+// plugin overrides
+// Selectors should have higher specificity than those in the plugins' default stylesheets.
 
-/* Show Invisibles plugin overrides */
+// Show Invisibles plugin overrides
 .token.token.tab:not(:empty):before,
 .token.token.cr:before,
 .token.token.lf:before,
@@ -232,13 +232,13 @@ code[class*='language-'], pre[class*='language-'] {
   text-shadow: none;
 }
 
-/* Toolbar plugin overrides */
-/* Space out all buttons and move them away from the right edge of the code block */
+// toolbar plugin overrides
+// Space out all buttons and move them away from the right edge of the code block.
 div.code-toolbar > .toolbar.toolbar > .toolbar-item {
   margin-right: 0.4em;
 }
 
-/* Styling the buttons */
+// styling the buttons
 div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
 div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
@@ -258,45 +258,45 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
   color: var(--color-font-gray);
 }
 
-/* Line Highlight plugin overrides */
-/* The highlighted line itself */
+// line highlight plugin overrides
+// the highlighted line itself
 .line-highlight.line-highlight {
   background: var(--syntax-highlighting-select);
 }
 
-/* Default line numbers in Line Highlight plugin */
+// default line numbers in line highlight plugin
 .line-highlight.line-highlight:before,
 .line-highlight.line-highlight[data-end]:after {
   background: var(--syntax-highlighting-gray-dark);
   color: var(--color-font-gray);
   padding: 0.1em 0.6em;
   border-radius: 0.3em;
-  box-shadow: 0 2px 0 0 var(--color-shadow); /* same as Toolbar plugin default */
+  box-shadow: 0 2px 0 0 var(--color-shadow); // same as Toolbar plugin default
 }
 
-/* Hovering over a linkable line number (in the gutter area) */
-/* Requires Line Numbers plugin as well */
+// hovering over a linkable line number (in the gutter area)
+// requires line numbers plugin as well
 pre[id].linkable-line-numbers.linkable-line-numbers
   span.line-numbers-rows
   > span:hover:before {
   background-color: var(--syntax-highlighting-select);
 }
 
-/* Line Numbers and Command Line plugins overrides */
-/* Line separating gutter from coding area */
+// line numbers and command line plugins overrides
+// line separating gutter from coding area
 .line-numbers.line-numbers .line-numbers-rows,
 .command-line .command-line-prompt {
   border-right-color: var(--syntax-highlighting-transparent);
 }
 
-/* Stuff in the gutter */
+// stuff in the gutter
 .line-numbers .line-numbers-rows > span:before,
 .command-line .command-line-prompt > span:before {
   color: var(--syntax-highlighting-gray);
 }
 
-/* Match Braces plugin overrides */
-/* Note: Outline colour is inherited from the braces */
+// match braces plugin overrides
+// note: outline colour is inherited from the braces
 .rainbow-braces .token.token.punctuation.brace-level-1,
 .rainbow-braces .token.token.punctuation.brace-level-5,
 .rainbow-braces .token.token.punctuation.brace-level-9 {
@@ -321,8 +321,8 @@ pre[id].linkable-line-numbers.linkable-line-numbers
   color: var(--syntax-highlighting-purple);
 }
 
-/* Diff Highlight plugin overrides */
-/* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+// diff highlight plugin overrides
+// taken from https://github.com/atom/github/blob/master/styles/variables.less
 pre.diff-highlight > code .token.token.deleted:not(.prefix),
 pre > code.diff-highlight .token.token.deleted:not(.prefix) {
   background-color: var(--syntax-highlighting-delete);
@@ -361,22 +361,22 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
   background-color: var(--syntax-highlighting-add-select);
 }
 
-/* Previewers plugin overrides */
-/* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-dark-ui */
-/* Border around popup */
+// previewers plugin overrides
+// based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-dark-ui
+// border around popup
 .prism-previewer.prism-previewer:before,
 .prism-previewer-gradient.prism-previewer-gradient div {
   border-color: var(--syntax-highlighting-gray-dark-plus);
 }
 
-/* Angle and time should remain as circles and are hence not included */
+// angle and time should remain as circles and are hence not included
 .prism-previewer-color.prism-previewer-color:before,
 .prism-previewer-gradient.prism-previewer-gradient div,
 .prism-previewer-easing.prism-previewer-easing:before {
   border-radius: 0.3em;
 }
 
-/* Triangles pointing to the code */
+// triangles pointing to the code
 .prism-previewer.prism-previewer:after {
   border-top-color: var(--syntax-highlighting-gray-dark-plus);
 }
@@ -385,29 +385,29 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
   border-bottom-color: var(--syntax-highlighting-gray-dark-plus);
 }
 
-/* Background colour within the popup */
+// background colour within the popup
 .prism-previewer-angle.prism-previewer-angle:before,
 .prism-previewer-time.prism-previewer-time:before,
 .prism-previewer-easing.prism-previewer-easing {
   background: var(--syntax-highlighting-gray-dark-plus);
 }
 
-/* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
-/* For time, this is the alternate colour */
+// for angle, this is the positive area (eg. 90deg will display one quadrant in this colour)
+// for time, this is the alternate colour
 .prism-previewer-angle.prism-previewer-angle circle,
 .prism-previewer-time.prism-previewer-time circle {
   stroke: var(--color-font-gray);
   stroke-opacity: 1;
 }
 
-/* Stroke colours of the handle, direction point, and vector itself */
+// stroke colours of the handle, direction point, and vector itself
 .prism-previewer-easing.prism-previewer-easing circle,
 .prism-previewer-easing.prism-previewer-easing path,
 .prism-previewer-easing.prism-previewer-easing line {
   stroke: var(--color-font-gray);
 }
 
-/* Fill colour of the handle */
+// fill colour of the handle
 .prism-previewer-easing.prism-previewer-easing circle {
   fill: var(--color-transparent);
 }

@@ -134,24 +134,24 @@
 }
 
 @media (max-width: 1160px) { // optimizes layout for smaller screens for better readability
-  .blog-post-footer {
+  .blog_post_footer {
     width: 800px;
     max-width: calc(100% - 40px);
   }
 }
 
 @media (max-width: 660px) { // removes too large images on small screens for better readability
-  .blog-post-footer-linked-blog-image {
+  .blog_post_footer_linked_blog_image {
     display: none;
   }
 }
 
 @media (max-width: 360px) { // small visual fix (removes overlapping read more heading and all posts button)
-  .blog-post-footer-read-more {
+  .blog_post_footer_read_more {
     display: block;
   }
 
-  .blog-post-footer-all-posts {
+  .blog_post_footer_all_posts {
     display: block;
     position: relative;
     left: 0;
@@ -160,14 +160,14 @@
 }
 
 @media (max-width: 300px) { // small visual fix (removes overlapping topic and date in some cases)
-  .blog-post-footer-linked-blog-date {
+  .blog_post_footer_linked_blog_date {
     text-align: left;
     margin-top: -10px;
   }
 }
 
 @media (max-width: 240px) { // hides everything on too small screens
-  .blog-post-footer {
+  .blog_post_footer {
     display: none;
   }
 }

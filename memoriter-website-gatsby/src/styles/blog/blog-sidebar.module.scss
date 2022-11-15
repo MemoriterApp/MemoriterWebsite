@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 960px) { // optimizations for smaller screens
-  .blog-sidebar {
+  .blog_sidebar {
     position: relative;
     top: 140px;
     width: unset;
@@ -113,13 +113,13 @@
 }
 
 @media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
-  .blog-sidebar {
+  .blog_sidebar {
     display: none;
   }
 }
 
 @media (max-height: 560px) {
-  .blog-sidebar {
+  .blog_sidebar {
     position: relative;
     margin-top: -8px;
   }
