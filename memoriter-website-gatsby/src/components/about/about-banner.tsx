@@ -35,7 +35,7 @@ const AboutBanner: FC = () => {
 
             {/*content*/}
             <p className={styles.about_banner_content}>
-                Lorem <span>ipsum</span> dolor sit amet, consetetur <span>sadipscing</span> elitr.
+                Find our more about <span>the best</span> team of developers and designers <span>in the world.</span>
             </p>
 
             {/*transition shape at the bottom*/}

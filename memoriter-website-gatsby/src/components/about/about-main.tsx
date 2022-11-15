@@ -65,7 +65,7 @@ const AboutMain: FC = () => {
 
             <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_down} animateOut={styles.about_main_animation_fade_out_down}>
                 <p className={styles.about_main_bottom}>
-                    Lorem <span>ipsum</span> dolor sit amet, consetetur <span>sadipscing</span> elitr.
+                    from <span>Students</span> for <span>Student</span>
                 </p>
             </AnimationOnScroll>
 
