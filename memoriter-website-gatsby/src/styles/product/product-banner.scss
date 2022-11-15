@@ -4,7 +4,7 @@
     position: absolute;
     width: 100%;
     height: calc(100vh - 60px);
-    min-height: 420px; /*fixes issues for screens not high enough*/
+    min-height: 540px; /*fixes issues for screens not high enough*/
     left: 0;
     top: 62px;
     background: var(--color-banner-gradient);
@@ -134,6 +134,12 @@
 @media (max-width: 420px) {
     .product-banner {
         min-height: 480px;
+    }
+    .product-banner-text {
+        font-size: 1.6rem;
+    }
+    .product-banner-text-sub {
+        line-height: 1.8rem;
     }
 }
 

@@ -115,14 +115,9 @@
     }
 }
 
-@media (max-height: 560px) { /*fixes issues for screens not high enough*/
+@media (max-height: 600px) { /*fixes issues for screens not high enough on small widths*/
     .product-main {
-        margin-top: 440px;
-    }
-    @media (max-width: 340px) {
-        .product-main {
-            margin-top: 560px;
-        }
+        margin-top: 600px;
     }
 }
 
