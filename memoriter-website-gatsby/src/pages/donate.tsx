@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
+import * as styles from '../styles/donate/donate-main.module.scss';
 import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
 import DonateMain from '../components/donate/donate-main';
@@ -9,7 +10,7 @@ import DonateStatistics from '../components/donate/donate-statistics';
 const Donate: FC = () => {
   return (
     <WebsiteLayout currentPage='donate'>
-      <section className='donate-main-container'>
+      <section className={styles.donate_main_container}>
         {/*main content and texts*/}
         <DonateMain />
 
