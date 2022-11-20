@@ -61,6 +61,7 @@ const config: GatsbyConfig = {
             options: {
               maxWidth: 1200,
               backgroundColor: 'none',
+              tracedSVG: { color: '#00000000'},
               linkImagesToOriginal: false
             },
           },
