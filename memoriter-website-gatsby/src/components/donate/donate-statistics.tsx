@@ -109,60 +109,55 @@ const DonateStatistics: FC = () => {
       <article className={styles.donate_statistics_section}>
         {changeContent === 0 ? (
           <>
-            <h2 style={{ color: data[0].color }}>Placeholder</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <h2 style={{ color: data[0].color }}>Product Development</h2>
+            <p>Sometimes we need ressources or help from external people for example:</p>
             <ul>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
+              <li className={styles.donate_statistics_section_default}>Small design tasks</li>
+              <li className={styles.donate_statistics_section_default}>Computer Science Books</li>
+              <li className={styles.donate_statistics_section_default}>Licenses</li>
             </ul>
           </>
         ) : changeContent === 1 ? (
           <>
-            <h2 style={{ color: data[1].color }}>Placeholder</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <h2 style={{ color: data[1].color }}>Server costs</h2>
+            <p>It costs money to keep the servers running.</p>
             <ul>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
+              <li className={styles.donate_statistics_section_default}>Firebase costs</li>
+              <li className={styles.donate_statistics_section_default}>Open.ai API</li>
+              <li className={styles.donate_statistics_section_default}>Google cloud functions</li>
             </ul>
           </>
         ) : changeContent === 2 ? (
           <>
-            <h2 style={{ color: data[2].color }}>Placeholder</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <h2 style={{ color: data[2].color }}>Marketing</h2>
+            <p>To make memoriter accessible to more people we need money.</p>
             <ul>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
+              <li className={styles.donate_statistics_section_default}>Creating ads</li>
+              <li className={styles.donate_statistics_section_default}>Renting ad</li>
             </ul>
           </>
         ) : changeContent === 3 ? (
           <>
-            <h2 style={{ color: data[3].color }}>Placeholder</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <ul>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-              <li className={styles.donate_statistics_section_default}>Text</li>
-            </ul>
+            <h2 style={{ color: data[3].color }}>Others</h2>
+            <p>Sometimes costs come up in unpredicted places</p>
+            
           </>
         ) : (
           <>
-            <h2>Placeholder</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit:</p>
+            <h2>Spending Overview</h2>
+            <p>How we spend your money:</p>
             <ul>
               <li className={styles.donate_statistics_section_0}>
-                Category 0: <b>{data[0].value}€</b>
+                Product Development: <b>{data[0].value}€</b>
               </li>
               <li className={styles.donate_statistics_section_1}>
-                Category 1: <b>{data[1].value}€</b>
+                Server costs: <b>{data[1].value}€</b>
               </li>
               <li className={styles.donate_statistics_section_2}>
-                Category 2: <b>{data[2].value}€</b>
+                Marketing: <b>{data[2].value}€</b>
               </li>
               <li className={styles.donate_statistics_section_3}>
-                Category 3: <b>{data[3].value}€</b>
+                Others: <b>{data[3].value}€</b>
               </li>
             </ul>
             <p style={{ color: 'var(--color-font-gray)' }}>
@@ -174,22 +169,19 @@ const DonateStatistics: FC = () => {
 
       {/*fixed description*/}
       <article className={styles.donate_statistics_section}>
-        <h2>Placeholder</h2>
+        <h2>Key principles</h2>
         <div className={styles.donate_statistics_section_box}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          We can assure you, that we will probably not spend your money on cocain and hookers. 
         </div>
         <p>
-          Veritatis, voluptas at sint necessitatibus non sed rem doloribus praesentium laboriosam
-          iste fugit impedit, nam commodi dolorem dignissimos obcaecati quae. Neque, libero.
+          All of the money earned will be reinvested into the project. Memoriter acts as a non-profit. 
+          All of us work for free and will use the money only for absolutely necessary things.
         </p>
       </article>
 
       {/*text at the bottom*/}
       <article className={styles.donate_statistics_section_bottom_text}>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, voluptas at sint
-          necessitatibus non sed rem doloribus praesentium laboriosam iste fugit impedit, nam
-          commodi dolorem dignissimos obcaecati quae. Neque, libero.&nbsp;
           <Link to='/faq#donating'>Please check out the FAQ</Link>.
         </p>
       </article>
