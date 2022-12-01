@@ -9,11 +9,14 @@ const AboutMain: FC = () => {
 
             <article className={styles.about_main_container} style={{marginTop: '160px'}}>
                 <div className={styles.about_main_container_sub}>
-                    <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_right} animateOut={styles.about_main_animation_fade_out_right}>
+                    <AnimationOnScroll 
+                    animateIn={styles.about_main_animation_fade_in_right} 
+                    animateOut={styles.about_main_animation_fade_out_right}>
                     {/*AnimationOnScroll starts an animation when it enters the viewport*/}
                         <h1 className={styles.about_main_heading}>Our Vision</h1>
                         <p className={styles.about_main_text}>
-                        We have experienced a lot of students spending more time studying then necessary because of ineffcient methods. We wanted to solve this problem with 
+                        We have experienced a lot of students spending more time studying then necessary 
+                        because of ineffcient methods. We wanted to solve this problem with 
                         Memoriter as an all-in-one-learning-environment that is also free and accessible for everyone.</p>
                     </AnimationOnScroll>
                 </div>
@@ -23,7 +26,9 @@ const AboutMain: FC = () => {
             </article>
             <article className={styles.about_main_container}>
                 <div className={styles.about_main_container_sub}>
-                    <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_right} animateOut={styles.about_main_animation_fade_out_right}>
+                    <AnimationOnScroll 
+                    animateIn={styles.about_main_animation_fade_in_right} 
+                    animateOut={styles.about_main_animation_fade_out_right}>
                     {/*AnimationOnScroll starts an animation when it enters the viewport*/}
                         <h1 className={styles.about_main_heading}>Our Story</h1>
                         <p className={styles.about_main_text}>
@@ -36,33 +41,34 @@ const AboutMain: FC = () => {
                 </div>
             </article>
 
-            <article className={styles.about_main_container} style={{marginTop: '240px'}}>
-                <div className={styles.about_main_container_sub}>
-                    <img className={styles.about_main_image} src={placeholderImage} alt='placeholder'/>
-                </div>
-                <div className={styles.about_main_container_sub}>
-                    <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_left} animateOut={styles.about_main_animation_fade_out_left}>
-                    {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-                        <h1 className={styles.about_main_heading}>Our Team</h1>
-                        <p className={styles.about_main_text}>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        </p>
-                    </AnimationOnScroll>
-                </div>
-            </article>
-            <article className={styles.about_main_container}>
-                <div className={styles.about_main_container_sub}>
-                    <img className={styles.about_main_image} src={placeholderImage} alt='placeholder'/>
-                </div>
-                <div className={styles.about_main_container_sub}>
-                    <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_left} animateOut={styles.about_main_animation_fade_out_left}>
-                    {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-                        <p className={styles.about_main_text}>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        </p>
-                    </AnimationOnScroll>
-                </div>
-            </article>
+            <section>
+                <h1 className={styles.about_main_title}>The Team</h1>
+                <article>
+                    <div className={styles.about_main_grid_container}>
+                        <div className={styles.about_main_grid_item} style={{ gridColumn: '1/1', gridRow: '1/1' }}>
+                            <h1 className={styles.about_main_grid_item_heading}>Johan T.</h1>
+                            <p className={styles.about_main_text}>Lorem Ipsum Lorem Ipsum Lorem impsum Lorem Ipsum Lorem Ipsum Lorem impsum Lorem Ipsum Lorem Ipsum Lorem impsum</p>
+                            <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder'></img>
+                            
+                        </div>
+                        <div className={styles.about_main_grid_item} style={{ gridColumn: '2/2', gridRow: '1/1' }}>
+                            <h1 className={styles.about_main_grid_item_heading}>Simon H.</h1>
+                        </div>
+                        <div className={styles.about_main_grid_item} style={{}}>
+                            <h1 className={styles.about_main_grid_item_heading}>Alexander I.</h1>
+                        </div>
+                        <div className={styles.about_main_grid_item} style={{}}>
+                            <h1 className={styles.about_main_grid_item_heading}>Saga B.</h1>
+                        </div>
+                        <div className={styles.about_main_grid_item} style={{}}>
+                            <h1 className={styles.about_main_grid_item_heading}>Ale F.</h1>
+                        </div>
+                        <div className={styles.about_main_grid_item} style={{}}>
+                            <h1 className={styles.about_main_grid_item_heading}>Simon K.</h1>
+                        </div>
+                    </div>
+                </article>
+            </section>
 
             <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_down} animateOut={styles.about_main_animation_fade_out_down}>
                 <p className={styles.about_main_bottom}>
