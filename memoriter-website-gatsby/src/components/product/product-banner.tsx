@@ -68,7 +68,7 @@ const ProductBanner: FC = () => {
             }, 400);
           }}
         >
-          Get Started &nbsp;
+          Get Started
           <div className={styles.product_banner_get_started_background} style={{ filter: onHover }} />
         </a>
       </article>

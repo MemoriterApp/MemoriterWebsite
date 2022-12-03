@@ -1,28 +1,24 @@
 import React, { FC } from 'react';
-import '../../styles/layout/website-language-select.scss';
+import * as styles from '../../styles/layout/website-language-select.module.scss';
 
-interface props { //type definitions for props
-    onAnimation: React.CSSProperties;
-    onCloseLanguageSelect: () => void;
-};
-
-const WebsiteLanguageSelect: FC<props> = ({ onAnimation, onCloseLanguageSelect }: props) => {
-
-    const animationStyles: React.CSSProperties = onAnimation; //gets styles for animation from the parent component
-
-    return (
-        <section className='website-language-select' style={animationStyles}>
-
-            <div className='website-language-select-close' onClick={() => onCloseLanguageSelect()}/>
-            <p className='website-language-select-title'>Select Language</p>
-
-            <ul className='website-language-select-languages'>
-                <li>English</li>
-                <li>Deutsch (Beta)</li>
-            </ul>
-            
-        </section>
-    );
+interface Props { // type definitions for props
+  onAnimation: React.CSSProperties;
+  onCloseLanguageSelect: () => void;
 }
 
+const WebsiteLanguageSelect: FC<Props> = ({ onAnimation, onCloseLanguageSelect }: Props) => {
+  const animationStyles: React.CSSProperties = onAnimation; // gets styles for animation from the parent component
+
+  return (
+    <section className={styles.website_language_select} style={animationStyles}>
+      <div className={styles.website_language_select_close} onClick={() => onCloseLanguageSelect()} />
+      <p className={styles.website_language_select_title}>Select Language</p>
+
+      <ul className={styles.website_language_select_languages}>
+        <li>English</li>
+        <li>Deutsch (Beta)</li>
+      </ul>
+    </section>
+  );
+};
 export default WebsiteLanguageSelect;
