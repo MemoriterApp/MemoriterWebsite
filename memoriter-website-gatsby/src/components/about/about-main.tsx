@@ -112,7 +112,7 @@ const AboutMain: FC = () => {
 
             <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_down} animateOut={styles.about_main_animation_fade_out_down}>
                 <p className={styles.about_main_bottom}>
-                    By <span>Students</span> for <span>Student</span>
+                    By <span>Students</span> for <span>Students</span>.
                 </p>
             </AnimationOnScroll>
 

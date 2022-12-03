@@ -1,0 +1,391 @@
+// styles used for the cookie banner settings view (when clicking the moreinformation-button)
+
+.cookie_settings { // settings view box
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 540px;
+  max-width: calc(100% - 40px);
+  height: 700px;
+  max-height: calc(100% - 40px);
+  background-color: var(--color-background);
+  border-radius: 12px;
+  transition: transform 400ms, opacity 400ms; // fade in/out animation transition
+  z-index: 4;
+
+  &_title { // cookie settings title
+    position: relative;
+    top: 0;
+    height: 72px;
+
+    &::after { // small lie at the bottom
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%);
+      width: calc(100% - 60px);
+      height: 1px;
+      background-color: var(--color-container);
+    }
+
+    &_text { // heading
+      font-size: 2rem;
+      font-family: var(--font-highlight);
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 0;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+  }
+
+  &_close { // x-button for closing settings
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-transparent);;
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &::after { // x-shape
+      content: '\d7'; // symbol for shape
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: var(--color-font-gray);
+    }
+
+    &:hover { // background on hover
+      background-color: var(--color-hover);
+    }
+  }
+
+  &_scroll { // area with scrollbar
+    position: relative;
+    width: calc(100% - 2px);
+    height: calc(100% - 152px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar { // custom scrollbar size
+      width: 8px;
+
+      &-track { // hides bar background
+        background-color: var(--color-transparent);
+      }
+
+      &-thumb { // custom scrollbar design
+        background-color: var(--color-background-dark);
+        border-radius: 4px;
+
+        &:hover { // hover effect
+          background-color: var(--color-background-dark-plus);
+        }
+      }
+    }
+  }
+
+  &_description { // main description for the banner
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 1.5rem;
+    text-align: justify;
+    margin: 12px 30px 30px 40px;
+  }
+
+  &_container { // contains toggle switches and labels
+    margin-inline: 40px 30px;
+    margin-bottom: 20px;
+    padding: 8px 40px 24px 40px;
+    border-radius: 6px;
+    background-color: var(--color-container);
+  }
+
+  &_label { // label for toggle switches
+    font-size: 1.2rem;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    margin-right: 50px;
+    margin-bottom: 0;
+
+    &_description { // label description texts
+      width: 100%;
+      font-size: 0.95rem;
+      color: var(--color-font);
+      font-family: var(--font-default);
+      line-height: 1.2rem;
+      text-align: justify;
+    }
+  }
+
+  &_switch { // toggle switch
+    position: absolute;
+    right: 70px;
+    transform: translate(0, -24px);
+    width: 40px;
+    height: 24px;
+
+    input { // hides default checkbox
+      display: none;
+
+      &:checked + .cookie_settings_switch_slider { // background color change on toggle
+        background-color: var(--color-highlight-gradient-blue);
+      }
+
+      &:checked + .cookie_settings_switch_slider::before { // knob position change on toggle
+        transform: translateX(16px);
+      }
+    }
+
+    &_slider { // toggle slider background shape
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 30px;
+      background-color: var(--color-background);
+      transition: background-color 400ms;
+      cursor: pointer;
+
+      &::before { // slider knob (the circle)
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: var(--color-container);
+        transition: transform 400ms;
+      }
+
+      &_static { // static slider background shape
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+        background-color: var(--color-highlight-gradient-blue);
+        filter: saturate(0.4);
+        cursor: default;
+    
+        &::before { // static slider knob (the circle)
+          content: '';
+          position: absolute;
+          right: 4px;
+          top: 4px;
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background-color: var(--color-container);
+        }
+      }
+    }
+  }
+
+  &_links { // further information links at the bottom
+    display: flex; // display: flex creates columns
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    gap: 8px;
+    margin-top: 24px;
+    text-align: center;
+
+    > * { // layout optimization
+      flex: 1; // used for equal columns
+    }
+  }
+
+  &_link { // link font style
+    width: fit-content;
+    font-size: 0.95rem;
+    color: var(--color-font-gray);
+    font-family: var(--font-default);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 200ms;
+
+    &:hover { // link hover effect
+      color: var(--color-font);
+    }
+  }
+
+  &_buttons { // positioning for save/accept buttons
+    position: relative;
+    height: 80px;
+
+    &::after { // small line at the top
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%);
+      width: calc(100% - 60px);
+      height: 1px;
+      background-color: var(--color-container);
+    }
+  }
+
+  &_save { // save current button
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: calc(50% - 80px);
+    height: 30px;
+    padding: 8px 10px 8px 10px;
+    background-color: var(--color-container);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &:hover { // hover effect on button
+      background-color: var(--color-hover-button);
+    }
+
+    &_text { // text which is not supposed to change color
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translate(-50%);
+      font-size: 1.4rem;
+      color: var(--color-font);
+      font-family: var(--font-highlight);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  }
+
+  &_accept { // accept button, needed to be split in multiple classes, this class is for the positionig of the button
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: calc(50% - 80px);
+    padding: 0 10px 0 0;
+    background-color: var(--color-transparent);;
+    border: none;
+    cursor: pointer;
+
+    &_text { // text which is not supposed to change color
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translate(-45%);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      font-family: var(--font-highlight);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    &_background { // the hover background was done in React because it did not work in CSS
+      width: 100%;
+      height: 30px;
+      padding: 8px 10px 8px 10px;
+      border-radius: 6px;
+      background: var(--color-highlight-gradient);
+      transition: 200ms;
+    }
+  }
+}
+
+@media (max-width: 460px) { // some layout changes for very small screens
+  .cookie_settings_title_text {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-left: 30px;
+  }
+    
+  .cookie_settings_scroll {
+    height: calc(100% - 212px);
+  }
+
+  .cookie_settings_description {
+    margin: 12px 20px 30px 30px;
+  }
+
+  .cookie_settings_container {
+    margin: 12px 20px 30px 30px;
+    padding: 8px 20px 24px 20px;
+  }
+
+  .cookie_settings_switch {
+    right: 40px;
+  }
+
+  .cookie_settings_links {
+    flex-direction: column;
+  }
+
+  .cookie_settings_buttons {
+    height: 140px;
+  }
+
+  .cookie_settings_save {
+    left: 30px;
+    top: 100px;
+    width: calc(100% - 80px);
+  }
+
+  .cookie_settings_accept {
+    left: 30px;
+    top: 40px;
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 310px) { // some optimizations for very very small screens
+  .cookie_settings_title {
+    height: 102px;
+
+    &_text {
+      margin-right: 60px;
+    }
+  }
+
+  .cookie_settings_scroll {
+    height: calc(100% - 242px);
+  }
+}
+
+@media (max-width: 290px) { // some last changes fixing text overlapping
+  .cookie_settings_label {
+    margin-bottom: 36px;
+  }
+
+  .cookie_settings_switch {
+    left: calc(50% + 10px);
+    transform: translate(-50%, -30px);
+  }
+}
+
+@media (max-width: 240px) { // hidden on to small 
+  .cookie_settings {
+    display: none;
+  }
+}
+
+@media (max-height: 360px) { // changes scroll part because it becomes too small
+  .cookie_settings {
+    overflow-y: auto;
+
+    &_scroll {
+      height: unset;
+    }
+  }
+}
