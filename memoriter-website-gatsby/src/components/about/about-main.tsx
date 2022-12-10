@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import * as styles from '../../styles/about/about-main.module.scss';
+import AboutTeam from './about-team';
 import placeholderImage from '../../images/about/placeholder.jpg';
 
 const AboutMain: FC = () => {
@@ -41,74 +42,8 @@ const AboutMain: FC = () => {
                 </div>
             </article>
 
-            <section>
-                <h1 className={styles.about_main_title}>The Team</h1>
-                <article>
-                    <div className={styles.about_main_grid_container}>
-                        <div className={styles.about_main_grid_item} style={{ gridColumn: '1/1', gridRow: '1/1' }}>
-                            <h1 className={styles.about_main_grid_item_heading}> Simon H.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                        <div className={styles.about_main_grid_item} style={{ gridColumn: '2/2', gridRow: '1/1' }}>
-                            <h1 className={styles.about_main_grid_item_heading}> Johan T.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Hello, I am leading the development of Memoriter. I make sure that we stay on track and move toward our goals and creative vision.
-                                    I also help with the development of the website and the app. 
-
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                        <div className={styles.about_main_grid_item} style={{}}>
-                            <h1 className={styles.about_main_grid_item_heading}> Alexander I.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                        <div className={styles.about_main_grid_item} style={{}}>
-                            <h1 className={styles.about_main_grid_item_heading}> Ale F.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                        <div className={styles.about_main_grid_item} style={{}}>
-                            <h1 className={styles.about_main_grid_item_heading}> Saga B.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                        <div className={styles.about_main_grid_item} style={{}}>
-                            <h1 className={styles.about_main_grid_item_heading}> Simon K.</h1>
-                            <article>
-                                <p className={styles.about_main_grid_item_text}>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                </p>
-                                <img className={styles.about_main_grid_item_image} src={placeholderImage} alt='placeholder' />
-                            </article>
-                        </div>
-                    </div>
-                </article>
-            </section>
+            {/* our team section */}
+            <AboutTeam/>
 
             <AnimationOnScroll animateIn={styles.about_main_animation_fade_in_down} animateOut={styles.about_main_animation_fade_out_down}>
                 <p className={styles.about_main_bottom}>
