@@ -4,9 +4,9 @@ import * as styles from '../styles/help.module.scss';
 import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
+import emoji_1f609 from '../images/emoji/1f609.svg';
 
-const Faq: FC = () => {
-  // array with all questions with answers, answers can be typed as string or html objects
+const Faq: FC = () => { // array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { section: string; question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
@@ -171,8 +171,10 @@ const Faq: FC = () => {
         <p>
           Sadly no, at least at the moment. The beginning of development were very unorganized, so
           no one really cared about documenting anything, and with our code beeing very chaotic
-          (even the people who wrote it don't understand it &#128521;), nobody wanted to do this
-          task for a long while. So be patient, we are trying to get it done.
+          (even the people who wrote it don't understand it{' '}
+          <img className='emoji' src={emoji_1f609} alt='😉' draggable='false' />
+          ), nobody wanted to do this task for a long while. So be patient, we are trying to get it
+          done.
         </p>
       ),
       isOpen: false,
@@ -241,9 +243,7 @@ const Faq: FC = () => {
       <section className={styles.help_main}>
         <h1>Frequently Asked Questions</h1>
 
-        <h2 id='general'>
-          General FAQ
-        </h2>
+        <h2 id='general'>General FAQ</h2>
         {/*displays a list for a section of questions*/}
         {questions
           .filter((question) => question.section === 'general')
@@ -256,9 +256,7 @@ const Faq: FC = () => {
             />
           ))}
 
-        <h2 id='account'>
-          Account
-        </h2>
+        <h2 id='account'>Account</h2>
         {/*displays a list for a section of questions*/}
         {questions
           .filter((question) => question.section === 'account')
@@ -271,9 +269,7 @@ const Faq: FC = () => {
             />
           ))}
 
-        <h2 id='donating'>
-          Donating
-        </h2>
+        <h2 id='donating'>Donating</h2>
         {/*displays a list for a section of questions*/}
         {questions
           .filter((question) => question.section === 'donating')
@@ -286,9 +282,7 @@ const Faq: FC = () => {
             />
           ))}
 
-        <h2 id='open-source'>
-          Open Source
-        </h2>
+        <h2 id='open-source'>Open Source</h2>
         {/*displays a list for a section of questions*/}
         {questions
           .filter((question) => question.section === 'open-source')
@@ -301,9 +295,7 @@ const Faq: FC = () => {
             />
           ))}
 
-        <h2 id='legal'>
-          Legal
-        </h2>
+        <h2 id='legal'>Legal</h2>
         {/*displays a list for a section of questions*/}
         {questions
           .filter((question) => question.section === 'legal')

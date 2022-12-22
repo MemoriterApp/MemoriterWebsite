@@ -136,3 +136,8 @@
   background-color: var(--color-select);
   -webkit-text-fill-color: var(--color-font); // is needed to fix the gradient headings
 }
+
+.emoji {
+  height: 1.2rem;
+  margin: 0 0.2rem -0.2rem 0.2rem;
+}

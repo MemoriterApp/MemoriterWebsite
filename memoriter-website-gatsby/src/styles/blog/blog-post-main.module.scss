@@ -72,7 +72,7 @@
     [class='gatsby-resp-image-wrapper'] { // images
       width: calc(100% + 80px) !important;
       margin: 48px -40px 48px -40px !important;
-      border-radius: 10px; 
+      border-radius: 4px; 
       overflow: hidden;
       fill: invert(1);
     }
@@ -83,7 +83,7 @@
       margin: 24px -40px 40px -40px;
       background-color: var(--color-transparent);
       border: none;
-      border-radius: 10px;
+      border-radius: 4px;
       overflow: hidden;
     }
 
@@ -116,7 +116,7 @@
       padding: 20px 24px;
       margin-top: 36px;
       margin-bottom: 36px;
-      border-radius: 10px;
+      border-radius: 4px;
     
       code { // fixes issues with code block component
         color: unset;
@@ -132,7 +132,7 @@
       margin-bottom: 36px;
       background-color: var(--color-hover);
       border-left: none !important; // !important overwrites all other conflicting CSS
-      border-radius: 10px;
+      border-radius: 4px;
     
       &::before { // emoji inserted before the text
         content: '';
@@ -140,107 +140,107 @@
         width: 2.2rem;
         height: 2.2rem;
         margin-left: -50px;
-        background-image: url('../../images/twemoji/1f4a1.svg'); // light bulb emoji, default icon if unsupported or none was selected
+        background-image: url('../../images/emoji/1f4a1.svg'); // light bulb emoji, default icon if unsupported or none was selected
       }
 
       &[icon='👉']::before { // hand pointing right emoji
-        background-image: url('../../images/twemoji/1f449.svg');
+        background-image: url('../../images/emoji/1f449.svg');
       }
 
       &[icon='☝️']::before { // hand pointing up emoji
-        background-image: url('../../images/twemoji/261d.svg');
+        background-image: url('../../images/emoji/261d.svg');
       }
 
       &[icon='👌']::before { // ok hand emoji
-        background-image: url('../../images/twemoji/1f44c.svg');
+        background-image: url('../../images/emoji/1f44c.svg');
       }
 
       &[icon='🔑']::before { // key emoji
-        background-image: url('../../images/twemoji/1f511.svg');
+        background-image: url('../../images/emoji/1f511.svg');
       }
 
       &[icon='🚧']::before { // construction sign emoji
-        background-image: url('../../images/twemoji/1f6a7.svg');
+        background-image: url('../../images/emoji/1f6a7.svg');
       }
 
       &[icon='⚠️']::before { // warning sign emoji
-        background-image: url('../../images/twemoji/26a0.svg');
+        background-image: url('../../images/emoji/26a0.svg');
       }
       
       &[icon='🔥']::before { // fire emoji
-        background-image: url('../../images/twemoji/1f525.svg');
+        background-image: url('../../images/emoji/1f525.svg');
       }
 
       &[icon='📌']::before { // pushpin emoji
-        background-image: url('../../images/twemoji/1f4cc.svg');
+        background-image: url('../../images/emoji/1f4cc.svg');
       }
 
       &[icon='✂️']::before { // scissors emoji
-        background-image: url('../../images/twemoji/2702.svg');
+        background-image: url('../../images/emoji/2702.svg');
       }
 
       &[icon='❓']::before { // question mark emoji
-        background-image: url('../../images/twemoji/2753.svg');
+        background-image: url('../../images/emoji/2753.svg');
       }
 
       &[icon='🚫']::before { // no entry sign emoji
-        background-image: url('../../images/twemoji/1f6ab.svg');
+        background-image: url('../../images/emoji/1f6ab.svg');
       }
 
       &[icon='⛔']::before { // no entry emoji
-        background-image: url('../../images/twemoji/26d4.svg');
+        background-image: url('../../images/emoji/26d4.svg');
       }
 
       &[icon='⏰']::before { // alarm clock emoji
-        background-image: url('../../images/twemoji/23f0.svg');
+        background-image: url('../../images/emoji/23f0.svg');
       }
 
       &[icon='☎️']::before { // telephone emoji
-        background-image: url('../../images/twemoji/260e.svg');
+        background-image: url('../../images/emoji/260e.svg');
       }
 
       &[icon='🚨']::before { // red alarm light emoji
-        background-image: url('../../images/twemoji/1f6a8.svg');
+        background-image: url('../../images/emoji/1f6a8.svg');
       }
 
       &[icon='♻️']::before { // recycling emoji
-        background-image: url('../../images/twemoji/267b.svg');
+        background-image: url('../../images/emoji/267b.svg');
       }
 
       &[icon='✅']::before { // checkmark emoji
-        background-image: url('../../images/twemoji/2714.svg');
+        background-image: url('../../images/emoji/2714.svg');
       }
 
       &[icon='🔒']::before { // lock emoji
-        background-image: url('../../images/twemoji/1f512.svg');
+        background-image: url('../../images/emoji/1f512.svg');
       }
 
       &[icon='📎']::before { // papaerclip emoji
-        background-image: url('../../images/twemoji/1f4ce.svg');
+        background-image: url('../../images/emoji/1f4ce.svg');
       }
 
       &[icon='📖']::before { // open book emoji
-        background-image: url('../../images/twemoji/1f4d6.svg');
+        background-image: url('../../images/emoji/1f4d6.svg');
       }
 
       &[icon='🗣️']::before { // speaking head emoji
-        background-image: url('../../images/twemoji/1f5e3.svg');
+        background-image: url('../../images/emoji/1f5e3.svg');
       }
 
       &[icon='➡️']::before { // rightwards arrow emoji
-        background-image: url('../../images/twemoji/27a1.svg');
+        background-image: url('../../images/emoji/27a1.svg');
       }
 
       &[icon='📢']::before { // loudspeaker emoji
-        background-image: url('../../images/twemoji/1f4e2.svg');
+        background-image: url('../../images/emoji/1f4e2.svg');
       }
 
       &[icon='🛠️']::before { // tools emoji
-        background-image: url('../../images/twemoji/1f6e0.svg');
+        background-image: url('../../images/emoji/1f6e0.svg');
       }
 
       &[icon='⚙️']::before { // gear emoji
-        background-image: url('../../images/twemoji/2699.svg');
+        background-image: url('../../images/emoji/2699.svg');
       }
     }
   }
