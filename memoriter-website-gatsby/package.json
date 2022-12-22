@@ -21,24 +21,28 @@
     "@types/react-animate-on-scroll": "^2.1.5",
     "@types/react-redux": "^7.1.24",
     "gatsby": "^4.24.4",
+    "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
-    "gatsby-plugin-mdx": "^4.3.0",
     "gatsby-plugin-sass": "^5.24.0",
+    "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-sitemap": "^5.24.0",
+    "gatsby-remark-images": "^6.24.0",
+    "gatsby-remark-prismjs": "^6.24.0",
     "gatsby-source-filesystem": "^4.24.0",
+    "gatsby-transformer-remark": "^5.24.0",
+    "gatsby-transformer-sharp": "^4.24.0",
+    "prismjs": "^1.29.0",
     "react": "^18.1.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.1.0",
     "react-minimal-pie-chart": "^8.3.0",
     "react-redux": "^8.0.4",
-    "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.55.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@types/react-syntax-highlighter": "^15.5.5",
     "typescript": "^4.8.3"
   }
 }

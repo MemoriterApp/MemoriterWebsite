@@ -1,0 +1,179 @@
+// all styles for the blog overview page (list of all blog posts)
+
+.blog_body { // an additional class which includes the main part as well as the sidebar, used for layout
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: calc(100% - 140px);
+  max-width: 2400px;
+  gap: 80px;
+}
+
+.blog_main { // layout container for the content
+  position: relative;
+  top: 140px;
+  width: 100%;
+  margin-bottom: 400px;
+
+  &_blog_date { // some extra layout styles for the date of publication for each blog post
+    margin-top: -2.1rem;
+    text-align: right;
+  }
+
+  &_new_blog { // new blog post preview
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 200ms, filter 200ms;
+
+    &:hover { // hover effect
+      transform: scale(0.98);
+      filter: brightness(0.75);
+    }
+
+    &_container { // container for the four newest posts
+      display: flex; // two column layout
+      gap: 40px;
+      margin-bottom: 60px;
+  
+      > * { //children of the container, used for equally sized items
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    &_image { // image for new blog preview
+      width: 100%;
+      margin-top: -8px;
+      border-radius: 6px;
+      transition: filter 200ms;
+    }
+
+    h2 { // new blog preview title
+      font-size: 2rem;
+      font-weight: 500;
+      font-family: var(--font-highlight);
+      color: var(--color-font);
+      transition: color 200ms;
+    }
+
+    p { // new blog preview description
+      font-size: 1.1rem;
+      font-family: var(--font-default);
+      color: var(--color-font-gray);
+      line-height: 1.6rem;
+    }
+  }
+
+  &_old_blog {
+    /*links to older blog posts*/
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 42px;
+    cursor: pointer;
+    transition: filter 200ms;
+
+    &:hover { // hover effect
+      filter: brightness(0.75);
+    }
+
+    &_outside { // tag and date text outside the box
+      transform: translate(0, 4px);
+      font-family: var(--font-default);
+      color: var(--color-font-gray);
+    }
+
+    &_box {
+      /*gray box with content*/
+      width: 100%;
+      background-color: var(--color-container);
+      border-radius: 6px;
+
+      h2 { // old blog preview title
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--color-font);
+        font-family: var(--font-default);
+        line-height: 2rem;
+        margin-inline: 16px;
+      }
+
+      p { // old blog preview description
+        font-size: 1.1rem;
+        font-family: var(--font-default);
+        color: var(--color-font-gray);
+        line-height: 1.6rem;
+        text-align: justify;
+        margin-inline: 16px;
+      }
+    }
+
+    &_image { // old blog preview image
+      display: inline-block;
+      width: 200px;
+      object-fit: cover; // optimizes image scaling
+      border-radius: 6px;
+    }
+  }
+
+  &_button { // load more button
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 164px;
+    font-size: 1.6rem;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    padding: 8px 6px 8px 6px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-transparent);
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &:hover { // for the fading background box on hover
+      background-color: var(--color-hover);
+    }
+  }
+}
+
+@media (max-width: 1160px) { // optimizes space usage for medium sized screens (e.g. smaller laptops or large tablets)
+  .blog_body {
+    width: calc(100% - 40px);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 960px) { // optimizes layout for small screens
+  .blog_body {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 660px) { // optimizes layout mobile devices
+  .blog_main_new_blog_container {
+    flex-direction: column;
+
+    > * {
+      flex: 1;
+      max-width: 100%;
+    }
+  }
+
+  .blog_main_old_blog_imgage {
+    display: none;
+  }
+}
+
+@media (max-width: 280px) { // small visual fix (removes overlapping topic and date in some cases)
+  .blog_main_blog_date {
+    text-align: left;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+  .blog_main {
+    display: none;
+  }
+}

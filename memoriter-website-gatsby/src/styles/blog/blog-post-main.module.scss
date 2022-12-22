@@ -1,0 +1,181 @@
+/*In this stylesheet the basic layout options of all blog posts are defined.*/
+
+.blog_post_main { // main container
+  position: relative;
+  left: 50%;
+  top: 180px;
+  transform: translate(-50%);
+  width: 100%;
+  max-width: 2400px;
+  margin-bottom: 240px;
+  overflow: hidden;
+
+  article { // main text
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 48%;
+    font-size: 1.3rem;
+    color: var(--color-font);
+    font-family: var(--font-blog);
+    line-height: 2.2rem;
+    margin-bottom: 80px;
+
+    h1 { // all headings
+      font-size: 2.2rem;
+      font-family: var(--font-heading);
+      margin-top: 48px;
+    }
+
+    h2 { // all sub headings
+      font-size: 1.7rem;
+      font-family: var(--font-heading);
+      margin-top: 42px;
+    }
+
+    h3 { // sub sub headings
+      font-size: 1.4rem;
+      font-family: var(--font-heading);
+      margin-top: 36px;
+    }
+
+    ul { // unordered list
+      font-size: 1.3rem;
+      color: var(--color-font);
+      font-family: var(--font-blog);
+      line-height: 2.2rem;
+      margin-left: -16px;
+      list-style: disc;
+    }
+
+    ol { // ordered lists
+      font-size: 1.3rem;
+      color: var(--color-font);
+      font-family: var(--font-blog);
+      line-height: 2.2rem;
+      margin-left: -16px;
+      list-style: decimal;
+    }
+
+    a { // hyperlinks
+      color: var(--color-font);
+      text-decoration: underline 1px;
+      text-underline-offset: 2px;
+      cursor: pointer;
+      transition: color 200ms;
+
+      &:hover { // link hover effect
+        color: var(--color-font-gray);
+      }
+    }
+
+    [class='gatsby-resp-image-wrapper'] { // images
+      width: calc(100% + 80px) !important;
+      margin: 48px -40px 48px -40px !important;
+      border-radius: 10px; 
+      overflow: hidden;
+      fill: invert(1);
+    }
+
+    iframe { // embedded youtube videos
+      width: calc(100% + 80px);
+      aspect-ratio: 16 / 9;
+      margin: 24px -40px 40px -40px;
+      background-color: var(--color-transparent);
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    figcaption { // image or video and captions
+      font-size: 1.1rem;
+      color: var(--color-font-gray);
+      font-family: var(--font-default);
+      margin-inline: -40px;
+      margin-top: -40px;
+      margin-bottom: 32px;
+    }
+
+    blockquote { // blockquotes with line at the left
+      padding-left: 24px;
+      margin: 40px 0 40px 0;
+      border-left: 4px solid var(--color-font);
+    }
+
+    code { // inline code styles
+      font-size: 1.2rem;
+      color: var(--color-font-code);
+      padding: 4px 6px;
+      background-color: var(--color-hover);
+      border-radius: 4px;
+    }
+
+    pre { // code blocks
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      padding: 20px 24px;
+      margin-top: 36px;
+      margin-bottom: 36px;
+      border-radius: 10px;
+    
+      code { // fixes issues with code block component
+        color: unset;
+        padding: 4px 0;
+        background-color: unset;
+      }
+    }
+
+    .callout {
+      font-family: var(--font-default);
+      padding: 22px 24px 22px 68px;
+      margin-top: 36px;
+      margin-bottom: 36px;
+      background-color: var(--color-hover);
+      border-left: none !important; // !important overwrites all other conflicting CSS
+      border-radius: 10px;
+    
+      &[icon]::before { // emoji inserted before the text
+        content: attr(icon); // the emoji is set based on the icon attribute
+        position: absolute;
+        font-size: 2.2rem;
+        margin-left: -50px;
+      }
+    
+      &:not([icon])::before { // default icon if none was selected
+        content: '\1F4A1'; // light bulb emoji
+        position: absolute;
+        font-size: 2.2rem;
+        margin-left: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) { // optimizes layout for smaller screens for better readability
+  .blog_post_main article {
+    width: 600px;
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 700px) { // fixes images breaking content margin
+  .blog_post_main article [class='gatsby-resp-image-wrapper'] {
+    width: 100% !important;
+    margin: 40px 0 48px 0 !important;
+  }
+
+  .blog_post_main article iframe {
+    width: 100%;
+    margin: 40px 0 48px 0;
+  }
+
+  .blog_post_main article figcaption {
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 240px) { // hides everything on too small screens
+  .blog_post_main {
+    display: none;
+  }
+}

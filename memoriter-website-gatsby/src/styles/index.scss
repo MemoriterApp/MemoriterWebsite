@@ -1,44 +1,52 @@
-/*This css file is only used for classes used very often and across multiple pages, as well as some global styles.*/
+// This css file is only used for classes used very often and across multiple pages, as well as some global styles.
 
-/*font imports*/
-@font-face { /*Inter: basic font for most text*/
+// font imports
+// Inter: basic font for most text
+@font-face {
   font-family: 'Inter';
   font-weight: 300;
   src: url('../fonts/inter/Inter-VariableFont_slnt\,wght.ttf');
 }
-@font-face { /*Rubik: larger font for subheadings or buttons*/
+// Rubik: larger font for subheadings or buttons
+@font-face {
   font-family: 'Rubik';
   font-weight: 400;
   src: url('../fonts/rubik/Rubik-VariableFont_wght.ttf');
 }
-@font-face { /*Heebo: large font for page headings*/
+// Heebo: large font for page headings
+@font-face {
   font-family: 'Heebo';
   font-weight: 800;
   src: url('../fonts/heebo/Heebo-VariableFont_wght.ttf');
 }
-@font-face { /*Kaisei HarunoUmi: italic serif font for the product page*/
+// Kaisei HarunoUmi: italic serif font for the product page
+@font-face {
   font-family: 'Kaisei HarunoUmi';
   font-weight: 400;
   src: url('../fonts/kaisei-haruno-umi/KaiseiHarunoUmi-Regular.ttf');
 }
-@font-face { /*BIZ UDPGothic: font for quotation mark at product stories*/
+// BIZ UDPGothic: font for quotation mark at product stories
+@font-face {
   font-family: 'BIZ UDPGothic';
   font-weight: 700;
   src: url('../fonts/biz-udp-gothic/BIZUDPGothic-Bold.ttf');
 }
-@font-face { /*IBM Plex Serif: serif font for the blog posts*/
+// IBM Plex Serif: serif font for the blog posts
+@font-face {
   font-family: 'IBM Plex Serif';
   font-weight: 400;
   src: url('../fonts/ibm-plex-serif/IBMPlexSerif-Regular.ttf');
 }
-@font-face { /*Quantico: question mark font for the page not found page*/
+// Quantico: question mark font for the page not found page
+@font-face {
   font-family: 'Quantico';
   font-weight: 400;
   src: url('../fonts/quantico/Quantico-Regular.ttf');
 }
 
-:root { /*global fixed colors and fonts*/
-  /*colors*/
+// global fixed colors and fonts
+:root {
+  // colors
   --color-font-code: #ff4444;
   --color-highlight-gradient: linear-gradient(45deg, #23aaaa, #28b97d);
   --color-highlight-gradient-blue: #23aaaa;
@@ -59,9 +67,10 @@
   --color-github-hover: #645087;
   --color-paypal: #0070ba;
   --color-paypal-hover: #005994;
-  /*values for correcting svg colors*/
+  --color-select: #2850a080;
+  // values for correcting svg colors
   --svg-invert-white: invert(1);
-  /*font families*/
+  // font families
   --font-default: 'Inter', sans-serif;
   --font-highlight: 'Rubik', sans-serif;
   --font-heading: 'Heebo', sans-serif;
@@ -71,8 +80,9 @@
   --font-large-question: 'Quantico', sans-serif;
 }
 
-/*global color variables for different visual modes (can be used with the var() expression)*/
-#dark { /*dark mode (default)*/
+// global color variables for different visual modes (can be used with the var() expression)
+// dark mode (default) colors
+#dark {
   --color-font: #ffffff;
   --color-font-gray: #c8c8c8;
   --color-background: #202020;
@@ -91,12 +101,13 @@
   --color-banner-gradient: linear-gradient(#242424, #36363c);
   --color-banner-triangle-light: #36363c80;
   --color-banner-triangle-dark: #24242480;
-  /*values for correcting svg colors*/
+  // values for correcting svg colors
   --svg-invert: invert(1);
   --svg-invert-gray: invert(0.78431372549019607843137254901961);
 }
 
-#light { /*light mode*/
+// light mode colors
+#light {
   --color-font: #000000;
   --color-font-gray: #373737;
   --color-background: #e0e0e0;
@@ -115,7 +126,13 @@
   --color-banner-gradient: linear-gradient(#bababa, #8f8f96);
   --color-banner-triangle-light: #8f8f9680;
   --color-banner-triangle-dark: #bababa80;
-  /*values for correcting svg colors*/
+  // values for correcting svg colors
   --svg-invert: invert(0);
   --svg-invert-gray: invert(0.21568627450980392156862745098039);
+}
+
+// custom text selection color
+::selection {
+  background-color: var(--color-select);
+  -webkit-text-fill-color: var(--color-font); // is needed to fix the gradient headings
 }

@@ -1,0 +1,224 @@
+// the main body of the about page uses this styleshet.
+
+.about_main { // main class, used for positioning
+  position: relative;
+  left: 50%; // centering the content on too large screens
+  transform: translate(-50%);
+  max-width: 2400px; // looks better on large screens
+  margin-top: 100vh;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+
+  &_container { // contains all of the main sections, is used for positioning
+    display: flex;
+    margin: 100px 70px 100px 70px;
+
+    > * + * { // children of container
+      margin-left: 60px;
+    }
+
+    &_sub { // sub containers with the text inside
+      flex-basis: 45%;
+      align-self: center;
+
+      &_image { // sub containers with the image inside
+        flex-basis: 55%;
+        align-self: center;
+      }
+    }
+  }
+
+  &_heading { // heading font styling
+    font-size: 3.4rem;
+    font-family: var(--font-heading);
+    line-height: 4rem;
+    background: var(--color-highlight-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-transparent);
+  }
+
+  &_text { // text font styling
+    font-size: 1.4rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2rem;
+  }
+
+  &_image { // image optimization
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &_bottom { // positioning for the text and button
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80vw;
+    max-width: 800px;
+    color: var(--color-font);
+    font-style: italic;
+    font-size: 3.2rem;
+    font-family: var(--font-serif);
+    text-align: center;
+    margin-top: 240px;
+    margin-bottom: 200px;
+
+    span { // highlighted words
+      font-size: 3.4rem;
+      font-family: var(--font-heading);
+      font-style: normal;
+      line-height: 4rem;
+      margin-left: 4px;
+      margin-right: -4px;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+  }
+}
+
+@media (max-width: 960px) { // simplyfied layout for smaller screens
+  .about_main_overview {
+    flex-direction: column; // renders items above each other instead of next to each other
+  }
+
+  .about_main_heading {
+    font-size: 3rem;
+    hyphens: auto; // allows linebreaks within words
+  }
+
+  .about_main_text {
+    font-size: 1.2rem;
+  }
+
+  .about_main_container {
+    display: block;
+    margin: 120px 20px 20px 20px;
+
+    > * + * { // children of container
+      margin-left: unset;
+    }
+  }
+}
+
+@media (max-width: 720px) { // adjusting too big text
+  .about_main_bottom {
+    font-size: 2.2rem;
+    margin-top: 160px;
+    margin-bottom: 40px;
+
+    span {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media (max-width: 660px) { // pushes the footer down on certain width
+  .about_main {
+    margin-bottom: 240px;
+  }
+}
+
+@media (max-width: 240px) { // hiding content for too small screens (where the warning displays)
+  .about_main {
+    display: none;
+  }
+}
+
+@media (max-height: 560px) { // fixes issues for screens not high enough
+  .about_main {
+    margin-top: 440px;
+  }
+  @media (max-width: 340px) {
+    .about_main {
+      margin-top: 560px;
+    }
+  }
+}
+
+// animation classes
+.about_main_animation_fade_in_right { // class for triggering the fade in right animation
+  animation: fade-in-right 200ms;
+}
+@keyframes fade-in-right { // the items move a bit to the left and get visible
+  from {
+    transform: translateX(8%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.about_main_animation_fade_out_right { // class for triggering the fade out right animation
+  animation: fade-out-right 400ms;
+}
+@keyframes fade-out-right { // the items move a bit to the right and get invisible
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(8%);
+    opacity: 0;
+  }
+}
+
+.about_main_animation_fade_in_left { // class for triggering the fade in left animation
+  animation: fade-in-left 200ms;
+}
+@keyframes fade-in-left { // the items move a bit to the right and get visible
+  from {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.about_main_animation_fade_out_left { // class for triggering the fade out left animation
+  animation: fade-out-left 400ms;
+}
+@keyframes fade-out-left { // the items move a bit to the right and get invisible
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-8%);
+    opacity: 0;
+  }
+}
+
+.about_main_animation_fade_in_down { // class for triggering the fade in down animation
+  animation: fade-in-down 200ms;
+}
+@keyframes fade-in-down { // the items move a bit down and get visible
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about_main_animation_fade_out_down { // class for triggering the fade out down animation
+  animation: fade-out-down 400ms;
+}
+@keyframes fade-out-down { // the items move a bit down and get invisible
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+}

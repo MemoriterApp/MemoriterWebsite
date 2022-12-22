@@ -1,7 +1,7 @@
 [![stars](https://img.shields.io/github/stars/MemoriterApp/MemoriterWebsite?color=brightgreen)](https://github.com/MemoriterApp/MemoriterWebsite/stargazers)
 [![issues](https://img.shields.io/github/issues/MemoriterApp/MemoriterWebsite?color=orange)](https://github.com/MemoriterApp/MemoriterWebsite/issues)
 [![pull requests](https://img.shields.io/github/issues-pr/MemoriterApp/MemoriterWebsite?color=yellow)](https://github.com/MemoriterApp/MemoriterWebsite/pulls)
-[![license](https://img.shields.io/github/license/MemoriterApp/MemoriterWebsite?color=blue)](https://www.gnu.org/licenses/gpl-3.0)
+[![license](https://img.shields.io/github/license/MemoriterApp/MemoriterWebsite?color=blue)](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE)
 [![website](https://img.shields.io/website-up-down-green-red/https/memoriter.de/.svg)](https://www.memoriter.de)
 
 # Memoriter Website
@@ -21,13 +21,13 @@ This repository only contains the informational website about the project. The a
 [![gatsby](https://img.shields.io/badge/Gatsby-663399?style=flat&logo=gatsby&logoColor=white)](https://www.gatsbyjs.com/)
 
 ### Pull Requests, Issues and Discussions
-Memoriter is a more personal project of our small team and the informational website won't be changed much in the future, so we are unlikely to accept any pull requests, yet feel free to report issues or propose changes. Our main focus lies on the actual web application repository, so please consider reporting issues there instead in this repository. You will find our [GitHub discussion forum](https://github.com/MemoriterApp/Memoriter/discussions) there too. Please also check out our own [bug report page](https://www.memoriter.de/bugs).
+Memoriter is a more personal project of our small team and the informational website won't be changed much in the future, so we are unlikely to accept any pull requests, yet feel free to report issues or propose changes. Our main focus lies on the actual web application repository, so please consider reporting issues there instead in this repository. You will find our [GitHub discussions](https://github.com/MemoriterApp/Memoriter/discussions) there too. Please also check out our own [bug report page](https://www.memoriter.de/bugs).
 
 ### Contributing Guidelines
 Before contributing to this project, please read our [contributing guidelines](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/CONTRIBUTING.md). To create a respectful atmosphere for everyone, please follow the [code of conduct](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/CODE_OF_CONDUCT.md) when posting or submitting anything to this site.
 
 ### License
-The Memoriter website is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0).
+The Memoriter website is licensed under the [GNU General Public License v3.0](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE).
 
 ## Social Media
 [![instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/memorit.er)

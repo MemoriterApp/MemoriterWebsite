@@ -1,15 +1,14 @@
 import React, { FC } from 'react';
-import '../../styles/donate/donate-main.scss';
+import * as styles from '../../styles/donate/donate-main.module.scss';
 
 const DonateMain: FC = () => {
-    return (
-        <section className='donate-main'>
-            <h1 className='donate-main-heading'>Help Us Continuing and Improving Memoriter</h1>
-            <p className='donate-main-content'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eius, facilis aut itaque voluptas quidem saepe ducimus minus dicta illo iusto veritatis omnis quo sunt recusandae, dolorem sequi distinctio dolorum?
-            </p>
-        </section>
-    );
-}
-
+  return (
+    <section className={styles.donate_main}>
+      <h1>Help Us Continuing and Improving Memoriter</h1>
+      <p>
+        If you want to support the project you can help us by donating a small sum of money. That way we can keep the servers running and improve the project. 
+      </p>
+    </section>
+  );
+};
 export default DonateMain;

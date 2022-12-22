@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
-import WebsiteHead from '../components/website-head';
-import WebsiteWrapper from '../components/wrapper/website-wrapper';
+import WebsiteHead from '../components/layout/website-head';
+import WebsiteLayout from '../components/layout/website-layout';
 import AboutBanner from '../components/about/about-banner';
 import AboutMain from '../components/about/about-main';
 
 const About: FC = () => {
     return (
-        <WebsiteWrapper currentPage='about'>
+        <WebsiteLayout currentPage='about'>
             
             {/*banner with introduction*/}
             <AboutBanner/>
@@ -15,7 +15,7 @@ const About: FC = () => {
             {/*basic main layout and texts*/}
             <AboutMain/>
 
-        </WebsiteWrapper>
+        </WebsiteLayout>
     );
 }
 

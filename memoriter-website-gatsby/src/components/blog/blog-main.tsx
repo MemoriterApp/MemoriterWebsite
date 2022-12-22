@@ -1,83 +1,140 @@
 import React, { FC, useState } from 'react';
 import { Link } from 'gatsby';
-import '../../styles/blog/blog-main.scss';
-import blogs from '../../utils/blog-posts';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import * as styles from '../../styles/blog/blog-main.module.scss';
 
-interface props { //type definitions of props
-    topic: string;
+interface Props { //type definitions of props
+  data: {allMarkdownRemark: {nodes: {frontmatter: {
+    link: string,
+    topic: string,
+    thumb: object,
+    date: string,
+    author: string,
+    title: string,
+    description: string,
+    linkedBlogs: string[]
+  }, id: string}[]}};
+  topic: string;
 };
 
-const BlogMain: FC<props> = ({ topic }: props) => {
+const BlogMain: FC<Props> = ({ topic, data }: Props) => {
 
-    const [loadedBlogs, setLoadedBlogs] = useState(8); //number of blog posts shown before clicking on the load more button
+  const blogPosts = data.allMarkdownRemark.nodes; // list of all blog posts
 
-    return (
-        <section className='blog-main'>
+  const [loadedBlogPosts, setLoadedBlogPosts] = useState(8); //number of blog posts shown before clicking on the load more button
 
-            {/*four newest blog posts, divided in to two parts for the layout*/}
-            <div className='blog-main-new-blog-container'>
-                {blogs.filter((blog) => topic !== 'Latest' ? blog.topic === topic : blog.topic !== topic).slice(0, 2).map((blog) => (
-                    //gets the first two objects from the blogs array, is filtered when a topic (e.g. 'company') is set
-                    <Link className='blog-main-new-blog' key={blog.title} to={`/blog/${blog.link}`}>
-                            
-                        <p style={{lineHeight: '1rem'}}>{blog.topic}</p>
-                        <p className='blog-main-blog-date' style={{lineHeight: '1rem'}}>{blog.dateShortened}</p>
-                            
-                        {blog.image}
-                            
-                        <h2>{blog.title}</h2>
-                        <p>{blog.description}</p>
-                        
-                    </Link>
-                ))}
-            </div>
-            <div className='blog-main-new-blog-container'>
-                {blogs.filter((blog) => topic !== 'Latest' ? blog.topic === topic : blog.topic !== topic).slice(2, 4).map((blog) => (
-                    //gets the objects three to four from the blogs array, is filtered when a topic (e.g. 'company') is set
-                    <Link className='blog-main-new-blog' key={blog.title} to={`/blog/${blog.link}`}>
-                            
-                        <p style={{lineHeight: '1rem'}}>{blog.topic}</p>
-                        <p className='blog-main-blog-date' style={{lineHeight: '1rem'}}>{blog.dateShortened}</p>
-                            
-                        {blog.image}
-                            
-                        <h2>{blog.title}</h2>
-                        <p>{blog.description}</p>
-                    </Link>
-                ))}
-            </div>
+  return (
+    <section className={styles.blog_main}>
 
-            {/*older blog posts (different, more compact style)*/}
-            <div>
-                {blogs.filter((blog) => topic !== 'Latest' ? blog.topic === topic : blog.topic !== topic).slice(4, loadedBlogs).map((blog) => (
-                    //gets more objects from the blogs array, is filtered when a topic (e.g. 'company') is set
-                    <Link className='blog-main-old-blog' key={blog.title} to={`/blog/${blog.link}`}>
-                            
-                        <p className='blog-main-old-blog-outside'>{blog.topic}</p>
-                        <p className='blog-main-blog-date blog-main-old-blog-outside' style={{lineHeight: '1rem'}}>{blog.dateShortened}</p> {/*two classes*/}
-                            
-                        <div style={{display: 'flex', gap: '20px'}}>
+      {/*four newest blog posts, divided in to two parts for the layout*/}
+      <div className={styles.blog_main_new_blog_container}>
+        {blogPosts.filter((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => topic !== 'Latest' ? blogPost.frontmatter.topic === topic : blogPost.frontmatter.topic !== topic).slice(0, 2).map((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => {
+          //gets the first two objects from the blogs array, is filtered when a topic (e.g. 'company') is set
+          const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
+          
+          return (
+            <Link className={styles.blog_main_new_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+                              
+              <p style={{lineHeight: '1rem'}}>{blogPost.frontmatter.topic}</p>
+              <p className={styles.blog_main_blog_date} style={{lineHeight: '1rem'}}>
+                {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
+                  month: 'short',
+                  year: 'numeric',
+                  day: 'numeric'
+                })}
+              </p>
+                              
+              <GatsbyImage className={styles.blog_main_new_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
+                              
+              <h2>{blogPost.frontmatter.title}</h2>
+              <p>{blogPost.frontmatter.description}</p>
+                          
+            </Link>
+          );
+        })}
+      </div>
 
-                            <div className='blog-main-old-blog-box'>
-                                <h2>{blog.title}</h2>
-                                <p>{blog.description}</p>
-                            </div>
+      <div className={styles.blog_main_new_blog_container}>
+        {blogPosts.filter((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => topic !== 'Latest' ? blogPost.frontmatter.topic === topic : blogPost.frontmatter.topic !== topic).slice(2, 4).map((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => {
+          //gets the first two objects from the blogs array, is filtered when a topic (e.g. 'company') is set
+          const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
 
-                            {blog.image}
+          return (
+            <Link className={styles.blog_main_new_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+                              
+              <p style={{lineHeight: '1rem'}}>{blogPost.frontmatter.topic}</p>
+              <p className={styles.blog_main_blog_date} style={{lineHeight: '1rem'}}>
+                {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
+                  month: 'short',
+                  year: 'numeric',
+                  day: 'numeric'
+                })}
+              </p>
+                              
+              <GatsbyImage className={styles.blog_main_new_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
+                              
+              <h2>{blogPost.frontmatter.title}</h2>
+              <p>{blogPost.frontmatter.description}</p>
+                          
+            </Link>
+          );
+        })}
+      </div>
 
-                        </div>
+      {/*older blog posts (different, more compact style)*/}
+      <div>
+        {blogPosts.filter((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => topic !== 'Latest' ? blogPost.frontmatter.topic === topic : blogPost.frontmatter.topic !== topic).slice(4, loadedBlogPosts).map((
+          blogPost: {id: string, frontmatter: {link: string, topic: string, thumb: object, date: string, author: string, title: string, description: string, linkedBlogs: string[]}}
+        ) => {
+          //gets more objects from the blogs array, is filtered when a topic (e.g. 'company') is set
+          const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
+          
+          return (
+            <Link className={styles.blog_main_old_blog} key={blogPost.id} to={`/blog/${blogPost.frontmatter.link}`}>
+                              
+              <p className={styles.blog_main_old_blog_outside}>{blogPost.frontmatter.topic}</p>
+              <p className={`${styles.blog_main_blog_date} ${styles.blog_main_old_blog_outside}`} style={{lineHeight: '1rem'}}> {/*two classes*/}
+                {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
+                  month: 'short',
+                  year: 'numeric',
+                  day: 'numeric'
+                })}
+              </p>
+                              
+              <div style={{display: 'flex', gap: '20px'}}>
 
-                    </Link>
-                ))}
-            </div>
+                <div className={styles.blog_main_old_blog_box}>
+                  <h2>{blogPost.frontmatter.title}</h2>
+                  <p>{blogPost.frontmatter.description}</p>
+                </div>
+
+                <GatsbyImage className={styles.blog_main_old_blog_image} image={thumb} alt={blogPost.frontmatter.title}/>
+
+              </div>
+
+            </Link>
+          );
+        })}
+      </div>
                 
-            {/*load more button, onClick just adds eight to the number of the maximum of shown blogs. The button is just shown if necessary.*/}
-            {loadedBlogs <= blogs.filter((blog) => topic !== 'Latest' ? blog.topic === topic : blog.topic !== topic).length - 1 ? (
-                <button className='blog-main-button' onClick={() => setLoadedBlogs(loadedBlogs + 8)}>Load More...</button>) : (<div/>)
-            }
+      {/*load more button, onClick just adds eight to the number of the maximum of shown blogs. The button is just shown if necessary.*/}
+      {loadedBlogPosts <= blogPosts.filter((
+        blogPost: any
+      ) => topic !== 'Latest' ? blogPost.topic === topic : blogPost.topic !== topic).length - 1 ? (
+        <button className={styles.blog_main_button} onClick={() => setLoadedBlogPosts(loadedBlogPosts + 8)}>Load More...</button>) : (<div/>)
+      }
 
-        </section>
-    );
-}
-
+    </section>
+  );
+};
 export default BlogMain;

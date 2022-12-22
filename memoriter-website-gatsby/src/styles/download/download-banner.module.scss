@@ -1,0 +1,222 @@
+// The download banner is an area at the top with the download page with the desktop download buttons.
+
+.download_banner { // banner box, background and position
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 60px);
+  min-height: 540px; // fixes issues for screens not high enough
+  left: 0;
+  top: 62px;
+  background: var(--color-banner-gradient);
+  overflow: hidden;
+
+  &_square_top { // background square at the upper right corner
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    background-color: var(--color-banner-triangle-light);
+  }
+
+  &_square_bottom { // background square at the lower left corner
+    position: absolute;
+    bottom: 0;
+    width: 40vh;
+    height: 40vh;
+    background-color: var(--color-banner-triangle-dark);
+  }
+
+  &_content { // positioning and layout container
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    gap: 100px;
+  }
+
+  &_text { // text for slogan
+    color: var(--color-font);
+    width: 80vw;
+    max-width: 600px;
+    font-style: italic;
+    font-size: 2.6rem;
+    font-family: var(--font-serif);
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+  }
+
+  &_download { // download button, needed to be split in multiple classes, this class is for the positionig of the button
+    background-color: var(--color-transparent);;
+    border: none;
+    cursor: pointer;
+
+    &_icon { // operating system icon
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      filter: var(--svg-invert-white); // makes the icon white
+    }
+
+    &_text { // text which is not supposed to change color
+      position: absolute;
+      left: 80px;
+      top: 0.6rem;
+      font-size: 1.6rem;
+      color: var(--color-white);
+      font-family: var(--font-highlight);
+      white-space: nowrap;
+
+      &_os { // additional text formatting for the operating system
+        position: absolute;
+        left: 80px;
+        top: 2.6rem;
+        font-size: 1.2rem;
+        color: var(--color-white);
+        font-family: var(--font-highlight);
+      }
+    }
+
+    &_background { // the hover background was done in React because it did not work in CSS
+      width: 200px;
+      height: 56px;
+      padding: 8px 10px 8px 10px;
+      margin-inline: -6px;
+      border-radius: 10px;
+      background: var(--color-highlight-gradient);
+      transition: filter 200ms;
+    }
+
+    &_windows { // position for the download for windows button
+      position: relative;
+      margin-left: 60px;
+    }
+
+    &_mac { // position for the download for mac button
+      position: relative;
+      margin-left: 40px;
+    }
+  }
+
+  &_icon { // image container next to the download buttons
+    position: relative;
+    width: 400px;
+    height: 400px;
+
+    &_background { // background shape behind the icon
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      width: 135%;
+      height: 135%;
+    }
+
+    &_symbol { // download icon shape
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      width: 65%;
+      height: 65%;
+      filter: var(--svg-invert);
+    }
+  }
+
+  &_transition { // the shape at the bottom is an overlay in the same color as se next section
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-background);
+
+    &_left { // trapezoid shape at the left
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      border-right: 50px solid var(--color-transparent);
+      border-bottom: 50px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+
+    &_right { // trapezoid shape at the left
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+      border-left: 50px solid var(--color-transparent);
+      border-bottom: 50px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+  }
+}
+
+@media (max-width: 1160px) { // optimization for tablets and smaller laptops
+    .download_banner_content {
+        left: calc(50% + 12px);
+        gap: 0px;
+    }
+
+    .download_banner_icon {
+        transform: translate(0, 40px);
+        width: 360px;
+        height: 360px;
+
+        &_background {
+          width: 100%;
+          height: 100%;
+      }
+    }
+}
+
+@media (max-width: 960px) { // mobile optimization
+    .download_banner_content {
+        left: 50%;
+        top: 30%;
+    }
+    
+    .download_banner_download_windows {
+        position: absolute;
+        left: calc(50% - 240px);
+        margin: 0;
+    }
+    .download_banner_download_mac {
+        position: absolute;
+        right: calc(50% - 240px);
+        margin: 0;
+    }
+    
+    .download_banner_icon {
+        display: none;
+    }
+    
+    .download_banner_transition_left {
+        width: 20vw;
+    }
+    .download_banner_transition_right {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 560px) { // hides all at too small screens in order to show no responsive bugs 
+  .download_banner {
+    min-height: 710px;
+
+    &_text {
+    font-size: 2.2rem;
+    }
+
+    &_download_windows {
+      left: 50%;
+      transform: translate(-50%, -40px) scale(0.9);
+    }
+  }
+}
+
+@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+  .download_banner {
+    display: none;
+  }
+}
