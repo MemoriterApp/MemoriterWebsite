@@ -39,7 +39,7 @@ Phasellus volutpat non dolor at ullamcorper. Ut tempor tortor diam, in dictum di
 
 ## Example Callout
 
-<blockquote class='callout'>
+<blockquote class='callout' icon='🔥'>
 Phasellus volutpat non dolor at ullamcorper.
 </blockquote>
 

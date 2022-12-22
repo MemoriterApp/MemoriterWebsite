@@ -125,7 +125,7 @@
       }
     }
 
-    .callout {
+    blockquote[class='callout'] {
       font-family: var(--font-default);
       padding: 22px 24px 22px 68px;
       margin-top: 36px;
@@ -134,18 +134,113 @@
       border-left: none !important; // !important overwrites all other conflicting CSS
       border-radius: 10px;
     
-      &[icon]::before { // emoji inserted before the text
-        content: attr(icon); // the emoji is set based on the icon attribute
+      &::before { // emoji inserted before the text
+        content: '';
         position: absolute;
-        font-size: 2.2rem;
+        width: 2.2rem;
+        height: 2.2rem;
         margin-left: -50px;
+        background-image: url('../../images/twemoji/1f4a1.svg'); // light bulb emoji, default icon if unsupported or none was selected
       }
-    
-      &:not([icon])::before { // default icon if none was selected
-        content: '\1F4A1'; // light bulb emoji
-        position: absolute;
-        font-size: 2.2rem;
-        margin-left: -50px;
+
+      &[icon='👉']::before { // hand pointing right emoji
+        background-image: url('../../images/twemoji/1f449.svg');
+      }
+
+      &[icon='☝️']::before { // hand pointing up emoji
+        background-image: url('../../images/twemoji/261d.svg');
+      }
+
+      &[icon='👌']::before { // ok hand emoji
+        background-image: url('../../images/twemoji/1f44c.svg');
+      }
+
+      &[icon='🔑']::before { // key emoji
+        background-image: url('../../images/twemoji/1f511.svg');
+      }
+
+      &[icon='🚧']::before { // construction sign emoji
+        background-image: url('../../images/twemoji/1f6a7.svg');
+      }
+
+      &[icon='⚠️']::before { // warning sign emoji
+        background-image: url('../../images/twemoji/26a0.svg');
+      }
+      
+      &[icon='🔥']::before { // fire emoji
+        background-image: url('../../images/twemoji/1f525.svg');
+      }
+
+      &[icon='📌']::before { // pushpin emoji
+        background-image: url('../../images/twemoji/1f4cc.svg');
+      }
+
+      &[icon='✂️']::before { // scissors emoji
+        background-image: url('../../images/twemoji/2702.svg');
+      }
+
+      &[icon='❓']::before { // question mark emoji
+        background-image: url('../../images/twemoji/2753.svg');
+      }
+
+      &[icon='🚫']::before { // no entry sign emoji
+        background-image: url('../../images/twemoji/1f6ab.svg');
+      }
+
+      &[icon='⛔']::before { // no entry emoji
+        background-image: url('../../images/twemoji/26d4.svg');
+      }
+
+      &[icon='⏰']::before { // alarm clock emoji
+        background-image: url('../../images/twemoji/23f0.svg');
+      }
+
+      &[icon='☎️']::before { // telephone emoji
+        background-image: url('../../images/twemoji/260e.svg');
+      }
+
+      &[icon='🚨']::before { // red alarm light emoji
+        background-image: url('../../images/twemoji/1f6a8.svg');
+      }
+
+      &[icon='♻️']::before { // recycling emoji
+        background-image: url('../../images/twemoji/267b.svg');
+      }
+
+      &[icon='✅']::before { // checkmark emoji
+        background-image: url('../../images/twemoji/2714.svg');
+      }
+
+      &[icon='🔒']::before { // lock emoji
+        background-image: url('../../images/twemoji/1f512.svg');
+      }
+
+      &[icon='📎']::before { // papaerclip emoji
+        background-image: url('../../images/twemoji/1f4ce.svg');
+      }
+
+      &[icon='📖']::before { // open book emoji
+        background-image: url('../../images/twemoji/1f4d6.svg');
+      }
+
+      &[icon='🗣️']::before { // speaking head emoji
+        background-image: url('../../images/twemoji/1f5e3.svg');
+      }
+
+      &[icon='➡️']::before { // rightwards arrow emoji
+        background-image: url('../../images/twemoji/27a1.svg');
+      }
+
+      &[icon='📢']::before { // loudspeaker emoji
+        background-image: url('../../images/twemoji/1f4e2.svg');
+      }
+
+      &[icon='🛠️']::before { // tools emoji
+        background-image: url('../../images/twemoji/1f6e0.svg');
+      }
+
+      &[icon='⚙️']::before { // gear emoji
+        background-image: url('../../images/twemoji/2699.svg');
       }
     }
   }
