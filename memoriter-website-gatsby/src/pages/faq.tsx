@@ -4,7 +4,7 @@ import * as styles from '../styles/help.module.scss';
 import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
-import emoji_1f609 from '../images/emoji/1f609.svg';
+import emoji1f609 from '../images/emoji/1f609.svg';
 
 const Faq: FC = () => { // array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
@@ -172,7 +172,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           Sadly no, at least at the moment. The beginning of development were very unorganized, so
           no one really cared about documenting anything, and with our code beeing very chaotic
           (even the people who wrote it don't understand it{' '}
-          <img className='emoji' src={emoji_1f609} alt='😉' draggable='false' />
+          <img className='emoji' src={emoji1f609} alt='😉' draggable='false' />
           ), nobody wanted to do this task for a long while. So be patient, we are trying to get it
           done.
         </p>

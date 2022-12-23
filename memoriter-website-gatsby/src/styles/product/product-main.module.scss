@@ -10,41 +10,6 @@
   overflow-x: hidden;
   background-color: var(--color-background);
 
-  &_overview { // basic layout of three columns for overview texts at the top
-    display: flex; // creates the clumn layout
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: calc(100% - 80px);
-    max-width: 1200px;
-    gap: 80px; // gaps between child items
-    margin: 140px 0 200px 0;
-
-    > * { // children of overview
-      flex: 1; // used for equal columns
-    }
-
-    &_image { // images above the small texts
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      height: 100px;
-    }
-
-    &_text { // small overview texts
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      width: 200px;
-      font-size: 1.4rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
-      line-height: 2rem;
-      text-align: center;
-      margin-top: 32px;
-    }
-  }
-
   &_container { // contains all of the main sections, is used for positioning
     display: flex;
     margin: 160px 70px 200px 70px;
@@ -83,7 +48,75 @@
 
   &_image { // image optimization
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
+  }
+
+  &_overview { // basic layout of three columns for overview texts at the top
+    display: flex; // creates the clumn layout
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+    gap: 100px; // gaps between child items
+    margin: 140px 0 240px 0;
+
+    &_heading { // large section headings
+      font-size: 3.4rem;
+      font-family: var(--font-heading);
+      line-height: 4rem;
+      text-align: center;
+      margin-bottom: -32px;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+
+    > * { // children of overview
+      width: 200px;
+      padding: 32px 16px 12px 16px;
+      background-color: var(--color-container);
+      border-radius: 4px;
+    }
+
+    &_image { // images above the small texts
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      height: 100px;
+    }
+
+    &_text { // small overview texts
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 200px;
+      font-size: 1.4rem;
+      color: var(--color-font);
+      font-family: var(--font-default);
+      line-height: 2rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    &_link {
+      font-size: 1.4rem;
+      color: var(--color-font);
+      font-family: var(--font-highlight);
+      text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: background-color 200ms;
+
+      &:hover { // for the fading background box on hover
+        background-color: var(--color-container-button);
+      }
+
+      &_container {
+        text-align: center;
+        margin-top: 28px;
+      }
+    }
   }
 }
 

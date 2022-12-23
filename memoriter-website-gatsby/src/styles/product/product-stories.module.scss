@@ -16,7 +16,7 @@
     transform: translate(-50%);
     width: calc(100% - 150px);
     height: calc(100% - 40px);
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: var(--color-hover);
 
     &::after { // quotation mark at the upper left corner
@@ -70,6 +70,8 @@
       height: 30px;
       transform: skew(-30deg); // creates a parallelogram shape
       background-color: var(--color-font-gray);
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
     }
 
     &::after { // lower half of the arrow
@@ -81,6 +83,8 @@
       height: 30px;
       transform: skew(30deg); // creates a parallelogram shape
       background-color: var(--color-font-gray);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
 
     &:hover { // hover effect
@@ -110,6 +114,8 @@
       height: 30px;
       transform: skew(30deg); // creates a parallelogram shape
       background-color: var(--color-font-gray);
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
     }
 
     &::after { // lower half of the arrow
@@ -121,6 +127,8 @@
       height: 30px;
       transform: skew(-30deg); // creates a parallelogram shape
       background-color: var(--color-font-gray);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
 
     &:hover { // hover effect
