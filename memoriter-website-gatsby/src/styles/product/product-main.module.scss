@@ -4,7 +4,7 @@
   position: relative;
   left: 50%; // centering the content on too large screens
   transform: translate(-50%);
-  max-width: 2400px; // looks better on large screens
+  max-width: 1400px; // looks better on large screens
   margin-top: 100vh;
   margin-bottom: 20px;
   overflow-x: hidden;
@@ -22,17 +22,27 @@
       flex-basis: 45%;
       align-self: center;
 
+      &_large {
+        flex-basis: 60%;
+        align-self: center;
+      }
+
       &_image { // sub containers with the image inside
         flex-basis: 55%;
         align-self: center;
+
+        &_narrow {
+          flex-basis: 40%;
+          align-self: center;
+        }
       }
     }
   }
 
   &_heading { // heading font styling
-    font-size: 3.4rem;
+    font-size: 2.8rem;
     font-family: var(--font-heading);
-    line-height: 4rem;
+    line-height: 3.6rem;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -44,6 +54,37 @@
     color: var(--color-font);
     font-family: var(--font-default);
     line-height: 2rem;
+  }
+
+  &_list { // list font styling
+    list-style-type: none;
+
+    li {
+      display: flex;
+      font-size: 1.2rem;
+      color: var(--color-font);
+      margin-top: -0.4rem;
+      margin-bottom: -0.4rem;
+      align-items: center;
+
+      img {
+        height: 2.4rem;
+        margin: 0 1rem 0 -2.4rem;
+        user-select: none;
+      }
+
+      h3 {
+        font-family: var(--font-highlight);
+        margin-bottom: 0.2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-family: var(--font-default);
+        line-height: 2rem;
+        margin-top: 0.2rem;
+      }
+    }
   }
 
   &_image { // image optimization
@@ -61,11 +102,11 @@
     margin: 140px 0 240px 0;
 
     &_heading { // large section headings
-      font-size: 3.4rem;
+      font-size: 2.8rem;
       font-family: var(--font-heading);
-      line-height: 4rem;
+      line-height: 3.6rem;
       text-align: center;
-      margin-bottom: -32px;
+      margin-bottom: -60px;
       background: var(--color-highlight-gradient);
       background-clip: text;
       -webkit-background-clip: text;

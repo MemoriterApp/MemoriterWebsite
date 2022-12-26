@@ -6,6 +6,9 @@ import * as styles from '../../styles/product/product-main.module.scss';
 import emoji1f4a1 from '../../images/emoji/1f4a1.svg';
 import emoji1f9e0 from '../../images/emoji/1f9e0.svg';
 import emoji1f465 from '../../images/emoji/1f465.svg';
+import emoji1f4dd from '../../images/emoji/1f4dd.svg';
+import emoji1f5c3 from '../../images/emoji/1f5c3.svg';
+import emoji2049 from '../../images/emoji/2049.svg';
 import emoji1f310 from '../../images/emoji/1f310.svg';
 import emoji1f4bb from '../../images/emoji/1f4bb.svg';
 import emoji1f916 from '../../images/emoji/1f916.svg';
@@ -17,8 +20,8 @@ const ProductMain: FC = () => {
       <article className={styles.product_main_container}>
         <div className={styles.product_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.product_main_animation_fade_in_right}
-            animateOut={styles.product_main_animation_fade_out_right}
+            animateIn={styles.product_main_animation_fade_in_left}
+            animateOut={styles.product_main_animation_fade_out_left}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.product_main_heading}>Placeholder Heading</h1>
@@ -41,7 +44,6 @@ const ProductMain: FC = () => {
       {/*three small overview items*/}
       <h1 className={styles.product_main_overview_heading}>Placeholder Heading</h1>
       <article className={styles.product_main_overview}>
-
         <div>
           <img className={styles.product_main_overview_image} src={emoji1f4a1} alt='Light bulb' />
           <p className={styles.product_main_overview_text}>
@@ -89,8 +91,8 @@ const ProductMain: FC = () => {
         </div>
         <div className={styles.product_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.product_main_animation_fade_in_left}
-            animateOut={styles.product_main_animation_fade_out_left}
+            animateIn={styles.product_main_animation_fade_in_right}
+            animateOut={styles.product_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.product_main_heading}>Accumalate knowledge faster</h1>
@@ -105,10 +107,62 @@ const ProductMain: FC = () => {
       </article>
 
       <article className={styles.product_main_container}>
-        <div className={styles.product_main_container_sub}>
+        <div className={styles.product_main_container_sub_large}>
           <AnimationOnScroll
             animateIn={styles.product_main_animation_fade_in_left}
             animateOut={styles.product_main_animation_fade_out_left}
+          >
+            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            <h1 className={styles.product_main_heading}>Study in a Feature Rich Environment</h1>
+            <p className={styles.product_main_text}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque recusandae.
+            </p>
+            <ul className={styles.product_main_list}>
+              <li>
+                <img src={emoji1f4dd} alt='Notes' draggable='false' />
+                <div>
+                  <h3>Notes</h3>
+                  <p>Notesssssssssssssssss</p>
+                </div>
+              </li>
+              <li>
+                <img src={emoji1f5c3} alt='Flashcards' draggable='false' />
+                <div>
+                  <h3>Flashcards</h3>
+                  <p>Flashcardsssssssss</p>
+                </div>
+              </li>
+              <li>
+                <img src={emoji2049} alt='Study' draggable='false' />
+                <div>
+                  <h3>Study Mode</h3>
+                  <p>Studyyyyyyyyyyyy</p>
+                </div>
+              </li>
+            </ul>
+          </AnimationOnScroll>
+        </div>
+        <div className={styles.product_main_container_sub_image_narrow}>
+          <StaticImage
+            className={styles.product_main_image}
+            src='../../images/product/placeholder-portrait.jpg'
+            alt='placeholder'
+          />
+        </div>
+      </article>
+
+      <article className={styles.product_main_container}>
+        <div className={styles.product_main_container_sub_image}>
+          <StaticImage
+            className={styles.product_main_image}
+            src='../../images/product/placeholder.jpg'
+            alt='placeholder'
+          />
+        </div>
+        <div className={styles.product_main_container_sub}>
+          <AnimationOnScroll
+            animateIn={styles.product_main_animation_fade_in_right}
+            animateOut={styles.product_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.product_main_heading}>Study with friends</h1>
@@ -119,21 +173,17 @@ const ProductMain: FC = () => {
             </p>
           </AnimationOnScroll>
         </div>
-        <div className={styles.product_main_container_sub_image}>
-          <StaticImage
-            className={styles.product_main_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
-        </div>
       </article>
 
       {/*three small overview items*/}
-      <h1 className={styles.product_main_overview_heading}>Apps and Tools</h1>
+      <h1 className={styles.product_main_overview_heading}>Study Anytime and Everywhere</h1>
       <article className={styles.product_main_overview}>
-
         <div>
-          <img className={styles.product_main_overview_image} src={emoji1f310} alt='Global communication' />
+          <img
+            className={styles.product_main_overview_image}
+            src={emoji1f310}
+            alt='Global communication'
+          />
           <p className={styles.product_main_overview_text}>
             Access Memoriter anytime with our web application
           </p>
@@ -145,7 +195,11 @@ const ProductMain: FC = () => {
         </div>
 
         <div>
-          <img className={styles.product_main_overview_image} src={emoji1f4bb} alt='Personal computer' />
+          <img
+            className={styles.product_main_overview_image}
+            src={emoji1f4bb}
+            alt='Personal computer'
+          />
           <p className={styles.product_main_overview_text}>
             Desktop and mobile apps for most devices
           </p>
@@ -201,11 +255,12 @@ const ProductMain: FC = () => {
             animateIn={styles.product_main_animation_fade_in_left}
             animateOut={styles.product_main_animation_fade_out_left}
           >
-            <h1 className={styles.product_main_heading}>It's only free.99 </h1>
+            <h1 className={styles.product_main_heading}>Free and Open Source</h1>
             <p className={styles.product_main_text}>
               Food is always beetter when it's free, same goes for software. We strictly believe in
               the idea that education and the things around it should be made affordable. That's why
-              we decided to make Memoriter free.99.
+              we decided to make Memoriter free. With making the project open source, everyone can
+              make Memoriter a even better way to study.
             </p>
           </AnimationOnScroll>
         </div>
