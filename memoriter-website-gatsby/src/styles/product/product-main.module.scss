@@ -22,19 +22,9 @@
       flex-basis: 45%;
       align-self: center;
 
-      &_large {
-        flex-basis: 60%;
-        align-self: center;
-      }
-
       &_image { // sub containers with the image inside
         flex-basis: 55%;
         align-self: center;
-
-        &_narrow {
-          flex-basis: 40%;
-          align-self: center;
-        }
       }
     }
   }

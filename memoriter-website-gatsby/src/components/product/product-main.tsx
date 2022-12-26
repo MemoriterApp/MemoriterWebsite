@@ -107,7 +107,7 @@ const ProductMain: FC = () => {
       </article>
 
       <article className={styles.product_main_container}>
-        <div className={styles.product_main_container_sub_large}>
+        <div className={styles.product_main_container_sub}>
           <AnimationOnScroll
             animateIn={styles.product_main_animation_fade_in_left}
             animateOut={styles.product_main_animation_fade_out_left}
@@ -142,10 +142,10 @@ const ProductMain: FC = () => {
             </ul>
           </AnimationOnScroll>
         </div>
-        <div className={styles.product_main_container_sub_image_narrow}>
+        <div className={styles.product_main_container_sub_image}>
           <StaticImage
             className={styles.product_main_image}
-            src='../../images/product/placeholder-portrait.jpg'
+            src='../../images/product/placeholder.jpg'
             alt='placeholder'
           />
         </div>
