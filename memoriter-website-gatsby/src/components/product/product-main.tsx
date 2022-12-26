@@ -17,29 +17,15 @@ const ProductMain: FC = () => {
   return (
     <section className={styles.product_main}>
       {/*main parts with texts and images*/}
-      <article className={styles.product_main_container}>
-        <div className={styles.product_main_container_sub}>
-          <AnimationOnScroll
-            animateIn={styles.product_main_animation_fade_in_left}
-            animateOut={styles.product_main_animation_fade_out_left}
-          >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.product_main_heading}>Placeholder Heading</h1>
-            <p className={styles.product_main_text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis possimus nemo
-              tenetur blanditiis, vitae non rem sint optio, molestias accusamus iure expedita sequi.
-              Hic ipsum cumque rerum laborum recusandae?
-            </p>
-          </AnimationOnScroll>
-        </div>
-        <div className={styles.product_main_container_sub_image}>
-          <StaticImage
-            className={styles.product_main_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
-        </div>
-      </article>
+      <p className={styles.product_main_top_text}>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+      <StaticImage
+        className={styles.product_main_top_image}
+        src='../../images/product/placeholder.jpg'
+        alt='placeholder'
+      />
 
       {/*three small overview items*/}
       <h1 className={styles.product_main_overview_heading}>Placeholder Heading</h1>

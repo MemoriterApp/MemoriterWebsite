@@ -10,6 +10,43 @@
   overflow-x: hidden;
   background-color: var(--color-background);
 
+  &_title { // page heading
+    font-size: 4rem;
+    font-family: var(--font-heading);
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    background: var(--color-highlight-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-transparent);
+  }
+
+  &_top_text { // slogan at the top
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 840px;
+    max-width: calc(100% - 40px);
+    font-size: 1.8rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2.8rem;
+    text-align: center;
+    margin-top: 160px;
+    margin-bottom: 80px;
+  }
+
+  &_top_image { // large image at the top
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1000px;
+    max-width: calc(100% - 40px);
+    margin-bottom: 160px;
+    border-radius: 4px;
+  }
+
   &_container { // contains all of the main sections, is used for positioning
     display: flex;
     margin: 160px 70px 200px 70px;
