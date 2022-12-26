@@ -1,13 +1,14 @@
-// This file includes most of the styles for the main part of the download page except the parts seperated in to pc and mobile.
+// These styles define the main layout of the most pages
 
-.download_main { // layout container for the content
+.default_main { // just used for layout adjustment
   position: relative;
   left: 50%; // centering the content on too large screens
   transform: translate(-50%);
-  max-width: 2400px; // looks better on large screens
+  max-width: 1400px; // looks better on large screens
   margin-top: 100vh;
   margin-bottom: 20px;
   overflow-x: hidden;
+  background-color: var(--color-background);
 
   &_title { // page heading
     font-size: 4rem;
@@ -64,9 +65,9 @@
   }
 
   &_heading { // heading font styling
-    font-size: 3.4rem;
+    font-size: 2.8rem;
     font-family: var(--font-heading);
-    line-height: 4rem;
+    line-height: 3.6rem;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -80,12 +81,139 @@
     line-height: 2rem;
   }
 
-  &_image { // image optimization
-    width: 100%;
-    border-radius: 10px;
+  &_list { // list font styling
+    list-style-type: none;
+
+    li {
+      display: flex;
+      font-size: 1.1rem;
+      color: var(--color-font);
+      margin-top: -0.4rem;
+      margin-bottom: -0.4rem;
+      align-items: center;
+
+      img {
+        height: 2.4rem;
+        margin: 0 1rem 0 -2.4rem;
+        user-select: none;
+      }
+
+      h3 {
+        font-family: var(--font-highlight);
+        margin-bottom: 0.2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-family: var(--font-default);
+        line-height: 2rem;
+        margin-top: 0.2rem;
+      }
+    }
   }
 
-  &_footer { // container with download buttons at the bottom
+  &_image { // image optimization
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &_overview { // basic layout of three columns for overview texts at the top
+    display: flex; // creates the clumn layout
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+    gap: 100px; // gaps between child items
+    margin: 140px 0 240px 0;
+
+    &_heading { // large section headings
+      font-size: 2.8rem;
+      font-family: var(--font-heading);
+      line-height: 3.6rem;
+      text-align: center;
+      margin-bottom: -60px;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+
+    > * { // children of overview
+      width: 200px;
+      padding: 32px 16px 12px 16px;
+      background-color: var(--color-container);
+      border-radius: 4px;
+    }
+
+    &_image { // images above the small texts
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      height: 100px;
+    }
+
+    &_text { // small overview texts
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 200px;
+      font-size: 1.4rem;
+      color: var(--color-font);
+      font-family: var(--font-default);
+      line-height: 2rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    &_link {
+      font-size: 1.4rem;
+      color: var(--color-font);
+      font-family: var(--font-highlight);
+      text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: background-color 200ms;
+
+      &:hover { // for the fading background box on hover
+        background-color: var(--color-container-button);
+      }
+
+      &_container {
+        text-align: center;
+        margin-top: 28px;
+      }
+    }
+  }
+
+  &_bottom { // positioning for the text and button
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80vw;
+    max-width: 800px;
+    color: var(--color-font);
+    font-style: italic;
+    font-size: 3.2rem;
+    font-family: var(--font-serif);
+    text-align: center;
+    margin-top: 240px;
+    margin-bottom: 200px;
+
+    span { // highlighted words
+      font-size: 3.4rem;
+      font-family: var(--font-heading);
+      font-style: normal;
+      line-height: 4rem;
+      margin-left: 4px;
+      margin-right: -4px;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+  }
+
+  &_download_footer { // container with download buttons at the bottom
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -93,7 +221,7 @@
     max-width: calc(100% - 40px);
     margin-top: 200px;
     margin-bottom: 320px;
-
+  
     &_text { // text above thw download buttons
       font-size: 1.8rem;
       color: var(--color-font);
@@ -108,7 +236,7 @@
     background-color: var(--color-transparent);;
     border: none;
     cursor: pointer;
-
+  
     &_icon { // operating system icon
       position: absolute;
       left: 40px;
@@ -116,7 +244,7 @@
       transform: translate(-50%, -50%);
       filter: var(--svg-invert-white); // makes the icon white
     }
-
+  
     &_text { // text which is not supposed to change color
       position: absolute;
       left: 80px;
@@ -125,7 +253,7 @@
       color: var(--color-white);
       font-family: var(--font-highlight);
       white-space: nowrap;
-
+  
       &_os { // additional text formatting for the operating system
         position: absolute;
         left: 80px;
@@ -133,9 +261,9 @@
         font-size: 1.2rem;
         color: var(--color-white);
         font-family: var(--font-highlight);
+        }
       }
-    }
-
+  
     &_background { // the hover background was done in React because it did not work in CSS
       width: 200px;
       height: 56px;
@@ -145,13 +273,13 @@
       background: var(--color-highlight-gradient);
       transition: filter 200ms;
     }
-
+  
     &_windows { // position for the download for windows button
       position: absolute;
       left: calc(50% - 130px);
       transform: translate(-50%);
     }
-
+  
     &_mac { // position for the download for mac button
       position: absolute;
       left: calc(50% + 130px);
@@ -159,7 +287,7 @@
     }
   }
 
-  &_divider { // divider between mainand mobile section
+  &_download_divider { // divider between mainand mobile section
     width: calc(100% - 120px);
     margin-bottom: 180px;
     background-color: var(--color-container);
@@ -168,21 +296,21 @@
   }
 }
 
-@media (max-width: 960px) { // simplyfied layout for smaller screens  
-  .download_main_top_image {
-    margin-bottom: -120px;
+@media (max-width: 960px) { // simplyfied layout for smaller screens
+  .default_main_overview {
+    flex-direction: column; // renders items above each other instead of next to each other
   }
     
-  .download_main_heading {
+  .default_main_heading {
     font-size: 3rem;
     hyphens: auto; // allows linebreaks within words
   }
 
-  .download_main_text {
+  .default_main_text {
     font-size: 1.2rem;
   }
 
-  .download_main_container {
+  .default_main_container {
     display: block;
     margin: 120px 20px 20px 20px;
 
@@ -191,67 +319,64 @@
     }
   }
 
-  .download_main_divider {
+  .default_main_download_divider {
     width: calc(100% - 40px);
     margin-bottom: 40px;
   }
 }
 
-@media (max-width: 560px) { // makes some text font size samller for better readability on small screens
-  .download_main_title {
-    font-size: 3.2rem;
+@media (max-width: 720px) { // adjusting too big text
+  .default_main_bottom {
+    font-size: 2.2rem;
+    margin-top: 160px;
+    margin-bottom: 40px;
+
+    span {
+      font-size: 2.4rem;
+    }
   }
-  .download_main_top_text {
+}
+
+@media (max-width: 660px) { // pushes the footer down when the customer stories disappear
+  .default_main {
+    margin-bottom: 240px;
+  }
+}
+
+@media (max-width: 560px) {
+  .default_main_download_footer_text {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
 
-  .download_main_footer_text {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-  }
-
-  .download_main_download_windows {
+  .default_main_download_windows {
     left: 50%;
     transform: translate(-50%, -24px) scale(0.9);
   }
-  .download_main_download_mac {
+  .default_main_download_mac {
     left: 50%;
     transform: translate(-50%, 80px) scale(0.9);
   }
 
-  .download_main_divider {
+  .default_main_download_divider {
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 240px) { // hiding content for too small screens (where the warning displays)
-  .download_main {
-    display: none;
-  }
+    .default_main {
+      display: none;
+    }
 }
 
-@media (max-height: 720px) { // fixes issues for screens not high enough on small widths
-  @media (max-width: 560px) {
-    .download_main {
-      margin-top: 720px;
+@media (max-height: 600px) { // fixes issues for screens not high enough on small widths
+    .default_main {
+      margin-top: 600px;
     }
-  }
-}
-
-@media (max-height: 600px) { // fixes issues for screens not high enough
-  .download_main {
-    margin-top: 600px;
-  }
-  @media (max-width: 560px) {
-    .download_main {
-      margin-top: 720px;
-    }
-  }
 }
 
 // animation classes
-.download_main_animation_fade_in_right { // class for triggering the fade in right animation
+.default_main_animation_fade_in_right { // class for triggering the fade in right animation
   animation: fade-in-right 200ms;
 }
 @keyframes fade-in-right { // the items move a bit to the left and get visible
@@ -265,7 +390,7 @@
   }
 }
 
-.download_main_animation_fade_out_right { // class for triggering the fade out right animation
+.default_main_animation_fade_out_right { // class for triggering the fade out right animation
   animation: fade-out-right 400ms;
 }
 @keyframes fade-out-right { // the items move a bit to the right and get invisible
@@ -279,7 +404,7 @@
   }
 }
 
-.download_main_animation_fade_in_left { // class for triggering the fade in left animation
+.default_main_animation_fade_in_left { // class for triggering the fade in left animation
   animation: fade-in-left 200ms;
 }
 @keyframes fade-in-left { // the items move a bit to the right and get visible
@@ -293,7 +418,7 @@
   }
 }
 
-.download_main_animation_fade_out_left { // class for triggering the fade out left animation
+.default_main_animation_fade_out_left { // class for triggering the fade out left animation
   animation: fade-out-left 400ms;
 }
 @keyframes fade-out-left { // the items move a bit to the right and get invisible
@@ -303,6 +428,34 @@
   }
   to {
     transform: translateX(-8%);
+    opacity: 0;
+  }
+}
+
+.default_main_animation_fade_in_down { // class for triggering the fade in down animation
+  animation: fade-in-down 200ms;
+}
+@keyframes fade-in-down { // the items move a bit down and get visible
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.default_main_animation_fade_out_down { // class for triggering the fade out down animation
+  animation: fade-out-down 400ms;
+}
+@keyframes fade-out-down { // the items move a bit down and get invisible
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30%);
     opacity: 0;
   }
 }
