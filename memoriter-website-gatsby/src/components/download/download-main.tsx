@@ -19,7 +19,7 @@ const DownloadMain: FC = () => {
       </p>
       <img className={styles.default_main_top_image} src={placeholderImage} alt='placeholder' />
 
-      <article className={styles.default_main_container} style={{ marginTop: '300px' }}>
+      <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub_image}>
           <img className={styles.default_main_image} src={placeholderImage} alt='placeholder' />
         </div>

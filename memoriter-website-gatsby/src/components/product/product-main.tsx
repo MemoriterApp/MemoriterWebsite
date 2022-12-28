@@ -41,8 +41,19 @@ const ProductMain: FC = () => {
         </div>
       </article>
 
+      <h1 className={styles.default_main_overview_heading}>See Memoriter in Action</h1>
+      <p className={styles.default_main_top_text}>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+      <iframe
+        className={styles.default_main_top_video}
+        src='https://www.youtube-nocookie.com/embed/WXuK6gekU1Y'
+        allowFullScreen
+      />
+
       {/*three small overview items*/}
-      <h1 className={styles.default_main_overview_heading}>Placeholder Heading</h1>
+      <h1 className={styles.default_main_overview_heading}>Explore our Tools and Features</h1>
       <article className={styles.default_main_overview}>
         <div>
           <img className={styles.default_main_overview_image} src={emoji1f4a1} alt='Light bulb' />
@@ -95,12 +106,12 @@ const ProductMain: FC = () => {
             animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.default_main_heading}>Accumalate knowledge faster</h1>
+            <h1 className={styles.default_main_heading}>Accumalate Knowledge Faster</h1>
             <p className={styles.default_main_text}>
-              Flashcards have proven to be <strong>150% more effective</strong> if you want to
-              accumalte knowledge faster. Instead of memorizing your notes passively, save time
-              using flashcards. When studying with flashcards the algorithm will notice your
-              mistakes and help you study more where your knowledge is lacking!
+              Flashcards have proven to be 150% more effective if you want to accumalte knowledge
+              faster. Instead of memorizing your notes passively, save time using flashcards. When
+              studying with flashcards the algorithm will notice your mistakes and help you study
+              more where your knowledge is lacking!
             </p>
           </AnimationOnScroll>
         </div>
@@ -115,28 +126,32 @@ const ProductMain: FC = () => {
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Study in a Feature Rich Environment</h1>
             <p className={styles.default_main_text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eaque recusandae.
+              Memoriter provides a wide range of all tools you need to achieve great studying
+              results.
             </p>
             <ul className={styles.default_main_list}>
               <li>
                 <img src={emoji1f4dd} alt='Notes' draggable='false' />
                 <div>
                   <h3>Notes</h3>
-                  <p>Notesssssssssssssssss</p>
+                  <p>Take notes and store all your knowledge in one place.</p>
                 </div>
               </li>
               <li>
                 <img src={emoji1f5c3} alt='Flashcards' draggable='false' />
                 <div>
                   <h3>Flashcards</h3>
-                  <p>Flashcardsssssssss</p>
+                  <p>Organize your notes into small, easy to remember pieces of knowledge.</p>
                 </div>
               </li>
               <li>
                 <img src={emoji2049} alt='Study' draggable='false' />
                 <div>
                   <h3>Study Mode</h3>
-                  <p>Studyyyyyyyyyyyy</p>
+                  <p>
+                    Repeat your flashcards using spaced repetition to remember the maximum of your
+                    notes and flashcards.
+                  </p>
                 </div>
               </li>
             </ul>
@@ -165,13 +180,58 @@ const ProductMain: FC = () => {
             animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.default_main_heading}>Study with friends</h1>
+            <h1 className={styles.default_main_heading}>Placeholder Heading</h1>
+            <p className={styles.default_main_text}>Content.</p>
+            <ul className={styles.default_main_list}>
+              <li>
+                <img src={emoji1f4dd} alt='Notes' draggable='false' />
+                <div>
+                  <h3>Heading 1</h3>
+                  <p>Content</p>
+                </div>
+              </li>
+              <li>
+                <img src={emoji1f5c3} alt='Flashcards' draggable='false' />
+                <div>
+                  <h3>Heading 2</h3>
+                  <p>Content</p>
+                </div>
+              </li>
+              <li>
+                <img src={emoji2049} alt='Study' draggable='false' />
+                <div>
+                  <h3>Heading 3</h3>
+                  <p>Content</p>
+                </div>
+              </li>
+            </ul>
+          </AnimationOnScroll>
+        </div>
+      </article>
+
+      <article className={styles.default_main_container}>
+        <div className={styles.default_main_container_sub}>
+          <AnimationOnScroll
+            animateIn={styles.default_main_animation_fade_in_left}
+            animateOut={styles.default_main_animation_fade_out_left}
+          >
+            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            <h1 className={styles.default_main_heading}>
+              Remember Everything with Spaced Repetition
+            </h1>
             <p className={styles.default_main_text}>
-              Study together and you will always find the motivation to suceed. You can help each
-              other out and share your notes, techniques and structure. That way you will save time
-              and hard work.
+              By using the scientic method of spaced repetition, we will remind you to regularly
+              review important flashcards that way you can remember thousands of flashcards with
+              minimal effort.
             </p>
           </AnimationOnScroll>
+        </div>
+        <div className={styles.default_main_container_sub_image}>
+          <StaticImage
+            className={styles.default_main_image}
+            src='../../images/product/placeholder.jpg'
+            alt='placeholder'
+          />
         </div>
       </article>
 
@@ -237,13 +297,11 @@ const ProductMain: FC = () => {
             animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.default_main_heading}>
-              Remember everything with spaced repetition
-            </h1>
+            <h1 className={styles.default_main_heading}>Study with Friends</h1>
             <p className={styles.default_main_text}>
-              By using the scientic method of spaced repetition, we will remind you to regularly
-              review important flashcards that way you can remember thousands of flashcards with
-              minimal effort.
+              Study together and you will always find the motivation to suceed. You can help each
+              other out and share your notes, techniques and structure. That way you will save time
+              and hard work.
             </p>
           </AnimationOnScroll>
         </div>
@@ -257,7 +315,7 @@ const ProductMain: FC = () => {
           >
             <h1 className={styles.default_main_heading}>Free and Open Source</h1>
             <p className={styles.default_main_text}>
-              Food is always beetter when it's free, same goes for software. We strictly believe in
+              Food is always better when it's free, same goes for software. We strictly believe in
               the idea that education and the things around it should be made affordable. That's why
               we decided to make Memoriter free. With making the project open source, everyone can
               make Memoriter a even better way to study.
