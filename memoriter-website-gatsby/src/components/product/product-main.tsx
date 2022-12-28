@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/default-main.module.scss';
+import ProductStories from './product-stories';
 import emoji1f4a1 from '../../images/emoji/1f4a1.svg';
 import emoji1f9e0 from '../../images/emoji/1f9e0.svg';
 import emoji1f465 from '../../images/emoji/1f465.svg';
@@ -306,6 +307,9 @@ const ProductMain: FC = () => {
           </AnimationOnScroll>
         </div>
       </article>
+
+      {/*slider with customer stories*/}
+      <ProductStories/>
 
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>

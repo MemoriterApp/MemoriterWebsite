@@ -4,7 +4,6 @@ import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
 import ProductBanner from '../components/product/product-banner';
 import ProductMain from '../components/product/product-main';
-import ProductStories from '../components/product/product-stories';
 
 const Product: FC = (): React.ReactElement => {
   return (
@@ -15,9 +14,6 @@ const Product: FC = (): React.ReactElement => {
             
       {/*basic main layout and texts*/}
       <ProductMain/>
-
-      {/*slider with customer stories*/}
-      <ProductStories/>
 
     </WebsiteLayout>
   );
