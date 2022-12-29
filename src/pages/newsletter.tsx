@@ -60,7 +60,7 @@ const Newsletter: FC = () => {
 
         {/*button to unsubscribe from the newsletter*/}
         <p className={styles.newsletter_main_unsubscribe}>
-          You do not want to recieve our email newsletter anymore?&nbsp;
+          You do not want to recieve our email newsletter anymore?{' '}
           <span
             className={styles.newsletter_main_unsubscribe_link}
             onClick={openUnsubscribe}

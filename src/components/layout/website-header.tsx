@@ -5,12 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
-import memoriterLogo from '../../images/memoriter-logo.svg';
+import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
+import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
 import emoji1f30d from '../../images/emoji/1f30d.svg';
 import emoji1f312 from '../../images/emoji/1f312.svg';
 import emoji26c5 from '../../images/emoji/26c5.svg';
 
-interface Props { // type definitions for props
+// type definitions for props
+interface Props {
   currentPage: string;
   onOpenLanguageSelect: () => void;
 }
@@ -22,8 +24,10 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
   const [onHoverAlt, setOnHoverAlt] = useState<string>('brightness(1)'); // hover effect for alternative mobile register button
 
   const [mobileSidebar, setMobileSidebar] = useState<string>('-280px'); // variable if the mobile nav sidebar is open or not
-  function toggleMobileSidebar() { // function for opening and closing the mobile nav sidebar
-    if (mobileSidebar === '-280px') { // if else condition is for opening and closing correctly
+  function toggleMobileSidebar() {
+    // function for opening and closing the mobile nav sidebar
+    if (mobileSidebar === '-280px') {
+      // if else condition is for opening and closing correctly
       setMobileSidebar('0');
     } else {
       setMobileSidebar('-280px');
@@ -31,7 +35,8 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
   }
 
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
-  const onScroll = (): void => { // getting the scroll data
+  // getting the scroll data
+  const onScroll = (): void => {
     const scroll = document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
@@ -40,7 +45,8 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
     setScrollProgress(scrolled);
   };
 
-  useEffect((): any => { // the useEffect is important for getting the value if it is scrolling
+  // the useEffect is important for getting the value if it is scrolling
+  useEffect((): any => {
     window.addEventListener('scroll', onScroll);
 
     return () => window.removeEventListener('scroll', onScroll);
@@ -48,10 +54,12 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
 
   const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode icon based on theme
 
-  const onChangeTheme = (theme: string): void => { // function to swap the current theme
+  // function to swap the current theme
+  const onChangeTheme = (theme: string): void => {
     dispatch(changeTheme(theme)); // changes the theme
 
-    if ( // checks if functional cookies are accepted
+    // checks if functional cookies are accepted
+    if (
       cookies.getCookie('accepted-cookies') &&
       JSON.parse(cookies.getCookie('accepted-cookies')).functional
     ) {
@@ -63,7 +71,11 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
     <header className={styles.website_header}>
       {/*If you click the logo, you will be redirected to the product page.*/}
       <Link to='/'>
-        <img className={styles.website_header_logo} src={memoriterLogo} alt='Memoriter' />
+        <img
+          className={styles.website_header_logo}
+          src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+          alt='Memoriter'
+        />
       </Link>
 
       {/*button for expanding side bar for small screens*/}
@@ -112,12 +124,18 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         {/*the if else conditions changes the color of the links depending on the current open page*/}
         {/*light and dark mode buttons, icon depends on the current mode*/}
         {(themeIcon === 'dark' || !themeIcon) && (
-          <button className={styles.website_header_theme_button} onClick={() => onChangeTheme('light')}>
+          <button
+            className={styles.website_header_theme_button}
+            onClick={() => onChangeTheme('light')}
+          >
             <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
           </button>
         )}
         {themeIcon === 'light' && (
-          <button className={styles.website_header_theme_button} onClick={() => onChangeTheme('dark')}>
+          <button
+            className={styles.website_header_theme_button}
+            onClick={() => onChangeTheme('dark')}
+          >
             <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
           </button>
         )}
@@ -154,15 +172,18 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
       <a
         className={styles.website_header_register_alt}
         href='https://app.memoriter.de/signup'
-        onMouseEnter={() => setOnHover('brightness(0.75)')}
-        onMouseLeave={() => setOnHover('brightness(1)')}
+        onMouseEnter={() => setOnHoverAlt('brightness(0.75)')}
+        onMouseLeave={() => setOnHoverAlt('brightness(1)')}
       >
         Register
-        <div className={styles.website_header_register_background} style={{ filter: onHover }} />
+        <div className={styles.website_header_register_background} style={{ filter: onHoverAlt }} />
       </a>
 
       {/*scroll indicator*/}
-      <div className={styles.website_header_scroll_indicator} style={{ width: `${scrollProgress}%` }} />
+      <div
+        className={styles.website_header_scroll_indicator}
+        style={{ width: `${scrollProgress}%` }}
+      />
       {/*the width is calculated by the scrollProgress variable and defines the width of the bar*/}
     </header>
   );

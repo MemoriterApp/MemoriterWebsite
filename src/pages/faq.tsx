@@ -31,7 +31,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
         <p>
           Memoriter is a tool for students by students. It was originally started as a school
           project by a small team of German students in 2021, but we moved on afterwards and are now
-          a still small, but international organization. Head over to our&nbsp;
+          a still small, but international organization. Head over to our{' '}
           <Link to='/about'>About page</Link> to find out more.
         </p>
       ),
@@ -45,7 +45,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           Yes! The application is completely free to use at the moment. Memoriter is currently a non
           profit project, we do not have an incentive to make money off of it. With the project
           beeing very small at the moment, our operative costs are little, so we are able to do so.
-          If you still want to support us financially, please consider&nbsp;
+          If you still want to support us financially, please consider{' '}
           <Link to='/donate'>donating</Link>.
         </p>
       ),
@@ -120,7 +120,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
         <p>
           We use the money to cover or operative costs and to expand the project. That means that we
           are using some of it to speed up development or for marketing reasons, but most of it will
-          be used to cover cloud service and server costs. On the&nbsp;
+          be used to cover cloud service and server costs. On the{' '}
           <Link to='/donate'>Donate page</Link> there is a more detailed report on that.
         </p>
       ),
@@ -144,7 +144,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       question: 'Is Memoriter open source?',
       answer: (
         <p>
-          Yes, it is! You can find our entire source code on&nbsp;
+          Yes, it is! You can find our entire source code on{' '}
           <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
             GitHub
           </a>
@@ -185,7 +185,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       answer: (
         <p>
           Sure, you can use the source code of Memoriter for your own pupuses. That is one part of
-          the aspects of open source. Please remember the code is licensed under the&nbsp;
+          the aspects of open source. Please remember the code is licensed under the{' '}
           <a
             href='https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE'
             target='_blank'

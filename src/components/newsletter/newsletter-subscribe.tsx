@@ -43,7 +43,7 @@ const NewsletterSubscribe: FC = () => {
         {/*agree to privacy policy checkbox*/}
         <div>
           <p className={styles.newsletter_subscribe_checkbox_label}>
-            I have read and understood the&nbsp;
+            I have read and understood the{' '}
             <Link
               className={styles.newsletter_subscribe_checkbox_label_link}
               to='/privacy'

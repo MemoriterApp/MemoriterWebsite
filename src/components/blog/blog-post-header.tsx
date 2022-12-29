@@ -24,7 +24,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
       </Link>
       <div className={styles.blog_post_header_content}>
         <p className={styles.blog_post_header_data}>
-          Published on&nbsp; 
+          Published on{' '} 
           {new Date(date).toLocaleString('en-us', {
             month: 'long',
             year: 'numeric',

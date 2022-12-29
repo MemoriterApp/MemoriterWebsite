@@ -45,7 +45,7 @@ const Bugs: FC = () => {
       answer: (
         <>
           <p>
-            Please report security issues to&nbsp;
+            Please report security issues to{' '}
             <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
           </p>
           <p>
@@ -68,7 +68,7 @@ const Bugs: FC = () => {
           </p>
           <ul>
             <li>
-              Report a web application issue on&nbsp;
+              Report a web application issue on{' '}
               <a
                 href='https://github.com/MemoriterApp/Memoriter/issues'
                 target='_blank'
@@ -78,7 +78,7 @@ const Bugs: FC = () => {
               </a>
             </li>
             <li>
-              Discuss issues on our GitHub&nbsp;
+              Discuss issues on our GitHub{' '}
               <a
                 href='https://github.com/MemoriterApp/Memoriter/discussions/categories/general'
                 target='_blank'
@@ -88,7 +88,7 @@ const Bugs: FC = () => {
               </a>
             </li>
             <li>
-              Send us an email regarding the problem to&nbsp;
+              Send us an email regarding the problem to{' '}
               <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
             </li>
           </ul>
