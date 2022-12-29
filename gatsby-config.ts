@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
 
+// This file contains all plugins for Gatsby and how they relate to each other.
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Memoriter`,
@@ -99,5 +101,4 @@ const config: GatsbyConfig = {
     },
   ],
 };
-
 export default config;

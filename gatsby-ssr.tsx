@@ -5,10 +5,12 @@ import './src/styles/index.scss';
 import './src/styles/syntax-highlighting.scss';
 import ThemeProvider from './src/components/theme-provider';
 
-interface Props { // type definitions for props
+// type definitions for props
+interface Props {
   element: React.ReactNode;
 };
 
+// This element enables some shared state to all pages (same as gatsby-browser.tsx)
 export const wrapRootElement: FC<Props> = ({ element }: Props) => {
   return (
     <Provider store={store}>
