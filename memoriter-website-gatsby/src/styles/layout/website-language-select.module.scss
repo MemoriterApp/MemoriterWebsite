@@ -70,15 +70,21 @@
   }
 
   li { // single language items
-    cursor: pointer;
     padding: 2px 8px 2px 8px;
     margin-inline: 8px;
     margin-bottom: 8px;
     border-radius: 6px;
+    cursor: pointer;
     transition: background-color 200ms;
 
     &:hover { // for the fading background box on hover
       background-color: var(--color-hover);
+    }
+
+    img {
+      display: inline;
+      height: 2rem;
+      margin: 0 0.5rem -0.5rem 0;
     }
   }
 }

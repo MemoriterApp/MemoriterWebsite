@@ -4,11 +4,11 @@ import * as styles from '../../styles/layout/website-header.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { changeTheme } from '../../features/theme-slice';
-import memoriterLogo from '../../images/memoriter-logo.svg';
-import languageIcon from '../../images/icons/language-icon.svg';
-import lightModeIcon from '../../images/icons/light-mode-icon.svg';
-import darkModeIcon from '../../images/icons/dark-mode-icon.svg';
 import cookies from '../../utils/cookies';
+import memoriterLogo from '../../images/memoriter-logo.svg';
+import emoji1f30d from '../../images/emoji/1f30d.svg';
+import emoji1f312 from '../../images/emoji/1f312.svg';
+import emoji26c5 from '../../images/emoji/26c5.svg';
 
 interface Props { // type definitions for props
   currentPage: string;
@@ -113,21 +113,21 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         {/*light and dark mode buttons, icon depends on the current mode*/}
         {(themeIcon === 'dark' || !themeIcon) && (
           <button className={styles.website_header_theme_button} onClick={() => onChangeTheme('light')}>
-            <img className={styles.website_header_icon} src={lightModeIcon} alt='Light mode' />
+            <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
           </button>
         )}
         {themeIcon === 'light' && (
           <button className={styles.website_header_theme_button} onClick={() => onChangeTheme('dark')}>
-            <img className={styles.website_header_icon} src={darkModeIcon} alt='Dark mode' />
+            <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
           </button>
         )}
         {/*change language button*/}
         <button className={styles.website_header_language_button}>
           <img
             className={styles.website_header_icon}
-            src={languageIcon}
-            alt='Language'
-            onClick={onOpenLanguageSelect}
+            src={emoji1f30d}
+            alt='🌍'
+            onClick={() => onOpenLanguageSelect()}
           />
         </button>
         {/*sign in and register buttons*/}
