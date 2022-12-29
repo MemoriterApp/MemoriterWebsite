@@ -21,8 +21,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Placeholder Heading</h1>
@@ -103,8 +103,8 @@ const ProductMain: FC = () => {
         </div>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_right}
-            animateOut={styles.default_main_animation_fade_out_right}
+            animateIn={styles.default_main_animation_fade_in_left}
+            animateOut={styles.default_main_animation_fade_out_left}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Accumalate Knowledge Faster</h1>
@@ -121,8 +121,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Study in a Feature Rich Environment</h1>
@@ -177,8 +177,8 @@ const ProductMain: FC = () => {
         </div>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_right}
-            animateOut={styles.default_main_animation_fade_out_right}
+            animateIn={styles.default_main_animation_fade_in_left}
+            animateOut={styles.default_main_animation_fade_out_left}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Placeholder Heading</h1>
@@ -213,8 +213,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>
@@ -294,8 +294,8 @@ const ProductMain: FC = () => {
         </div>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_right}
-            animateOut={styles.default_main_animation_fade_out_right}
+            animateIn={styles.default_main_animation_fade_in_left}
+            animateOut={styles.default_main_animation_fade_out_left}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Study with Friends</h1>
@@ -314,8 +314,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             <h1 className={styles.default_main_heading}>Free and Open Source</h1>
             <p className={styles.default_main_text}>
