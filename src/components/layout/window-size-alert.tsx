@@ -1,8 +1,8 @@
-//On too small screens a warning alert will be displayed, because on very small screens (e.g. very small phones, smart watches etc.) the page does not display correctly.
-
+import React, { FC } from 'react';
 import * as styles from '../../styles/layout/window-size-alert.module.scss';
 
-import React, { FC } from 'react';
+// On too small screens a warning alert will be displayed, because on very small screens
+// (e.g. very small phones, smart watches etc.) the page does not display correctly.
 
 const WindowSizeAlert: FC = () => {
   return (

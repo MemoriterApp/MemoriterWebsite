@@ -1,5 +1,3 @@
-// This wrapper component simplifies many pages by combining all functions and components used on any of these pages
-
 import React, { FC, useState } from 'react';
 import WebsiteHeader from './website-header';
 import WebsiteFooter from './website-footer';
@@ -9,23 +7,28 @@ import CookieSettings from './cookie-banner/cookie-settings';
 import WindowSizeAlert from './window-size-alert';
 import Backdrop from '../backdrop';
 
-interface Props { // type definitions for props
+// type definitions for props
+interface Props {
   children: React.ReactNode;
   currentPage: string;
 }
+
+// This wrapper component simplifies many pages by combining all functions and components used on any of these pages
 
 const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
   const [languageSelect, setLanguageSelect] = useState<boolean>(false); // opens or closes language select modal
 
   const [cookieSettings, setCookieSettings] = useState<boolean>(false); // opens or closes cookie settings
 
-  const [modalAnimation, setModalAnimation] = useState<React.CSSProperties>({ // animation when opening cookie settings modal
+  // animation when opening cookie settings modal
+  const [modalAnimation, setModalAnimation] = useState<React.CSSProperties>({
     transform: 'translate(-50%, calc(-50% - 16px))',
     opacity: '0',
   }); // styles used for the cookie settings fade in and out animation
   const [backdropAnimation, setBackdropAnimation] = useState<string>('0'); // backdrop opacity (used for fade in and out animation)
 
-  const openLanguageSelect = (): void => { // function for opening the language select modal
+  // function for opening the language select modal
+  const openLanguageSelect = (): void => {
     document.body.style.overflow = 'hidden'; // disables page scrolling
     setLanguageSelect(true);
     setTimeout(() => {
@@ -37,7 +40,8 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
     }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
   };
 
-  const closeLanguageSelect = (): void => { // function for closing the language select modal
+  // function for closing the language select modal
+  const closeLanguageSelect = (): void => {
     document.body.style.overflow = 'auto'; // re-enables page scrolling
     setTimeout(() => {
       setLanguageSelect(false);
@@ -51,7 +55,8 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
     }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
   };
 
-  const openCookieSettings = (): void => { // function for opening the cookie settings
+  // function for opening the cookie settings
+  const openCookieSettings = (): void => {
     document.body.style.overflow = 'hidden'; // disables page scrolling
     setCookieSettings(true);
     setTimeout(() => {
@@ -63,7 +68,8 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
     }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
   };
 
-  const closeCookieSettings = (): void => { // function for closing the cookie settings
+  // function for closing the cookie settings
+  const closeCookieSettings = (): void => {
     document.body.style.overflow = 'auto'; // re-enables page scrolling
     setTimeout(() => {
       setCookieSettings(false);
