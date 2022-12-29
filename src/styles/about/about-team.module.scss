@@ -27,7 +27,7 @@
     padding: 16px 42px;
     gap: 20px;
     background-color: var(--color-container);
-    border-radius: 10px;
+    border-radius: 4px;
 
     h2 { // card heading
       font-size: 1.6rem;
@@ -48,7 +48,7 @@
       top: 20px;
       width: 160px;
       height: calc(100% - 40px);
-      border-radius: 10px;
+      border-radius: 4px;
       object-fit: cover;
     }
   }

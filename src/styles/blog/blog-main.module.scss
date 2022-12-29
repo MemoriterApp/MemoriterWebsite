@@ -44,7 +44,7 @@
     &_image { // image for new blog preview
       width: 100%;
       margin-top: -8px;
-      border-radius: 6px;
+      border-radius: 4px;
       transition: filter 200ms;
     }
 
@@ -82,11 +82,10 @@
       color: var(--color-font-gray);
     }
 
-    &_box {
-      /*gray box with content*/
+    &_box { // gray box with content
       width: 100%;
       background-color: var(--color-container);
-      border-radius: 6px;
+      border-radius: 4px;
 
       h2 { // old blog preview title
         font-size: 1.8rem;
@@ -111,7 +110,7 @@
       display: inline-block;
       width: 200px;
       object-fit: cover; // optimizes image scaling
-      border-radius: 6px;
+      border-radius: 4px;
     }
   }
 
