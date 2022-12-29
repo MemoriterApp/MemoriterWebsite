@@ -7,59 +7,50 @@ import memoriterLogoBlack from '../images/memoriter-logo-black.svg';
 import WebsiteHead from '../components/layout/website-head';
 import WindowSizeAlert from '../components/layout/window-size-alert';
 
+// this page is shown when no other page can be rendered
+
 const PageNotFound: FC = (): React.ReactElement => {
-  const PageNotFoundBottomSpace: React.CSSProperties = {
-    //styles for extra space at the bottom on page scroll
-    position: 'absolute',
-    left: '0',
-    top: '42px',
-    width: '100%',
-    height: '40px',
-  };
+  const [onHover, setOnHover] = useState<string>('brightness(1)'); // variable for the hover effect for the get started button
 
-  const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the get started button
-
-  const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode icon based on theme
+  const theme: string = useSelector((state: any) => state.theme.value); // current light or dark mode icon based on theme
 
   return (
     <>
-      {/*container with content*/}
+      {/* container with content */}
       <main className={styles.page_not_found}>
-        {/*large question mark next to the text*/}
+        {/* large question mark next to the text */}
         <section className={styles.page_not_found_question_mark}>?</section>
 
-        {/*extra div is important for layout*/}
+        {/* extra div is important for layout */}
         <section>
-          {/*logo above the content*/}
+          {/* logo above the content */}
           <img
             className={styles.page_not_found_logo}
-            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            src={theme === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
             alt='Memoriter'
           />
 
-          {/*text*/}
-          <h1 className={styles.page_not_found_heading}>Page Not Found!</h1>
-          <p className={styles.page_not_found_text}>
+          {/* text */}
+          <h1>Page Not Found!</h1>
+          <p>
             This URL does not match any page. Please use another link or go back to an existing
             page.
           </p>
 
-          {/*button redirects to product page*/}
+          {/* button redirects to product page */}
           <Link
             className={styles.page_not_found_button}
             to='/'
             onMouseEnter={() => setOnHover('brightness(0.75)')}
             onMouseLeave={() => setOnHover('brightness(1)')}
           >
-            {' '}
-            {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css*/}
+            {/* the onMouseEnter and -Leave is for the fade effect on hover which was not possible in CSS */}
+            Return to Website!
             <div className={styles.page_not_found_button_background} style={{ filter: onHover }} />
-            <span className={styles.page_not_found_button_text}>Return to Website!</span>
-            <div style={PageNotFoundBottomSpace} /> {/*space at the bottom on page scroll*/}
           </Link>
         </section>
       </main>
-      {/*alert for too small screens*/}
+      {/* alert for too small screens */}
       <WindowSizeAlert />
     </>
   );
