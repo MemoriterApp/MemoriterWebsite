@@ -2,15 +2,17 @@ import React, { FC } from 'react';
 import { HeadFC } from 'gatsby';
 import WebsiteHead from '../components/layout/website-head';
 import WebsiteLayout from '../components/layout/website-layout';
+import BotBanner from '../components/bot/bot-banner';
 import BotMain from '../components/bot/bot-main';
 
 const Bot: FC = () => {
   return (
     <WebsiteLayout currentPage=''>
+      {/* banner with button to access the bot */}
+      <BotBanner />
 
-      {/*basic main layout and texts*/}
+      {/* basic main layout and texts */}
       <BotMain />
-      
     </WebsiteLayout>
   );
 };

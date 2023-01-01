@@ -1,0 +1,166 @@
+// The bot banner is an area at the top with a button to access the memoriter bot.
+
+.bot_banner { // banner box, background and position
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 60px);
+  min-height: 540px; // fixes issues for screens not high enough
+  left: 0;
+  top: 62px;
+  background: var(--color-banner-gradient);
+  overflow: hidden;
+
+  &_square_top { // background square at the upper right corner
+    position: absolute;
+    width: 40vh;
+    height: 40vh;
+    background-color: var(--color-banner-triangle-light);
+  }
+
+  &_square_bottom { // background square at the lower left corner
+    position: absolute;
+    bottom: 0;
+    width: 40vh;
+    height: 40vh;
+    background-color: var(--color-banner-triangle-dark);
+  }
+
+  &_content { // positioning and layout container
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    gap: 100px;
+  }
+
+  &_heading {
+    color: var(--color-font);
+    width: 80vw;
+    max-width: 600px;
+    font-size: 3.2rem;
+    font-family: var(--font-heading);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+  }
+
+  &_text { // text for slogan
+    color: var(--color-font);
+    width: 80vw;
+    max-width: 600px;
+    font-style: italic;
+    font-size: 2.6rem;
+    font-family: var(--font-serif);
+    text-align: center;
+    margin: 0 0 5rem 0;
+  }
+
+  &_button { // download button, needed to be split in multiple classes, this class is for the positionig of the button
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.6rem;
+    color: var(--color-white);
+    font-family: var(--font-highlight);
+    text-align: center;
+    white-space: nowrap;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--color-transparent);
+    border: none;
+    cursor: pointer;
+
+    &_background { // the hover background was done in React because it did not work in CSS
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-highlight-gradient);
+      border-radius: 4px;
+      z-index: -1;
+      transition: filter 200ms;
+    }
+  }
+
+  &_icon { // image container next to the download buttons
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+
+  &_transition { // the shape at the bottom is an overlay in the same color as se next section
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-background);
+
+    &_left { // trapezoid shape at the left
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      border-right: 50px solid var(--color-transparent);
+      border-bottom: 50px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+
+    &_right { // trapezoid shape at the left
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+      border-left: 50px solid var(--color-transparent);
+      border-bottom: 50px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+  }
+}
+
+@media (max-width: 1160px) { // optimization for tablets and smaller laptops
+    .bot_banner_content {
+      left: calc(50% + 12px);
+      gap: 0px;
+    }
+
+    .bot_banner_icon {
+      transform: translate(0, 40px);
+      width: 360px;
+      height: 360px;
+    }
+}
+
+@media (max-width: 960px) { // mobile optimization
+  .bot_banner_content {
+    left: 50%;
+    top: 30%;
+  }
+    
+  .bot_banner_icon {
+    display: none;
+  }
+    
+  .bot_banner_transition_left {
+    width: 20vw;
+  }
+  .bot_banner_transition_right {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 560px) { // hides all at too small screens in order to show no responsive bugs 
+  .bot_banner {
+    min-height: 710px;
+
+    &_text {
+    font-size: 2.2rem;
+    }
+  }
+}
+
+@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+  .bot_banner {
+    display: none;
+  }
+}
