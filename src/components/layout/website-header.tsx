@@ -35,20 +35,17 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
   }
 
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
-  // getting the scroll data
+  // getting the scroll progress data
   const onScroll = (): void => {
     const scroll = document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
     const scrolled: number = (scroll / height) * 100;
-
     setScrollProgress(scrolled);
   };
 
-  // the useEffect is important for getting the value if it is scrolling
+  // attaching an event listener to detect when the user is scrolling
   useEffect((): any => {
     window.addEventListener('scroll', onScroll);
-
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -69,7 +66,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
 
   return (
     <header className={styles.website_header}>
-      {/*If you click the logo, you will be redirected to the product page.*/}
+      {/* If you click the logo, you will be redirected to the product page. */}
       <Link to='/'>
         <img
           className={styles.website_header_logo}
@@ -78,14 +75,14 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         />
       </Link>
 
-      {/*button for expanding side bar for small screens*/}
+      {/* button for expanding side bar for small screens */}
       <button className={styles.website_header_mobile_sidebar_button} onClick={toggleMobileSidebar}>
         <div className={styles.website_header_mobile_sidebar_icon}>|||</div>
       </button>
 
       {/*quicklinks (navigation bar)*/}
       <nav className={styles.website_header_quicklinks} style={{ right: mobileSidebar }}>
-        {/*expandable mobile nav sidebar, displays when button is clicked (changes className)*/}
+        {/* expandable mobile nav sidebar, displays when button is clicked (changes className) */}
         <Link className={styles.website_header_quicklink} to='/'>
           {currentPage === 'product' ? (
             <span className={styles.website_header_text_gradient}>Product</span>
@@ -121,8 +118,17 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             <span>Donate</span>
           )}
         </Link>
-        {/*the if else conditions changes the color of the links depending on the current open page*/}
-        {/*light and dark mode buttons, icon depends on the current mode*/}
+        {/* change language button */}
+        <button className={styles.website_header_language_button}>
+          <img
+            className={styles.website_header_icon}
+            src={emoji1f30d}
+            alt='🌍'
+            onClick={() => onOpenLanguageSelect()}
+          />
+        </button>
+        {/* the if else conditions changes the color of the links depending on the current open page */}
+        {/* light and dark mode buttons, icon depends on the current mode */}
         {(themeIcon === 'dark' || !themeIcon) && (
           <button
             className={styles.website_header_theme_button}
@@ -139,16 +145,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
           </button>
         )}
-        {/*change language button*/}
-        <button className={styles.website_header_language_button}>
-          <img
-            className={styles.website_header_icon}
-            src={emoji1f30d}
-            alt='🌍'
-            onClick={() => onOpenLanguageSelect()}
-          />
-        </button>
-        {/*sign in and register buttons*/}
+        {/* sign in and register buttons */}
         <a className={styles.website_header_sign_in} href='https://app.memoriter.de/login'>
           <span className={styles.website_header_text_gradient}>Sign in</span>
         </a>
@@ -162,10 +159,10 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
           <div className={styles.website_header_register_background} style={{ filter: onHover }} />
         </a>
         <div className={styles.website_header_quicklinks_space} />
-        {/*space at the end for scrolling at the nav sidebar*/}
+        {/* space at the end for scrolling at the nav sidebar */}
       </nav>
 
-      {/*alternative sign in and register button for mobile nav sidebar, staying at the default position*/}
+      {/* alternative sign in and register button for mobile nav sidebar, staying at the default position */}
       <a className={styles.website_header_sign_in_alt} href='https://app.memoriter.de/login'>
         <span className={styles.website_header_text_gradient}>Sign in</span>
       </a>
@@ -179,12 +176,12 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         <div className={styles.website_header_register_background} style={{ filter: onHoverAlt }} />
       </a>
 
-      {/*scroll indicator*/}
+      {/* scroll indicator */}
       <div
         className={styles.website_header_scroll_indicator}
         style={{ width: `${scrollProgress}%` }}
       />
-      {/*the width is calculated by the scrollProgress variable and defines the width of the bar*/}
+      {/* the width is calculated by the scrollProgress variable and defines the width of the bar */}
     </header>
   );
 };

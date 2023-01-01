@@ -18,9 +18,9 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-sharp',
       options: {
         defaults: {
-          placeholder: 'none'
-        }
-      }
+          placeholder: 'none',
+        },
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-image',
@@ -48,9 +48,9 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-sharp',
       options: {
         defaults: {
-          placeholder: 'none'
-        }
-      }
+          placeholder: 'none',
+        },
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-image',
@@ -63,8 +63,8 @@ const config: GatsbyConfig = {
             options: {
               maxWidth: 1200,
               backgroundColor: 'none',
-              tracedSVG: { color: '#00000000'},
-              linkImagesToOriginal: false
+              tracedSVG: { color: '#00000000' },
+              linkImagesToOriginal: false,
             },
           },
           {

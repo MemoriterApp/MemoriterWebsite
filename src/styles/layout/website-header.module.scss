@@ -8,7 +8,6 @@
   height: 62px;
   background-color: var(--color-background);
   box-shadow: 0 5px 5px var(--color-shadow);
-  transition: bottom 200ms;
   z-index: 1;
 
   &_text_gradient { // for the text gradient of link texts
@@ -145,7 +144,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      border-radius: 6px;
+      border-radius: 4px;
       background: var(--color-highlight-gradient);
       z-index: -1;
       transition: filter 200ms;

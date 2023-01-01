@@ -14,8 +14,7 @@
   &_question_mark { // large question mark at the left side
     font-size: 20rem;
     font-family: var(--font-large-question);
-    margin-left: -20px;
-    margin-bottom: -80px;
+    margin: 0 0 -80px -20px;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -73,7 +72,7 @@
   .page_not_found {
     display: unset;
     top: 20px;
-    transform: translate(-50%);
+    transform: translate(-50%, 0);
     width: 400px;
     text-align: center;
 
@@ -98,7 +97,7 @@
   }
 }
 
-@media (max-height: 430px) { // new position on less high screens (otherwise some parts would be off screen)
+@media (max-height: 500px) { // new position on less high screens (otherwise some parts would be off screen)
   .page_not_found {
     top: 20px;
     transform: translate(-50%);

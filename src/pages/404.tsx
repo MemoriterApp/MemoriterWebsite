@@ -29,7 +29,6 @@ const PageNotFound: FC = (): React.ReactElement => {
             src={theme === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
             alt='Memoriter'
           />
-
           {/* text */}
           <h1>Page Not Found!</h1>
           <p>
@@ -50,6 +49,7 @@ const PageNotFound: FC = (): React.ReactElement => {
           </Link>
         </section>
       </main>
+      
       {/* alert for too small screens */}
       <WindowSizeAlert />
     </>

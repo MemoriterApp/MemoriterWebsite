@@ -71,14 +71,18 @@
 
   li { // single language items
     padding: 2px 8px 2px 8px;
-    margin-inline: 8px;
-    margin-bottom: 8px;
-    border-radius: 6px;
+    margin: 0 8px 8px 8px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 200ms;
 
     &:hover { // for the fading background box on hover
       background-color: var(--color-hover);
+    }
+
+    a {
+      color: var(--color-font);
+      text-decoration: none;
     }
 
     img {

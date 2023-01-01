@@ -8,7 +8,7 @@ import ThemeProvider from './src/components/theme-provider';
 // type definitions for props
 interface Props {
   element: React.ReactNode;
-};
+}
 
 // This element enables some shared state to all pages (same as gatsby-browser.tsx)
 export const wrapRootElement: FC<Props> = ({ element }: Props) => {
