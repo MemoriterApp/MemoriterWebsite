@@ -66,115 +66,115 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
 
   return (
     <header className={styles.website_header}>
-      {/* If you click the logo, you will be redirected to the product page. */}
-      <Link to='/'>
-        <img
-          className={styles.website_header_logo}
-          src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
-          alt='Memoriter'
-        />
-      </Link>
-
-      {/* button for expanding side bar for small screens */}
-      <button className={styles.website_header_mobile_sidebar_button} onClick={toggleMobileSidebar}>
-        <div className={styles.website_header_mobile_sidebar_icon}>|||</div>
-      </button>
-
-      {/*quicklinks (navigation bar)*/}
-      <nav className={styles.website_header_quicklinks} style={{ right: mobileSidebar }}>
-        {/* expandable mobile nav sidebar, displays when button is clicked (changes className) */}
-        <Link className={styles.website_header_quicklink} to='/'>
-          {currentPage === 'product' ? (
-            <span className={styles.website_header_text_gradient}>Product</span>
-          ) : (
-            <span>Product</span>
-          )}
-        </Link>
-        <Link className={styles.website_header_quicklink} to='/about'>
-          {currentPage === 'about' ? (
-            <span className={styles.website_header_text_gradient}>About</span>
-          ) : (
-            <span>About</span>
-          )}
-        </Link>
-        <Link className={styles.website_header_quicklink} to='/blog'>
-          {currentPage === 'blog' ? (
-            <span className={styles.website_header_text_gradient}>Blog</span>
-          ) : (
-            <span>Blog</span>
-          )}
-        </Link>
-        <Link className={styles.website_header_quicklink} to='/download'>
-          {currentPage === 'download' ? (
-            <span className={styles.website_header_text_gradient}>Download</span>
-          ) : (
-            <span>Download</span>
-          )}
-        </Link>
-        <Link className={styles.website_header_quicklink} to='/donate'>
-          {currentPage === 'donate' ? (
-            <span className={styles.website_header_text_gradient}>Donate</span>
-          ) : (
-            <span>Donate</span>
-          )}
-        </Link>
-        {/* change language button */}
-        <button className={styles.website_header_language_button}>
+      <nav className={styles.website_header_navigation}>
+        {/* If you click the logo, you will be redirected to the product page. */}
+        <Link to='/'>
           <img
-            className={styles.website_header_icon}
-            src={emoji1f30d}
-            alt='🌍'
-            onClick={() => onOpenLanguageSelect()}
+            className={styles.website_header_logo}
+            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            alt='Memoriter'
           />
+        </Link>
+
+        {/* button for expanding side bar for small screens */}
+        <button
+          className={styles.website_header_mobile_sidebar_button}
+          onClick={() => toggleMobileSidebar()}
+        >
+          <div className={styles.website_header_mobile_sidebar_icon}>|||</div>
         </button>
-        {/* the if else conditions changes the color of the links depending on the current open page */}
-        {/* light and dark mode buttons, icon depends on the current mode */}
-        {(themeIcon === 'dark' || !themeIcon) && (
-          <button
-            className={styles.website_header_theme_button}
-            onClick={() => onChangeTheme('light')}
-          >
-            <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
+
+        {/*quicklinks (navigation bar)*/}
+        <div className={styles.website_header_quicklinks} style={{ right: mobileSidebar }}>
+          {/* expandable mobile nav sidebar, displays when button is clicked (changes className) */}
+          <Link className={styles.website_header_quicklink} to='/'>
+            <span className={currentPage === 'product' ? styles.website_header_text_gradient : ''}>
+              Product
+            </span>
+          </Link>
+          <Link className={styles.website_header_quicklink} to='/about'>
+            <span className={currentPage === 'about' ? styles.website_header_text_gradient : ''}>
+              About
+            </span>
+          </Link>
+          <Link className={styles.website_header_quicklink} to='/blog'>
+            <span className={currentPage === 'blog' ? styles.website_header_text_gradient : ''}>
+              Blog
+            </span>
+          </Link>
+          <Link className={styles.website_header_quicklink} to='/download'>
+            <span>Tools</span>
+            <div className={styles.website_header_quicklink_dropdown_arrow} />
+          </Link>
+          <Link className={styles.website_header_quicklink} to='/donate'>
+            <span className={currentPage === 'donate' ? styles.website_header_text_gradient : ''}>
+              Donate
+            </span>
+          </Link>
+          {/* change language button */}
+          <button className={styles.website_header_language_button}>
+            <img
+              className={styles.website_header_icon}
+              src={emoji1f30d}
+              alt='🌍'
+              onClick={() => onOpenLanguageSelect()}
+            />
           </button>
-        )}
-        {themeIcon === 'light' && (
-          <button
-            className={styles.website_header_theme_button}
-            onClick={() => onChangeTheme('dark')}
+          {/* the if else conditions changes the color of the links depending on the current open page */}
+          {/* light and dark mode buttons, icon depends on the current mode */}
+          {(themeIcon === 'dark' || !themeIcon) && (
+            <button
+              className={styles.website_header_theme_button}
+              onClick={() => onChangeTheme('light')}
+            >
+              <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
+            </button>
+          )}
+          {themeIcon === 'light' && (
+            <button
+              className={styles.website_header_theme_button}
+              onClick={() => onChangeTheme('dark')}
+            >
+              <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
+            </button>
+          )}
+          {/* sign in and register buttons */}
+          <a className={styles.website_header_sign_in} href='https://app.memoriter.de/login'>
+            <span className={styles.website_header_text_gradient}>Sign in</span>
+          </a>
+          <a
+            className={styles.website_header_register}
+            href='https://app.memoriter.de/signup'
+            onMouseEnter={() => setOnHover('brightness(0.75)')}
+            onMouseLeave={() => setOnHover('brightness(1)')}
           >
-            <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
-          </button>
-        )}
-        {/* sign in and register buttons */}
-        <a className={styles.website_header_sign_in} href='https://app.memoriter.de/login'>
+            Register
+            <div
+              className={styles.website_header_register_background}
+              style={{ filter: onHover }}
+            />
+          </a>
+          <div className={styles.website_header_quicklinks_space} />
+          {/* space at the end for scrolling at the nav sidebar */}
+        </div>
+
+        {/* alternative sign in and register button for mobile nav sidebar, staying at the default position */}
+        <a className={styles.website_header_sign_in_alt} href='https://app.memoriter.de/login'>
           <span className={styles.website_header_text_gradient}>Sign in</span>
         </a>
         <a
-          className={styles.website_header_register}
+          className={styles.website_header_register_alt}
           href='https://app.memoriter.de/signup'
-          onMouseEnter={() => setOnHover('brightness(0.75)')}
-          onMouseLeave={() => setOnHover('brightness(1)')}
+          onMouseEnter={() => setOnHoverAlt('brightness(0.75)')}
+          onMouseLeave={() => setOnHoverAlt('brightness(1)')}
         >
           Register
-          <div className={styles.website_header_register_background} style={{ filter: onHover }} />
+          <div
+            className={styles.website_header_register_background}
+            style={{ filter: onHoverAlt }}
+          />
         </a>
-        <div className={styles.website_header_quicklinks_space} />
-        {/* space at the end for scrolling at the nav sidebar */}
       </nav>
-
-      {/* alternative sign in and register button for mobile nav sidebar, staying at the default position */}
-      <a className={styles.website_header_sign_in_alt} href='https://app.memoriter.de/login'>
-        <span className={styles.website_header_text_gradient}>Sign in</span>
-      </a>
-      <a
-        className={styles.website_header_register_alt}
-        href='https://app.memoriter.de/signup'
-        onMouseEnter={() => setOnHoverAlt('brightness(0.75)')}
-        onMouseLeave={() => setOnHoverAlt('brightness(1)')}
-      >
-        Register
-        <div className={styles.website_header_register_background} style={{ filter: onHoverAlt }} />
-      </a>
 
       {/* scroll indicator */}
       <div

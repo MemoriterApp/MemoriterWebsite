@@ -10,6 +10,16 @@
   box-shadow: 0 5px 5px var(--color-shadow);
   z-index: 1;
 
+  &_navigation { // all navigation links and buttons
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    height: calc(100% - 1px);
+  }
+
   &_text_gradient { // for the text gradient of link texts
     font-weight: 600;
     background: var(--color-highlight-gradient);
@@ -20,7 +30,6 @@
 
   &_logo { // logo formatting used for the header
     position: absolute;
-    left: 80px;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     height: 35px;
@@ -29,10 +38,10 @@
 
   &_quicklinks { // used for the header links like product, about, downloads etc.
     position: absolute;
-    left: 240px;
+    left: 160px;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
-    width: calc(100% - 240px);
+    width: calc(100% - 160px);
     height: 40%;
 
     &_space { // only for small screens
@@ -56,11 +65,28 @@
     &:hover { // for the fading background box on hover
       background-color: var(--color-hover);
     }
+
+    &_dropdown {
+
+
+      &_arrow {
+        display: inline-block;
+        position: relative;
+        top: -0.2rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        transform: rotate(45deg);
+        margin-left: 0.8rem;
+        margin-right: 2px;
+        border-right: 2px solid var(--color-font);
+        border-bottom: 2px solid var(--color-font);
+      }
+    }
   }
 
   &_language_button { // button to change language
     position: absolute;
-    right: 385px;
+    right: 305px;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     width: 30px;
@@ -78,7 +104,7 @@
 
   &_theme_button { // button to swich between light and dark mode
     position: absolute;
-    right: 335px;
+    right: 255px;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     width: 30px;
@@ -105,7 +131,7 @@
 
   &_sign_in { // Sign in button
     position: absolute;
-    right: 200px;
+    right: 120px;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     font-size: 1.2rem;
@@ -127,7 +153,7 @@
 
   &_register { // register button, needed to be split in multiple classes, this class is for the positionig of the button
     position: absolute;
-    right: 80px;
+    right: 0;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     font-size: 1.2rem;
@@ -227,6 +253,10 @@
 
 @media (max-width: 960px) { // changes for small screen sizes (e.g. mobile devices)
   // many links are now hidden and can be shown in a seperate expandable window
+
+  .website_header_navigation {
+    width: 100%;
+  }
 
   .website_header_quicklinks { // changes to mobile sidebar
     left: unset;

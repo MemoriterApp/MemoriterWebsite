@@ -139,7 +139,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
       {/*box at the bottom with social media links and other buttons*/}
       <section className={styles.website_footer_bottom_box}>
-        <p className={styles.website_footer_bottom_box_copyright}>©Copyright 2022 Memoriter</p>
+        <p className={styles.website_footer_bottom_box_copyright}>©Copyright 2023 Memoriter</p>
 
         {/*right text uses two classes, one for the hover effect, the theme text depends on the current theme*/}
         <p
