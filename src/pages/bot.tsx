@@ -7,7 +7,7 @@ import BotMain from '../components/bot/bot-main';
 
 const Bot: FC = () => {
   return (
-    <WebsiteLayout currentPage='bot'>
+    <WebsiteLayout currentPage=''>
       {/* banner with button to access the bot */}
       <BotBanner />
 

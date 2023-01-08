@@ -103,8 +103,9 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             </span>
           </Link>
           <Link className={styles.website_header_quicklink} to='/download'>
-            <span>Tools</span>
-            <div className={styles.website_header_quicklink_dropdown_arrow} />
+            <span className={currentPage === 'download' ? styles.website_header_text_gradient : ''}>
+              Download
+            </span>
           </Link>
           <Link className={styles.website_header_quicklink} to='/donate'>
             <span className={currentPage === 'donate' ? styles.website_header_text_gradient : ''}>

@@ -277,7 +277,7 @@ const ProductMain: FC = () => {
             Study more efficient using the Memoriter Bot
           </p>
           <p className={styles.default_main_overview_link_container}>
-            <Link className={styles.default_main_overview_link} to=''>
+            <Link className={styles.default_main_overview_link} to='/bot'>
               Find out more
             </Link>
           </p>

@@ -212,6 +212,11 @@
       left: 50%;
       transform: translate(-50%, -40px) scale(0.9);
     }
+
+    &_download_mac {
+      left: calc(50% + 6px);
+      transform: translate(-50%, 60px) scale(0.9);
+    }
   }
 }
 

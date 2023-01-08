@@ -65,23 +65,6 @@
     &:hover { // for the fading background box on hover
       background-color: var(--color-hover);
     }
-
-    &_dropdown {
-
-
-      &_arrow {
-        display: inline-block;
-        position: relative;
-        top: -0.2rem;
-        width: 0.5rem;
-        height: 0.5rem;
-        transform: rotate(45deg);
-        margin-left: 0.8rem;
-        margin-right: 2px;
-        border-right: 2px solid var(--color-font);
-        border-bottom: 2px solid var(--color-font);
-      }
-    }
   }
 
   &_language_button { // button to change language
