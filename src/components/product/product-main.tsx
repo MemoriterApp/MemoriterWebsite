@@ -44,8 +44,8 @@ const ProductMain: FC = () => {
 
       <h1 className={styles.default_main_overview_heading}>See Memoriter in Action</h1>
       <p className={styles.default_main_top_text}>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        Watch our video about the Memoriter project, tools and features and what you can use the
+        application for.
       </p>
       <iframe
         className={styles.default_main_top_video}
