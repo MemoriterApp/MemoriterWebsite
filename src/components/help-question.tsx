@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect, useRef } from 'react';
 
-interface Props { //  type definitions for props
+interface Props { // type definitions for props
   styles: { [className: string]: string; }
   question: { question: string; answer: string | React.ReactNode; isOpen: boolean };
   onOpenQuestion: (openedQuestion: string) => void;
