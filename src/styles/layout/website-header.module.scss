@@ -33,6 +33,10 @@
     top: calc(50% - 1px);
     transform: translate(0, -50%);
     height: 35px;
+    font-size: 1.4rem;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    line-height: 2.2rem;
     cursor: pointer;
   }
 
@@ -44,26 +48,38 @@
     width: calc(100% - 160px);
     height: 40%;
 
+    &_link { // link texts
+      display: inline;
+      position: relative;
+      font-size: 1.2rem;
+      color: var(--color-font);
+      font-family: var(--font-highlight);
+      text-decoration: none;
+      margin-right: 30px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 200ms;
+
+      &:hover { // for the fading background box on hover
+        background-color: var(--color-hover);
+      }
+    }
+
     &_space { // only for small screens
       display: none;
     }
-  }
 
-  &_quicklink { // link texts
-    display: inline;
-    position: relative;
-    font-size: 1.2rem;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    text-decoration: none;
-    margin-right: 30px;
-    padding: 4px 6px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 200ms;
-
-    &:hover { // for the fading background box on hover
-      background-color: var(--color-hover);
+    &_backdrop { // only for small screens
+      position: fixed;
+      left: 0;
+      top: 62px;
+      width: 100vw;
+      height: calc(100vh - 62px);
+      background-color: var(--color-backdrop);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 600ms;
     }
   }
 
@@ -74,6 +90,7 @@
     transform: translate(0, -50%);
     width: 30px;
     height: 30px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 4px;
     background-color: var(--color-transparent);
@@ -92,6 +109,7 @@
     transform: translate(0, -50%);
     width: 30px;
     height: 30px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 4px;
     background-color: var(--color-transparent);
@@ -169,28 +187,29 @@
     position: absolute;
     right: 15px;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translate(0, -50%) rotate(90deg);
     width: 30px;
     height: 30px;
     border: none;
     border-radius: 4px;
-    background-color: var(--color-transparent);;
+    background-color: var(--color-transparent);
     cursor: pointer;
     transition: background-color 200ms;
+
+    &::after { // expand sidebar for small screens symbol
+      content: '|||';
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-font-gray);
+      font-family: var(--font-highlight);
+      letter-spacing: 0.2rem;
+      text-align: center;
+      margin-left: -0.05rem;
+    }
 
     &:hover { // visible border on hover
       background-color: var(--color-hover);
     }
-  }
-
-  &_mobile_sidebar_icon { // expand sidebar for small screens symbol
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-font-gray);
-    font-family: var(--font-highlight);
-    letter-spacing: 3px;
-    text-align: center;
-    transform: rotate(90deg);
   }
 
   &_scroll_indicator { // scroll indicator bar at the bottom
@@ -205,6 +224,10 @@
 @media (max-width: 1160px) { // changes for medium screen sizes (e.g. tablets, smaller laptops etc.)
   // many objects are rendered closer to the edge and closer together to fit on a smaller width
     
+  .website_header_navigation {
+    width: 100%;
+  }
+
   .website_header_logo {
     left: 10px;
   }
@@ -213,7 +236,7 @@
     left: 150px;
     width: calc(100% - 150px);
   }
-  .website_header_quicklink {
+  .website_header_quicklinks_link {
     margin-right: 20px;
   }
 
@@ -237,10 +260,6 @@
 @media (max-width: 960px) { // changes for small screen sizes (e.g. mobile devices)
   // many links are now hidden and can be shown in a seperate expandable window
 
-  .website_header_navigation {
-    width: 100%;
-  }
-
   .website_header_quicklinks { // changes to mobile sidebar
     left: unset;
     top: 62px;
@@ -259,11 +278,11 @@
       position: absolute;
       top: 390px;
       width: 100%;
-      height: 10px;
+      height: 16px;
     }
   }
     
-  .website_header_quicklink { // rearranging links and changing design
+  .website_header_quicklinks_link { // rearranging links and changing design
     display: block;
     left: 50%;
     transform: translate(-50%);

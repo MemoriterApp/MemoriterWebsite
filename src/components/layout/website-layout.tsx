@@ -13,8 +13,7 @@ interface Props {
   currentPage: string;
 }
 
-// This wrapper component simplifies many pages by combining all functions and components used on any of these pages
-
+// This wrapper component simplifies many pages by combining all functions and components used on any of these pages.
 const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
   const [languageSelect, setLanguageSelect] = useState<boolean>(false); // opens or closes language select modal
 
@@ -85,23 +84,23 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
   return (
     <>
-      {/*header*/}
+      {/* header */}
       <WebsiteHeader currentPage={currentPage} onOpenLanguageSelect={openLanguageSelect} />
-      {/*The currentPage property defines the highlighted quicklink ath the navigation bar.*/}
+      {/* The currentPage property defines the highlighted quicklink ath the navigation bar. */}
 
-      {/*main part, children refers to the content inside the wrapper (the main part content)*/}
+      {/* main part, children refers to the content inside the wrapper (the main part content) */}
       <main style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {children}
       </main>
-      {/*style is needed for aligning the items correctly, children are all other components inside the wrapper*/}
+      {/* style is needed for aligning the items correctly, children are all other components inside the wrapper */}
 
-      {/*footer*/}
+      {/* footer */}
       <WebsiteFooter
         onOpenLanguageSelect={openLanguageSelect}
         onOpenCookieSettings={openCookieSettings}
       />
 
-      {/*language select modal*/}
+      {/* language select modal */}
       {languageSelect && (
         <>
           <WebsiteLanguageSelect
@@ -112,10 +111,10 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         </>
       )}
 
-      {/*cookie banner*/}
+      {/* cookie banner */}
       <CookieBanner onOpenCookieSettings={openCookieSettings} />
 
-      {/*cookie settings modal*/}
+      {/* cookie settings modal */}
       {cookieSettings && (
         <>
           <CookieSettings
@@ -126,7 +125,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         </>
       )}
 
-      {/*alert for too small screens*/}
+      {/* alert for too small screens */}
       <WindowSizeAlert />
     </>
   );

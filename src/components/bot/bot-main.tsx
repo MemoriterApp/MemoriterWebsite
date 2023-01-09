@@ -14,8 +14,8 @@ const BotMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>Get All your Answers Now!</h1>
@@ -38,8 +38,8 @@ const BotMain: FC = () => {
         </div>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_right}
-            animateOut={styles.default_main_animation_fade_out_right}
+            animateIn={styles.default_main_animation_fade_in_left}
+            animateOut={styles.default_main_animation_fade_out_left}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>How it Works</h1>
@@ -58,8 +58,8 @@ const BotMain: FC = () => {
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
-            animateIn={styles.default_main_animation_fade_in_left}
-            animateOut={styles.default_main_animation_fade_out_left}
+            animateIn={styles.default_main_animation_fade_in_right}
+            animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
             <h1 className={styles.default_main_heading}>What is the pricing?</h1>

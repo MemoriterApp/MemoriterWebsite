@@ -24,13 +24,26 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
   const [onHoverAlt, setOnHoverAlt] = useState<string>('brightness(1)'); // hover effect for alternative mobile register button
 
   const [mobileSidebar, setMobileSidebar] = useState<string>('-280px'); // variable if the mobile nav sidebar is open or not
+  const [mobileSidebarBackdrop, setMobileSidebarBackdrop] = useState<object>({
+    display: 'none',
+    opacity: '0',
+  }); // variable if the mobile nav sidebar backdrop is open
+
+  // function for opening and closing the mobile nav sidebar
   function toggleMobileSidebar() {
-    // function for opening and closing the mobile nav sidebar
     if (mobileSidebar === '-280px') {
       // if else condition is for opening and closing correctly
       setMobileSidebar('0');
+      setMobileSidebarBackdrop({ display: 'block', opacity: '0' });
+      setTimeout(() => {
+        setMobileSidebarBackdrop({ display: 'block', opacity: '1' });
+      }, 0); // timeout is needed for the transition animation to work
     } else {
       setMobileSidebar('-280px');
+      setMobileSidebarBackdrop({ opacity: '0' });
+      setTimeout(() => {
+        setMobileSidebarBackdrop({ display: 'none', opacity: '0' });
+      }, 600);
     }
   }
 
@@ -80,34 +93,32 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         <button
           className={styles.website_header_mobile_sidebar_button}
           onClick={() => toggleMobileSidebar()}
-        >
-          <div className={styles.website_header_mobile_sidebar_icon}>|||</div>
-        </button>
+        />
 
-        {/*quicklinks (navigation bar)*/}
+        {/* quicklinks (navigation bar) */}
         <div className={styles.website_header_quicklinks} style={{ right: mobileSidebar }}>
           {/* expandable mobile nav sidebar, displays when button is clicked (changes className) */}
-          <Link className={styles.website_header_quicklink} to='/'>
+          <Link className={styles.website_header_quicklinks_link} to='/'>
             <span className={currentPage === 'product' ? styles.website_header_text_gradient : ''}>
               Product
             </span>
           </Link>
-          <Link className={styles.website_header_quicklink} to='/about'>
+          <Link className={styles.website_header_quicklinks_link} to='/about'>
             <span className={currentPage === 'about' ? styles.website_header_text_gradient : ''}>
               About
             </span>
           </Link>
-          <Link className={styles.website_header_quicklink} to='/blog'>
+          <Link className={styles.website_header_quicklinks_link} to='/blog'>
             <span className={currentPage === 'blog' ? styles.website_header_text_gradient : ''}>
               Blog
             </span>
           </Link>
-          <Link className={styles.website_header_quicklink} to='/download'>
+          <Link className={styles.website_header_quicklinks_link} to='/download'>
             <span className={currentPage === 'download' ? styles.website_header_text_gradient : ''}>
               Download
             </span>
           </Link>
-          <Link className={styles.website_header_quicklink} to='/donate'>
+          <Link className={styles.website_header_quicklinks_link} to='/donate'>
             <span className={currentPage === 'donate' ? styles.website_header_text_gradient : ''}>
               Donate
             </span>
@@ -158,6 +169,13 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
           <div className={styles.website_header_quicklinks_space} />
           {/* space at the end for scrolling at the nav sidebar */}
         </div>
+
+        {/* backdrop for opened mobile sidebar */}
+        <div
+          className={styles.website_header_quicklinks_backdrop}
+          style={mobileSidebarBackdrop}
+          onClick={() => toggleMobileSidebar()}
+        />
 
         {/* alternative sign in and register button for mobile nav sidebar, staying at the default position */}
         <a className={styles.website_header_sign_in_alt} href='https://app.memoriter.de/login'>

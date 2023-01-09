@@ -25,11 +25,11 @@ const ProductMain: FC = () => {
             animateOut={styles.default_main_animation_fade_out_right}
           >
             {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.default_main_heading}>Placeholder Heading</h1>
+            <h1 className={styles.default_main_heading}>Discover Memoriter</h1>
             <p className={styles.default_main_text}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis possimus nemo
-              tenetur blanditiis, vitae non rem sint optio, molestias accusamus iure expedita sequi.
-              Hic ipsum cumque rerum laborum recusandae?
+              Memoriter is a study application combining the information storage capacity of a
+              note-taking tool with the practical advantages of a flashcard learning system,
+              creating the ultimate all-in-one learning environment.
             </p>
           </AnimationOnScroll>
         </div>
@@ -309,7 +309,7 @@ const ProductMain: FC = () => {
       </article>
 
       {/*slider with customer stories*/}
-      <ProductStories/>
+      <ProductStories />
 
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
