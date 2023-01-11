@@ -7,6 +7,8 @@ import ProductStories from './product-stories';
 import emoji1f4a1 from '../../images/emoji/1f4a1.svg';
 import emoji1f9e0 from '../../images/emoji/1f9e0.svg';
 import emoji1f465 from '../../images/emoji/1f465.svg';
+import emoji1f4ac from '../../images/emoji/1f4ac.svg';
+import emoji1f5c2 from '../../images/emoji/1f5c2.svg';
 import emoji1f4dd from '../../images/emoji/1f4dd.svg';
 import emoji1f5c3 from '../../images/emoji/1f5c3.svg';
 import emoji2049 from '../../images/emoji/2049.svg';
@@ -17,14 +19,14 @@ import emoji1f916 from '../../images/emoji/1f916.svg';
 const ProductMain: FC = () => {
   return (
     <section className={styles.default_main}>
-      {/*main parts with texts and images*/}
+      {/* main parts with texts and images */}
       <article className={styles.default_main_container}>
         <div className={styles.default_main_container_sub}>
           <AnimationOnScroll
             animateIn={styles.default_main_animation_fade_in_right}
             animateOut={styles.default_main_animation_fade_out_right}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Discover Memoriter</h1>
             <p className={styles.default_main_text}>
               Memoriter is a study application combining the information storage capacity of a
@@ -53,7 +55,7 @@ const ProductMain: FC = () => {
         allowFullScreen
       />
 
-      {/*three small overview items*/}
+      {/* three small overview items */}
       <h1 className={styles.default_main_overview_heading}>Explore our Tools and Features</h1>
       <article className={styles.default_main_overview}>
         <div>
@@ -106,7 +108,7 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_left}
             animateOut={styles.default_main_animation_fade_out_left}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Accumalate Knowledge Faster</h1>
             <p className={styles.default_main_text}>
               Flashcards have proven to be 150% more effective if you want to accumalte knowledge
@@ -124,7 +126,7 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_right}
             animateOut={styles.default_main_animation_fade_out_right}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Study in a Feature Rich Environment</h1>
             <p className={styles.default_main_text}>
               Memoriter provides a wide range of all tools you need to achieve great studying
@@ -139,7 +141,7 @@ const ProductMain: FC = () => {
                 </div>
               </li>
               <li>
-                <img src={emoji1f5c3} alt='Flashcards' draggable='false' />
+                <img src={emoji1f5c3} alt='Flashcard box' draggable='false' />
                 <div>
                   <h3>Flashcards</h3>
                   <p>Organize your notes into small, easy to remember pieces of knowledge.</p>
@@ -180,22 +182,26 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_left}
             animateOut={styles.default_main_animation_fade_out_left}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
-            <h1 className={styles.default_main_heading}>Placeholder Heading</h1>
-            <p className={styles.default_main_text}>Content.</p>
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
+            <p className={styles.default_main_badge}>Supporter Features</p>
+            <h1 className={styles.default_main_heading}>Integrated AI Tools</h1>
+            <p className={styles.default_main_text}>
+              Support us with only 0.99€ per month and get access to exclusive AI powered features
+              improving your studying experience.
+            </p>
             <ul className={styles.default_main_list}>
               <li>
-                <img src={emoji1f4dd} alt='Notes' draggable='false' />
+                <img src={emoji1f4ac} alt='Speach bubble' draggable='false' />
                 <div>
-                  <h3>Heading 1</h3>
-                  <p>Content</p>
+                  <h3>Memoriter Bot</h3>
+                  <p>Study faster using an AI tutor.</p>
                 </div>
               </li>
               <li>
-                <img src={emoji1f5c3} alt='Flashcards' draggable='false' />
+                <img src={emoji1f5c2} alt='Flashcards' draggable='false' />
                 <div>
-                  <h3>Heading 2</h3>
-                  <p>Content</p>
+                  <h3>Flashcard Generation</h3>
+                  <p>Automatically generate answers for your flashcard questions.</p>
                 </div>
               </li>
               <li>
@@ -216,12 +222,12 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_right}
             animateOut={styles.default_main_animation_fade_out_right}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>
               Remember Everything with Spaced Repetition
             </h1>
             <p className={styles.default_main_text}>
-              By using the scientic method of spaced repetition, we will remind you to regularly
+              By using the scientific method of spaced repetition, we will remind you to regularly
               review important flashcards that way you can remember thousands of flashcards with
               minimal effort.
             </p>
@@ -236,7 +242,7 @@ const ProductMain: FC = () => {
         </div>
       </article>
 
-      {/*three small overview items*/}
+      {/* three small overview items */}
       <h1 className={styles.default_main_overview_heading}>Study Anytime and Everywhere</h1>
       <article className={styles.default_main_overview}>
         <div>
@@ -297,7 +303,7 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_left}
             animateOut={styles.default_main_animation_fade_out_left}
           >
-            {/*AnimationOnScroll starts an animation when it enters the viewport*/}
+            {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Study with Friends</h1>
             <p className={styles.default_main_text}>
               Study together and you will always find the motivation to suceed. You can help each
@@ -308,7 +314,7 @@ const ProductMain: FC = () => {
         </div>
       </article>
 
-      {/*slider with customer stories*/}
+      {/* slider with customer stories */}
       <ProductStories />
 
       <article className={styles.default_main_container}>
@@ -317,12 +323,12 @@ const ProductMain: FC = () => {
             animateIn={styles.default_main_animation_fade_in_right}
             animateOut={styles.default_main_animation_fade_out_right}
           >
-            <h1 className={styles.default_main_heading}>Free and Open Source</h1>
+            <h1 className={styles.default_main_heading}>Nonprofit and Open Source</h1>
             <p className={styles.default_main_text}>
               Food is always better when it's free, same goes for software. We strictly believe in
               the idea that education and the things around it should be made affordable. That's why
-              we decided to make Memoriter free. With making the project open source, everyone can
-              make Memoriter a even better way to study.
+              we decided to make Memoriter almost completely free. With making the project open
+              source, everyone can make Memoriter a even better way to study.
             </p>
           </AnimationOnScroll>
         </div>
