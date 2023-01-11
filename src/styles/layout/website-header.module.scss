@@ -1,6 +1,7 @@
 // These styles are used for the product page (formerly known as start page) header and some similar pages.
 
-.website_header { // the header box at the top of the page
+// the header box at the top of the page
+.website_header {
   position: fixed;
   left: 0;
   top: 0;
@@ -10,7 +11,8 @@
   box-shadow: 0 5px 5px var(--color-shadow);
   z-index: 1;
 
-  &_navigation { // all navigation links and buttons
+  // all navigation links and buttons
+  &_navigation {
     position: absolute;
     left: 50%;
     top: 0;
@@ -20,7 +22,8 @@
     height: calc(100% - 1px);
   }
 
-  &_text_gradient { // for the text gradient of link texts
+  // for the text gradient of link texts
+  &_text_gradient {
     font-weight: 600;
     background: var(--color-highlight-gradient);
     background-clip: text;
@@ -28,7 +31,8 @@
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_logo { // logo formatting used for the header
+  // logo formatting used for the header
+  &_logo {
     position: absolute;
     top: calc(50% - 1px);
     transform: translate(0, -50%);
@@ -40,7 +44,8 @@
     cursor: pointer;
   }
 
-  &_quicklinks { // used for the header links like product, about, downloads etc.
+  // used for the header links like product, about, downloads etc.
+  &_quicklinks {
     position: absolute;
     left: 160px;
     top: calc(50% - 1px);
@@ -48,7 +53,8 @@
     width: calc(100% - 160px);
     height: 40%;
 
-    &_link { // link texts
+    // link texts
+    &_link {
       display: inline;
       position: relative;
       font-size: 1.2rem;
@@ -61,16 +67,20 @@
       cursor: pointer;
       transition: background-color 200ms;
 
-      &:hover { // for the fading background box on hover
+      // for the fading background box on hover
+      &:hover { 
         background-color: var(--color-hover);
       }
     }
 
-    &_space { // only for small screens
+    // only for small screens
+    &_space {
       display: none;
     }
 
-    &_backdrop { // only for small screens
+    // only for small screens
+    &_backdrop {
+      display: none !important; // overwrites dynamic inline styles on large screens in order to hide the backdrop
       position: fixed;
       left: 0;
       top: 62px;
@@ -82,8 +92,9 @@
       transition: opacity 600ms;
     }
   }
-
-  &_language_button { // button to change language
+  
+  // language and light/dark mode buttons
+  &_settings_button { 
     position: absolute;
     right: 305px;
     top: calc(50% - 1px);
@@ -97,31 +108,24 @@
     cursor: pointer;
     transition: background-color 200ms;
 
-    &:hover { // visible border on hover
+    // visible border on hover
+    &:hover {
       background-color: var(--color-hover);
+    }
+
+    // language button
+    &:nth-of-type(1) {
+      right: 305px;
+    }
+
+    // theme button
+    &:nth-of-type(2) {
+      right: 255px;
     }
   }
 
-  &_theme_button { // button to swich between light and dark mode
-    position: absolute;
-    right: 255px;
-    top: calc(50% - 1px);
-    transform: translate(0, -50%);
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--color-transparent);
-    cursor: pointer;
-    transition: background-color 200ms;
-
-    &:hover { // visible border on hover
-      background-color: var(--color-hover);
-    }
-  }
-
-  &_icon { // change language and visual mode symbol
+  // change language and visual mode symbol
+  &_icon {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -130,7 +134,8 @@
     height: 80%;
   }
 
-  &_sign_in { // Sign in button
+  // Sign in button
+  &_sign_in {
     position: absolute;
     right: 120px;
     top: calc(50% - 1px);
@@ -143,16 +148,19 @@
     cursor: pointer;
     transition: background-color 200ms;
 
-    &:hover { // for the fading background box on hover
+    // for the fading background box on hover
+    &:hover {
       background-color: var(--color-hover);
     }
 
-    &_alt { // alternative button for mobile screens
+    // alternative button for mobile screens
+    &_alt {
       display: none;
     }
   }
 
-  &_register { // register button, needed to be split in multiple classes, this class is for the positionig of the button
+  // register button, needed to be split in multiple classes, this class is for the positionig of the button
+  &_register {
     position: absolute;
     right: 0;
     top: calc(50% - 1px);
@@ -165,7 +173,8 @@
     padding: 0.5rem 0.6rem;
     cursor: pointer;
 
-    &_background { // the hover background was done in React because it did not work in CSS
+    // the hover background was done in React because it did not work in CSS
+    &_background {
       position: absolute;
       left: 0;
       top: 0;
@@ -177,12 +186,14 @@
       transition: filter 200ms;
     }
 
-    &_alt { // alternative button for mobile screens
+    // alternative button for mobile screens
+    &_alt {
       display: none;
     }
   }
 
-  &_mobile_sidebar_button { // toggle button for small screen expandable side bar
+  // toggle button for small screen expandable side bar
+  &_mobile_sidebar_button {
     display: none; // the button is hidden by default
     position: absolute;
     right: 15px;
@@ -196,7 +207,8 @@
     cursor: pointer;
     transition: background-color 200ms;
 
-    &::after { // expand sidebar for small screens symbol
+    // expand sidebar for small screens symbol
+    &::after {
       content: '|||';
       font-size: 1.2rem;
       font-weight: 600;
@@ -207,12 +219,14 @@
       margin-left: -0.05rem;
     }
 
-    &:hover { // visible border on hover
+    // visible border on hover
+    &:hover {
       background-color: var(--color-hover);
     }
   }
 
-  &_scroll_indicator { // scroll indicator bar at the bottom
+  // scroll indicator bar at the bottom
+  &_scroll_indicator {
     position: absolute;
     left: 0;
     bottom: 0px;
@@ -221,9 +235,8 @@
   }
 }
 
-@media (max-width: 1160px) { // changes for medium screen sizes (e.g. tablets, smaller laptops etc.)
-  // many objects are rendered closer to the edge and closer together to fit on a smaller width
-    
+// changes for medium screen sizes (e.g. tablets, smaller laptops etc.)
+@media (max-width: 1160px) {  
   .website_header_navigation {
     width: 100%;
   }
@@ -235,16 +248,17 @@
   .website_header_quicklinks {
     left: 150px;
     width: calc(100% - 150px);
-  }
-  .website_header_quicklinks_link {
-    margin-right: 20px;
+
+    &_link {
+      margin-right: 20px;
+    }
   }
 
-  .website_header_language_button {
+  .website_header_settings_button:nth-of-type(1) {
     right: 320px;
   }
 
-  .website_header_theme_button {
+  .website_header_settings_button:nth-of-type(2) {
     right: 265px;
   }
 
@@ -257,9 +271,9 @@
   }
 }
 
-@media (max-width: 960px) { // changes for small screen sizes (e.g. mobile devices)
-  // many links are now hidden and can be shown in a seperate expandable window
-
+// changes for small screen sizes (e.g. mobile devices)
+// many links are now hidden and can be shown in a seperate expandable window
+@media (max-width: 960px) {
   .website_header_quicklinks { // changes to mobile sidebar
     left: unset;
     top: 62px;
@@ -280,9 +294,14 @@
       width: 100%;
       height: 16px;
     }
+
+    &_backdrop {
+      display: unset !important; // show backdrop on small screens
+    }
   }
     
-  .website_header_quicklinks_link { // rearranging links and changing design
+  // rearranging links and changing design
+  .website_header_quicklinks_link {
     display: block;
     left: 50%;
     transform: translate(-50%);
@@ -293,16 +312,17 @@
     border-radius: 0;
   }
 
-  .website_header_theme_button {
-    right: 3px;
+  .website_header_settings_button {
     top: 375px;
     transform: translate(-50%, -50%);
-  }
 
-  .website_header_language_button {
-    right: 50px;
-    top: 375px;
-    transform: translate(-50%, -50%);
+    &:nth-of-type(1) {
+      right: 50px;
+    }
+
+    &:nth-of-type(2) {
+      right: 3px;
+    }
   }
 
   .website_header_sign_in {
@@ -311,7 +331,8 @@
     transform: translate(0, -50%);
     width: 62px;
 
-    &_alt { // sign in button staying at the top
+    // sign in button staying at the top
+    &_alt {
       display: block;
       position: absolute;
       right: 160px;
@@ -337,7 +358,8 @@
     right: 35px;
     transform: translate(0, -50%);
 
-    &_alt { // register button staying at the top
+    // register button staying at the top
+    &_alt {
       display: block;
       position: absolute;
       right: 60px;
@@ -358,7 +380,8 @@
   }
 }
 
-@media (max-width: 360px) { // hiding overlapping items on very small screen sizes
+// hiding overlapping items on very small screen sizes
+@media (max-width: 360px) {
   .website_header_sign_in_alt {
     display: none;
   }
@@ -368,7 +391,8 @@
   }
 }
 
-@media (max-width: 180px) { // visual fix for too small screens
+// visual fix for too small screens
+@media (max-width: 180px) {
   .website_header_mobile_sidebar_button {
     display: none;
   }

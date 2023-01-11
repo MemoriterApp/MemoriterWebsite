@@ -124,7 +124,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             </span>
           </Link>
           {/* change language button */}
-          <button className={styles.website_header_language_button}>
+          <button className={styles.website_header_settings_button}>
             <img
               className={styles.website_header_icon}
               src={emoji1f30d}
@@ -136,7 +136,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
           {/* light and dark mode buttons, icon depends on the current mode */}
           {(themeIcon === 'dark' || !themeIcon) && (
             <button
-              className={styles.website_header_theme_button}
+              className={styles.website_header_settings_button}
               onClick={() => onChangeTheme('light')}
             >
               <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
@@ -144,7 +144,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
           )}
           {themeIcon === 'light' && (
             <button
-              className={styles.website_header_theme_button}
+              className={styles.website_header_settings_button}
               onClick={() => onChangeTheme('dark')}
             >
               <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />

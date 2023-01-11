@@ -49,7 +49,7 @@ const PageNotFound: FC = (): React.ReactElement => {
           </Link>
         </section>
       </main>
-      
+
       {/* alert for too small screens */}
       <WindowSizeAlert />
     </>

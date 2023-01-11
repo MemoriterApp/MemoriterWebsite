@@ -1,6 +1,7 @@
 // a few styles for the page not found (error 404) page
 
-.page_not_found { // container with everything
+// container with everything
+.page_not_found {
   display: flex; // for layout (queston mark needs to be at the side)
   position: absolute;
   top: 50%;
@@ -8,10 +9,13 @@
   transform: translate(-50%, -50%);
   width: 600px;
   max-width: calc(100% - 40px);
+  color: var(--color-font);
+  font-family: var(--font-highlight);
   padding-bottom: 92px;
   gap: 40px; // gap between question mark and text
 
-  &_question_mark { // large question mark at the left side
+  // large question mark at the left side
+  &_question_mark {
     font-size: 20rem;
     font-family: var(--font-large-question);
     margin: 0 0 -80px -20px;
@@ -21,40 +25,39 @@
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_logo { // memoriter logo
+  // memoriter logo
+  &_logo {
     height: 56px;
     font-size: 2rem;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
     line-height: 60px;
   }
 
-  h1 { // page not found heading
+  // page not found heading
+  h1 {
     font-size: 3.2rem;
-    color: var(--color-font);
     font-family: var(--font-heading);
   }
 
-  p { // basic (large) text
+  // basic (large) text
+  p {
     font-size: 1.6rem;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
     padding-bottom: 1rem;
     margin-top: -1.6rem;
   }
 
-  &_button { // return button, needed to be split in multiple classes, this class is for the positionig of the button
+  // return button, needed to be split in multiple classes, this class is for the positionig of the button
+  &_button {
     position: relative;
     font-size: 1.4rem;
     color: var(--color-white);
-    font-family: var(--font-highlight);
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     padding: 0.6rem 0.8rem;
     cursor: pointer;
 
-    &_background { // the hover background was done in React because it did not work in cs
+    // the hover background was done in React because it did not work in css
+    &_background {
       position: absolute;
       left: 0;
       top: 0;
@@ -68,7 +71,8 @@
   }
 }
 
-@media (max-width: 600px) { // mobile version of the page
+// mobile version of the page
+@media (max-width: 600px) {
   .page_not_found {
     display: unset;
     top: 20px;
@@ -91,13 +95,15 @@
   }
 }
 
-@media (max-width: 240px) { // hides the content on too small screens (when the warning modal is open)
+// hides the content on too small screens (when the warning modal is open)
+@media (max-width: 240px) {
   .page_not_found {
     display: none;
   }
 }
 
-@media (max-height: 500px) { // new position on less high screens (otherwise some parts would be off screen)
+// new position on less high screens (otherwise some parts would be off screen)
+@media (max-height: 500px) {
   .page_not_found {
     top: 20px;
     transform: translate(-50%);

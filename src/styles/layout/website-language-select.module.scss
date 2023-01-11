@@ -1,6 +1,7 @@
 // styles for the language select modal
 
-.website_language_select { // language select modal/box
+// language select modal/box
+.website_language_select {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -14,7 +15,8 @@
   z-index: 4;
   overflow-y: auto;
 
-  &_close { // x-button for closing modal
+  // x-button for closing modal
+  &_close {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -22,12 +24,13 @@
     height: 30px;
     border: none;
     border-radius: 4px;
-    background-color: var(--color-transparent);;
+    background-color: var(--color-transparent);
     cursor: pointer;
     transition: background-color 200ms;
 
-    &::after { // x-shape
-      content: '\d7'; // symbol for shape
+    // x-shape
+    &::after {
+      content: '×'; // symbol for shape
       position: absolute;
       left: 50%;
       top: 50%;
@@ -36,12 +39,14 @@
       color: var(--color-font-gray);
     }
 
-    &:hover { // background on hover
+    // background on hover
+    &:hover {
       background-color: var(--color-hover);
     }
   }
 
-  &_title { // modal title
+  // modal title
+  &_title {
     font-size: 1.8rem;
     color: var(--color-font);
     font-family: var(--font-highlight);
@@ -53,10 +58,8 @@
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_languages { // language list
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+  // language list
+  &_languages {
     width: fit-content;
     font-size: 1.4rem;
     color: var(--color-font);
@@ -65,26 +68,29 @@
     text-align: center;
     list-style: none;
     padding-left: 0;
-    margin-top: 40px;
-    margin-bottom: 32px;
+    margin: 40px auto 32px;
   }
 
-  li { // single language items
-    padding: 2px 8px 2px 8px;
+  // single language items
+  li {
+    padding: 2px 8px;
     margin: 0 8px 8px 8px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 200ms;
 
-    &:hover { // for the fading background box on hover
+    // for the fading background box on hover
+    &:hover {
       background-color: var(--color-hover);
     }
 
+    // actual select buttons
     a {
       color: var(--color-font);
       text-decoration: none;
     }
 
+    // flags next to languages
     img {
       display: inline;
       height: 2rem;
@@ -93,13 +99,15 @@
   }
 }
 
-@media (max-width: 380px) { // fixes overlapping with title and colose button
+// fixes overlapping with title and colose button
+@media (max-width: 380px) {
   .website_language_select_title {
     margin-top: 48px;
   }
 }
 
-@media (max-width: 240px) { // hides modal on to small screens
+// hides modal on to small screens
+@media (max-width: 240px) {
   .website_language_select {
     display: none;
   }

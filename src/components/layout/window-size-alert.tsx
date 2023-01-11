@@ -7,9 +7,9 @@ import * as styles from '../../styles/layout/window-size-alert.module.scss';
 const WindowSizeAlert: FC = () => {
   return (
     <div className={styles.window_size_alert_backdrop}>
-      {/*When the window or display size is to small, a warning will be shown*/}
+      {/* When the window or display size is to small, a warning will be shown */}
       <div className={styles.window_size_alert}>
-        {/*window not wide enough*/}
+        {/* window not wide enough */}
         <p className={styles.window_size_alert_heading}>Issue with device:</p>
         <p>Your screen or window is not wide enough to display the page correctly.</p>
         <p>Please rotate your device or resize your window to continue!</p>

@@ -1,6 +1,7 @@
 // These styles are used for the alert showing on too small screens
 
-.window_size_alert { // container and text formatting
+// container and text formatting
+.window_size_alert {
   display: none;
   position: fixed;
   left: 50%;
@@ -14,11 +15,12 @@
   font-size: 1.1rem;
   color: var(--color-font);
   font-family: var(--font-default);
-  padding: 12px 12px 12px 12px;
-  border-radius: 12px;
+  padding: 12px;
+  border-radius: 4px;
   background-color: var(--color-background);
 
-  &_backdrop { // backdrop for warning
+  // backdrop for warning
+  &_backdrop {
     display: none;
     position: fixed;
     left: 0;
@@ -29,7 +31,8 @@
     z-index: 3;
   }
 
-  &_heading { // container header
+  // container header
+  &_heading {
     background: var(--color-highlight-gradient);
     font-size: 1.2rem;
     font-family: var(--font-highlight);
@@ -39,12 +42,10 @@
   }
 }
 
-@media (max-width: 240px) { // defining screen width for showing the warning
-  .window_size_alert {
+// defining screen width for showing the warning
+@media (max-width: 240px) {
+  .window_size_alert,
+  .window_size_alert_backdrop {
     display: block;
-
-    &_backdrop {
-      display: block;
-    }
   }
 }
