@@ -9,6 +9,7 @@ import emoji1f9e0 from '../../images/emoji/1f9e0.svg';
 import emoji1f465 from '../../images/emoji/1f465.svg';
 import emoji1f4ac from '../../images/emoji/1f4ac.svg';
 import emoji1f5c2 from '../../images/emoji/1f5c2.svg';
+import emoji1f3c1 from '../../images/emoji/1f3c1.svg';
 import emoji1f4dd from '../../images/emoji/1f4dd.svg';
 import emoji1f5c3 from '../../images/emoji/1f5c3.svg';
 import emoji2049 from '../../images/emoji/2049.svg';
@@ -201,14 +202,14 @@ const ProductMain: FC = () => {
                 <img src={emoji1f5c2} alt='Flashcards' draggable='false' />
                 <div>
                   <h3>Flashcard Generation</h3>
-                  <p>Automatically generate answers for your flashcard questions.</p>
+                  <p>Get suggestions of flashcards from the content of your note pages.</p>
                 </div>
               </li>
               <li>
-                <img src={emoji2049} alt='Study' draggable='false' />
+                <img src={emoji1f3c1} alt='Study' draggable='false' />
                 <div>
-                  <h3>Heading 3</h3>
-                  <p>Content</p>
+                  <h3>Flashcard Autocompletion</h3>
+                  <p>Automatically generate answers for your flashcard questions.</p>
                 </div>
               </li>
             </ul>
