@@ -7,7 +7,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 const Privacy: FC = () => {
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body with text*/}
+      {/* main body with text */}
       <article className={styles.legal_main}>
         <h1>Memoriter Privacy Policy</h1>
 
@@ -86,7 +86,6 @@ const Privacy: FC = () => {
     </WebsiteLayout>
   );
 };
-
 export default Privacy;
 
 export const Head: HeadFC = (): React.ReactElement => {

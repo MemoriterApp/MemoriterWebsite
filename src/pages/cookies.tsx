@@ -7,7 +7,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 const Cookies: FC = () => {
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body with text*/}
+      {/* main body with text */}
       <section className={styles.legal_main}>
         <h1>Memoriter Cookie Policy</h1>
 

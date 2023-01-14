@@ -1,18 +1,22 @@
 // In this file all classes for the terms of use, privacy policy and all other legal condition pages are defined
 
-.legal_main { // main container
+// main container
+.legal_main {
   position: relative;
   left: 50%;
   top: 120px;
   transform: translate(-50%);
-  width: calc(100% - 320px);
-  max-width: 2400px;
-  padding: 40px 60px 80px 60px;
+  max-width: 1400px;
+  font: 1.1rem var(--font-default);
+  color: var(--color-font);
+  text-align: justify;
+  line-height: 1.8rem;
+  padding: 40px 72px 80px;
   margin-bottom: 320px;
 
-  h1 { // the big page heading (<h1/>) of legal_main
-    font-size: 2.8rem;
-    font-family: var(--font-heading);
+  // big page heading
+  h1 {
+    font: 2.8rem var(--font-heading);
     margin-bottom: 60px;
     background: var(--color-highlight-gradient);
     background-clip: text;
@@ -20,68 +24,38 @@
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  h2 { // all html sub headings (<h2/>) of legal_main
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    margin-top: 60px;
-    margin-bottom: 12px;
+  // section headings
+  h2 {
+    font: 1.6rem var(--font-highlight);
+    margin: 48px 0 12px;
   }
 
-  p { // all html text paragraps (<p/>) of legal_main
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin-bottom: 0;
-  }
-
-  ul { // all html unordered lists (<ul/>) of legal_main
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
+  // list margin
+  ul,
+  ol {
     margin-left: -16px;
-    margin-bottom: 0;
-    list-style: disc;
   }
 
-  ol { // all html ordered lists (<ol/>) of legal_main
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin-left: -16px;
-    margin-bottom: 0;
-    list-style: disc;
-  }
-
-  a { // all html links (<a/>) of legal_main
+  // hyperlinks
+  a {
     color: var(--color-font-gray);
     transition: color 200ms;
 
-    &:hover { // hover effect for all html links (<a/>) of legal_main
+    // hyperlink hover effect
+    &:hover {
       color: var(--color-font);
     }
   }
 
-  &_table_container { // container for tables enabling x-axis scrolling on smaller screens
+  // container for tables enabling x-axis scrolling on smaller screens
+  &_table_container {
     width: 100%;
     margin-bottom: 80px;
     overflow-x: auto;
 
-    table { // all html tables (<table/>) of legal_main-table-container
+    // actual table (used for the detailed cookie information)
+    table {
       width: 100%;
-      font-size: 1.1rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
       line-height: 1.6rem;
       text-align: left;
       margin-top: 16px;
@@ -89,48 +63,49 @@
       border-collapse: collapse; // removes double border where cells touch
     }
 
-    thead { // all html table header rows (<thead/>) of legal_main-table-container
+    // highlighted table header rows
+    thead {
       background-color: var(--color-hover);
     }
 
-    th, td { // all html table (header) cells (<th/>, <td/>) of legal_main-table-container
+    // all html table and table header cells
+    th,
+    td {
       min-width: 100px;
       vertical-align: top;
       border: 1px solid var(--color-table);
       padding: 8px;
 
-      &:nth-child(1) { // first column (name)
+      // first (name) and second (domain) column
+      &:nth-child(1),
+      &:nth-child(2) {
         width: 15%;
       }
 
-      &:nth-child(2) { // second column (domain)
-        width: 15%;
-      }
-
-      &:nth-child(3) { // third column (duration)
+      // third (duration) and fifth (provider) column
+      &:nth-child(3),
+      &:nth-child(5) {
         width: 10%;
       }
 
-      &:nth-child(4) { // fourth column (description)
+      // fourth column (description)
+      &:nth-child(4) {
         width: 50%;
-      }
-
-      &:nth-child(5) { // fifth column (provider)
-        width: 10%;
       }
     }
   }
 }
 
-@media (max-width: 960px) { // removes space at the sides on small screens
+// removes space at the sides on small screens
+@media (max-width: 960px) {
   .legal_main {
     top: 60px;
-    width: calc(100% - 40px);
-    padding: 40px 0 80px 0;
+    padding: 40px 0 80px;
   }
 }
 
-@media (max-width: 240px) { // hides the content on too small screens (when the warning modal is open)
+// hides the content on too small screens (when the warning modal is open)
+@media (max-width: 240px) {
   .legal_main {
     display: none;
   }

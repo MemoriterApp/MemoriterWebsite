@@ -7,7 +7,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 const Impressum: FC = () => {
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body with text*/}
+      {/* main body with text */}
       <article className={styles.legal_main}>
         <h1>Impressum</h1>
 
