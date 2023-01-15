@@ -11,24 +11,22 @@ const Impressum: FC = () => {
       <article className={styles.legal_main}>
         <h1>Impressum</h1>
 
-        <p>
-          Memoriter is a student company at the Bertha-von-Bertha-Suttner-Gymnasium Babelsberg in
-          Potsdam, Germany, under the supervision of JUNIOR, a project by the Institut der Deutchen
-          Wirtschaft (IW), supported by the Bundesministerium für Wirtschaft und Klimaschutz (BMWK).
-          Further information about the JUNIOR project can be found{' '}
-          <a href='https://www.junior-programme.de/startseite' target='_blank' rel='noreferrer'>
-            here
-          </a>
-          .
-        </p>
+        <h2>Information in accordance with § 5 TMG</h2>
+        <ul>
+          <p>Memoriter LLC.</p>
+          <p>Business ID: 1372720</p>
+          <p>Rudolf-Breitscheid-Straße 160c, upstairs first room on the right, bed</p>
+          <p>14482 Potsdam, Germany</p>
+        </ul>
 
-        <h2>Contact:</h2>
+
+        <h2>Representative:</h2>
         <ul>
           <li>Johan Trieloff</li>
-          <li>Kopernikusstraße 30</li>
+          <li>Rudolf-Breitscheid-Straße 160c</li>
           <li>14482 Potsdam, Germany</li>
-          <li>Phone: +49 (0)221 | 4981-707</li>
-          <li>Email: johan@trieloff.net</li>
+          <li>Phone: +49 160 7000697</li>
+          <li>Email: johan@memoriter.de</li>
         </ul>
       </article>
     </WebsiteLayout>
