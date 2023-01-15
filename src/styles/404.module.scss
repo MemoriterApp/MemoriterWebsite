@@ -16,8 +16,7 @@
 
   // large question mark at the left side
   &_question_mark {
-    font-size: 20rem;
-    font-family: var(--font-large-question);
+    font: 20rem var(--font-large-question);
     margin: 0 0 -80px -20px;
     background: var(--color-highlight-gradient);
     background-clip: text;
@@ -34,8 +33,7 @@
 
   // page not found heading
   h1 {
-    font-size: 3.2rem;
-    font-family: var(--font-heading);
+    font: 3.2rem var(--font-heading);
   }
 
   // basic (large) text

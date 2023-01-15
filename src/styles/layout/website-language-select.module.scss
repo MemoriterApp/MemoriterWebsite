@@ -47,9 +47,7 @@
 
   // modal title
   &_title {
-    font-size: 1.8rem;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
+    font: 1.8rem var(--font-highlight);
     text-align: center;
     margin: 32px 20px 24px 20px;
     background: var(--color-highlight-gradient);
@@ -61,9 +59,8 @@
   // language list
   &_languages {
     width: fit-content;
-    font-size: 1.4rem;
+    font: 1.4rem var(--font-highlight);
     color: var(--color-font);
-    font-family: var(--font-highlight);
     line-height: 2.4rem;
     text-align: center;
     list-style: none;

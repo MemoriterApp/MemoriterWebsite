@@ -12,9 +12,8 @@
   max-width: calc(100% - 32px);
   max-height: 90vh;
   text-align: center;
-  font-size: 1.1rem;
+  font: 1.1rem var(--font-default);
   color: var(--color-font);
-  font-family: var(--font-default);
   padding: 12px;
   border-radius: 4px;
   background-color: var(--color-background);
@@ -34,8 +33,7 @@
   // container header
   &_heading {
     background: var(--color-highlight-gradient);
-    font-size: 1.2rem;
-    font-family: var(--font-highlight);
+    font-size: 1.2rem var(--font-highlight);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
