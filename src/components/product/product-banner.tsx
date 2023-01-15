@@ -46,7 +46,7 @@ const ProductBanner: FC = () => {
       {/*content*/}
       <article className={styles.product_banner_content}>
         {/*slogan*/}
-        <p className={styles.product_banner_text}>Study Better, Faster, Smarter - Study with Memoriter!</p>
+        <p className={styles.product_banner_text}>Use Memoriter: the flashcard app that lets you remember more!</p>
         <p className={styles.product_banner_text_sub}>
           Work with Memoriter effective memorizing, tools to quickly achieve successful results.
         </p>

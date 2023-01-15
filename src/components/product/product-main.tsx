@@ -30,9 +30,9 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Discover Memoriter</h1>
             <p className={styles.default_main_text}>
-              Memoriter is a study application combining the information storage capacity of a
-              note-taking tool with the practical advantages of a flashcard learning system,
-              creating the ultimate all-in-one learning environment.
+            Unlock your full potential with Memoriter. 
+            Combining the information storage of a note-taking tool and 
+            the efficiency of flashcard learning, Memoriter is the ultimate all-in-one study app to help you ace your exams and reach your goals.
             </p>
           </AnimationOnScroll>
         </div>
@@ -112,10 +112,10 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Accumalate Knowledge Faster</h1>
             <p className={styles.default_main_text}>
-              Flashcards have proven to be 150% more effective if you want to accumalte knowledge
-              faster. Instead of memorizing your notes passively, save time using flashcards. When
-              studying with flashcards the algorithm will notice your mistakes and help you study
-              more where your knowledge is lacking!
+            Unlock the power of faster learning with flashcards. 
+            Studies have shown that flashcard-based studying is 150% more effective than passive note-taking. 
+            Save time and focus on your areas of improvement with our algorithm that detects and targets your weak points. 
+            Enhance your knowledge retention with flashcards.
             </p>
           </AnimationOnScroll>
         </div>
@@ -202,7 +202,7 @@ const ProductMain: FC = () => {
                 <img src={emoji1f5c2} alt='Flashcards' draggable='false' />
                 <div>
                   <h3>Flashcard Generation</h3>
-                  <p>Get suggestions of flashcards from the content of your note pages.</p>
+                  <p>Get suggestions for flashcards from the content of your note pages.</p>
                 </div>
               </li>
               <li>
@@ -228,9 +228,8 @@ const ProductMain: FC = () => {
               Remember Everything with Spaced Repetition
             </h1>
             <p className={styles.default_main_text}>
-              By using the scientific method of spaced repetition, we will remind you to regularly
-              review important flashcards that way you can remember thousands of flashcards with
-              minimal effort.
+            Achieve maximum retention with minimal effort through our scientifically-proven spaced repetition method. 
+            Our app will regularly remind you to review important flashcards, allowing you to effortlessly remember thousands of flashcards with ease
             </p>
           </AnimationOnScroll>
         </div>
@@ -281,7 +280,7 @@ const ProductMain: FC = () => {
         <div>
           <img className={styles.default_main_overview_image} src={emoji1f916} alt='Robot' />
           <p className={styles.default_main_overview_text}>
-            Study more efficient using the Memoriter Bot
+            Study even faster using the Memoriter Bot
           </p>
           <p className={styles.default_main_overview_link_container}>
             <Link className={styles.default_main_overview_link} to='/bot'>
@@ -307,9 +306,8 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Study with Friends</h1>
             <p className={styles.default_main_text}>
-              Study together and you will always find the motivation to suceed. You can help each
-              other out and share your notes, techniques and structure. That way you will save time
-              and hard work.
+            Easily share your notes and flashcards with friends or classmates to elevate your studying experience. 
+            By working together, you'll not only find motivation and support to succeed, but you'll also save time because you can start studying earlier.
             </p>
           </AnimationOnScroll>
         </div>
@@ -326,10 +324,10 @@ const ProductMain: FC = () => {
           >
             <h1 className={styles.default_main_heading}>Nonprofit and Open Source</h1>
             <p className={styles.default_main_text}>
-              Food is always better when it's free, same goes for software. We strictly believe in
-              the idea that education and the things around it should be made affordable. That's why
-              we decided to make Memoriter almost completely free. With making the project open
-              source, everyone can make Memoriter a even better way to study.
+            Education should be accessible to all, which is why we at Memoriter have made the decision to offer our study app as a non-profit, open-source project. 
+            Just as free food tastes better, we believe that free software can have a greater impact on education. 
+            By making our project open-source, anyone can contribute to making Memoriter an even better tool for learning. 
+            Join us in our mission to make education more affordable for all.
             </p>
           </AnimationOnScroll>
         </div>

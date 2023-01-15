@@ -8,19 +8,28 @@ const ProductStories: FC = () => {
       number: 0,
       author: 'Harry',
       quote:
-        'I used to struggle a lot with latin in school. Every week our Teacher would give us a huge list of words to study. I would spend hours memorizing them, but when using memoriter I was able to learn them in a fraction of the time, thanks to the different learning methods.',
+        `Latin was always a challenge for me in school. My teacher would give us a long list of words to memorize each week and I would spend hours trying to commit them to memory. 
+        But with Memoriter, I was able to learn them quickly and easily, thanks to its various learning methods. 
+        Memoriter not only saved me time but also made learning more efficient and effective. It was a game changer for my Latin studies.`,
     },
     {
       number: 1,
       author: 'Hermoine',
       quote:
-        'When studying in med. school it is imporant to remember everything over a longer period of time. Memoriter helped me to learn the most important things for my exams. I was able to learn everything in a short amount of time and to remember it for a long time by using spaced repetition.',
+        `As a medical student, long-term retention is crucial for success. 
+        That's where Memoriter comes in. It helped me to focus on the most important information for my exams and to retain it over time. 
+        The spaced repetition feature was particularly helpful in allowing me to learn and retain a large amount of information in a short amount of time. 
+        Memoriter was a powerful tool in my medical school studies.`
     },
     {
       number: 2,
       author: 'Ron',
       quote:
-        'I often times studied in groups. Memoriter helped us to study together and to share our knowledge. We were able to create our own flashcards and to study them together. This way we were able to learn everything faster and to remember it for a longer time.',
+        `Studying in groups has always been a great way for me to stay motivated and on track. 
+        With Memoriter, we were able to take our group study sessions to the next level. 
+        Its ability to share and collaborate on flashcards with my peers made it easy for us to pool our knowledge and learn from each other. 
+        We could create our own flashcards and study them together which helped us to learn faster and retain the information for a longer period of time. 
+        Memoriter was a valuable tool for our group study sessions.`,
     },
   ];
 
