@@ -31,7 +31,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
         <p>
           Memoriter is a tool for students by students. It was originally started as a school
           project by a small team of German students in 2021, but we moved on afterwards and are now
-          a still small, but international organization. Head over to our{' '}
+          a small, but international organization. Head over to our{' '}
           <Link to='/about'>About page</Link> to find out more.
         </p>
       ),
@@ -42,9 +42,9 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       question: 'Is Memoriter free?',
       answer: (
         <p>
-          Yes! The application is completely free to use at the moment. Memoriter is currently a non
-          profit project, we do not have an incentive to make money off of it. With the project
-          beeing very small at the moment, our operative costs are little, so we are able to do so.
+          Yes! The application is almost completely free. Memoriter is currently a non
+          profit project, we do not have an incentive to make money off of it. 
+          Unfortunately some of the AI features create costs for us, for that reason we need to charge the user a small sum of 0.99$. I hope you understand that we need to cover our costs.
           If you still want to support us financially, please consider{' '}
           <Link to='/donate'>donating</Link>.
         </p>
@@ -66,14 +66,86 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
     },
     {
       section: 'general',
-      question: 'Why are there so many inconsistencies in the visual design?',
+      question: 'What is the purpose of this application?',
       answer: (
         <p>
-          There are multiple reasons for this. Firstly we are mostly developers with little design
-          experience and we hadn't a person creating a proper deisgn in the for a long time, but now
-          the situation should get better. Secondly the beginning of development was very
-          unorganized and everyone implemented their own ideas, leading to different design choices
-          before we acquired a person doing all the visual stuff.
+          During our time in highschool we became increasingly frustrated with the lack of good digital tools for studying. We wanted to create a tool that would help us and other students to study more efficiently. We hope that you will find Memoriter useful and that it will help you to study more effectively. Head over to our{' '}
+          <Link to='/about'>About page</Link> to find out more.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'What inspired the creation of Memoriter?',
+      answer: (
+        <p>
+          During highschool all of us used note taking and study apps regularly, but we noticed that none of them offer a good combination of note taking and studying.
+          We were inspried by the apps we used and wanted to add something on top of their features. A big inspiration for the flashcard system were Anki as well as Quizlet,
+          we were inspired to implement the note taking functionality by apps like Notion and google Keep, overal a lot of different apps inspired us to create Memoriter.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'Who are the target users of this web application?',
+      answer: (
+        <p>
+          The target users of this web application are students of all ages. We want to provide a tool that is useful for everyone who wants to study more efficiently.
+          But we think Memoriter will be most useful for students in highschool and university, since they are the ones who are most likely to use note taking and study apps.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How does this web application differ from other study apps available on the market?',
+      answer: (
+        <p>
+          There are already a lot of good note taking and study apps available on the market, but we think that Memoriter is different in the way that it combines both aspects in one app. We also have a higher focus on helping students study with the power of ai and machine learning, than other apps do. Another key difference is that Memoriter is completely free for most of its features, the features that require a subscription are very cheap and we don't have any ads. 
+          The last but most important difference is that Memoriter is a non profit, open source project from students for students, we are not fuled by the profit incentive but by the desire to help students study more efficiently.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How often does Memoriter recieve updates?',
+      answer: (
+        <p>
+          Unfortunately we can't dedicate as much time to Memoriter as we would like to because we have school and other personal obligations. But nevertheless we try to update the app as often as possible, we try to release a new update every few months. Follow us on social media to stay updated on how the development is going.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How can I provide feedback or report a problem with this web application?',
+      answer: (
+        <p>
+          We would be super happy to get your feedback! You can provide feedback by sending us an email at contact@memoriter.de or head over to our{' '}
+          <Link to='/about'>About page</Link> and send a developer a message. You can also report a problem by filling out the form: <a href='https://docs.google.com/forms/d/e/1FAIpQLSdeAzvTo395mzFaHjii-hETrUf9VoRPSqe5u78NgJZueDveSA/viewform?usp=sf_link'>Report a bug</a>. We will try to fix the problem as soon as possible.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'Is there a community or support system for users of this web application?',
+      answer: (
+        <p>
+          Yes, we have a discord server where you can ask questions and get help from other users and developers. You can join the server by clicking{' '}. We also have a twitter, Tik Tok and Instagram accounts where we post updates about the development of Memoriter and where you can ask questions.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How can I stay updated on the development of Memoriter?',
+      answer: (
+        <p>
+          You can follow us on social media to stay updated on how the development is going. We also have a discord server where you can ask questions and get help from other users and developers. You can join the server by clicking{' '}. We also have a twitter, Tik Tok and Instagram accounts where we post updates about the development of Memoriter and where you can ask questions.
         </p>
       ),
       isOpen: false,
@@ -97,6 +169,16 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
         <p>
           Sadly no. Once an account is closed, all corresponding user data is deleted. It is
           possible opening an account with the same email address though.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'account',
+      question: 'Is my data safe?',
+      answer: (
+        <p>
+          Yes your data is extremlly safe. We are using the latest security standards and we are very concered about the safety of our app. Take a look at our{' '} <Link to='/privacy'>Privacy Policies</Link> to learn more about our security measures.
         </p>
       ),
       isOpen: false,
@@ -129,7 +211,10 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
     {
       section: 'donating',
       question: 'Are some features reserved for donors only?',
-      answer: <p>No, All features are free!</p>,
+      answer: <p>
+        We try to keep as possible free, but at the current moment with the amount of donations we can't cover all of the operating expenses 
+        that means we have to charge a small fee for some features. We are working on a way to make all features free again, but until then we are sorry for the inconvenience.
+      </p>,
       isOpen: false,
     },
     {
@@ -204,8 +289,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       question: 'What is the current legal status of Memoriter?',
       answer: (
         <p>
-          We are no formal organization yet. Currently the Project is represented by us individual
-          people, but we might create one in the future.
+          Memoriter is an LLC (Limited Liability Company) registered in Missippi. It is represented by its CEO, Johan Trieloff.
         </p>
       ),
       isOpen: false,
