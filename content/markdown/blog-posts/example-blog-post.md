@@ -1,25 +1,38 @@
 ---
-link: example-blog-post
-topic: Miscellaneous
+link: science-behind-the-app
+topic: Technology
 thumb: ../../images/thumbs/example-blog-post.jpg
-date: 2022-08-17
-author: Simon Hubert
-title: Example Blog Post
-description: This post is an example placeholder blog page. It will be replaced by the first real blog post.
+date: 2023-01-17
+author: Johan
+title: The science behind Memoriter explained with emojis.
+description: Memoriter uses different scientific principles to help you memorize things. In this post, we will explain how Memoriter works with emojis.
 linkedBlogs: ['example-blog-post']
 ---
 
-This post is an example placeholder blog page. It will be replaced by the first real blog post.
+Memoriter uses different scientific principles to help you memorize things. In this post, we will explain how Memoriter works with emojis.
 
-[Source of the following text](https://www.lipsum.com/feed/html)
+[Sources of the following text](https://www.lipsum.com/feed/html)
             
-# Lorem Ipsum
+# What scientific methods does Memoriter use?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum purus magna, a pulvinar odio condimentum quis. In varius posuere ligula nec maximus. Proin blandit tincidunt euismod. Vivamus dapibus tortor est, at varius ligula pretium convallis. Sed ligula dolor, feugiat non purus non, faucibus tristique enim. Aenean fermentum dictum risus, id sollicitudin turpis accumsan ut. In tincidunt tincidunt nisl, non pharetra metus rhoncus sed. Sed egestas pellentesque urna in volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin pellentesque ante convallis turpis auctor sagittis eu in nibh. Aliquam nec ullamcorper est. Aliquam a turpis sodales, lobortis ligula vitae, aliquam nulla. Nam vel massa sit amet nisl tempus vehicula. Nunc est elit, gravida eleifend quam ut, pretium dapibus dui. Suspendisse vitae leo eu elit ultricies sagittis.
+There are two big scientific principles that we use to help you study. The first one is active recall, which is a method that comes to play when you are using the regular study mode or have the 'only question' option enabled. The second one is spaced repetition, which is a method that we used to create the spaced repetition study mode.
 
-## Placeholder Heading
+## Active recall
 
 Praesent malesuada accumsan ligula at bibendum. Cras maximus massa id leo accumsan facilisis. Donec auctor laoreet tellus vitae volutpat. Curabitur vitae ultricies est. Nulla eu ultricies massa, sit amet molestie erat. Pellentesque ultrices nulla ex, id consequat nunc aliquet eget. Nunc faucibus massa quis rhoncus gravida.
+
+## Spaced repetition
+
+Praesent malesuada accumsan ligula at bibendum. Cras maximus massa id leo accumsan facilisis. Donec auctor laoreet tellus vitae volutpat. Curabitur vitae ultricies est. Nulla eu ultricies massa, sit amet molestie erat. Pellentesque ultrices nulla ex, id consequat nunc aliquet eget. Nunc faucibus massa quis rhoncus gravida.
+
+## How ai helps with these methods
+
+Praesent malesuada accumsan ligula at bibendum. Cras maximus massa id leo accumsan facilisis. Donec auctor laoreet tellus vitae volutpat. Curabitur vitae ultricies est. Nulla eu ultricies massa, sit amet molestie erat. Pellentesque ultrices nulla ex, id consequat nunc aliquet eget. Nunc faucibus massa quis rhoncus gravida.
+
+# Summary
+
+Praesent malesuada accumsan ligula at bibendum. Cras maximus massa id leo accumsan facilisis. Donec auctor laoreet tellus vitae volutpat. Curabitur vitae ultricies est. Nulla eu ultricies massa, sit amet molestie erat. Pellentesque ultrices nulla ex, id consequat nunc aliquet eget. Nunc faucibus massa quis rhoncus gravida.
+
 
 ![placeholder](../../images/blog/example-blog-post.jpg)
 <figcaption>Placeholder Image</figcaption>
