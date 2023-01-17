@@ -68,6 +68,9 @@ const Bugs: FC = () => {
           </p>
           <ul>
             <li>
+              Report the bug directly to our form: <a href='https://docs.google.com/forms/d/e/1FAIpQLSdeAzvTo395mzFaHjii-hETrUf9VoRPSqe5u78NgJZueDveSA/viewform?usp=sf_link'>Bug Report Form</a>
+            </li>
+            <li>
               Report a web application issue on{' '}
               <a
                 href='https://github.com/MemoriterApp/Memoriter/issues'
@@ -91,6 +94,9 @@ const Bugs: FC = () => {
               Send us an email regarding the problem to{' '}
               <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
             </li>
+            <li>
+              Or write us on <a href=''>Discord</a>
+            </li>
           </ul>
           <p>
             When reporting an issue, please make sure you describe it as accurate as possible, as
@@ -112,15 +118,15 @@ const Bugs: FC = () => {
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
-                ...question,
-                isOpen: true, //clicked question opens if it is closed
-              }
+              ...question,
+              isOpen: true, //clicked question opens if it is closed
+            }
             : question.question === openedQuestion && question.isOpen
-            ? {
+              ? {
                 ...question,
                 isOpen: false, //clicked question closes if it is open
               }
-            : {
+              : {
                 ...question,
                 isOpen: false, //all other questions are closing, only one can be opened at the same time
               }
