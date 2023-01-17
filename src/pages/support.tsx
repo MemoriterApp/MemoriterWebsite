@@ -6,7 +6,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 
 const Support: FC = () => {
-  
+
   //array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { question: string; answer: React.ReactNode; isOpen: boolean }[]
@@ -85,6 +85,25 @@ const Support: FC = () => {
       ),
       isOpen: false,
     },
+    {
+      question: 'Is there a dedicates support mail address?',
+      answer: (
+        <p>
+          Yes there is. You can send an email to{' '} <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      question: 'How quickly can I expect a response from the support team?',
+      answer: (
+        <p>
+          Thats dependent on the amount of requests we receive. We try to answer all requests within 24 hours.
+          But please excuse us if it takes a bit longer.
+        </p>
+      ),
+      isOpen: false,
+    },
   ]);
 
   //function is called when a question is clicked
@@ -96,15 +115,15 @@ const Support: FC = () => {
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
-                ...question,
-                isOpen: true, //clicked question opens if it is closed
-              }
+              ...question,
+              isOpen: true, //clicked question opens if it is closed
+            }
             : question.question === openedQuestion && question.isOpen
-            ? {
+              ? {
                 ...question,
                 isOpen: false, //clicked question closes if it is open
               }
-            : {
+              : {
                 ...question,
                 isOpen: false, //all other questions are closing, only one can be opened at the same time
               }
@@ -117,7 +136,7 @@ const Support: FC = () => {
       {/*main body*/}
       <section className={styles.help_main}>
         <h1>Support</h1>
-        <hr/>
+        <hr />
 
         {/*displays the list of questions*/}
         {questions.map((question) => (
