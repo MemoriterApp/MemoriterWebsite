@@ -1,12 +1,12 @@
 // The download banner is an area at the top with the download page with the desktop download buttons.
 
 .download_banner { // banner box, background and position
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 60px);
+  position: relative;
+  width: calc(100% + 16px);
+  height: calc(100vh - 62px);
   min-height: 540px; // fixes issues for screens not high enough
-  left: 0;
-  top: 62px;
+  left: -8px;
+  margin: 54px -8px 80px;
   background: var(--color-banner-gradient);
   overflow: hidden;
 
