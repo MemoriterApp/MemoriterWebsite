@@ -7,7 +7,8 @@ const ProductBanner: FC = () => {
   const [triangleTransition, setTriangleTransition] = useState<string>('none'); // variable for background animation transition (this does not trigger when scrolling)
 
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
-  const onScroll = (): void => { // getting the scroll data
+  // getting the scroll data
+  const onScroll = (): void => {
     const scroll: number = document.documentElement.scrollTop;
     const height: number =
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -26,7 +27,7 @@ const ProductBanner: FC = () => {
 
   return (
     <section className={styles.product_banner}>
-      {/*background triangles*/}
+      {/* background triangles */}
       <div
         className={styles.product_banner_triangle_top}
         style={{
@@ -41,17 +42,19 @@ const ProductBanner: FC = () => {
           transition: triangleTransition,
         }}
       />
-      {/*the size of the triangles changes a bit when you scroll down and when hovering over the get started button*/}
+      {/* the size of the triangles changes a bit when you scroll down and when hovering over the get started button */}
 
-      {/*content*/}
+      {/* content */}
       <article className={styles.product_banner_content}>
-        {/*slogan*/}
-        <p className={styles.product_banner_text}>Study Better, Faster, Smarter - Study with Memoriter!</p>
-        <p className={styles.product_banner_text_sub}>
+        {/* slogan */}
+        <p>
+          Study Better, Faster, Smarter - Study with Memoriter!
+        </p>
+        <p>
           Work with Memoriter effective memorizing, tools to quickly achieve successful results.
         </p>
 
-        {/*get started button for redirecting to register page*/}
+        {/* get started button for redirecting to register page */}
         <a
           className={styles.product_banner_get_started}
           href='https://app.memoriter.de/signup'
@@ -69,14 +72,15 @@ const ProductBanner: FC = () => {
           }}
         >
           Get Started
-          <div className={styles.product_banner_get_started_background} style={{ filter: onHover }} />
+          <div
+            className={styles.product_banner_get_started_background}
+            style={{ filter: onHover }}
+          />
         </a>
       </article>
 
-      {/*transition shape at the bottom*/}
+      {/* transition shape at the bottom */}
       <div className={styles.product_banner_transition} />
-      <div className={styles.product_banner_transition_left} />
-      <div className={styles.product_banner_transition_right} />
     </section>
   );
 };
