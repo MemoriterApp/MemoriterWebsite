@@ -30,16 +30,16 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Discover Memoriter</h1>
             <p className={styles.default_main_text}>
-            Unlock your full potential with Memoriter. 
-            Combining the information storage of a note-taking tool and 
-            the efficiency of flashcard learning, Memoriter is the ultimate all-in-one study app to help you ace your exams and reach your goals.
+              Unlock your full potential with Memoriter.
+              Combining the information storage of a note-taking tool and
+              the efficiency of flashcard learning, Memoriter is the ultimate all-in-one study app to help you ace your exams and reach your goals.
             </p>
           </AnimationOnScroll>
         </div>
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/studying-laptop.png'
             alt='placeholder'
           />
         </div>
@@ -112,10 +112,10 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Accumalate Knowledge Faster</h1>
             <p className={styles.default_main_text}>
-            Unlock the power of faster learning with flashcards. 
-            Studies have shown that flashcard-based studying is 150% more effective than passive note-taking. 
-            Save time and focus on your areas of improvement with our algorithm that detects and targets your weak points. 
-            Enhance your knowledge retention with flashcards.
+              Unlock the power of faster learning with flashcards.
+              Studies have shown that flashcard-based studying is 150% more effective than passive note-taking.
+              Save time and focus on your areas of improvement with our algorithm that detects and targets your weak points.
+              Enhance your knowledge retention with flashcards.
             </p>
           </AnimationOnScroll>
         </div>
@@ -228,8 +228,8 @@ const ProductMain: FC = () => {
               Remember Everything with Spaced Repetition
             </h1>
             <p className={styles.default_main_text}>
-            Achieve maximum retention with minimal effort through our scientifically-proven spaced repetition method. 
-            Our app will regularly remind you to review important flashcards, allowing you to effortlessly remember thousands of flashcards with ease
+              Achieve maximum retention with minimal effort through our scientifically-proven spaced repetition method.
+              Our app will regularly remind you to review important flashcards, allowing you to effortlessly remember thousands of flashcards with ease
             </p>
           </AnimationOnScroll>
         </div>
@@ -306,8 +306,8 @@ const ProductMain: FC = () => {
             {/* AnimationOnScroll starts an animation when it enters the viewport */}
             <h1 className={styles.default_main_heading}>Study with Friends</h1>
             <p className={styles.default_main_text}>
-            Easily share your notes and flashcards with friends or classmates to elevate your studying experience. 
-            By working together, you'll not only find motivation and support to succeed, but you'll also save time because you can start studying earlier.
+              Easily share your notes and flashcards with friends or classmates to elevate your studying experience.
+              By working together, you'll not only find motivation and support to succeed, but you'll also save time because you can start studying earlier.
             </p>
           </AnimationOnScroll>
         </div>
@@ -324,10 +324,10 @@ const ProductMain: FC = () => {
           >
             <h1 className={styles.default_main_heading}>Nonprofit and Open Source</h1>
             <p className={styles.default_main_text}>
-            Education should be accessible to all, which is why we at Memoriter have made the decision to offer our study app as a non-profit, open-source project. 
-            Just as free food tastes better, we believe that free software can have a greater impact on education. 
-            By making our project open-source, anyone can contribute to making Memoriter an even better tool for learning. 
-            Join us in our mission to make education more affordable for all.
+              Education should be accessible to all, which is why we at Memoriter have made the decision to offer our study app as a non-profit, open-source project.
+              Just as free food tastes better, we believe that free software can have a greater impact on education.
+              By making our project open-source, anyone can contribute to making Memoriter an even better tool for learning.
+              Join us in our mission to make education more affordable for all.
             </p>
           </AnimationOnScroll>
         </div>
