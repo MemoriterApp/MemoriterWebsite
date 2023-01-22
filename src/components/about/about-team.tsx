@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import * as styles from '../../styles/about/about-team.module.scss';
 import placeholderImage from '../../images/about/placeholder.jpg';
 
-const AboutTeam = () => {
+const AboutTeam: FC = () => {
   return (
     <section className={styles.about_team}>
       <h1 className={styles.about_team_title}>Our Team</h1>
@@ -85,6 +86,12 @@ const AboutTeam = () => {
           <img src={placeholderImage} alt='placeholder' />
         </article>
       </div>
+
+      <AnimationOnScroll animateIn={styles.about_team_animation_fade_in_down} animateOut={styles.about_team_animation_fade_in_down}>
+          <p className={styles.about_team_end}>
+              By <em>Students</em> for <em>Students</em>.
+                </p>
+      </AnimationOnScroll>
     </section>
   );
 };

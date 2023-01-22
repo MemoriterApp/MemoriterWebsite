@@ -45,12 +45,6 @@ const AboutMain: FC = () => {
             {/* our team section */}
             <AboutTeam/>
 
-            <AnimationOnScroll animateIn={styles.default_main_animation_fade_in_down} animateOut={styles.default_main_animation_fade_out_down}>
-                <p className={styles.default_main_bottom}>
-                    By <span>Students</span> for <span>Students</span>.
-                </p>
-            </AnimationOnScroll>
-
         </section>
     );
 }

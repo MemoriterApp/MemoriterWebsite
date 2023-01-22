@@ -1,6 +1,7 @@
 // These styles define the main layout of the most pages
 
-.default_main { // just used for layout adjustment
+// just used for layout adjustment
+.default_main {
   position: relative;
   left: 50%; // centering the content on too large screens
   transform: translate(-50%);
@@ -210,34 +211,6 @@
     }
   }
 
-  &_bottom { // positioning for the text and button
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 80vw;
-    max-width: 800px;
-    color: var(--color-font);
-    font-style: italic;
-    font-size: 3.2rem;
-    font-family: var(--font-serif);
-    text-align: center;
-    margin-top: 240px;
-    margin-bottom: 200px;
-
-    span { // highlighted words
-      font-size: 3.4rem;
-      font-family: var(--font-heading);
-      font-style: normal;
-      line-height: 4rem;
-      margin-left: 4px;
-      margin-right: -4px;
-      background: var(--color-highlight-gradient);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: var(--color-transparent);
-    }
-  }
-
   &_download_footer { // container with download buttons at the bottom
     position: relative;
     left: 50%;
@@ -387,18 +360,6 @@
   }
 }
 
-@media (max-width: 720px) { // adjusting too big text
-  .default_main_bottom {
-    font-size: 2.2rem;
-    margin-top: 160px;
-    margin-bottom: 40px;
-
-    span {
-      font-size: 2.4rem;
-    }
-  }
-}
-
 @media (max-width: 660px) { // pushes the footer down when the customer stories disappear
   .default_main {
     margin-bottom: 240px;
@@ -441,9 +402,9 @@
 }
 
 @media (max-width: 240px) { // hiding content for too small screens (where the warning displays)
-    .default_main {
-      display: none;
-    }
+  .default_main {
+    display: none;
+  }
 }
 
 // animation classes
@@ -499,34 +460,6 @@
   }
   to {
     transform: translateX(-8%);
-    opacity: 0;
-  }
-}
-
-.default_main_animation_fade_in_down { // class for triggering the fade in down animation
-  animation: fade-in-down 200ms;
-}
-@keyframes fade-in-down { // the items move a bit down and get visible
-  from {
-    transform: translateY(30%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.default_main_animation_fade_out_down { // class for triggering the fade out down animation
-  animation: fade-out-down 400ms;
-}
-@keyframes fade-out-down { // the items move a bit down and get invisible
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30%);
     opacity: 0;
   }
 }
