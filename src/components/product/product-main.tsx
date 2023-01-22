@@ -100,7 +100,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/effective.png'
             alt='placeholder'
           />
         </div>
