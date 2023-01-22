@@ -10,7 +10,8 @@
   overflow-x: hidden;
   background-color: var(--color-background);
 
-  &_title { // page heading
+  // page heading
+  &_title {
     font-size: 4rem;
     font-family: var(--font-heading);
     text-align: center;
@@ -22,7 +23,8 @@
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_top_text { // slogan at the top
+  // slogan at the top
+  &_top_text {
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -36,7 +38,8 @@
     margin-bottom: 80px;
   }
 
-  &_top_image { // large image at the top
+  // large image at the top
+  &_top_image {
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -46,6 +49,7 @@
     border-radius: 4px;
   }
 
+  // same as top_image, just with a youtube video container
   &_top_video {
     position: relative;
     left: 50%;
@@ -58,26 +62,31 @@
     border-radius: 4px;
   }
 
-  &_container { // contains all of the main sections, is used for positioning
+  // contains all of the main sections, is used for positioning
+  &_container {
     display: flex;
     margin: 160px 70px 200px 70px;
 
-    > * + * { // children of container
+    // children of container
+    > * + * {
       margin-left: 60px;
     }
 
-    &_sub { // sub containers with the text inside
+    // sub containers with the text inside
+    &_sub {
       flex-basis: 45%;
       align-self: center;
 
-      &_image { // sub containers with the image inside
+      // sub containers with the image inside
+      &_image {
         flex-basis: 55%;
         align-self: center;
       }
     }
   }
 
-  &_badge { // badge over a section advertising supporter only features
+  // badge over a section advertising supporter only features
+  &_badge {
     width: fit-content;
     font-size: 1.2rem;
     color: var(--color-font);
