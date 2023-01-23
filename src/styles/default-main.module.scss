@@ -72,6 +72,12 @@
       &_image {
         flex-basis: 55%;
         align-self: center;
+        width: 100%;
+
+        // image rounded corners
+        img {
+          border-radius: 4px;
+        }
       }
     }
   }
@@ -137,12 +143,6 @@
         margin-top: 0.2rem;
       }
     }
-  }
-
-  // image optimization
-  &_image {
-    width: 100%;
-    border-radius: 4px;
   }
 
   // basic layout of three columns for overview texts at the top
