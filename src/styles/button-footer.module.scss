@@ -1,0 +1,177 @@
+// these styles are used for the download and bot page buttons at the bottom
+
+// container with download buttons at the bottom
+.button_footer {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 800px;
+  max-width: calc(100% - 40px);
+  margin-top: 200px;
+  margin-bottom: 320px;
+
+  // text above thw download buttons
+  &_text {
+    font-size: 1.8rem;
+    color: var(--color-font);
+    font-family: var(--font-default);
+    line-height: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  // download button, needed to be split in multiple classes, this class is for the positionig of the button
+  &_download {
+    background-color: var(--color-transparent);
+    border: none;
+    cursor: pointer;
+
+    // operating system icon
+    &_icon {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      filter: var(--svg-invert-white); // makes the icon white
+    }
+
+    // text which is not supposed to change color
+    &_text {
+      position: absolute;
+      left: 80px;
+      top: 0.6rem;
+      font-size: 1.6rem;
+      color: var(--color-white);
+      font-family: var(--font-highlight);
+      white-space: nowrap;
+
+      // additional text formatting for the operating system
+      &_os {
+        position: absolute;
+        left: 80px;
+        top: 2.6rem;
+        font-size: 1.2rem;
+        color: var(--color-white);
+        font-family: var(--font-highlight);
+      }
+    }
+
+    // the hover background was done in React because it did not work in CSS
+    &_background {
+      width: 200px;
+      height: 56px;
+      padding: 8px 10px 8px 10px;
+      margin-inline: -6px;
+      border-radius: 4px;
+      background: var(--color-highlight-gradient);
+      transition: filter 200ms;
+    }
+
+    // position for the download for windows button
+    &_windows {
+      position: absolute;
+      left: calc(50% - 130px);
+      transform: translate(-50%);
+    }
+
+    // position for the download for mac button
+    &_mac {
+      position: absolute;
+      left: calc(50% + 130px);
+      transform: translate(-50%);
+    }
+  }
+
+  // divider between mainand mobile section
+  &_divider {
+    width: calc(100% - 120px);
+    margin-bottom: 180px;
+    background-color: var(--color-container);
+    border: none;
+    border-top: 2px solid var(--color-container);
+  }
+
+  // add to discord button from the bot page
+  &_bot {
+    position: relative;
+    width: 280px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--color-transparent);
+    border: none;
+    cursor: pointer;
+
+    // discord icon
+    &_icon {
+      position: absolute;
+      left: 20px;
+      top: 1.2rem;
+      height: 36px;
+    }
+
+    // text which is not supposed to change color
+    &_text {
+      position: absolute;
+      top: 1.3rem;
+      left: 86px;
+      font-size: 1.6rem;
+      color: var(--color-white);
+      font-family: var(--font-highlight);
+      white-space: nowrap;
+    }
+
+    // the hover background was done in React because it did not work in CSS
+    &_background {
+      position: absolute;
+      width: 100%;
+      height: 72px;
+      margin-inline: -6px;
+      border-radius: 4px;
+      background: var(--color-highlight-gradient);
+      transition: filter 200ms;
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .button_footer_download_divider {
+    width: calc(100% - 40px);
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .button_footer_download_footer_text {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .button_footer_download_windows {
+    left: 50%;
+    transform: translate(-50%, -24px) scale(0.9);
+  }
+  .button_footer_download_mac {
+    left: 50%;
+    transform: translate(-50%, 80px) scale(0.9);
+  }
+
+  .button_footer_download_divider {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 320px) { // fixing the bot button on small screens
+  .button_footer_bot {
+    width: 220px;
+
+    &_icon {
+      display: none;
+    }
+
+    &_text {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
