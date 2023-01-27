@@ -1,6 +1,7 @@
 // The about banner is an area at the top with the about page with the introduction.
 
-.about_banner { // banner box, background and position
+// banner box, background and position
+.about_banner {
   position: relative;
   width: calc(100% + 16px);
   height: calc(100vh - 62px);
@@ -9,7 +10,8 @@
   background: var(--color-banner-gradient);
   overflow: hidden;
 
-  &_circle_top { // background triangle at the upper right corner
+  // background triangle at the upper right corner
+  &_circle_top {
     position: absolute;
     top: -50vh;
     width: 100vh;
@@ -18,7 +20,8 @@
     background-color: var(--color-banner-triangle-light);
   }
 
-  &_circle_bottom { // background triangle at the lower left corner
+  // background triangle at the lower left corner
+  &_circle_bottom {
     position: absolute;
     bottom: -50vh;
     width: 100vh;
@@ -27,7 +30,8 @@
     background-color: var(--color-banner-triangle-dark);
   }
 
-  &_content { // positioning for the text and button
+  // positioning for the text and button
+  &_content {
     position: absolute;
     left: 50%;
     top: 35%;
@@ -40,13 +44,12 @@
     font-family: var(--font-serif);
     text-align: center;
 
-    span { // highlighted words
+    // highlighted words
+    em {
       font-size: 3.4rem;
       font-family: var(--font-heading);
       font-style: normal;
-      line-height: 4rem;
-      margin-left: 4px;
-      margin-right: -4px;
+      margin-inline: 4px -4px;
       background: var(--color-highlight-gradient);
       background-clip: text;
       -webkit-background-clip: text;
@@ -54,7 +57,8 @@
     }
   }
 
-  &_transition { // the shape at the bottom is an overlay in the same color as se next section
+  // the shape at the bottom is an overlay in the same color as se next section
+  &_transition {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -62,72 +66,60 @@
     height: 40px;
     background-color: var(--color-background);
 
-    &_left { // trapezoid shape at the left
+    // actual shapes
+    &::before,
+    &::after {
+      content: '';
       position: absolute;
+      border-bottom: 50px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+
+    // trapezoid shape on the left
+    &::before {
       left: 0;
       bottom: 40px;
       border-right: 50px solid var(--color-transparent);
-      border-bottom: 50px solid var(--color-background);
-      height: 0;
-      width: 30vw;
     }
 
-    &_right { // trapezoid shape at the left
-      position: absolute;
+    // trapezoid shape on the right
+    &::after {
       right: 0;
       bottom: 40px;
       border-left: 50px solid var(--color-transparent);
-      border-bottom: 50px solid var(--color-background);
-      height: 0;
-      width: 30vw;
     }
   }
 }
 
-@media (max-width: 960px) { // the bottom transition shapes are smaller on mobile devices to look better
-  .about_banner_transition_left {
-    width: 20vw;
-  }
-  .about_banner_transition_right {
+// the bottom transition shapes are smaller on mobile devices to look better
+@media (max-width: 960px) {
+  .about_banner_transition::before,
+  .about_banner_transition::after {
     width: 20vw;
   }
 }
 
-@media (max-width: 720px) { // adjusting too big text
+// adjusting too big text
+@media (max-width: 720px) {
   .about_banner_content {
     font-size: 2.2rem;
 
-    span {
+    em {
       font-size: 2.4rem;
     }
   }
 }
 
-@media (max-width: 420px) {
-  .about_banner {
-    min-height: 480px;
-  }
-}
-
+// larger height on small screens to prevent overflow
 @media (max-width: 340px) {
   .about_banner {
-    min-height: 520px;
+    min-height: 610px;
   }
 }
 
-@media (max-width: 310px) {
-  .about_banner {
-    min-height: 560px;
-  }
-}
-
-@media (max-width: 256px) {
-  .about_banner {
-    min-height: 620px;
-  }
-}
-
-@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+// hides all at too small screens in order to show no responsive bugs
+@media (max-width: 240px) {
   .about_banner {
     display: none;
   }

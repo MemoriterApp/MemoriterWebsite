@@ -6,6 +6,7 @@
   width: calc(100% + 16px);
   height: calc(100vh - 62px);
   min-height: 540px; // fixes issues for screens not high enough
+  color: var(--color-font);
   margin: 54px -8px 64px;
   background: var(--color-banner-gradient);
   overflow: hidden;
@@ -41,7 +42,6 @@
 
     // text for slogan
     p {
-      color: var(--color-font);
       width: 80vw;
       max-width: 800px;
       font-style: italic;

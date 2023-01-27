@@ -12,44 +12,38 @@ const ProductBanner: FC = () => {
     const scroll: number = document.documentElement.scrollTop;
     const height: number =
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
     const scrolled: number = (scroll / height) * 100;
-
     setScrollProgress(scrolled);
   };
 
   // the useEffect is important for getting the value if it is scrolling
   useEffect((): any => {
     window.addEventListener('scroll', onScroll);
-
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
     <section className={styles.product_banner}>
-      {/* background triangles */}
+      {/* background triangles, size changes when you scroll down or hover over the button */}
       <div
         className={styles.product_banner_triangle_top}
         style={{
-          right: `calc(-1 * ${scrollProgress}vh - ${triangleEffect}vh`,
+          right: `calc(-1.5 * ${scrollProgress}vh - ${triangleEffect}vh`,
           transition: triangleTransition,
         }}
       />
       <div
         className={styles.product_banner_triangle_bottom}
         style={{
-          left: `calc(-1 * ${scrollProgress}vh - ${triangleEffect}vh`,
+          left: `calc(-1.5 * ${scrollProgress}vh - ${triangleEffect}vh`,
           transition: triangleTransition,
         }}
       />
-      {/* the size of the triangles changes a bit when you scroll down and when hovering over the get started button */}
 
       {/* content */}
       <article className={styles.product_banner_content}>
         {/* slogan */}
-        <p>
-          Study Better, Faster, Smarter - Study with Memoriter!
-        </p>
+        <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
         <p>
           Work with Memoriter effective memorizing, tools to quickly achieve successful results.
         </p>
