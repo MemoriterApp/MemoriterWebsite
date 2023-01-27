@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react';
 import * as styles from '../../styles/product/product-stories.module.scss';
 
 const ProductStories: FC = () => {
-
-  const stories: { number: number; author: string; quote: string }[] = [ // array with all story data
+  // array with all story data
+  const stories: { number: number; author: string; quote: string }[] = [
     {
       number: 0,
       author: 'Harry',
@@ -29,78 +29,73 @@ const ProductStories: FC = () => {
   const [textAreaAnimation, setTextAreaAnimation] = useState<string>('1'); // value used for the animation on next or previous story
   const [dotAnimation, setDotAnimation] = useState<string>('var(--color-highlight-gradient-green)');
 
-  const previousStory = (): void => { // function for switching to previous story
-    setTextAreaAnimation('0'); // fade out effect
+  // function for switching to previous story
+  const previousStory = (): void => {
+    showAnimation(); // display animated transition
     setTimeout(() => {
-      setTextAreaAnimation('1');
-    }, 400); // fade in effect
-
-    setDotAnimation('var(--color-hover)'); // dot fade out
-    setTimeout(() => {
-      setDotAnimation('var(--color-highlight-gradient-green)');
-    }, 400); // dot fade in
-
-    setTimeout(() => { // timeout needed for correctly executed animation
-      if (number === 0) { // if the first story is shown it switches to the last one
+      // timeout needed for correctly executed animation
+      if (number === 0) {
+        // if the first story is shown it switches to the last one
         setNumber(stories.length - 1);
-      } else { // else it switches to the previous one
+      } else {
+        // else it switches to the previous one
         setNumber(number - 1);
       }
     }, 400);
   };
 
-  const nextStory = (): void => { // function for switching to next story
-    setTextAreaAnimation('0'); // fade out effect
+  // function for switching to next story
+  const nextStory = (): void => {
+    showAnimation(); // display animated transition
     setTimeout(() => {
-      setTextAreaAnimation('1');
-    }, 400); // fade in effect
-
-    setDotAnimation('var(--color-hover)'); // dot fade out
-    setTimeout(() => {
-      setDotAnimation('var(--color-highlight-gradient-green)');
-    }, 400); // dot fade in
-
-    setTimeout(() => { // timeout needed for correctly executed animation
-      if (number === stories.length - 1) { // if the first story is shown it switches to the last one
+      // timeout needed for correctly executed animation
+      if (number === stories.length - 1) {
+        // if the first story is shown it switches to the last one
         setNumber(0);
-      } else { // else it switches to the previous one
+      } else {
+        // else it switches to the previous one
         setNumber(number + 1);
       }
     }, 400);
   };
 
-  const chosenStory = (story: { number: number }): void => { // function for switching to the story of the clicked dot
-    setTextAreaAnimation('0'); // fade out effect
-    setTimeout(() => {
-      setTextAreaAnimation('1');
-    }, 400); // fade in effect
-
-    setDotAnimation('var(--color-hover)'); // dot fade out
-    setTimeout(() => {
-      setDotAnimation('var(--color-highlight-gradient-green)');
-    }, 400); // dot fade in
-
+  // function for switching to the story of the clicked dot
+  const chosenStory = (story: { number: number }): void => {
+    showAnimation(); // display animated transition
     setTimeout(() => {
       setNumber(story.number);
     }, 400); // timeout needed for correctly executed animation
   };
 
+  // animated transition when the story changes
+  const showAnimation = (): void => {
+    setTextAreaAnimation('0'); // fade out effect
+    setTimeout(() => {
+      setTextAreaAnimation('1');
+    }, 400); // fade in effect
+    setDotAnimation('var(--color-hover)'); // dot fade out
+    setTimeout(() => {
+      setDotAnimation('var(--color-highlight-gradient-green)');
+    }, 400); // dot fade in
+  };
+
   return (
     <section className={styles.product_stories}>
-      <div className={styles.product_stories_textarea}>
-        {/*the values from the array are used here*/}
-        <article style={{ opacity: textAreaAnimation, transition: 'opacity 400ms' }}>
-          {/*style used for animation*/}
-          <p className={styles.product_stories_textarea_quote}>{stories[number].quote}</p>
-          <p className={styles.product_stories_textarea_author}>- {stories[number].author}</p>
-        </article>
-      </div>
+      <figure className={styles.product_stories_textarea}>
+        {/* the values from the array are used here, style used for animation */}
+        <blockquote style={{ opacity: textAreaAnimation, transition: 'opacity 400ms' }}>
+          {stories[number].quote}
+        </blockquote>
+        <figcaption style={{ opacity: textAreaAnimation, transition: 'opacity 400ms' }}>
+          - {stories[number].author}
+        </figcaption>
+      </figure>
 
-      {/*buttons for switching to next or previous*/}
-      <button className={styles.product_stories_arrow_left} onClick={previousStory} />
-      <button className={styles.product_stories_arrow_right} onClick={nextStory} />
+      {/* buttons for switching to next or previous */}
+      <button className={styles.product_stories_arrow} onClick={() => previousStory()} />
+      <button className={styles.product_stories_arrow} onClick={() => nextStory()} />
 
-      {/*the bar of dots at the bottom for selecting a story*/}
+      {/* the bar of dots at the bottom for selecting a story */}
       <div className={styles.product_stories_dots}>
         {stories.map((story) =>
           story.number === number ? ( // dot for the current story is highlighted

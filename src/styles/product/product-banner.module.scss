@@ -51,7 +51,7 @@
       margin: 0 0 2.4rem 0;
 
       // text under the main text
-      &:nth-of-type(2) {
+      &:last-of-type {
         font: 1.4rem var(--font-default);
         text-align: center;
         line-height: 2rem;
@@ -136,7 +136,7 @@
   .product_banner_content p {
     font-size: 2.2rem;
 
-    &:nth-of-type(2) {
+    &:last-of-type {
       font-size: 1.2rem;
     }
   }
@@ -155,7 +155,7 @@
     &_content p {
       font-size: 1.6rem;
 
-      &:nth-of-type(2) {
+      &:last-of-type {
         line-height: 1.8rem;
       }
     }

@@ -39,16 +39,12 @@
     width: 80vw;
     max-width: 800px;
     color: var(--color-font);
-    font-style: italic;
-    font-size: 3.2rem;
-    font-family: var(--font-serif);
+    font: italic 3.2rem var(--font-serif);
     text-align: center;
 
     // highlighted words
     em {
-      font-size: 3.4rem;
-      font-family: var(--font-heading);
-      font-style: normal;
+      font: 3.4rem var(--font-heading);
       margin-inline: 4px -4px;
       background: var(--color-highlight-gradient);
       background-clip: text;

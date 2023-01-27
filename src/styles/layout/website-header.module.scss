@@ -111,12 +111,12 @@
     }
 
     // language button
-    &:nth-of-type(1) {
+    &:first-of-type {
       right: 305px;
     }
 
     // theme button
-    &:nth-of-type(2) {
+    &:last-of-type {
       right: 255px;
     }
   }
@@ -255,11 +255,11 @@
     }
   }
 
-  .website_header_settings_button:nth-of-type(1) {
+  .website_header_settings_button:first-of-type {
     right: 300px;
   }
 
-  .website_header_settings_button:nth-of-type(2) {
+  .website_header_settings_button:last-of-type {
     right: 245px;
   }
 
@@ -313,11 +313,11 @@
     top: 375px;
     transform: translate(-50%, -50%);
 
-    &:nth-of-type(1) {
+    &:first-of-type {
       right: 50px;
     }
 
-    &:nth-of-type(2) {
+    &:last-of-type {
       right: 3px;
     }
   }
