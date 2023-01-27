@@ -144,16 +144,16 @@
     bottom: 0;
     transform: translate(-50%);
     gap: 8px;
-  }
 
-  // single dots
-  &_dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; // circle shape
-    background-color: var(--color-hover);
-    cursor: pointer;
-    transition: 400ms;
+    // single dots
+    > div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%; // circle shape
+      background-color: var(--color-hover);
+      cursor: pointer;
+      transition: 400ms;
+    }
   }
 }
 

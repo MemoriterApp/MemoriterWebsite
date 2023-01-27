@@ -100,13 +100,11 @@ const ProductStories: FC = () => {
         {stories.map((story) =>
           story.number === number ? ( // dot for the current story is highlighted
             <div
-              className={styles.product_stories_dot}
               key={story.number}
               style={{ background: dotAnimation }}
             />
           ) : (
             <div
-              className={styles.product_stories_dot}
               key={story.number}
               onClick={() => chosenStory(story)}
             />
