@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   color: var(--color-font);
   max-width: 1200px;
   gap: 128px;
@@ -79,7 +79,7 @@
     display: flex;
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: fit-content;
     gap: 40px;
     margin-top: 40px;
@@ -133,7 +133,7 @@
     &_phone_image {
       position: relative;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       margin-bottom: -40px;
     }
 
@@ -172,7 +172,7 @@
     }
 
     &_phone_image {
-      transform: translate(-50%) scale(0.9);
+      transform: translateX(-50%) scale(0.9);
     }
 
     &_buttons {
@@ -204,7 +204,7 @@
 
 @media (max-width: 280px) { // makes phone image smaller to fit on smaller screens
   .download_mobile_phone_image {
-    transform: translate(-50%) scale(0.6);
+    transform: translateX(-50%) scale(0.6);
   }
 }
 

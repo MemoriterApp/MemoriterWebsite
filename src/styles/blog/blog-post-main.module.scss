@@ -4,7 +4,7 @@
   position: relative;
   left: 50%;
   top: 180px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: 100%;
   max-width: 2400px;
   margin-bottom: 240px;
@@ -13,7 +13,7 @@
   article { // main text
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     max-width: 48%;
     font-size: 1.3rem;
     color: var(--color-font);

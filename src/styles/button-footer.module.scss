@@ -4,7 +4,7 @@
 .button_footer {
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: 800px;
   max-width: calc(100% - 40px);
   margin-top: 200px;
@@ -71,14 +71,14 @@
     &_windows {
       position: absolute;
       left: calc(50% - 130px);
-      transform: translate(-50%);
+      transform: translateX(-50%);
     }
 
     // position for the download for mac button
     &_mac {
       position: absolute;
       left: calc(50% + 130px);
-      transform: translate(-50%);
+      transform: translateX(-50%);
     }
   }
 
@@ -96,7 +96,7 @@
     position: relative;
     width: 280px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     background-color: var(--color-transparent);
     border: none;
     cursor: pointer;
@@ -171,7 +171,7 @@
 
     &_text {
       left: 50%;
-      transform: translate(-50%, 0);
+      transform: translateX(-50%);
     }
   }
 }

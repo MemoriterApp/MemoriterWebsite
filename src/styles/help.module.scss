@@ -4,7 +4,7 @@
   position: relative;
   left: 50%;
   top: 120px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: calc(100% - 320px);
   max-width: 2400px;
   padding: 40px 60px 80px 60px;
@@ -39,7 +39,7 @@
   position: relative;
   left: 50%;
   top: 120px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: 100%;
   max-width: 2400px;
   padding-top: 36px;
@@ -97,7 +97,7 @@
     position: absolute;
     right: 24px;
     top: 28px;
-    transform: translate(0, -50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     width: 14px;
     height: 14px;
     border-bottom: 2px solid var(--color-font-gray);

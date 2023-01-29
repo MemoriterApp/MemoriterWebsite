@@ -3,7 +3,7 @@
 .blog_post_footer { // layout container with everything inside
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   max-width: calc(48% + 200px);
   padding-bottom: 40px;
   margin-bottom: 250px;
@@ -90,7 +90,7 @@
     }
 
     &_outside { // tag and date text outside the box
-      transform: translate(0, 4px);
+      transform: translateY(4px);
       font-family: var(--font-default);
       color: var(--color-font-gray);
     }

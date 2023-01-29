@@ -4,7 +4,7 @@
 .default_main {
   position: relative;
   left: 50%; // centering the content on too large screens
-  transform: translate(-50%);
+  transform: translateX(-50%);
   max-width: 1400px; // looks better on large screen
   color: var(--color-font);
   margin-bottom: 120px;
@@ -26,7 +26,7 @@
   &_top_text {
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 840px;
     max-width: calc(100% - 40px);
     font: 1.6rem var(--font-default);
@@ -40,7 +40,7 @@
   &_top_video {
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 1000px;
     max-width: calc(100% - 40px);
     margin-bottom: 120px;
@@ -148,7 +148,7 @@
     display: flex; // creates the column layout
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: fit-content;
     gap: 100px; // gaps between child items
     margin: 80px 0 240px;
@@ -176,7 +176,7 @@
     &_image {
       position: relative;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       height: 100px;
     }
 
@@ -184,7 +184,7 @@
     &_text {
       position: relative;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       width: 200px;
       font: 1.4rem var(--font-default);
       line-height: 2rem;

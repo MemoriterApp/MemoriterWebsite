@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import * as styles from '../../styles/about/about-team.module.scss';
-import placeholderImage from '../../images/about/placeholder.jpg';
 
 const AboutTeam: FC = () => {
   return (
@@ -19,7 +19,7 @@ const AboutTeam: FC = () => {
               website and the app.
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -31,7 +31,7 @@ const AboutTeam: FC = () => {
               our shitty legacy code.
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
       </div>
 
@@ -45,7 +45,7 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -57,7 +57,7 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
       </div>
 
@@ -71,7 +71,7 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -83,14 +83,17 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
         </article>
       </div>
 
-      <AnimationOnScroll animateIn={styles.about_team_animation_fade_in_down} animateOut={styles.about_team_animation_fade_in_down}>
-          <p className={styles.about_team_end}>
-              By <em>Students</em> for <em>Students</em>.
-                </p>
+      <AnimationOnScroll
+        animateIn={styles.about_team_animation_fade_in_down}
+        animateOut={styles.about_team_animation_fade_in_down}
+      >
+        <p className={styles.about_team_end}>
+          By <em>Students</em> for <em>Students</em>.
+        </p>
       </AnimationOnScroll>
     </section>
   );

@@ -62,7 +62,7 @@
     transition: color 200ms, transform 400ms;
 
     &:hover { // hover effect
-      transform: translate(4px);
+      transform: translateX(4px);
       color: var(--color-font-gray);
     }
   }
@@ -198,7 +198,7 @@
     left: 50%;
     top: unset;
     bottom: 0;
-    transform: translate(-50%);
+    transform: translateX(-50%);
   }
 
   .website_footer_bottom_box_language {

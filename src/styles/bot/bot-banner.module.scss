@@ -57,7 +57,7 @@
   &_button { // download button, needed to be split in multiple classes, this class is for the positionig of the button
     position: relative;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     font-size: 1.6rem;
     color: var(--color-white);
     font-family: var(--font-highlight);
@@ -124,7 +124,7 @@
     }
 
     .bot_banner_icon {
-      transform: translate(0, 40px);
+      transform: translateY(40px);
       width: 360px;
       height: 360px;
     }

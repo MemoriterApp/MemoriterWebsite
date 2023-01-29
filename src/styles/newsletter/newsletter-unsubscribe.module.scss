@@ -52,7 +52,7 @@
   &_error { // error message popup
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 108px);
     color: var(--color-white);
     font-family: var(--font-default);
@@ -94,7 +94,7 @@
   &_input { // email input field
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 108px);
     height: 42px;
     color: var(--color-font);
@@ -111,7 +111,7 @@
   &_button { // send email button
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 80px);
     height: 42px;
     text-align: center;
@@ -131,7 +131,7 @@
     &_text { // text which is not supposed to change color on hover
       position: absolute;
       top: 8px;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       color: var(--color-white);
       font-size: 1.4rem;
       font-family: var(--font-highlight);

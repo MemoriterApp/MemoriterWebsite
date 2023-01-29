@@ -4,7 +4,7 @@
 .product_stories {
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: calc(100% - 40px);
   max-width: 850px;
   height: 425px;
@@ -16,7 +16,7 @@
   &_textarea {
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 150px);
     height: calc(100% - 40px);
     margin: 0;
@@ -54,7 +54,7 @@
   &_arrow {
     position: absolute;
     top: calc(50% - 20px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     width: 36px;
     height: 64px;
     background-color: var(--color-transparent);
@@ -142,7 +142,7 @@
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     gap: 8px;
 
     // single dots

@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: calc(100% - 140px);
   max-width: 2400px;
   gap: 80px;
@@ -77,7 +77,7 @@
     }
 
     &_outside { // tag and date text outside the box
-      transform: translate(0, 4px);
+      transform: translateY(4px);
       font-family: var(--font-default);
       color: var(--color-font-gray);
     }
@@ -117,7 +117,7 @@
   &_button { // load more button
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 164px;
     font-size: 1.6rem;
     color: var(--color-font);

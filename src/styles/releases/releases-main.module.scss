@@ -7,7 +7,7 @@
     position: relative;
     left: 50%;
     top: 160px;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 320px);
     max-width: 2400px;
     font-size: 2.8rem;
@@ -23,7 +23,7 @@
     position: relative;
     top: 60px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 164px;
     font-size: 1.6rem;
     color: var(--color-font);
