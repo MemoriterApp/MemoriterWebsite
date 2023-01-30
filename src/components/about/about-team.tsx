@@ -8,9 +8,13 @@ const AboutTeam: FC = () => {
     <section className={styles.about_team}>
       <h1 className={styles.about_team_title}>Our Team</h1>
 
-      {/* member cards */}
+      {/* team member cards */}
       <div className={styles.about_team_container}>
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Johan T.</h2>
             <p>
@@ -19,10 +23,18 @@ const AboutTeam: FC = () => {
               website and the app.
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
 
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Simon H.</h2>
             <p>
@@ -31,12 +43,20 @@ const AboutTeam: FC = () => {
               our shitty legacy code.
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
       </div>
 
       <div className={styles.about_team_container}>
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Alexander I.</h2>
             <p>
@@ -45,10 +65,18 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
 
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Ale F.</h2>
             <p>
@@ -57,12 +85,20 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
       </div>
 
       <div className={styles.about_team_container}>
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Saga B.</h2>
             <p>
@@ -71,10 +107,18 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
 
-        <article className={styles.about_team_card}>
+        <AnimationOnScroll
+          className={styles.about_team_card}
+          animateIn={styles.about_team_animation_fade_in_down}
+          animateOut={styles.about_team_animation_fade_in_down}
+        >
           <div>
             <h2>Simon K.</h2>
             <p>
@@ -83,8 +127,12 @@ const AboutTeam: FC = () => {
               accusam
             </p>
           </div>
-          <StaticImage src='../../images/about/placeholder-square.jpg' alt='placeholder' />
-        </article>
+          <StaticImage
+            className={styles.about_team_card_image}
+            src='../../images/about/placeholder-square.jpg'
+            alt='placeholder'
+          />
+        </AnimationOnScroll>
       </div>
 
       <AnimationOnScroll
@@ -92,7 +140,7 @@ const AboutTeam: FC = () => {
         animateOut={styles.about_team_animation_fade_in_down}
       >
         <p className={styles.about_team_end}>
-          By <em>Students</em> for <em>Students</em>.
+          For <em>Students</em> by <em>Students</em>.
         </p>
       </AnimationOnScroll>
     </section>

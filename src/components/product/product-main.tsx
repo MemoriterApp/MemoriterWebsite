@@ -36,7 +36,7 @@ const ProductMain: FC = () => {
           </p>
         </AnimationOnScroll>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/product/placeholder.jpg'
           alt='placeholder'
         />
@@ -94,11 +94,11 @@ const ProductMain: FC = () => {
       </article>
 
       <article className={styles.default_main_container}>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
           animateIn={styles.default_main_animation_fade_in_left}
@@ -153,19 +153,19 @@ const ProductMain: FC = () => {
             </li>
           </ul>
         </AnimationOnScroll>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
       </article>
 
       <article className={styles.default_main_container}>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
           animateIn={styles.default_main_animation_fade_in_left}
@@ -220,11 +220,11 @@ const ProductMain: FC = () => {
             allowing you to effortlessly remember thousands of flashcards with ease.
           </p>
         </AnimationOnScroll>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
       </article>
 
       {/* three small overview items */}
@@ -276,11 +276,11 @@ const ProductMain: FC = () => {
       </article>
 
       <article className={styles.default_main_container}>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
           animateIn={styles.default_main_animation_fade_in_left}
@@ -314,11 +314,11 @@ const ProductMain: FC = () => {
             to make education more affordable for all.
           </p>
         </AnimationOnScroll>
-          <StaticImage
-            className={styles.default_main_container_sub_image}
-            src='../../images/product/placeholder.jpg'
-            alt='placeholder'
-          />
+        <StaticImage
+          className={styles.default_main_container_image}
+          src='../../images/product/placeholder.jpg'
+          alt='placeholder'
+        />
       </article>
     </section>
   );

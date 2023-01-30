@@ -42,12 +42,16 @@
       line-height: 1.8rem;
     }
 
-    // card image
-    img {
+    // card image container
+    &_image {
       position: relative;
-      min-height: 160px;
-      margin-top: -80px; // fixes an issue with the gatsby image optimization plugin
-      border-radius: 4px;
+      width: 160px;
+      min-width: 160px; // small fix
+
+      // image itself
+      img {
+        border-radius: 4px;
+      }
     }
   }
 
@@ -60,7 +64,7 @@
     max-width: 800px;
     font: italic 3.2rem var(--font-serif);
     text-align: center;
-    margin: 240px 0 200px;
+    margin: 180px 0 200px;
 
     // highlighted words
     em {
@@ -126,11 +130,6 @@
       flex-direction: column-reverse;
       margin-top: 60px;
       gap: 12px;
-
-      img {
-        justify-self: center;
-        height: 160px;
-      }
     }
   }
 }
@@ -142,7 +141,7 @@
 // the items move a bit down and get visible
 @keyframes fade-in-down {
   from {
-    transform: translateY(30%);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
@@ -162,7 +161,7 @@
     opacity: 1;
   }
   to {
-    transform: translateY(-30%);
+    transform: translateY(-40px);
     opacity: 0;
   }
 }

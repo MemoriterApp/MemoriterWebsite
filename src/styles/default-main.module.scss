@@ -67,17 +67,17 @@
     &_sub {
       flex-basis: 45%;
       align-self: center;
+    }
+    
+    // sub containers with the image inside
+    &_image {
+      flex-basis: 55%;
+      align-self: center;
+      width: 100%;
 
-      // sub containers with the image inside
-      &_image {
-        flex-basis: 55%;
-        align-self: center;
-        width: 100%;
-
-        // image rounded corners
-        img {
-          border-radius: 4px;
-        }
+      // image rounded corners
+      img {
+        border-radius: 4px;
       }
     }
   }
@@ -263,7 +263,7 @@
 // the items move a bit to the left and get visible
 @keyframes fade-in-right {
   from {
-    transform: translateX(8%);
+    transform: translateX(40px);
     opacity: 0;
   }
   to {
@@ -283,7 +283,7 @@
     opacity: 1;
   }
   to {
-    transform: translateX(8%);
+    transform: translateX(40px);
     opacity: 0;
   }
 }
@@ -295,7 +295,7 @@
 // the items move a bit to the right and get visible
 @keyframes fade-in-left {
   from {
-    transform: translateX(-8%);
+    transform: translateX(-40px);
     opacity: 0;
   }
   to {
@@ -315,7 +315,7 @@
     opacity: 1;
   }
   to {
-    transform: translateX(-8%);
+    transform: translateX(-40px);
     opacity: 0;
   }
 }

@@ -24,7 +24,7 @@ const BotMain: FC = () => {
           </p>
         </AnimationOnScroll>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/bot/placeholder.jpg'
           alt='placeholder'
         />
@@ -32,7 +32,7 @@ const BotMain: FC = () => {
 
       <article className={styles.default_main_container}>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/bot/placeholder.jpg'
           alt='placeholder'
         />
@@ -72,7 +72,7 @@ const BotMain: FC = () => {
           </p>
         </AnimationOnScroll>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/bot/placeholder.jpg'
           alt='placeholder'
         />

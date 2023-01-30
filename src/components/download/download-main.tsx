@@ -20,7 +20,7 @@ const DownloadMain: FC = () => {
 
       <article className={styles.default_main_container}>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/download/placeholder.jpg'
           alt='placeholder'
         />
@@ -52,7 +52,7 @@ const DownloadMain: FC = () => {
           </p>
         </AnimationOnScroll>
         <StaticImage
-          className={styles.default_main_container_sub_image}
+          className={styles.default_main_container_image}
           src='../../images/download/placeholder.jpg'
           alt='placeholder'
         />

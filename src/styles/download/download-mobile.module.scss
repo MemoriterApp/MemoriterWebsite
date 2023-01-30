@@ -221,7 +221,7 @@
 }
 @keyframes fade-in-down { // the items move a bit down and get visible
   from {
-    transform: translateY(6%);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
@@ -239,7 +239,7 @@
     opacity: 1;
     }
   to {
-    transform: translateY(-6%);
+    transform: translateY(-40px);
     opacity: 0;
   }
 }
