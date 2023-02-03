@@ -70,7 +70,36 @@
       flex-grow: 1;
     }
 
-    // social media links and newsletter
+    // social media links
+    &_social {
+      margin: 45px 36px 0 0;
+      height: 32px;
+
+      // social media icon links
+      a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        color: var(--color-font-gray);
+        margin-inline: 8px;
+        border-radius: 4px;
+        transition: background-color 200ms;
+
+        // circle hover effect
+        &:hover {
+          background-color: var(--color-hover-light);
+        }
+
+        // actual icon
+        img {
+          transform: translate(12.5%, 12.5%); // centers the icon
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+
+    // newsletter subscription box
     &_newsletter {
       // input field for email
       input {

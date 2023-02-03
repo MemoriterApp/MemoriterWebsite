@@ -7,6 +7,12 @@ import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
 import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
 import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
+import instagramIconLight from '../../images/icons/instagram-icon-light.svg';
+import instagramIconDark from '../../images/icons/instagram-icon-dark.svg';
+import discordIconLight from '../../images/icons/discord-icon-light.svg';
+import discordIconDark from '../../images/icons/discord-icon-dark.svg';
+import githubIconLight from '../../images/icons/github-icon-light.svg';
+import githubIconDark from '../../images/icons/github-icon-dark.svg';
 
 // type definition for props
 interface Props {
@@ -45,7 +51,18 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
           />
           <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
         </div>
-        <div className={styles.website_footer_top_gap}/>
+        <div className={styles.website_footer_top_gap} />
+        <div className={styles.website_footer_top_social}>
+          <a href='https://instagram.com' target='_blank' rel='noreferrer'>
+            <img src={themeText === 'dark' ? instagramIconLight : instagramIconDark} alt='Github' />
+          </a>
+          <a href='https://discord.com' target='_blank' rel='noreferrer'>
+            <img src={themeText === 'dark' ? discordIconLight : discordIconDark} alt='Github' />
+          </a>
+          <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
+            <img src={themeText === 'dark' ? githubIconLight : githubIconDark} alt='Github' />
+          </a>
+        </div>
         <div className={styles.website_footer_top_newsletter}>
           <form onSubmit={(event) => event.preventDefault()}>
             <p>Subscribe to our newsletter</p>
