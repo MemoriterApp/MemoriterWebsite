@@ -45,8 +45,13 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
           />
           <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
         </div>
-        <div className={styles.website_footer_top_social}>
-          
+        <div className={styles.website_footer_top_gap}/>
+        <div className={styles.website_footer_top_newsletter}>
+          <form onSubmit={(event) => event.preventDefault()}>
+            <p>Subscribe to our newsletter</p>
+            <input type='email' placeholder='Email address' />
+            <button type='submit'>=</button>
+          </form>
         </div>
       </section>
 

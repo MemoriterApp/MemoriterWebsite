@@ -41,20 +41,20 @@
 
   // bar before the navigation links
   &_top {
+    display: flex;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 160px);
     max-width: 1400px;
+    font: 0.8rem var(--font-default);
+    color: var(--color-font-gray);
+    line-height: 1.2rem;
     margin-top: 60px;
-    background-color: red;
 
     // project logo on the left
     &_logo {
       width: 240px;
-      font: 0.8rem var(--font-default);
-      color: var(--color-font-gray);
-      line-height: 1.2rem;
       
       // actual logo
       img {
@@ -65,10 +65,34 @@
       }
     }
 
+    // gap between left and right section
+    &_gap {
+      flex-grow: 1;
+    }
+
     // social media links and newsletter
-    &_social {
-      position: relative;
-      right: 0;
+    &_newsletter {
+      // input field for email
+      input {
+        width: 160px;
+        height: 12px;
+        font: 1rem var(--font-default);
+        color: var(--color-font);
+        padding: 10px;
+        background-color: var(--color-hover-light);
+        border: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+      }
+
+      // submit button
+      button {
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
     }
   }
 
