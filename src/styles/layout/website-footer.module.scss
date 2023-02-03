@@ -1,34 +1,83 @@
 // These styles are used for the product page (formerly known as start page) footer and some similar pages.
 
-.website_footer { // basic footer styles
+// basic footer container
+.website_footer {
   position: absolute;
   margin-top: auto;
   left: 0;
   width: 100%;
   background-color: var(--color-background-dark);
 
-  &_transition_left { // trapezoid shape at the top left
+  // shape at the top for a better transition between sections
+  &_transition {
     position: absolute;
     left: 0;
-    top: -50px;
-    border-right: 50px solid var(--color-transparent);
-    border-bottom: 50px solid var(--color-background-dark);
-    height: 0;
-    width: 30vw;
+    top: -40px;
+    width: 100%;
+
+    // actual shapes
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 0;
+      width: 30vw;
+      border-bottom: 40px solid var(--color-background-dark);
+    }
+
+    // trapezoid shape at the top left
+    &::before {
+      left: 0;
+      border-right: 40px solid var(--color-transparent);
+    }
+
+    // trapezoid shape at the top right
+    &::after {
+      right: 0;
+      border-left: 40px solid var(--color-transparent);
+    }
   }
 
-  &_transition_right { // trapezoid shape at the top right
-    position: absolute;
-    right: 0;
-    top: -50px;
-    border-left: 50px solid var(--color-transparent);
-    border-bottom: 50px solid var(--color-background-dark);
-    height: 0;
-    width: 30vw;
+  // bar before the navigation links
+  &_top {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    margin-top: 60px;
+    background-color: red;
+
+    // project logo on the left
+    &_logo {
+      width: 240px;
+      font: 0.8rem var(--font-default);
+      color: var(--color-font-gray);
+      line-height: 1.2rem;
+      
+      // actual logo
+      img {
+        height: 35px;
+        font: 1.4rem var(--font-highlight);
+        color: var(--color-font);
+        line-height: 2.2rem;
+      }
+    }
+
+    // social media links and newsletter
+    &_social {
+      position: relative;
+      right: 0;
+    }
   }
+
+
+
+
 
   &_content { // values for setting up the column layout
-    display: flex; // display: flex creates columns
+    display: flex;
     gap: 20px;
     padding: 80px 8% 180px 8%;
 

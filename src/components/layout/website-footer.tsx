@@ -4,13 +4,12 @@ import * as styles from '../../styles/layout/website-footer.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnyAction, Dispatch } from '@reduxjs/toolkit';
 import { changeTheme } from '../../features/theme-slice';
-import youtubeIcon from '../../images/icons/youtube-icon.svg';
-import twitterIcon from '../../images/icons/twitter-icon.svg';
-import instagramIcon from '../../images/icons/instagram-icon.svg';
-import newsletterIcon from '../../images/icons/email-icon.svg';
 import cookies from '../../utils/cookies';
+import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
+import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
 
-interface Props { // type definition for props
+// type definition for props
+interface Props {
   onOpenLanguageSelect: () => void;
   onOpenCookieSettings: () => void;
 }
@@ -20,26 +19,40 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
   const themeText: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
 
-  const onChangeTheme = (theme: string): void => { // function to swap the current theme
+  // function to swap the current theme
+  const onChangeTheme = (theme: string): void => {
     dispatch(changeTheme(theme)); // changes the theme
-
+    // checks if functional cookies are accepted
     if (
       cookies.getCookie('accepted-cookies') &&
       JSON.parse(cookies.getCookie('accepted-cookies')).functional
-    ) { // checks if functional cookies are accepted
+    ) {
       localStorage.setItem('theme', theme); // if functional cookies are accepted, then the theme can be saved to localStorage
     }
   };
 
   return (
     <footer className={styles.website_footer}>
-      {/*transition shape at the top*/}
-      <div className={styles.website_footer_transition_left} />
-      <div className={styles.website_footer_transition_right} />
+      {/* transition shape at the top */}
+      <div className={styles.website_footer_transition} />
 
-      {/*columns of content*/}
+      {/* bar with project logo on the left ans social media at the right */}
+      <section className={styles.website_footer_top}>
+        <div className={styles.website_footer_top_logo}>
+          <img
+            src={themeText === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            alt='Memoriter'
+          />
+          <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
+        </div>
+        <div className={styles.website_footer_top_social}>
+          
+        </div>
+      </section>
+
+      {/* columns of content */}
       <section className={styles.website_footer_content}>
-        {/*lists of footer links*/}
+        {/* lists of footer links */}
         <nav>
           <p className={styles.website_footer_heading}>App</p>
           <a className={styles.website_footer_link} href='https://app.memoriter.de/login'>
@@ -57,7 +70,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         </nav>
 
         <nav>
-          <p className={styles.website_footer_heading}>Company</p>
+          <p className={styles.website_footer_heading}>Project</p>
           <Link className={styles.website_footer_link} to='/'>
             Product
           </Link>
@@ -101,11 +114,12 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
           </Link>
           <span className={styles.website_footer_link} onClick={() => onOpenCookieSettings()}>
             Cookie Settings
-          </span> {/*opens cookie settings banner*/}
+          </span>
+          {/* opens cookie settings banner */}
         </nav>
 
         <nav>
-          {/*mostly external links*/}
+          {/* mostly external links */}
           <p className={styles.website_footer_heading}>Follow Us</p>
           <a
             className={styles.website_footer_link}
@@ -137,15 +151,12 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         </nav>
       </section>
 
-      {/*box at the bottom with social media links and other buttons*/}
+      {/* box at the bottom with social media links and other buttons */}
       <section className={styles.website_footer_bottom_box}>
-        <p className={styles.website_footer_bottom_box_copyright}>©Copyright 2023 Memoriter</p>
+        <p className={styles.website_footer_bottom_box_copyright}>© Copyright 2023 Memoriter</p>
 
-        {/*right text uses two classes, one for the hover effect, the theme text depends on the current theme*/}
-        <p
-          className={styles.website_footer_bottom_box_language}
-          onClick={onOpenLanguageSelect}
-        >
+        {/* right text uses two classes, one for the hover effect, the theme text depends on the current theme */}
+        <p className={styles.website_footer_bottom_box_language} onClick={onOpenLanguageSelect}>
           Language: English
         </p>
         {(themeText === 'dark' || !themeText) && (
@@ -164,60 +175,6 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             Theme: Light
           </p>
         )}
-
-        {/*social media icons*/}
-        <div className={styles.website_footer_bottom_box_social_media}>
-          <a
-            className={styles.website_footer_bottom_box_social_media_circle}
-            style={{ left: '0' }}
-            href='https://www.twitter.com/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img
-              className={styles.website_footer_bottom_box_social_media_icon}
-              src={twitterIcon}
-              alt='Twitter'
-            />
-          </a>
-          <a
-            className={styles.website_footer_bottom_box_social_media_circle}
-            style={{ left: '60px' }}
-            href='https://www.youtube.com/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img
-              className={styles.website_footer_bottom_box_social_media_icon}
-              src={youtubeIcon}
-              alt='Youtube'
-            />
-          </a>
-          <a
-            className={styles.website_footer_bottom_box_social_media_circle}
-            style={{ right: '60px' }}
-            href='https://www.instagram.com/memorit.er/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img
-              className={styles.website_footer_bottom_box_social_media_icon}
-              src={instagramIcon}
-              alt='Instagram'
-            />
-          </a>
-          <Link
-            className={styles.website_footer_bottom_box_social_media_circle}
-            style={{ right: '0' }}
-            to='/newsletter'
-          >
-            <img
-              className={styles.website_footer_bottom_box_social_media_icon}
-              src={newsletterIcon}
-              alt='Newsletter'
-            />
-          </Link>
-        </div>
       </section>
     </footer>
   );

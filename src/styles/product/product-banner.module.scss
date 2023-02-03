@@ -102,7 +102,7 @@
     &::after {
       content: '';
       position: absolute;
-      border-bottom: 50px solid var(--color-background);
+      border-bottom: 40px solid var(--color-background);
       height: 0;
       width: 30vw;
     }
@@ -111,14 +111,14 @@
     &::before {
       left: 0;
       bottom: 40px;
-      border-right: 50px solid var(--color-transparent);
+      border-right: 40px solid var(--color-transparent);
     }
 
     // trapezoid shape on the right
     &::after {
       right: 0;
       bottom: 40px;
-      border-left: 50px solid var(--color-transparent);
+      border-left: 40px solid var(--color-transparent);
     }
   }
 }
