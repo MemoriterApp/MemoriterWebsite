@@ -103,6 +103,8 @@
     &_newsletter {
       // input field for email
       input {
+        position: relative;
+        top: -9px;
         width: 160px;
         height: 12px;
         font: 1rem var(--font-default);
@@ -118,9 +120,31 @@
       button {
         width: 32px;
         height: 32px;
+        background-color: var(--color-transparent);
         border: none;
         border-radius: 0 4px 4px 0;
         cursor: pointer;
+        overflow: hidden;
+
+        // send icon
+        img {
+          position: relative;
+          left: 50%;
+          transform: translate(-50%);
+          height: 100%;
+        }
+
+        // background
+        div {
+          position: relative;
+          left: -6px;
+          top: -34px;
+          width: 32px;
+          height: 32px;
+          background: var(--color-highlight-gradient);
+          transition: filter 200ms;
+          z-index: -1;
+        }
       }
     }
   }

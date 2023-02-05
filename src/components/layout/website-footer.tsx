@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Link } from 'gatsby';
 import * as styles from '../../styles/layout/website-footer.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,6 +13,7 @@ import discordIconLight from '../../images/icons/discord-icon-light.svg';
 import discordIconDark from '../../images/icons/discord-icon-dark.svg';
 import githubIconLight from '../../images/icons/github-icon-light.svg';
 import githubIconDark from '../../images/icons/github-icon-dark.svg';
+import sendIcon from '../../images/icons/send-icon.svg';
 
 // type definition for props
 interface Props {
@@ -22,6 +23,8 @@ interface Props {
 
 const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }: Props) => {
   const dispatch: Dispatch<AnyAction> = useDispatch(); // used to manipulate global state (react redux)
+
+  const [onHover, setOnHover] = useState<string>('brightness(1)'); // variable for the hover effect for the newsletter send button
 
   const themeText: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
 
@@ -67,7 +70,14 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
           <form onSubmit={(event) => event.preventDefault()}>
             <p>Subscribe to our newsletter</p>
             <input type='email' placeholder='Email address' />
-            <button type='submit'>=</button>
+            <button
+              type='submit'
+              onMouseEnter={() => setOnHover('brightness(0.75)')}
+              onMouseLeave={() => setOnHover('brightness(1)')}
+            >
+              <img src={sendIcon} />
+              <div style={{ filter: onHover }} />
+            </button>
           </form>
         </div>
       </section>
