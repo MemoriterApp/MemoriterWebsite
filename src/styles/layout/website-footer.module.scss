@@ -72,7 +72,7 @@
 
     // social media links
     &_social {
-      margin: 45px 36px 0 0;
+      margin: 45px 64px 0 0;
       height: 32px;
 
       // social media icon links
@@ -101,15 +101,17 @@
 
     // newsletter subscription box
     &_newsletter {
+      width: 212px;
+
       // input field for email
       input {
-        position: relative;
-        top: -9px;
+        position: absolute;
+        top: 45px;
         width: 160px;
-        height: 12px;
+        height: 30px;
         font: 1rem var(--font-default);
         color: var(--color-font);
-        padding: 10px;
+        padding-inline: 10px;
         background-color: var(--color-hover-light);
         border: none;
         border-radius: 4px 0 0 4px;
@@ -118,6 +120,9 @@
 
       // submit button
       button {
+        position: absolute;
+        right: 0;
+        top: 45px;
         width: 32px;
         height: 32px;
         background-color: var(--color-transparent);
@@ -149,47 +154,52 @@
     }
   }
 
+  // values for setting up the column layout
+  &_content {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    padding: 80px 0 180px;
 
-
-
-
-  &_content { // values for setting up the column layout
-    display: flex;
-    gap: 20px;
-    padding: 80px 8% 180px 8%;
-
-    > * { // layout optimization
-      flex: 1; // used for equal columns
+    // layout optimization
+    > * {
+      display: inline-block;
+      width: 160px;
+      margin-right: 40px;
     }
-  }
 
-  &_heading { // column header
-    background: var(--color-highlight-gradient);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    text-decoration: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--color-transparent);
-  }
+    // column heading
+    h3 {
+      background: var(--color-highlight-gradient);
+      font: 600 1.2rem var(--font-highlight);
+      color: var(--color-font);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
 
-  &_link { // column list items
-    display: block;
-    width: fit-content;
-    font-size: 1.1rem;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    text-decoration: none;
-    line-height: 1.5;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: color 200ms, transform 400ms;
+    // list of links
+    ul {
+      margin-left: -40px;
+      list-style: none; // removes bullet points
+    }
 
-    &:hover { // hover effect
-      transform: translateX(4px);
-      color: var(--color-font-gray);
+    // column list items
+    li, a {
+      font: 1.1rem var(--font-default);
+      color: var(--color-font);
+      text-decoration: none;
+      line-height: 1.5;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color 200ms, transform 400ms;
+  
+      &:hover { // hover effect
+        transform: translateX(4px);
+        color: var(--color-font-gray);
+      }
     }
   }
 

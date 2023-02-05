@@ -86,100 +86,74 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
       <section className={styles.website_footer_content}>
         {/* lists of footer links */}
         <nav>
-          <p className={styles.website_footer_heading}>App</p>
-          <a className={styles.website_footer_link} href='https://app.memoriter.de/login'>
-            Sign In
-          </a>
-          <a className={styles.website_footer_link} href='https://app.memoriter.de/signup'>
-            Register
-          </a>
-          <Link className={styles.website_footer_link} to='/download'>
-            Download
-          </Link>
-          <Link className={styles.website_footer_link} to='/releases'>
-            Release Notes
-          </Link>
+          <h3>Application</h3>
+          <ul>
+            <li>
+              <a href='https://app.memoriter.de/login'>Sign In</a>
+            </li>
+            <li>
+              <a href='https://app.memoriter.de/signup'>Register</a>
+            </li>
+            <li>
+              <Link to='/download'>Download</Link>
+            </li>
+            <li>
+              <Link to='/releases'>Release Notes</Link>
+            </li>
+          </ul>
         </nav>
 
         <nav>
-          <p className={styles.website_footer_heading}>Project</p>
-          <Link className={styles.website_footer_link} to='/'>
-            Product
-          </Link>
-          <Link className={styles.website_footer_link} to='/about'>
-            About
-          </Link>
-          <Link className={styles.website_footer_link} to='/blog'>
-            Blog
-          </Link>
-          <Link className={styles.website_footer_link} to='/donate'>
-            Donate
-          </Link>
+          <h3>Project</h3>
+          <ul>
+            <li>
+              <Link to='/'>Product</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/blog'>Blog</Link>
+            </li>
+            <li>
+              <Link to='/donate'>Donate</Link>
+            </li>
+          </ul>
         </nav>
 
         <nav>
-          <p className={styles.website_footer_heading}>Legal</p>
-          <Link className={styles.website_footer_link} to='/impressum'>
-            Impressum
-          </Link>
-          <Link className={styles.website_footer_link} to='/terms'>
-            Terms of Use
-          </Link>
-          <Link className={styles.website_footer_link} to='/privacy'>
-            Privacy Policy
-          </Link>
-          <Link className={styles.website_footer_link} to='/cookies'>
-            Cookie Policy
-          </Link>
+          <h3>Legal</h3>
+          <ul>
+            <li>
+              <Link to='/impressum'>Impressum</Link>
+            </li>
+            <li>
+              <Link to='/terms'>Terms of Use</Link>
+            </li>
+            <li>
+              <Link to='/privacy'>Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to='/cookies'>Cookie Policy</Link>
+            </li>
+          </ul>
         </nav>
 
         <nav>
-          <p className={styles.website_footer_heading}>Help</p>
-          <Link className={styles.website_footer_link} to='/support'>
-            Support
-          </Link>
-          <Link className={styles.website_footer_link} to='/faq'>
-            FAQ
-          </Link>
-          <Link className={styles.website_footer_link} to='/bugs'>
-            Bug Report
-          </Link>
-          <span className={styles.website_footer_link} onClick={() => onOpenCookieSettings()}>
-            Cookie Settings
-          </span>
-          {/* opens cookie settings banner */}
-        </nav>
-
-        <nav>
-          {/* mostly external links */}
-          <p className={styles.website_footer_heading}>Follow Us</p>
-          <a
-            className={styles.website_footer_link}
-            href='https://www.twitter.com/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Twitter
-          </a>
-          <a
-            className={styles.website_footer_link}
-            href='https://www.youtube.com/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            YouTube
-          </a>
-          <a
-            className={styles.website_footer_link}
-            href='https://www.instagram.com/memorit.er/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Instagram
-          </a>
-          <Link className={styles.website_footer_link} to='/newsletter'>
-            Newsletter
-          </Link>
+          <h3>Help</h3>
+          <ul>
+            <li>
+              <Link to='/support'>Support</Link>
+            </li>
+            <li>
+              <Link to='/faq'>FAQ</Link>
+            </li>
+            <li>
+              <Link to='/bugs'>Bug Report</Link>
+            </li>
+            <li onClick={() => onOpenCookieSettings()}>Cookie Settings</li>
+            {/* opens cookie settings banner */}
+          </ul>
         </nav>
       </section>
 
