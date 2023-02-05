@@ -39,6 +39,11 @@
     }
   }
 
+  // gap between left and right section
+  &_flex_gap {
+    flex-grow: 1;
+  }
+
   // bar before the navigation links
   &_top {
     display: flex;
@@ -47,32 +52,28 @@
     transform: translateX(-50%);
     width: calc(100% - 160px);
     max-width: 1400px;
-    font: 0.8rem var(--font-default);
+    font: 0.9rem var(--font-default);
     color: var(--color-font-gray);
-    line-height: 1.2rem;
+    line-height: 1.4rem;
     margin-top: 60px;
 
     // project logo on the left
     &_logo {
       width: 240px;
-      
+
       // actual logo
       img {
         height: 35px;
         font: 1.4rem var(--font-highlight);
         color: var(--color-font);
         line-height: 2.2rem;
+        margin-bottom: -8px;
       }
-    }
-
-    // gap between left and right section
-    &_gap {
-      flex-grow: 1;
     }
 
     // social media links
     &_social {
-      margin: 45px 64px 0 0;
+      margin: 48px 64px 0 0;
       height: 32px;
 
       // social media icon links
@@ -106,7 +107,7 @@
       // input field for email
       input {
         position: absolute;
-        top: 45px;
+        top: 48px;
         width: 160px;
         height: 30px;
         font: 1rem var(--font-default);
@@ -122,7 +123,7 @@
       button {
         position: absolute;
         right: 0;
-        top: 45px;
+        top: 48px;
         width: 32px;
         height: 32px;
         background-color: var(--color-transparent);
@@ -161,7 +162,7 @@
     transform: translateX(-50%);
     width: calc(100% - 160px);
     max-width: 1400px;
-    padding: 80px 0 180px;
+    padding: 60px 0 140px;
 
     // layout optimization
     > * {
@@ -187,7 +188,8 @@
     }
 
     // column list items
-    li, a {
+    li,
+    a {
       font: 1.1rem var(--font-default);
       color: var(--color-font);
       text-decoration: none;
@@ -195,104 +197,65 @@
       white-space: nowrap;
       cursor: pointer;
       transition: color 200ms, transform 400ms;
-  
-      &:hover { // hover effect
+
+      // hover effect
+      &:hover {
         transform: translateX(4px);
         color: var(--color-font-gray);
       }
     }
   }
 
-  &_bottom_box { // dark box at the bottom
+  // dark box at the bottom
+  &_bottom {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 80px;
     background-color: var(--color-background-dark-plus);
 
-    &_copyright { // copyright text
-      position: absolute;
-      left: 30px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      white-space: nowrap;
-    }
-
-    &_language { // language select at the bottom of the footer
-      position: absolute;
-      right: 160px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      transition: color 200ms;
-      cursor: pointer;
-
-      &:hover { // hover effect for text
-        color: var(--color-font);
-      }
-    }
-
-    &_theme { // the text to change the theme at the bootom of the footer
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      transition: color 200ms;
-      cursor: pointer;
-
-      &_:hover { // hover effect for text
-        color: var(--color-font);
-      }
-    }
-
-    &_social_media { // positioning for the social media icons
-      position: absolute;
+    // positioning container for the text inside the box
+    &_content {
+      display: flex;
+      position: relative;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 220px;
-      height: 40px;
+      transform: translateX(-50%);
+      width: calc(100% - 160px);
+      max-width: 1400px;
+      font: 0.9rem var(--font-default);
+      color: var(--color-font-gray);
+      line-height: 1.2rem;
+      gap: 24px;
+    }
 
-      &_circle { // circle around the icons
-        position: absolute;
-        width: 36px;
-        height: 36px;
-        border: 2px solid var(--color-font);
-        border-radius: 50%; // circle shape
-        cursor: pointer;
-        transition: background-color 200ms;
-  
-        &:hover { // background hover effect
-          background-color: var(--color-hover-light);
-        }
+    // cookie settings, language select and change theme links
+    &_link {
+      cursor: pointer;
+      transition: color 200ms;
+
+      // hover effect for text
+      &:hover {
+        color: var(--color-font);
       }
 
-      &_icon { // icons for the different social media platforms
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        height: 60%;
-        filter: var(--svg-invert); // for making the icons white
+      // icons next to the link
+      img {
+        height: 1.1rem;
+        margin: 0 0.1rem -0.2rem 0.1rem;
       }
     }
   }
 }
 
-@media (max-width: 1160px) { // small optimization for small screens
+// small optimization for small screens
+@media (max-width: 1200px) {
   .website_footer_content {
     padding: 80px 4% 180px 4%;
   }
 }
 
-@media (max-width: 960px) { // mobile layout
+// mobile layout
+@media (max-width: 960px) {
   // the top transition shapes are smaller on mobile devices to look better
   .website_footertransition_left {
     width: 20vw;
@@ -325,7 +288,8 @@
   }
 }
 
-@media (max-width: 660px) { // two rows of items are formed
+// two rows of items are formed
+@media (max-width: 660px) {
   .website_footer_bottom_box {
     height: 120px;
   }
@@ -353,7 +317,8 @@
   }
 }
 
-@media (max-width: 300px) { // small fix
+// small fix
+@media (max-width: 300px) {
   .website_footer_bottom_box_language {
     left: 8px;
   }
@@ -363,7 +328,8 @@
   }
 }
 
-@media (max-width: 240px) { // hides footer on to small screens
+// hides footer on to small screens
+@media (max-width: 240px) {
   .website_footer {
     display: none;
   }

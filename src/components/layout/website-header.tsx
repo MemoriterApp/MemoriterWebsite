@@ -7,9 +7,9 @@ import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
 import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
 import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
-import emoji1f30d from '../../images/emoji/1f30d.svg';
-import emoji1f312 from '../../images/emoji/1f312.svg';
-import emoji26c5 from '../../images/emoji/26c5.svg';
+import emoji1f30d from '../../images/emoji/1f30d.svg'; // globe icon for language select
+import emoji1f312 from '../../images/emoji/1f312.svg'; // moon icon for dark mode
+import emoji26c5 from '../../images/emoji/26c5.svg'; // sun icon for light mode
 
 // type definitions for props
 interface Props {

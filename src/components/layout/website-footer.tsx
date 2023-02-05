@@ -14,6 +14,10 @@ import discordIconDark from '../../images/icons/discord-icon-dark.svg';
 import githubIconLight from '../../images/icons/github-icon-light.svg';
 import githubIconDark from '../../images/icons/github-icon-dark.svg';
 import sendIcon from '../../images/icons/send-icon.svg';
+import emoji1f36a from '../../images/emoji/1f36a.svg'; // cookie emoji for cookie setting
+import emoji1f1ec_1f1e7 from '../../images/emoji/1f1ec-1f1e7.svg'; // british flag for language select
+import emoji1f312 from '../../images/emoji/1f312.svg'; // moon icon for dark mode
+import emoji26c5 from '../../images/emoji/26c5.svg'; // sun icon for light mode
 
 // type definition for props
 interface Props {
@@ -26,7 +30,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
   const [onHover, setOnHover] = useState<string>('brightness(1)'); // variable for the hover effect for the newsletter send button
 
-  const themeText: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
+  const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
 
   // function to swap the current theme
   const onChangeTheme = (theme: string): void => {
@@ -49,23 +53,26 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
       <section className={styles.website_footer_top}>
         <div className={styles.website_footer_top_logo}>
           <img
-            src={themeText === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
             alt='Memoriter'
           />
           <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
         </div>
-        <div className={styles.website_footer_top_gap} />
+
+        <div className={styles.website_footer_flex_gap} />
+
         <div className={styles.website_footer_top_social}>
           <a href='https://instagram.com' target='_blank' rel='noreferrer'>
-            <img src={themeText === 'dark' ? instagramIconLight : instagramIconDark} alt='Github' />
+            <img src={themeIcon === 'dark' ? instagramIconLight : instagramIconDark} alt='Github' />
           </a>
           <a href='https://discord.com' target='_blank' rel='noreferrer'>
-            <img src={themeText === 'dark' ? discordIconLight : discordIconDark} alt='Github' />
+            <img src={themeIcon === 'dark' ? discordIconLight : discordIconDark} alt='Github' />
           </a>
           <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
-            <img src={themeText === 'dark' ? githubIconLight : githubIconDark} alt='Github' />
+            <img src={themeIcon === 'dark' ? githubIconLight : githubIconDark} alt='Github' />
           </a>
         </div>
+
         <div className={styles.website_footer_top_newsletter}>
           <form onSubmit={(event) => event.preventDefault()}>
             <p>Subscribe to our newsletter</p>
@@ -98,7 +105,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
               <Link to='/download'>Download</Link>
             </li>
             <li>
-              <Link to='/releases'>Release Notes</Link>
+              <Link to='/bot'>Memoriter Bot</Link>
             </li>
           </ul>
         </nav>
@@ -151,36 +158,51 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <li>
               <Link to='/bugs'>Bug Report</Link>
             </li>
-            <li onClick={() => onOpenCookieSettings()}>Cookie Settings</li>
-            {/* opens cookie settings banner */}
+            <li>
+              <Link to='/releases'>Release Notes</Link>
+            </li>
           </ul>
         </nav>
       </section>
 
       {/* box at the bottom with social media links and other buttons */}
-      <section className={styles.website_footer_bottom_box}>
-        <p className={styles.website_footer_bottom_box_copyright}>© Copyright 2023 Memoriter</p>
+      <section className={styles.website_footer_bottom}>
+        <p className={styles.website_footer_bottom_content}>
+          <span>© Copyright 2023 Memoriter</span>
 
-        {/* right text uses two classes, one for the hover effect, the theme text depends on the current theme */}
-        <p className={styles.website_footer_bottom_box_language} onClick={onOpenLanguageSelect}>
-          Language: English
+          <span className={styles.website_footer_flex_gap} />
+
+          <span
+            className={styles.website_footer_bottom_link}
+            onClick={() => onOpenCookieSettings()}
+          >
+            <img src={emoji1f36a} /> Cookies
+          </span>
+
+          <span
+            className={styles.website_footer_bottom_link}
+            onClick={() => onOpenLanguageSelect()}
+          >
+            <img src={emoji1f1ec_1f1e7} /> Language
+          </span>
+
+          {(themeIcon === 'dark' || !themeIcon) && (
+            <span
+              className={styles.website_footer_bottom_link}
+              onClick={() => onChangeTheme('light')}
+            >
+              <img src={emoji26c5} /> Theme
+            </span>
+          )}
+          {themeIcon === 'light' && (
+            <span
+              className={styles.website_footer_bottom_link}
+              onClick={() => onChangeTheme('dark')}
+            >
+              <img src={emoji1f312} /> Theme
+            </span>
+          )}
         </p>
-        {(themeText === 'dark' || !themeText) && (
-          <p
-            className={styles.website_footer_bottom_box_theme}
-            onClick={() => onChangeTheme('light')}
-          >
-            Theme: Dark
-          </p>
-        )}
-        {themeText === 'light' && (
-          <p
-            className={styles.website_footer_bottom_box_theme}
-            onClick={() => onChangeTheme('dark')}
-          >
-            Theme: Light
-          </p>
-        )}
       </section>
     </footer>
   );
