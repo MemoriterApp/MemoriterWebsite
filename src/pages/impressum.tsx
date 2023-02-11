@@ -11,25 +11,39 @@ const Impressum: FC = () => {
       <article className={styles.legal_main}>
         <h1>Impressum</h1>
 
-        <p>
-          Memoriter is a student company at the Bertha-von-Bertha-Suttner-Gymnasium Babelsberg in
-          Potsdam, Germany, under the supervision of JUNIOR, a project by the Institut der Deutchen
-          Wirtschaft (IW), supported by the Bundesministerium für Wirtschaft und Klimaschutz (BMWK).
-          Further information about the JUNIOR project can be found{' '}
-          <a href='https://www.junior-programme.de/startseite' target='_blank' rel='noreferrer'>
-            here
-          </a>
-          .
-        </p>
+        <h2>Information in accordance with §5 TMG (Telemediengesetz)</h2>
+        <ul>
+          <li>Memoriter LLC.</li>
+          <li>Business ID: 1372720</li>
+          <li>Rudolf-Breitscheid-Straße 160c, upstairs first room on the right, bed</li>
+          <li>14482 Potsdam, Germany</li>
+        </ul>
 
-        <h2>Contact:</h2>
+        <h2>Representative</h2>
         <ul>
           <li>Johan Trieloff</li>
-          <li>Kopernikusstraße 30</li>
+          <li>Rudolf-Breitscheid-Straße 160c</li>
           <li>14482 Potsdam, Germany</li>
-          <li>Phone: +49 (0)221 | 4981-707</li>
-          <li>Email: johan@trieloff.net</li>
+          <li>Phone: +49 160 7000697</li>
+          <li>Email: johan@memoriter.de</li>
         </ul>
+
+        <h2>Copyright</h2>
+        <p>
+          As a student and community driven project, we decided to distribute Memoriter as an open
+          source software. Therefore our own content on the website and of our services is licensed
+          under the{' '}
+          <a
+            href='https://github.com/MemoriterApp/Memoriter/blob/main/LICENSE'
+            target='_blank'
+            rel='noreferrer'
+          >
+            GNU General Public License v3.0
+          </a>
+          . Nevertheless we try to respect the copyrights of third parties in our services. Should
+          you become aware of a copyright infringement, please inform us accordingly, so we can
+          remove such content.
+        </p>
       </article>
     </WebsiteLayout>
   );
