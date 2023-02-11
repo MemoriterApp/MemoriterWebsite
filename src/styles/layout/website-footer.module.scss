@@ -256,7 +256,7 @@
   .website_footer_top {
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
     margin-top: 80px;
 
     &_logo img {
@@ -289,6 +289,33 @@
 
   .website_footer_content {
     text-align: center;
+    width: calc(100% - 20px);
+
+    > * {
+      margin-inline: 20px;
+    }
+  }
+
+  .website_footer_bottom_content {
+    width: calc(100% - 20px);
+  }
+}
+
+// fixes for the bottom links
+@media (max-width: 600px) {
+  .website_footer_flex_gap {
+    display: none;
+  }
+
+  .website_footer_content {
+    margin-bottom: 100px;
+  }
+  
+  .website_footer_bottom_content {
+    flex-direction: column-reverse;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0;
   }
 }
 
