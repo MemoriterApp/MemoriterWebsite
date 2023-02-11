@@ -17,6 +17,7 @@ const Impressum: FC = () => {
           <li>Business ID: 1372720</li>
           <li>Rudolf-Breitscheid-Straße 160c, upstairs first room on the right, bed</li>
           <li>14482 Potsdam, Germany</li>
+          <li>Email: contact@memoriter.de</li>
         </ul>
 
         <h2>Representative</h2>
