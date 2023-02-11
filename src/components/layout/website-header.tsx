@@ -84,7 +84,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         <Link to='/'>
           <img
             className={styles.website_header_logo}
-            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            src={themeIcon === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
             alt='Memoriter'
           />
         </Link>

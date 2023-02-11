@@ -53,7 +53,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
       <section className={styles.website_footer_top}>
         <div className={styles.website_footer_top_logo}>
           <img
-            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
+            src={themeIcon === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
             alt='Memoriter'
           />
           <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
@@ -63,13 +63,13 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
         <div className={styles.website_footer_top_social}>
           <a href='https://instagram.com' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'dark' ? instagramIconLight : instagramIconDark} alt='Github' />
+            <img src={themeIcon === 'light' ? instagramIconDark : instagramIconLight} alt='Github' />
           </a>
           <a href='https://discord.com' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'dark' ? discordIconLight : discordIconDark} alt='Github' />
+            <img src={themeIcon === 'light' ? discordIconDark : discordIconLight} alt='Github' />
           </a>
           <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'dark' ? githubIconLight : githubIconDark} alt='Github' />
+            <img src={themeIcon === 'light' ? githubIconDark : githubIconLight} alt='Github' />
           </a>
         </div>
 
