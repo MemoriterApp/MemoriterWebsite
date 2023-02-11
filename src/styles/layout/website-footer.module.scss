@@ -259,16 +259,15 @@
     width: calc(100% - 80px);
     margin-top: 80px;
 
+    &_logo img {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-      &_logo img {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      &_logo p {
-        text-align: center;
-      }
+    &_logo p {
+      text-align: center;
+    }
 
     &_social {
       display: flex;
