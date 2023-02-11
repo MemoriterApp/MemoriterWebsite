@@ -73,7 +73,7 @@
 
     // social media links
     &_social {
-      margin: 48px 64px 0 0;
+      margin: 51px 64px 0 0;
       height: 32px;
 
       // social media icon links
@@ -107,7 +107,6 @@
       // input field for email
       input {
         position: absolute;
-        top: 48px;
         width: 160px;
         height: 30px;
         font: 1rem var(--font-default);
@@ -122,10 +121,9 @@
       // submit button
       button {
         position: absolute;
-        right: 0;
-        top: 48px;
         width: 32px;
         height: 32px;
+        margin-left: 180px;
         background-color: var(--color-transparent);
         border: none;
         border-radius: 0 4px 4px 0;
@@ -247,84 +245,47 @@
   }
 }
 
-// small optimization for small screens
-@media (max-width: 1200px) {
-  .website_footer_content {
-    padding: 80px 4% 180px 4%;
-  }
-}
-
 // mobile layout
 @media (max-width: 960px) {
   // the top transition shapes are smaller on mobile devices to look better
-  .website_footertransition_left {
+  .website_footer_transition::before,
+  .website_footer_transition::after {
     width: 20vw;
   }
-  .website_footer_transition_right {
-    width: 20vw;
-  }
 
-  .website_footer_content {
-    flex-wrap: wrap;
-  }
+  .website_footer_top {
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 80px);
+    margin-top: 80px;
 
-  // font size will be smaller
-  .website_footer_heading {
-    font-size: 0.9rem;
-  }
 
-  .website_footer_link {
-    font-size: 0.8rem;
-  }
+      &_logo img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
-  .website_footer_bottom_box_language {
-    right: 30px;
-    top: 4px;
-  }
+      &_logo p {
+        text-align: center;
+      }
 
-  .website_footer_bottom_box_theme {
-    top: unset;
-    bottom: 4px;
-  }
-}
+    &_social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: unset;
+      margin: 24px 0 8px;
 
-// two rows of items are formed
-@media (max-width: 660px) {
-  .website_footer_bottom_box {
-    height: 120px;
-  }
+      a {
+        margin-bottom: 16px;
+      }
+    }
 
-  .website_footer_bottom_box_copyright {
-    left: 50%;
-    top: unset;
-    bottom: 0;
-    transform: translateX(-50%);
-  }
-
-  .website_footer_bottom_box_language {
-    left: 30px;
-    top: unset;
-    bottom: 24px;
-  }
-
-  .website_footer_bottom_box_theme {
-    top: unset;
-    bottom: 24px;
-  }
-
-  .website_footer_bottom_box_social_media {
-    top: 25%;
-  }
-}
-
-// small fix
-@media (max-width: 300px) {
-  .website_footer_bottom_box_language {
-    left: 8px;
-  }
-
-  .website_footer_bottom_box_theme {
-    right: 8px;
+    &_newsletter {
+      height: 84px;
+    }
   }
 }
 

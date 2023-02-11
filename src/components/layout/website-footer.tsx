@@ -63,7 +63,10 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
         <div className={styles.website_footer_top_social}>
           <a href='https://instagram.com' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? instagramIconDark : instagramIconLight} alt='Github' />
+            <img
+              src={themeIcon === 'light' ? instagramIconDark : instagramIconLight}
+              alt='Github'
+            />
           </a>
           <a href='https://discord.com' target='_blank' rel='noreferrer'>
             <img src={themeIcon === 'light' ? discordIconDark : discordIconLight} alt='Github' />
@@ -76,9 +79,11 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         <div className={styles.website_footer_top_newsletter}>
           <form onSubmit={(event) => event.preventDefault()}>
             <p>Subscribe to our newsletter</p>
-            <input type='email' placeholder='Email address' />
+            <input id='email' type='email' name='email' placeholder='Email address' />
             <button
+              id='send'
               type='submit'
+              name='send'
               onMouseEnter={() => setOnHover('brightness(0.75)')}
               onMouseLeave={() => setOnHover('brightness(1)')}
             >
