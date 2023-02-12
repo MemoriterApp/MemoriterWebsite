@@ -5,6 +5,7 @@
   position: relative;
   left: 50%; // centering the content on too large screens
   transform: translateX(-50%);
+  width: calc(100% - 144px);
   max-width: 1400px; // looks better on large screen
   color: var(--color-font);
   margin-bottom: 120px;
@@ -42,7 +43,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
-    max-width: calc(100% - 40px);
+    max-width: 100%;
     margin-bottom: 120px;
     border-radius: 4px;
   }
@@ -56,7 +57,7 @@
   // contains all of the main sections, is used for positioning
   &_container {
     display: flex;
-    margin: 160px 70px 200px;
+    margin: 160px 0 200px;
 
     // children of container
     > * + * {
@@ -215,6 +216,13 @@
   }
 }
 
+// small fix for medium sized screens
+@media (max-width: 1200px) {
+  .default_main {
+    width: calc(100% - 40px);
+  }
+}
+
 // simplyfied layout for smaller screens
 @media (max-width: 960px) {
   .default_main_overview {
@@ -236,7 +244,7 @@
 
   .default_main_container {
     display: block;
-    margin: 120px 20px 20px;
+    margin: 120px 0 20px;
 
     // children of container
     > * + * {

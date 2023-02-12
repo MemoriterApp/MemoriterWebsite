@@ -6,11 +6,12 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 import emoji1f609 from '../images/emoji/1f609.svg';
 
-const Faq: FC = () => { // array with all questions with answers, answers can be typed as string or html objects
+const Faq: FC = () => {
+  //  array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { section: string; question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
-    // General FAQ
+    //  General FAQ
     {
       section: 'general',
       question: 'What exactly is Memoriter?',
@@ -78,7 +79,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       ),
       isOpen: false,
     },
-    // Account
+    //  Account
     {
       section: 'account',
       question: 'Can I delete my user data?',
@@ -101,7 +102,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       ),
       isOpen: false,
     },
-    // Donating
+    //  Donating
     {
       section: 'donating',
       question: 'Can I cancel my monthly subscription?',
@@ -138,7 +139,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       answer: <p>At the moment it is only possible to donate via credit card or PayPal.</p>,
       isOpen: false,
     },
-    // Open Source
+    //  Open Source
     {
       section: 'open-source',
       question: 'Is Memoriter open source?',
@@ -198,7 +199,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       ),
       isOpen: false,
     },
-    // Legal
+    //  Legal
     {
       section: 'legal',
       question: 'What is the current legal status of Memoriter?',
@@ -212,26 +213,26 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
     },
   ]);
 
-  //function is called when a question is clicked
+  // function is called when a question is clicked
   const openQuestion = (openedQuestion: string): void => {
     setQuestions((questions) =>
       questions.map(
         (
-          question //question array is changed
+          question // question array is changed
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
                 ...question,
-                isOpen: true, //clicked question opens if it is closed
+                isOpen: true, // clicked question opens if it is closed
               }
             : question.question === openedQuestion && question.isOpen
             ? {
                 ...question,
-                isOpen: false, //clicked question closes if it is open
+                isOpen: false, // clicked question closes if it is open
               }
             : {
                 ...question,
-                isOpen: false, //all other questions are closing, only one can be opened at the same time
+                isOpen: false, // all other questions are closing, only one can be opened at the same time
               }
       )
     );
@@ -239,12 +240,13 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body */}
       <section className={styles.help_main}>
         <h1>Frequently Asked Questions</h1>
+        <div className={styles.help_main_space_reducer} />
 
         <h2 id='general'>General FAQ</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'general')
           .map((question) => (
@@ -257,7 +259,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='account'>Account</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'account')
           .map((question) => (
@@ -270,7 +272,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='donating'>Donating</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'donating')
           .map((question) => (
@@ -283,7 +285,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='open-source'>Open Source</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'open-source')
           .map((question) => (
@@ -296,7 +298,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='legal'>Legal</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'legal')
           .map((question) => (

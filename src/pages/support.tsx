@@ -6,8 +6,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 
 const Support: FC = () => {
-  
-  //array with all questions with answers, answers can be typed as string or html objects
+  // array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
@@ -87,26 +86,26 @@ const Support: FC = () => {
     },
   ]);
 
-  //function is called when a question is clicked
+  // function is called when a question is clicked
   const openQuestion = (openedQuestion: string): void => {
     setQuestions((questions) =>
       questions.map(
         (
-          question //question array is changed
+          question // question array is changed
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
                 ...question,
-                isOpen: true, //clicked question opens if it is closed
+                isOpen: true, // clicked question opens if it is closed
               }
             : question.question === openedQuestion && question.isOpen
             ? {
                 ...question,
-                isOpen: false, //clicked question closes if it is open
+                isOpen: false, // clicked question closes if it is open
               }
             : {
                 ...question,
-                isOpen: false, //all other questions are closing, only one can be opened at the same time
+                isOpen: false, // all other questions are closing, only one can be opened at the same time
               }
       )
     );
@@ -114,12 +113,11 @@ const Support: FC = () => {
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body */}
       <section className={styles.help_main}>
         <h1>Support</h1>
-        <hr/>
 
-        {/*displays the list of questions*/}
+        {/* displays the list of questions */}
         {questions.map((question) => (
           <HelpQuestion
             styles={styles}
