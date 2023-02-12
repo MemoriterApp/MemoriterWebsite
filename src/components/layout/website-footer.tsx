@@ -77,7 +77,14 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         </div>
 
         <div className={styles.website_footer_top_newsletter}>
-          <form onSubmit={(event) => event.preventDefault()}>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault(),
+                alert(
+                  'The newsletter system is not set up yet. Please sign up later when it was implemented!'
+                );
+            }}
+          >
             <p>Subscribe to our newsletter</p>
             <input id='email' type='email' name='email' placeholder='Email address' />
             <button
