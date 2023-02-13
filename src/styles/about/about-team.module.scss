@@ -3,7 +3,7 @@
 // main container
 .about_team {
   color: var(--color-font);
-  margin: 200px 80px -80px;
+  margin: 200px 60px -80px;
 
   // section title
   &_title {
@@ -20,13 +20,14 @@
   &_container {
     display: flex;
     margin-bottom: 80px;
-    gap: 80px;
+    gap: 40px;
   }
 
   // member card
   &_card {
     display: flex;
     flex-grow: 1;
+    width: 50%;
     align-items: center;
     padding-inline: 32px;
     gap: 40px;
@@ -40,6 +41,13 @@
     p {
       font: 1.2rem var(--font-default);
       line-height: 1.8rem;
+    }
+
+    // last card
+    h2 {
+      font: 1.4rem var(--font-highlight);
+      text-align: center;
+      line-height: 2.2rem;
     }
 
     // card image container
@@ -102,6 +110,7 @@
 
   .about_team_card {
     width: calc(100% - 40px);
+    max-width: unset;
   }
 }
 
