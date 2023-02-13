@@ -47,8 +47,8 @@ const Support: FC = () => {
       question: 'I want to unsubscribe from the newsletter',
       answer: (
         <p>
-          You can use the link at the bottom of each newsletter email to do so. As an alternative
-          you can use the link at the bottom of the <Link to='/newsletter'>Newsletter page</Link>.
+          You can use the link at the bottom of each newsletter email to do so. It will redirect you
+          to the unsubscribe page.
         </p>
       ),
       isOpen: false,
@@ -79,7 +79,9 @@ const Support: FC = () => {
       answer: (
         <p>
           Please check out the <Link to='/faq'>frequently asked questions</Link> or send an email to{' '}
-          <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+          <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>. Thats dependent on the
+          amount of requests we receive. We try to answer all requests within 48 hours, depending of
+          the type of request, so please excuse us if it takes a bit longer.
         </p>
       ),
       isOpen: false,

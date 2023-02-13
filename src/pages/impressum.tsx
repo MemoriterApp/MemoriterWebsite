@@ -13,7 +13,7 @@ const Impressum: FC = () => {
 
         <h2>Information in accordance with §5 TMG (Telemediengesetz)</h2>
         <ul>
-          <li>Memoriter LLC.</li>
+          <li>Memoriter LLC</li>
           <li>Business ID: 1372720</li>
           <li>Rudolf-Breitscheid-Straße 160c, upstairs first room on the right, bed</li>
           <li>14482 Potsdam, Germany</li>

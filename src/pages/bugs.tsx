@@ -67,23 +67,16 @@ const Bugs: FC = () => {
           </p>
           <ul>
             <li>
-              Report a web application issue on{' '}
+              Report the bug directly to our <a href='https://docs.google.com/forms/d/e/1FAIpQLSdeAzvTo395mzFaHjii-hETrUf9VoRPSqe5u78NgJZueDveSA/viewform?usp=sf_link'>Bug Report Form</a>
+            </li>
+            <li>
+              Discuss issues on{' '}
               <a
                 href='https://github.com/MemoriterApp/Memoriter/issues'
                 target='_blank'
                 rel='noreferrer'
               >
                 GitHub
-              </a>
-            </li>
-            <li>
-              Discuss issues on our GitHub{' '}
-              <a
-                href='https://github.com/MemoriterApp/Memoriter/discussions/categories/general'
-                target='_blank'
-                rel='noreferrer'
-              >
-                discussion forum
               </a>
             </li>
             <li>
