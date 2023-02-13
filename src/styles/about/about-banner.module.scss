@@ -2,10 +2,12 @@
 
 // banner box, background and position
 .about_banner {
+  display: flex; // for centering content
+  align-items: center; // for centering content
+  justify-content: center; // for centering content
   position: relative;
   width: calc(100% + 16px);
-  height: calc(100vh - 62px);
-  min-height: 540px; // fixes issues for screens not high enough
+  min-height: calc(100vh - 62px);
   margin: 54px -8px 64px;
   background: var(--color-banner-gradient);
   overflow: hidden;
@@ -32,15 +34,14 @@
 
   // positioning for the text and button
   &_content {
-    position: absolute;
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%);
     width: 80vw;
     max-width: 800px;
     color: var(--color-font);
     font: italic 3.2rem var(--font-serif);
     text-align: center;
+    padding-bottom: 80px;
+    margin-top: 40px;
+    z-index: 0;
 
     // highlighted words
     em {
@@ -99,18 +100,11 @@
 // adjusting too big text
 @media (max-width: 720px) {
   .about_banner_content {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
 
     em {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
     }
-  }
-}
-
-// larger height on small screens to prevent overflow
-@media (max-width: 340px) {
-  .about_banner {
-    min-height: 610px;
   }
 }
 

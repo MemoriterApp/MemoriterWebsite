@@ -2,10 +2,12 @@
 
 // banner box, background and position
 .product_banner {
+  display: flex; // for centering content
+  align-items: center; // for centering content
+  justify-content: center; // for centering content
   position: relative;
   width: calc(100% + 16px);
-  height: calc(100vh - 62px);
-  min-height: 540px; // fixes issues for screens not high enough
+  min-height: calc(100vh - 62px);
   color: var(--color-font);
   margin: 54px -8px 64px;
   background: var(--color-banner-gradient);
@@ -35,15 +37,14 @@
 
   // positioning for the text and button
   &_content {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 800px;
+    padding-bottom: 180px;
+    margin-top: 40px;
+    z-index: 0;
 
     // text for slogan
     p {
-      width: 80vw;
-      max-width: 800px;
       font-style: italic;
       font-size: 3rem;
       font-family: var(--font-serif);
@@ -149,23 +150,12 @@
 
 // adjusting too big text again
 @media (max-width: 420px) {
-  .product_banner {
-    min-height: 700px;
+  .product_banner_content p {
+    font-size: 1.6rem;
 
-    &_content p {
-      font-size: 1.6rem;
-
-      &:last-of-type {
-        line-height: 1.8rem;
-      }
+    &:last-of-type {
+      line-height: 1.8rem;
     }
-  }
-}
-
-// changing height to avoid overflow again
-@media (max-width: 310px) {
-  .product_banner {
-    min-height: 800px;
   }
 }
 
