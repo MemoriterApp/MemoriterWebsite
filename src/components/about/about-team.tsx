@@ -61,7 +61,7 @@ const AboutTeam: FC = () => {
           <article>
             <h2>Alexander I.</h2>
             <p>
-              Good day, I the CSS (Chief of Sassy Style Shests) on the Memoriter team. I create new
+              Good day, I the CSS (Chief of Sassy Stylesheets) on the Memoriter team. I create new
               ideas and turn them into reality, I mostly work on the frontend of the app.
             </p>
           </article>
