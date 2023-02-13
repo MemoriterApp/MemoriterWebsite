@@ -5,7 +5,7 @@
   left: 50%;
   top: 120px;
   transform: translateX(-50%);
-  width: calc(100% - 320px);
+  width: 100%;
   max-width: 2400px;
   padding: 40px 60px 80px 60px;
 
@@ -40,6 +40,17 @@
     line-height: 1.8rem;
     text-align: justify;
     margin-bottom: 0;
+  }
+
+  // links
+  a {
+    color: var(--color-font-gray);
+    transition: color 200ms;
+
+    // link hover effect
+    &:hover {
+      color: var(--color-font);
+    }
   }
 
   ul { // all html unordered lists (<ul/>) of current-release

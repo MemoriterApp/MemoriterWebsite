@@ -1,26 +1,28 @@
 ---
-date: 3014-03-14
+date: 2023-03-01
 ---
 
-# Memoriter v3.14
+# Memoriter v1.2: Adiutor potens
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo diam id ante ultrices, vel pharetra urna vestibulum. Ut mattis congue magna vulputate congue. Vivamus sed dui nec urna lacinia finibus nec in sem. Praesent ex nibh, luctus et tempus ut, facilisis pharetra ante. Sed vel blandit elit, id aliquet mi. Integer et neque imperdiet, varius sem at, sagittis libero. Aenean a porttitor arcu, ut dapibus ante. Donec vestibulum ligula et luctus venenatis. Nulla vulputate mattis sodales. Sed hendrerit ex vitae magna ultricies rutrum. Aliquam sodales, justo nec condimentum vulputate, arcu ipsum efficitur quam, id venenatis velit justo id eros.
+While working on this update, we redirected our focus to AI and incorporated new features such as a Discord Bot, an AI tutor to speed up homework, and flashcard suggestions for easy creation. We also revamped our startpage to be more visually appealing and added more features. Additionally, we implemented a spaced repetition algorithm for flashcards to enhance memorization and made various design improvements to modernize the website
 
 ## New Features
 
-Duis metus ex, luctus eget massa vel, congue placerat risus. Pellentesque eget tincidunt elit. Aenean quis consectetur elit, elementum suscipit turpis. Donec ac neque dolor. Proin consequat varius nisl, eu tristique enim pretium id. Nulla laoreet fringilla erat condimentum tempor. Aliquam et felis magna. Sed pretium pellentesque ligula ut volutpat. Pellentesque pharetra, sem eget consequat varius, arcu metus faucibus nulla, 
+The most notable addition to this update is the incorporation of AI features. The AI now suggests answers for flashcards, enabling faster creation. We've also added CheatPT-3, an AI tutor in the form of a Discord Bot. It assists with homework and flashcard creation. Please note that this feature is currently in beta and may have bugs. Feedback and suggestions are welcome. To further support homework assistance, we created a community on Discord for users to ask questions and receive help. Join the community whith [this link](https://discord.gg/6Z2Z7Y4) and help to grow it to be a helpful place for homework assistance.
 
-sit amet varius sem sapien eu mi. Quisque nec augue euismod tortor gravida dapibus. Morbi sit amet sapien velit.
-Nunc bibendum dui at lacus eleifend, non lacinia turpis sagittis. Suspendisse volutpat risus ipsum, ut euismod nisl euismod vitae. Maecenas rutrum neque a laoreet commodo. Vestibulum erat nisl, molestie at eros non, sagittis ullamcorper justo. Curabitur eleifend ex id ligula imperdiet, vitae dictum odio commodo.
+In addition We created this beautiful startpage, which has a lot more features than the old one. It also looks a lot nicer and more modern. We will be adding more features to the startpage in the future, if you have any suggestions, please let us know.
 
-## Minor Changes
+Moreover a spaced repetition algorithm was added to the flashcards to aid in longer-term memorization. You can access the study mode by clicking on the 'study'-button and selecting your preferred mode.
 
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
+## Design Changes
+
+Saga changed the color scheme to make it look a bit nicer. She also reworked the design of a flashcard and made the design a lot more consistent.
+
+## Other Changes
+
+- The Backend was reworked to make it more efficient and easier to use.
+- A feature was added which makes it able to archive folders.
 
 ## Bugfixes and Tweaks
 
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
-- Lorem ipsum dolor sit amet.
+- We fixed some old bugs and created some new ones 😉.

@@ -7,46 +7,48 @@ import CurrentRelease from '../components/releases/current-release';
 import OldRelease from '../components/releases/old-release';
 
 interface Props {
-  data: {allMarkdownRemark: {nodes: {frontmatter: {date: string}, html: string, id: string}[]}};
+  data: {
+    allMarkdownRemark: { nodes: { frontmatter: { date: string }; html: string; id: string }[] };
+  };
 }
 
 const Releases: FC<Props> = ({ data }: Props) => {
-
   const releases = data.allMarkdownRemark.nodes; // list of all releases
 
   const [loadedReleases, setLoadedReleases] = useState<number>(5); // number of releases shown before clicking on the load more button
 
   return (
     <WebsiteLayout currentPage=''>
-
       {/*main body*/}
       <section className={styles.releases_main}>
+        <h1 className={styles.releases_main_title}>Release Notes</h1>
 
-      <h1 className={styles.releases_main_title}>Release Notes</h1>
+        {/*current version with other style*/}
+        {releases
+          .slice(0, 1)
+          .map((release: { id: string; frontmatter: { date: string }; html: string }) => (
+            <CurrentRelease key={release.id} date={release.frontmatter.date} html={release.html} />
+          ))}
 
-      {/*current version with other style*/}
-      {releases.slice(0, 1).map(
-        (release: {id: string, frontmatter: {date: string}, html: string}) => (
-          <CurrentRelease key={release.id} date={release.frontmatter.date} html={release.html}/>
-        )
-      )}
+        {/* older versions, gets data from the releases array, where all components are stored, just gets a part of the array */}
+        {releases
+          .slice(1, loadedReleases)
+          .map((release: { id: string; frontmatter: { date: string }; html: string }) => (
+            <OldRelease key={release.id} date={release.frontmatter.date} html={release.html} />
+          ))}
 
-      {/* older versions, gets data from the releases array, where all components are stored, just gets a part of the array */}
-      {releases.slice(1, loadedReleases).map(
-        (release: {id: string, frontmatter: {date: string}, html: string}) => (
-          <OldRelease key={release.id} date={release.frontmatter.date} html={release.html}/>
-        )
-      )}
-
-      {/* load more button, onClick just adds five to the number of the maximum of shown releases. The button is just shown if necessary. */}
-      {loadedReleases <= releases.length - 1 ? (
-        <button className={styles.releases_main_button} onClick={() => setLoadedReleases(loadedReleases + 5)}>Load More...</button>
+        {/* load more button, onClick just adds five to the number of the maximum of shown releases. The button is just shown if necessary. */}
+        {loadedReleases <= releases.length - 1 ? (
+          <button
+            className={styles.releases_main_button}
+            onClick={() => setLoadedReleases(loadedReleases + 5)}
+          >
+            Load More...
+          </button>
         ) : (
-        <div/>
-      )}
-
+          <div />
+        )}
       </section>
-            
     </WebsiteLayout>
   );
 };
@@ -66,8 +68,8 @@ export const Head: HeadFC = (): React.ReactElement => {
 export const query = graphql`
   query ReleasesQuery {
     allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC}
-      filter: {fileAbsolutePath: {regex: "/(releases)/"}}
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fileAbsolutePath: { regex: "/(releases)/" } }
     ) {
       nodes {
         frontmatter {
@@ -78,4 +80,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
