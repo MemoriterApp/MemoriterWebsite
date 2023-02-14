@@ -25,4 +25,4 @@ Saga changed the color scheme to make it look a bit nicer. She also reworked the
 
 ## Bugfixes and Tweaks
 
-- We fixed some old bugs and created some new ones 😉.
+- We fixed some old bugs and created some new ones :D.
