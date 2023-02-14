@@ -7,7 +7,7 @@ import facebookIcon from '../../images/icons/facebook-icon.svg';
 import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
 import emailIcon from '../../images/icons/email-icon.svg';
 
-interface Props { //type definitions of props
+interface Props {
   title: string;
   linkedBlogs: string[];
   allBlogPosts: any;

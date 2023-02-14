@@ -1,45 +1,37 @@
 // here are the styles used for the current version in the release notes, older versions are using a seperate stylesheet
 
-.current_release { // main container
-  position: relative;
-  left: 50%;
-  top: 120px;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 2400px;
-  padding: 40px 60px 80px 60px;
+// main container
+.current_release {
+  font: 1.1rem var(--font-default);
+  color: var(--color-font);
+  line-height: 1.8rem;
+  text-align: justify;
+  padding: 160px 0 80px;
 
-  &_date { // date at the top of the section
-    color: var(--color-font-gray) !important;
+  // date at the top of the section
+  &_date {
+    color: var(--color-font-gray);
     text-align: left;
   }
 
-  h1 { // all html sub headings (<h2/>) of current-release
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    margin-top: 20px;
-    margin-bottom: 32px;
+  // release version number
+  h1 {
+    font: 2rem var(--font-highlight);
+    text-align: left;
+    margin: 20px 0 32px;
   }
 
-  h2 { // all html sub headings (<h2/>) of current-release
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family:  var(--font-highlight);
-    margin-top: 40px;
-    margin-bottom: 12px;
+  // section heading
+  h2 {
+    font: 1.4rem var(--font-highlight);
+    text-align: left;
+    margin: 40px 0 12px;
   }
 
-  p { // all html text paragraps (<p/>) of current-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family:  var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin-bottom: 0;
+  // different margin for bullet point and numbered lists
+  ul,
+  ol {
+    margin-left: -16px;
   }
 
   // links
@@ -53,74 +45,59 @@
     }
   }
 
-  ul { // all html unordered lists (<ul/>) of current-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin-bottom: 0;
-    margin-left: -20px;
-    list-style: disc;
-  }
-
-  ol { // all html ordered lists (<ol/>) of current-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin-bottom: 0;
-    margin-left: -20px;
-    list-style: decimal;
-  }
-
-  [class='gatsby-resp-image-wrapper'] { // all html images (<img/>) of current-release
-    position: relative;
+  // images
+  [class='gatsby-resp-image-wrapper'] {
     width: calc(100% - 100px);
-    margin-top: 32px;
-    margin-bottom: 32px;
-    border-radius: 10px;
-    overflow: hidden;
+    min-width: calc(100% - 100px);
+    margin: 32px 0;
+    border-radius: 4px;
   }
 
-  figcaption { // all html image caption (<figcaption/>) of current-release
-    font-size: 1.1rem;
-    font-weight: 500;
+  // image captions
+  figcaption {
     color: var(--color-font-gray);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin: -24px 50px 32px 50px;
+    margin: -24px 50px 32px;
   }
 
-  code { // all html inline code (<code/>) of current-release
-    font-size: 1.1rem;
+  // inline code
+  code {
     color: var(--color-font-code);
     padding: 2px 4px;
-    background-Color: var(--color-hover);
-    border-Radius: 4px;
+    background-color: var(--color-hover);
+    border-radius: 4px;
   }
 
-  pre { // code block container
+  // code block container
+  pre {
     padding: 20px;
-    margin: 40px 0 40px 0;
-    border-radius: 10px;
+    margin: 40px 0;
+    border-radius: 4px;
   }
 
-  pre code { // code blocks
+  // code block content
+  pre code {
     color: unset;
     padding: 4px 0;
     background-color: unset;
   }
+
+  // greeting at the end
+  &_end {
+    font-family: var(--font-highlight);
+    text-align: left;
+    margin: 40px 0;
+  }
+
+  // heading for the next section
+  &_older_releases {
+    margin: 80px 0 -140px !important;
+  }
 }
 
-@media (max-width: 960px) { // removes space at the sides on small screens
-  .current-release {
-    width: calc(100% - 40px);
-    padding: 40px 0 80px 0;
+@media (max-width: 960px) {
+  // removes space at the sides on small screens
+  .current_release {
+    padding: 40px 0 80px;
 
     [class='gatsby-resp-image-wrapper'] {
       width: 100%;

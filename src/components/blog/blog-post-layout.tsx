@@ -4,7 +4,7 @@ import WebsiteLayout from '../layout/website-layout';
 import BlogPostHeader from './blog-post-header';
 import BlogPostFooter from './blog-post-footer';
 
-interface Props { // type definitions for props
+interface Props {
   topic: string;
   date: string;
   author: string;

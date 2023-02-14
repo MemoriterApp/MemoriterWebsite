@@ -11,7 +11,6 @@ import emoji1f30d from '../../images/emoji/1f30d.svg'; // globe icon for languag
 import emoji1f312 from '../../images/emoji/1f312.svg'; // moon icon for dark mode
 import emoji26c5 from '../../images/emoji/26c5.svg'; // sun icon for light mode
 
-// type definitions for props
 interface Props {
   currentPage: string;
   onOpenLanguageSelect: () => void;

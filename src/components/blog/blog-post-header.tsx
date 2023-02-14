@@ -7,7 +7,6 @@ import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
 import emailIcon from '../../images/icons/email-icon.svg';
 
 interface Props {
-  //type definitions of props
   title: string;
   date: string;
   author: string;

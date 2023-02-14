@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import * as styles from '../../styles/blog/blog-sidebar.module.scss';
 
-interface Props { //type definitions of props
+interface Props {
   topic: string;
 }
 

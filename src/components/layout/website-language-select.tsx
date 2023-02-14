@@ -4,7 +4,7 @@ import * as styles from '../../styles/layout/website-language-select.module.scss
 import emoji1f1ec_1f1e7 from '../../images/emoji/1f1ec-1f1e7.svg'; // british flag
 import emoji1f1e9_1f1ea from '../../images/emoji/1f1e9-1f1ea.svg'; // german flag
 
-interface Props { // type definitions for props
+interface Props {
   onAnimation: React.CSSProperties;
   onCloseLanguageSelect: () => void;
 }

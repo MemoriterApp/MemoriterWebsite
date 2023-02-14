@@ -2,7 +2,7 @@
 date: 2023-03-01
 ---
 
-# Memoriter v1.2: Adiutor potens
+# Memoriter v1.2
 
 While working on this update, we redirected our focus to AI and incorporated new features such as a Discord Bot, an AI tutor to speed up homework, and flashcard suggestions for easy creation. We also revamped our startpage to be more visually appealing and added more features. Additionally, we implemented a spaced repetition algorithm for flashcards to enhance memorization and made various design improvements to modernize the website
 

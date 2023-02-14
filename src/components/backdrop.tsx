@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 
-// type definitions for props
 interface Props {
   onFade: string | React.CSSProperties;
   onClick: () => void;

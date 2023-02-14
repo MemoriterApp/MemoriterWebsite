@@ -12,6 +12,12 @@ interface Props {
   };
 }
 
+type Release = {
+  id: string;
+  frontmatter: { date: string };
+  html: string;
+};
+
 const Releases: FC<Props> = ({ data }: Props) => {
   const releases = data.allMarkdownRemark.nodes; // list of all releases
 
@@ -19,23 +25,19 @@ const Releases: FC<Props> = ({ data }: Props) => {
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body*/}
       <section className={styles.releases_main}>
         <h1 className={styles.releases_main_title}>Release Notes</h1>
 
-        {/*current version with other style*/}
-        {releases
-          .slice(0, 1)
-          .map((release: { id: string; frontmatter: { date: string }; html: string }) => (
-            <CurrentRelease key={release.id} date={release.frontmatter.date} html={release.html} />
-          ))}
+        {/* current version with other style */}
+        {releases.slice(0, 1).map((release: Release) => (
+          <CurrentRelease key={release.id} date={release.frontmatter.date} html={release.html} />
+        ))}
 
         {/* older versions, gets data from the releases array, where all components are stored, just gets a part of the array */}
-        {releases
-          .slice(1, loadedReleases)
-          .map((release: { id: string; frontmatter: { date: string }; html: string }) => (
-            <OldRelease key={release.id} date={release.frontmatter.date} html={release.html} />
-          ))}
+        {releases.slice(1, loadedReleases).map((release: Release) => (
+          <OldRelease key={release.id} date={release.frontmatter.date} html={release.html} />
+        ))}
 
         {/* load more button, onClick just adds five to the number of the maximum of shown releases. The button is just shown if necessary. */}
         {loadedReleases <= releases.length - 1 ? (

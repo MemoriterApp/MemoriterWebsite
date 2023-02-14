@@ -7,7 +7,6 @@ import BlogSidebar from '../components/blog/blog-sidebar';
 import BlogMain from '../components/blog/blog-main';
 
 interface Props {
-  //type definitions of props
   data: {
     allMarkdownRemark: {
       nodes: {

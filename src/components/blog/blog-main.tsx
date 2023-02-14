@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/blog/blog-main.module.scss';
 
-interface Props { //type definitions of props
+interface Props {
   data: {allMarkdownRemark: {nodes: {frontmatter: {
     link: string,
     topic: string,

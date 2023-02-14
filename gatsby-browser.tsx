@@ -5,7 +5,6 @@ import './src/styles/index.scss';
 import './src/styles/syntax-highlighting.scss';
 import ThemeProvider from './src/components/theme-provider';
 
-// type definitions for props
 interface Props {
   element: React.ReactNode;
 }

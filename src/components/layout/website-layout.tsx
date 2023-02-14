@@ -7,7 +7,6 @@ import CookieSettings from './cookie-banner/cookie-settings';
 import WindowSizeAlert from './window-size-alert';
 import Backdrop from '../backdrop';
 
-// type definitions for props
 interface Props {
   children: React.ReactNode;
   currentPage: string;

@@ -19,7 +19,6 @@ import emoji1f1ec_1f1e7 from '../../images/emoji/1f1ec-1f1e7.svg'; // british fl
 import emoji1f312 from '../../images/emoji/1f312.svg'; // moon icon for dark mode
 import emoji26c5 from '../../images/emoji/26c5.svg'; // sun icon for light mode
 
-// type definition for props
 interface Props {
   onOpenLanguageSelect: () => void;
   onOpenCookieSettings: () => void;
