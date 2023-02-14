@@ -8,8 +8,8 @@ interface Props {
 const Backdrop: FC<Props> = ({ onFade, onClick }: Props) => {
   const opacity: string | React.CSSProperties = onFade; // variable for possible fade animation (opacity)
 
+  // css for backdrop
   const backdropStyles: object = {
-    // css for backdrop
     position: 'fixed',
     zIndex: '3',
     backgroundColor: 'var(--color-backdrop)',

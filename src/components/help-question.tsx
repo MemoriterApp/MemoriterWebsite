@@ -46,9 +46,9 @@ const FaqQuestion: FC<Props> = ({ styles, question, onOpenQuestion }: Props) => 
       setOpen(`calc(${questionHeight}px - 12px)`); // sets back to default height
       setAnswerOpen('0');
       setArrowOpacity('0');
-      //  timeout used for animation, time in ms
+      // timeout used for animation, time in ms
       setTimeout(() => {
-        setOpenAnimation(''); //  removes height transition
+        setOpenAnimation(''); // removes height transition
         setarrowRotation('');
         setArrowOpacity('1');
       }, 400);
