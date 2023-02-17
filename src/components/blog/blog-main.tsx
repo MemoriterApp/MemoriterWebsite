@@ -54,14 +54,14 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
         <>
           <img className={styles.blog_main_topic} src={emoji_1f3Af} alt='Project' />
           <p className={styles.blog_main_topic}>
-            <strong>Project — </strong>
+            <strong>Project — </strong>How Memoriter is developing and progressing.
           </p>
         </>
       ) : topic === 'Productivity' ? (
         <>
           <img className={styles.blog_main_topic} src={emoji_1f52C} alt='Productivity' />
           <p className={styles.blog_main_topic}>
-            <strong>Productivity — </strong>
+            <strong>Productivity — </strong>Tips and tricks how to use Memoriter.
           </p>
         </>
       ) : topic === 'Technology' ? (
