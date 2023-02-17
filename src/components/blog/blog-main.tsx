@@ -2,6 +2,10 @@ import React, { FC, useState } from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/blog/blog-main.module.scss';
+import emoji_1f3Af from '../../images/emoji/1f3Af.svg'; // bullseye for project
+import emoji_1f52C from '../../images/emoji/1f52C.svg'; // microscope for productivity
+import emoji_1f6f0 from '../../images/emoji/1f6f0.svg'; // satellite for technology
+import emoji_1f4A5 from '../../images/emoji/1f4A5.svg'; // explosion for miscellaneous
 
 interface Props {
   data: {
@@ -45,6 +49,39 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
 
   return (
     <section className={styles.blog_main}>
+      {/* text and image describing the current topic */}
+      {topic === 'Project' ? (
+        <>
+          <img className={styles.blog_main_topic} src={emoji_1f3Af} alt='Project' />
+          <p className={styles.blog_main_topic}>
+            <strong>Project — </strong>
+          </p>
+        </>
+      ) : topic === 'Productivity' ? (
+        <>
+          <img className={styles.blog_main_topic} src={emoji_1f52C} alt='Productivity' />
+          <p className={styles.blog_main_topic}>
+            <strong>Productivity — </strong>
+          </p>
+        </>
+      ) : topic === 'Technology' ? (
+        <>
+          <img className={styles.blog_main_topic} src={emoji_1f6f0} alt='Technology' />
+          <p className={styles.blog_main_topic}>
+            <strong>Technology — </strong> How Memoriter is made.
+          </p>
+        </>
+      ) : topic === 'Miscellaneous' ? (
+        <>
+          <img className={styles.blog_main_topic} src={emoji_1f4A5} alt='Miscellaneous' />
+          <p className={styles.blog_main_topic}>
+            <strong>Miscellaneous — </strong> Everything not fitting into other topics.
+          </p>
+        </>
+      ) : (
+        <div className={styles.blog_main_topic} />
+      )}
+
       {/* four newest blog posts, divided in to two parts for the layout */}
       <div className={styles.blog_main_new_blog_container}>
         {blogPosts
@@ -63,8 +100,8 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                 key={blogPost.id}
                 to={`/blog/${blogPost.frontmatter.link}`}
               >
-                <p style={{ lineHeight: '1rem' }}>{blogPost.frontmatter.topic}</p>
-                <p className={styles.blog_main_blog_date} style={{ lineHeight: '1rem' }}>
+                <p>{blogPost.frontmatter.topic}</p>
+                <p className={styles.blog_main_blog_date}>
                   {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
                     month: 'short',
                     year: 'numeric',
@@ -72,11 +109,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                   })}
                 </p>
 
-                <GatsbyImage
-                  className={styles.blog_main_new_blog_image}
-                  image={thumb}
-                  alt={blogPost.frontmatter.title}
-                />
+                <GatsbyImage image={thumb} alt={blogPost.frontmatter.title} />
 
                 <h2>{blogPost.frontmatter.title}</h2>
                 <p>{blogPost.frontmatter.description}</p>
@@ -114,7 +147,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
                   })}
                 </p>
 
-                <div style={{ display: 'flex', gap: '20px' }}>
+                <div className={styles.blog_main_old_blog_flex}>
                   <div className={styles.blog_main_old_blog_box}>
                     <h2>{blogPost.frontmatter.title}</h2>
                     <p>{blogPost.frontmatter.description}</p>

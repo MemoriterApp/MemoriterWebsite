@@ -9,6 +9,7 @@
   width: calc(100% - 140px);
   max-width: 1400px;
   font: 1.1rem var(--font-default);
+  color: var(--color-font);
   gap: 80px;
 }
 
@@ -19,15 +20,43 @@
   width: 100%;
   margin-bottom: 400px;
 
+  // introduction to the selected blog topics
+  .blog_main_topic {
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+  }
+
+  // image for the selected topic
+  img.blog_main_topic {
+    width: 100px;
+  }
+
+  // description for the selected topic
+  p.blog_main_topic {
+    width: 320px;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 260px;
+  }
+
+  // empty container for layout if no topic was selected
+  div.blog_main_topic {
+    margin-bottom: 200px;
+  }
+
   // some extra layout styles for the date of publication for each blog post
   &_blog_date {
-    margin-top: -2.1rem;
     text-align: right;
+    margin-top: -2.1rem;
   }
 
   // new blog post preview
   &_new_blog {
     text-decoration: none;
+    margin-top: -200px;
     cursor: pointer;
     transition: transform 200ms, filter 200ms;
 
@@ -52,7 +81,6 @@
 
     // image for new blog preview
     img {
-      color: var(--color-font);
       border-radius: 4px;
     }
 
@@ -66,7 +94,12 @@
     // new blog preview description
     p {
       color: var(--color-font-gray);
-      line-height: 1.6rem;
+      line-height: 1rem;
+
+      // description with other text formatting
+      &:last-of-type {
+        line-height: 1.6rem;
+      }
     }
   }
 
@@ -89,6 +122,12 @@
       font-family: var(--font-default);
       color: var(--color-font-gray);
       line-height: 1rem;
+    }
+
+    // flex container for text and images
+    &_flex {
+      display: flex;
+      gap: 20px;
     }
 
     // gray box with content
