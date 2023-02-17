@@ -9,80 +9,58 @@ interface Props {
 const BlogSidebar: FC<Props> = ({ topic }: Props) => {
   return (
     <aside className={styles.blog_sidebar}>
-      <h1 className={styles.blog_sidebar_heading}>Blog</h1>
-      <p className={styles.blog_sidebar_description}>
-        Thoughts, inspirations and stories by the people creating Memoriter.
-      </p>
-      <hr className={styles.blog_sidebar_divider} />
+      <h1>Blog</h1>
+      <p>Thoughts, inspirations and stories by the people creating Memoriter.</p>
+      <hr />
 
-      {/*links to different sub topics*/}
-      <ul className={styles.blog_sidebar_topics}>
-        {/*the link for the current topic is highlighted*/}
-        {topic === 'Latest' ? (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog'>
-              <strong style={{ color: 'var(--color-font)' }}>Latest</strong>
-            </Link>
-          </li>
-        ) : (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog'>
-              Latest
-            </Link>
-          </li>
-        )}
-        {topic === 'Company' ? (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#company'>
-              <strong style={{ color: 'var(--color-font)' }}>Company</strong>
-            </Link>
-          </li>
-        ) : (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#company'>
-              Company
-            </Link>
-          </li>
-        )}
-        {topic === 'Productivity' ? (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#productivity'>
-              <strong style={{ color: 'var(--color-font)' }}>Productivity</strong>
-            </Link>
-          </li>
-        ) : (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#productivity'>
-              Productivity
-            </Link>
-          </li>
-        )}
-        {topic === 'Technology' ? (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#technology'>
-              <strong style={{ color: 'var(--color-font)' }}>Technology</strong>
-            </Link>
-          </li>
-        ) : (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#technology'>
-              Technology
-            </Link>
-          </li>
-        )}
-        {topic === 'Miscellaneous' ? (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#miscellaneous'>
-              <strong style={{ color: 'var(--color-font)' }}>Miscellaneous</strong>
-            </Link>
-          </li>
-        ) : (
-          <li>
-            <Link className={styles.blog_sidebar_topics_link} to='/blog#miscellaneous'>
-              Miscellaneous
-            </Link>
-          </li>
-        )}
+      {/* links to different sub topics */}
+      <ul>
+        {/* the link for the current topic is highlighted */}
+
+        <li>
+          <Link
+            to='/blog'
+            style={topic === 'Latest' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}}
+          >
+            Latest
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/blog#company'
+            style={topic === 'Company' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}}
+          >
+            Company
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/blog#productivity'
+            style={
+              topic === 'Productivity' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}
+            }
+          >
+            Productivity
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/blog#technology'
+            style={topic === 'Technology' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}}
+          >
+            Technology
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/blog#miscellaneous'
+            style={
+              topic === 'Miscellaneous' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}
+            }
+          >
+            Miscellaneous
+          </Link>
+        </li>
       </ul>
     </aside>
   );
