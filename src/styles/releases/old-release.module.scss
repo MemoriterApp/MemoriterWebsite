@@ -102,7 +102,7 @@
 // removes space at the sides on small screens
 @media (max-width: 960px) {
   .old_release {
-    width: calc(100% - 40px);
+    width: 100%;
     padding: 2px 0 56px;
 
     h1 {

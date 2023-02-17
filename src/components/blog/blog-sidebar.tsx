@@ -27,10 +27,10 @@ const BlogSidebar: FC<Props> = ({ topic }: Props) => {
         </li>
         <li>
           <Link
-            to='/blog#company'
-            style={topic === 'Company' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}}
+            to='/blog#project'
+            style={topic === 'Project' ? { fontWeight: 'bold', color: 'var(--color-font)' } : {}}
           >
-            Company
+            Project
           </Link>
         </li>
         <li>

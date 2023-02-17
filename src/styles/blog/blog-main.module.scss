@@ -1,104 +1,115 @@
 // all styles for the blog overview page (list of all blog posts)
 
-.blog_body { // an additional class which includes the main part as well as the sidebar, used for layout
+// an additional class which includes the main part as well as the sidebar, used for layout
+.blog_body {
   display: flex;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 140px);
-  max-width: 2400px;
+  max-width: 1400px;
+  font: 1.1rem var(--font-default);
   gap: 80px;
 }
 
-.blog_main { // layout container for the content
+// layout container for the content
+.blog_main {
   position: relative;
   top: 140px;
   width: 100%;
   margin-bottom: 400px;
 
-  &_blog_date { // some extra layout styles for the date of publication for each blog post
+  // some extra layout styles for the date of publication for each blog post
+  &_blog_date {
     margin-top: -2.1rem;
     text-align: right;
   }
 
-  &_new_blog { // new blog post preview
+  // new blog post preview
+  &_new_blog {
     text-decoration: none;
     cursor: pointer;
     transition: transform 200ms, filter 200ms;
 
-    &:hover { // hover effect
+    // hover effect
+    &:hover {
       transform: scale(0.98);
       filter: brightness(0.75);
     }
 
-    &_container { // container for the four newest posts
-      display: flex; // two column layout
-      gap: 40px;
+    // container for the four newest posts
+    &_container > * {
+      display: inline-block;
+      width: calc(50% - 20px);
       margin-bottom: 60px;
-  
-      > * { //children of the container, used for equally sized items
-        max-width: calc(50% - 20px);
+
+      // margin between the layout columns
+      &:first-of-type,
+      &:nth-of-type(3) {
+        margin-right: 40px;
       }
     }
 
-    &_image { // image for new blog preview
-      width: 100%;
-      margin-top: -8px;
+    // image for new blog preview
+    img {
+      color: var(--color-font);
       border-radius: 4px;
-      transition: filter 200ms;
     }
 
-    h2 { // new blog preview title
-      font-size: 2rem;
-      font-weight: 500;
-      font-family: var(--font-highlight);
+    // new blog preview title
+    h2 {
+      font: 2rem var(--font-highlight);
       color: var(--color-font);
       transition: color 200ms;
     }
 
-    p { // new blog preview description
-      font-size: 1.1rem;
-      font-family: var(--font-default);
+    // new blog preview description
+    p {
       color: var(--color-font-gray);
       line-height: 1.6rem;
     }
   }
 
+  // links to older blog posts
   &_old_blog {
-    /*links to older blog posts*/
     position: relative;
     text-decoration: none;
     margin-bottom: 42px;
     cursor: pointer;
     transition: filter 200ms;
 
-    &:hover { // hover effect
+    // hover effect
+    &:hover {
       filter: brightness(0.75);
     }
 
-    &_outside { // tag and date text outside the box
+    // tag and date text outside the box
+    &_outside {
       transform: translateY(4px);
       font-family: var(--font-default);
       color: var(--color-font-gray);
+      line-height: 1rem;
     }
 
-    &_box { // gray box with content
+    // gray box with content
+    &_box {
       width: 100%;
+      margin-bottom: 20px;
       background-color: var(--color-container);
       border-radius: 4px;
 
-      h2 { // old blog preview title
+      // old blog preview title
+      h2 {
         font-size: 1.8rem;
         font-weight: 500;
         color: var(--color-font);
-        font-family: var(--font-default);
         line-height: 2rem;
         margin-inline: 16px;
       }
 
-      p { // old blog preview description
+      // old blog preview description
+      p {
         font-size: 1.1rem;
-        font-family: var(--font-default);
         color: var(--color-font-gray);
         line-height: 1.6rem;
         text-align: justify;
@@ -106,23 +117,26 @@
       }
     }
 
-    &_image { // old blog preview image
+    // old blog preview image, classname is necessary to prevent a bug
+    &_image {
       display: inline-block;
       width: 200px;
+      color: var(--color-font);
+      margin-bottom: 20px;
       object-fit: cover; // optimizes image scaling
       border-radius: 4px;
     }
   }
 
-  &_button { // load more button
+  // load more button
+  button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 164px;
-    font-size: 1.6rem;
+    font: 1.6rem var(--font-highlight);
     color: var(--color-font);
-    font-family: var(--font-highlight);
-    padding: 8px 6px 8px 6px;
+    padding: 8px 6px;
     margin-top: 40px;
     border: none;
     border-radius: 4px;
@@ -130,48 +144,54 @@
     cursor: pointer;
     transition: background-color 200ms;
 
-    &:hover { // for the fading background box on hover
+    // for the fading background box on hover
+    &:hover {
       background-color: var(--color-hover);
     }
   }
 }
 
-@media (max-width: 1160px) { // optimizes space usage for medium sized screens (e.g. smaller laptops or large tablets)
+// optimizes space usage for medium sized screens (e.g. smaller laptops or large tablets)
+@media (max-width: 1200px) {
   .blog_body {
     width: calc(100% - 40px);
     gap: 40px;
   }
 }
 
-@media (max-width: 960px) { // optimizes layout for small screens
+// optimizes layout for small screens
+@media (max-width: 960px) {
   .blog_body {
     flex-direction: column;
   }
 }
 
-@media (max-width: 660px) { // optimizes layout mobile devices
-  .blog_main_new_blog_container {
-    flex-direction: column;
+// optimizes layout mobile devices
+@media (max-width: 660px) {
+  .blog_main_new_blog_container > * {
+    width: 100%;
 
-    > * {
-      flex: 1;
-      max-width: 100%;
+    &:first-of-type,
+    &:nth-of-type(3) {
+      margin-right: 0;
     }
   }
 
-  .blog_main_old_blog_imgage {
+  .blog_main_old_blog_image {
     display: none;
   }
 }
 
-@media (max-width: 280px) { // small visual fix (removes overlapping topic and date in some cases)
+// small visual fix (removes overlapping topic and date in some cases)
+@media (max-width: 280px) {
   .blog_main_blog_date {
     text-align: left;
     margin-top: -10px;
   }
 }
 
-@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+// hides all at too small screens in order to show no responsive bugs
+@media (max-width: 240px) {
   .blog_main {
     display: none;
   }

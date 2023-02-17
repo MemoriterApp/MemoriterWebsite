@@ -27,11 +27,11 @@ interface Props {
 }
 
 const Blog: FC<Props> = ({ data }: Props) => {
-  const [topic, setTopic] = useState<string>(''); //currently selected topic filter
+  const [topic, setTopic] = useState<string>(''); // currently selected topic filter
 
-  //checks selected topic based on the url hash
-  if (location.hash === '#company' && topic !== 'Company') {
-    setTopic('Company');
+  // checks selected topic based on the url hash
+  if (location.hash === '#project' && topic !== 'Project') {
+    setTopic('Project');
   } else if (location.hash === '#productivity' && topic !== 'Productivity') {
     setTopic('Productivity');
   } else if (location.hash === '#technology' && topic !== 'Technology') {
@@ -44,12 +44,12 @@ const Blog: FC<Props> = ({ data }: Props) => {
 
   return (
     <WebsiteLayout currentPage='blog'>
-      {/*style is needed for two column layout*/}
+      {/* style is needed for two column layout */}
       <section className={styles.blog_body}>
-        {/*sidebar with filter options*/}
+        {/* sidebar with filter options */}
         <BlogSidebar topic={topic} />
 
-        {/*main part with blog posts*/}
+        {/* main part with blog posts */}
         <BlogMain topic={topic} data={data} />
       </section>
     </WebsiteLayout>
@@ -71,8 +71,8 @@ export const Head: HeadFC = (): React.ReactElement => {
 export const query = graphql`
   query BlogPostsQuery {
     allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC}
-      filter: {fileAbsolutePath: {regex: "/(blog-posts)/"}}
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fileAbsolutePath: { regex: "/(blog-posts)/" } }
     ) {
       nodes {
         frontmatter {
