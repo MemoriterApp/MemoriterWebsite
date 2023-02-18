@@ -1,8 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/bot/bot-banner.module.scss';
-import windowsIcon from '../../images/icons/windows-icon.svg';
-import appleIcon from '../../images/icons/apple-icon.svg';
 
 const BotBanner: FC = () => {
   const [squareEffect, setSquareEffect] = useState<string>('0'); //variable for background animation when hovering on the download buttons

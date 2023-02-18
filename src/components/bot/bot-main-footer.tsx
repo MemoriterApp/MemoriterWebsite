@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import * as styles from '../../styles/button-footer.module.scss';
-import discordIcon from '../../images/icons/discord-icon.svg';
+import discordIcon from '../../images/icons/discord-icon-white.svg';
 
 const BotMainFooter: FC = () => {
   const [onHover, setOnHover] = useState<string>('brightness(1)'); //variable for the hover effect for the add to discord button
