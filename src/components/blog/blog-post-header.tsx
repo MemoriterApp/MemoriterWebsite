@@ -20,7 +20,6 @@ interface Props {
 }
 
 const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: Props) => {
-
   const themeIcons: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
 
   return (
@@ -69,14 +68,20 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? facebookIconBlack : facebookIconWhite} alt='Facebook' />
+          <img
+            src={themeIcons === 'light' ? facebookIconBlack : facebookIconWhite}
+            alt='Facebook'
+          />
         </a>
         <a
           href={`https://api.whatsapp.com/send?text=${title}%0a${window.location}`}
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? whatsappIconBlack : whatsappIconWhite} alt='WhatsApp' />
+          <img
+            src={themeIcons === 'light' ? whatsappIconBlack : whatsappIconWhite}
+            alt='WhatsApp'
+          />
         </a>
         <a
           href={`mailto:?subject=${title}&body=${title}%0A${window.location}`}

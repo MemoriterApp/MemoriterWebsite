@@ -1,11 +1,16 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useSelector } from 'react-redux';
 import * as styles from '../../styles/blog/blog-post-footer.module.scss';
-import twitterIcon from '../../images/icons/twitter-icon.svg';
-import facebookIcon from '../../images/icons/facebook-icon.svg';
-import whatsappIcon from '../../images/icons/whatsapp-icon.svg';
-import emailIcon from '../../images/icons/email-icon.svg';
+import twitterIconWhite from '../../images/icons/twitter-icon-white.svg';
+import twitterIconBlack from '../../images/icons/twitter-icon-black.svg';
+import facebookIconWhite from '../../images/icons/facebook-icon-white.svg';
+import facebookIconBlack from '../../images/icons/facebook-icon-black.svg';
+import whatsappIconWhite from '../../images/icons/whatsapp-icon-white.svg';
+import whatsappIconBlack from '../../images/icons/whatsapp-icon-black.svg';
+import emailIconWhite from '../../images/icons/email-icon-white.svg';
+import emailIconBlack from '../../images/icons/email-icon-black.svg';
 
 interface Props {
   title: string;
@@ -14,83 +19,73 @@ interface Props {
 }
 
 const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) => {
+  const themeIcons: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
   return (
     <section className={styles.blog_post_footer}>
-      {/*share links, the links are using the title variable and the current url (window.location)*/}
+      {/* share links, the links are using the title variable and the current url (window.location) */}
       <div className={styles.blog_post_footer_share}>
         <p>Share this post</p>
         <a
-          className={styles.blog_post_footer_share_circle}
-          style={{ left: '0' }}
           href={`https://twitter.com/intent/tweet?url=${window.location}/&text=${title}`}
           target='_blank'
           rel='noreferrer'
         >
-          <img className={styles.blog_post_footer_share_icon} src={twitterIcon} alt='Twitter' />
+          <img src={themeIcons === 'light' ? twitterIconBlack : twitterIconWhite} alt='Twitter' />
         </a>
         <a
-          className={styles.blog_post_footer_share_circle}
-          style={{ left: '45px' }}
           href={`https://www.facebook.com/sharer/sharer.php?u=${window.location}/`}
           target='_blank'
           rel='noreferrer'
         >
           <img
-            className={styles.blog_post_footer_share_icon}
-            style={{ marginTop: '-1px' }}
-            src={facebookIcon}
+            src={themeIcons === 'light' ? facebookIconBlack : facebookIconWhite}
             alt='Facebook'
           />
         </a>
         <a
-          className={styles.blog_post_footer_share_circle}
-          style={{ left: '90px' }}
           href={`https://api.whatsapp.com/send?text=${title}%0a${window.location}`}
           target='_blank'
           rel='noreferrer'
         >
-          <img className={styles.blog_post_footer_share_icon} src={whatsappIcon} alt='WhatApp' />
+          <img src={themeIcons === 'light' ? whatsappIconBlack : whatsappIconWhite} alt='WhatApp' />
         </a>
         <a
-          className={styles.blog_post_footer_share_circle}
-          style={{ left: '135px' }}
           href={`mailto:?subject=${title}&body=${title}%0A${window.location}`}
           target='_blank'
           rel='noreferrer'
         >
-          <img className={styles.blog_post_footer_share_icon} src={emailIcon} alt='Email' />
+          <img src={themeIcons === 'light' ? emailIconBlack : emailIconWhite} alt='Email' />
         </a>
       </div>
-
-      <hr className={styles.blog_post_footer_divider} /> {/*small divider line*/}
-      
-      <h2 className={styles.blog_post_footer_read_more}>Read More</h2>
-      {/*link to all blog posts*/}
+      <hr /> {/* small divider line */}
+      <h2>Read More</h2>
+      {/* link to all blog posts */}
       <Link className={styles.blog_post_footer_all_posts} to='/blog'>
-        All posts &#129046; {/*&#129044; is a unicode arrow symbol*/}
+        All posts &#129046; {/* &#129044; is a unicode arrow symbol */}
       </Link>
       <div>
-        {/*it is checked if one of all blog posts matches the title of one of the linked blogs*/}
+        {/* it is checked if one of all blog posts matches the title of one of the linked blogs */}
         {allBlogPosts
           .filter(
             (blogPost: any) =>
-              blogPost.frontmatter.link === linkedBlogs.find((item) => item === blogPost.frontmatter.link)
+              blogPost.frontmatter.link ===
+              linkedBlogs.find((item) => item === blogPost.frontmatter.link)
           )
           .map((blogPost: any) => {
             const thumb: any = getImage(blogPost.frontmatter.thumb); // post thumbnail
 
             return (
               <Link
-              className={styles.blog_post_footer_linked_blog}
+                className={styles.blog_post_footer_linked_blog}
                 to={`/blog/${blogPost.frontmatter.link}`}
                 key={blogPost.id}
               >
-                <p className={styles.blog_post_footer_linked_blog_outside}>{blogPost.frontmatter.topic}</p>
+                <p className={styles.blog_post_footer_linked_blog_outside}>
+                  {blogPost.frontmatter.topic}
+                </p>
                 <p
-                  className={`${styles.blog_post_footer_linked_blog_date} ${styles.blog_post_footer_linked_blog_outside}`}
-                  style={{ lineHeight: '1rem' }}
+                  className={`${styles.blog_post_footer_linked_blog_date} ${styles.blog_post_footer_linked_blog_outside}`} // two classes
                 >
-                  {/*two classes*/}
                   {new Date(blogPost.frontmatter.date).toLocaleString('en-us', {
                     month: 'short',
                     year: 'numeric',
@@ -98,18 +93,17 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
                   })}
                 </p>
 
-                <div style={{ display: 'flex', gap: '20px' }}>
+                <div className={styles.blog_post_footer_linked_blog_flex}>
                   <div className={styles.blog_post_footer_linked_blog_box}>
                     <h3>{blogPost.frontmatter.title}</h3>
                     <p>{blogPost.frontmatter.description}</p>
                   </div>
 
                   <GatsbyImage
-                    className={styles.blog_post_footer_linked_blog_image}
+                    className={styles.blog_post_footer_linked_blog_box_image}
                     image={thumb}
                     alt={blogPost.frontmatter.title}
                   />
-                  
                 </div>
               </Link>
             );

@@ -78,13 +78,13 @@
     color: var(--color-font-gray);
     margin-bottom: -90px;
 
-    // circle around the icons
+    // share link buttons
     a {
       position: relative;
       display: inline-block;
       width: 32px;
       height: 32px;
-      margin-inline: 6px;
+      margin-right: 12px;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 200ms;
@@ -93,13 +93,13 @@
       &:hover {
         background-color: var(--color-hover-light);
       }
-    }
 
-    // icons for the different social media platforms
-    img {
-      transform: translate(12.5%, 12.5%); // centers the icon
-      width: 80%;
-      height: 80%;
+      // icons for the different social media platforms
+      img {
+        transform: translate(12.5%, 12.5%); // centers the icon
+        width: 80%;
+        height: 80%;
+      }
     }
   }
 }
@@ -128,7 +128,13 @@
 }
 
 // fixes some objects moving out of the screen
-@media (max-width: 960px) {
+@media (max-width: 700px) {
+  .blog_post_header_all_posts,
+  .blog_post_header_reading_time,
+  .blog_post_header_share {
+    left: 0;
+  }
+
   .blog_post_header_content {
     max-width: 100%;
   }
