@@ -97,10 +97,10 @@
 }
 
 // removes space at the sides on small screens
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .legal_main {
     top: 60px;
-    padding: 40px 0 80px;
+    padding: 40px 20px 80px;
   }
 }
 
