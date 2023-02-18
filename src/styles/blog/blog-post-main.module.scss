@@ -1,97 +1,99 @@
-/*In this stylesheet the basic layout options of all blog posts are defined.*/
+// In this stylesheet the basic layout options of all blog posts are defined.
 
-.blog_post_main { // main container
+// main container
+.blog_post_main {
   position: relative;
   left: 50%;
   top: 180px;
   transform: translateX(-50%);
   width: calc(100% - 144px);
   max-width: 1400px;
+  font: 1.3rem var(--font-blog);
   color: var(--color-font);
+  line-height: 2.2rem;
   margin-bottom: 240px;
   overflow: hidden;
 
-  article { // main text
+  // main text
+  article {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     max-width: 60%;
-    font-size: 1.3rem;
-    font-family: var(--font-blog);
-    line-height: 2.2rem;
     margin-bottom: 80px;
 
-    h1 { // all headings
-      font-size: 2.2rem;
-      font-family: var(--font-heading);
+    // all headings
+    h1 {
+      font: 2.2rem var(--font-heading);
       margin-top: 48px;
     }
 
-    h2 { // all sub headings
-      font-size: 1.7rem;
-      font-family: var(--font-heading);
+    // all sub headings
+    h2 {
+      font: 1.7rem var(--font-heading);
       margin-top: 42px;
     }
 
-    h3 { // sub sub headings
-      font-size: 1.4rem;
-      font-family: var(--font-heading);
+    // sub sub headings
+    h3 {
+      font: 1.4rem var(--font-heading);
       margin-top: 36px;
     }
 
-    ul, ol { // unordered list
-      font-size: 1.3rem;
-      font-family: var(--font-blog);
-      line-height: 2.2rem;
+    // ordered and unordered list
+    ul,
+    ol {
       margin-left: -16px;
     }
 
-    a { // hyperlinks
+    // hyperlinks
+    a {
       color: var(--color-font);
       text-decoration: underline 1px;
       text-underline-offset: 2px;
       cursor: pointer;
       transition: color 200ms;
 
-      &:hover { // link hover effect
+      // link hover effect
+      &:hover {
         color: var(--color-font-gray);
       }
     }
 
-    [class='gatsby-resp-image-wrapper'] { // images
+    // images
+    [class='gatsby-resp-image-wrapper'] {
       width: calc(100% + 80px) !important;
-      margin: 48px -40px 48px -40px !important;
-      border-radius: 4px; 
+      margin: 48px -40px 48px !important;
+      border-radius: 4px;
       overflow: hidden;
-      fill: invert(1);
     }
 
-    iframe { // embedded youtube videos
+    // embedded youtube videos
+    iframe {
       width: calc(100% + 80px);
       aspect-ratio: 16 / 9;
-      margin: 24px -40px 40px -40px;
-      background-color: var(--color-transparent);
+      margin: 24px -40px 40px;
       border: none;
       border-radius: 4px;
       overflow: hidden;
     }
 
-    figcaption { // image or video and captions
-      font-size: 1.1rem;
+    // image or video and captions
+    figcaption {
+      font: 1.1rem var(--font-default);
       color: var(--color-font-gray);
-      font-family: var(--font-default);
-      margin-inline: -40px;
-      margin-top: -40px;
-      margin-bottom: 32px;
+      margin: -40px -40px 32px;
     }
 
-    blockquote { // blockquotes with line at the left
+    // blockquotes with line at the left
+    blockquote {
       padding-left: 24px;
-      margin: 40px 0 40px 0;
+      margin: 40px 0;
       border-left: 4px solid var(--color-font);
     }
 
-    code { // inline code styles
+    // inline code styles
+    code {
       font-size: 1.2rem;
       color: var(--color-font-code);
       padding: 4px 6px;
@@ -99,31 +101,33 @@
       border-radius: 4px;
     }
 
-    pre { // code blocks
+    // code blocks
+    pre {
       font-size: 1.2rem;
       line-height: 1.8rem;
       padding: 20px 24px;
-      margin-top: 36px;
-      margin-bottom: 36px;
+      margin: 36px 0;
       border-radius: 4px;
-    
-      code { // fixes issues with code block component
+
+      // fixes issues with code block component
+      code {
         color: unset;
         padding: 4px 0;
         background-color: unset;
       }
     }
 
+    // emphazised quotes
     blockquote[class='callout'] {
       font-family: var(--font-default);
       padding: 22px 24px 22px 68px;
-      margin-top: 36px;
-      margin-bottom: 36px;
+      margin: 36px 0;
       background-color: var(--color-hover);
-      border-left: none !important; // !important overwrites all other conflicting CSS
+      border-left: none !important;
       border-radius: 4px;
-    
-      &::before { // emoji inserted before the text
+
+      // emoji inserted before the text
+      &::before {
         content: '';
         position: absolute;
         width: 2.2rem;
@@ -132,139 +136,168 @@
         background-image: url('../../images/emoji/1f4a1.svg'); // light bulb emoji, default icon if unsupported or none was selected
       }
 
-      &[icon='👉']::before { // hand pointing right emoji
+      // hand pointing right emoji
+      &[icon='👉']::before {
         background-image: url('../../images/emoji/1f449.svg');
       }
 
-      &[icon='☝️']::before { // hand pointing up emoji
+      // hand pointing up emoji
+      &[icon='☝️']::before {
         background-image: url('../../images/emoji/261d.svg');
       }
 
-      &[icon='👌']::before { // ok hand emoji
+      // ok hand emoji
+      &[icon='👌']::before {
         background-image: url('../../images/emoji/1f44c.svg');
       }
 
-      &[icon='🔑']::before { // key emoji
+      // key emoji
+      &[icon='🔑']::before {
         background-image: url('../../images/emoji/1f511.svg');
       }
 
-      &[icon='🚧']::before { // construction sign emoji
+      // construction sign emoji
+      &[icon='🚧']::before {
         background-image: url('../../images/emoji/1f6a7.svg');
       }
 
-      &[icon='⚠️']::before { // warning sign emoji
+      // warning sign emoji
+      &[icon='⚠️']::before {
         background-image: url('../../images/emoji/26a0.svg');
       }
-      
-      &[icon='🔥']::before { // fire emoji
+
+      // fire emoji
+      &[icon='🔥']::before {
         background-image: url('../../images/emoji/1f525.svg');
       }
 
-      &[icon='📌']::before { // pushpin emoji
+      // pushpin emoji
+      &[icon='📌']::before {
         background-image: url('../../images/emoji/1f4cc.svg');
       }
 
-      &[icon='✂️']::before { // scissors emoji
+      // scissors emoji
+      &[icon='✂️']::before {
         background-image: url('../../images/emoji/2702.svg');
       }
 
-      &[icon='❓']::before { // question mark emoji
+      // question mark emoji
+      &[icon='❓']::before {
         background-image: url('../../images/emoji/2753.svg');
       }
 
-      &[icon='🚫']::before { // no entry sign emoji
+      // no entry sign emoji
+      &[icon='🚫']::before {
         background-image: url('../../images/emoji/1f6ab.svg');
       }
 
-      &[icon='⛔']::before { // no entry emoji
+      // no entry emoji
+      &[icon='⛔']::before {
         background-image: url('../../images/emoji/26d4.svg');
       }
 
-      &[icon='⏰']::before { // alarm clock emoji
+      // alarm clock emoji
+      &[icon='⏰']::before {
         background-image: url('../../images/emoji/23f0.svg');
       }
 
-      &[icon='☎️']::before { // telephone emoji
+      // telephone emoji
+      &[icon='☎️']::before {
         background-image: url('../../images/emoji/260e.svg');
       }
 
-      &[icon='🚨']::before { // red alarm light emoji
+      // red alarm light emoji
+      &[icon='🚨']::before {
         background-image: url('../../images/emoji/1f6a8.svg');
       }
 
-      &[icon='♻️']::before { // recycling emoji
+      // recycling emoji
+      &[icon='♻️']::before {
         background-image: url('../../images/emoji/267b.svg');
       }
 
-      &[icon='✅']::before { // checkmark emoji
+      // checkmark emoji
+      &[icon='✅']::before {
         background-image: url('../../images/emoji/2714.svg');
       }
 
-      &[icon='🔒']::before { // lock emoji
+      // lock emoji
+      &[icon='🔒']::before {
         background-image: url('../../images/emoji/1f512.svg');
       }
 
-      &[icon='📎']::before { // papaerclip emoji
+      // papaerclip emoji
+      &[icon='📎']::before {
         background-image: url('../../images/emoji/1f4ce.svg');
       }
 
-      &[icon='📖']::before { // open book emoji
+      // open book emoji
+      &[icon='📖']::before {
         background-image: url('../../images/emoji/1f4d6.svg');
       }
 
-      &[icon='🗣️']::before { // speaking head emoji
+      // speaking head emoji
+      &[icon='🗣️']::before {
         background-image: url('../../images/emoji/1f5e3.svg');
       }
 
-      &[icon='➡️']::before { // rightwards arrow emoji
+      // rightwards arrow emoji
+      &[icon='➡️']::before {
         background-image: url('../../images/emoji/27a1.svg');
       }
 
-      &[icon='📢']::before { // loudspeaker emoji
+      // loudspeaker emoji
+      &[icon='📢']::before {
         background-image: url('../../images/emoji/1f4e2.svg');
       }
 
-      &[icon='🛠️']::before { // tools emoji
+      // tools emoji
+      &[icon='🛠️']::before {
         background-image: url('../../images/emoji/1f6e0.svg');
       }
 
-      &[icon='⚙️']::before { // gear emoji
+      // gear emoji
+      &[icon='⚙️']::before {
         background-image: url('../../images/emoji/2699.svg');
       }
     }
   }
 }
 
-@media (max-width: 1200px) { // optimizes layout for smaller screens for better readability
+// optimizes layout for smaller screens for better readability
+@media (max-width: 1200px) {
   .blog_post_main article {
     max-width: calc(100% - 80px);
   }
 }
 
-@media (max-width: 700px) { // fixes images breaking content margin
+// fixes images breaking content margin
+@media (max-width: 700px) {
   .blog_post_main {
     width: calc(100% - 40px);
-  }
-  .blog_post_main article {
-    max-width: 100%;
-  }
-  
-  .blog_post_main article [class='gatsby-resp-image-wrapper'] {
-    width: 100% !important;
-    margin: 40px 0 48px 0 !important;
-  }
 
-  .blog_post_main article iframe {
-    width: 100%;
-    margin: 40px 0 48px 0;
-  }
+    article {
+      max-width: 100%;
 
-  .blog_post_main article figcaption {
-    margin-inline: 0;
+      [class='gatsby-resp-image-wrapper'] {
+        width: 100% !important;
+        margin: 40px 0 48px 0 !important;
+      }
+
+      iframe {
+        width: 100%;
+        margin: 40px 0 48px 0;
+      }
+
+      figcaption {
+        margin-inline: 0;
+      }
+    }
   }
 }
 
-@media (max-width: 240px) { // hides everything on too small screens
+// hides everything on too small screens
+@media (max-width: 240px) {
   .blog_post_main {
     display: none;
   }
