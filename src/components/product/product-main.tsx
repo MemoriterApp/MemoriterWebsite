@@ -4,18 +4,18 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/default-main.module.scss';
 import ProductStories from './product-stories';
-import emoji1f4a1 from '../../images/emoji/1f4a1.svg';
-import emoji1f9e0 from '../../images/emoji/1f9e0.svg';
-import emoji1f465 from '../../images/emoji/1f465.svg';
-import emoji1f4ac from '../../images/emoji/1f4ac.svg';
-import emoji1f5c2 from '../../images/emoji/1f5c2.svg';
-import emoji1f3c1 from '../../images/emoji/1f3c1.svg';
-import emoji1f4dd from '../../images/emoji/1f4dd.svg';
-import emoji1f5c3 from '../../images/emoji/1f5c3.svg';
-import emoji2049 from '../../images/emoji/2049.svg';
-import emoji1f310 from '../../images/emoji/1f310.svg';
-import emoji1f4bb from '../../images/emoji/1f4bb.svg';
-import emoji1f916 from '../../images/emoji/1f916.svg';
+import emoji1f4a1 from '../../images/emoji/1f4a1.svg'; // light bulb
+import emoji1f9e0 from '../../images/emoji/1f9e0.svg'; // brain
+import emoji1f465 from '../../images/emoji/1f465.svg'; // two faces
+import emoji1f4ac from '../../images/emoji/1f4ac.svg'; // memo
+import emoji1f5c2 from '../../images/emoji/1f5c2.svg'; // index card box
+import emoji1f3c1 from '../../images/emoji/1f3c1.svg'; // question and exclamation mark
+import emoji1f4dd from '../../images/emoji/1f4dd.svg'; // speech bubble
+import emoji1f5c3 from '../../images/emoji/1f5c3.svg'; // card file box
+import emoji2049 from '../../images/emoji/2049.svg'; // finish flag
+import emoji1f310 from '../../images/emoji/1f310.svg'; // globe with meridians
+import emoji1f4bb from '../../images/emoji/1f4bb.svg'; // personal computer
+import emoji1f916 from '../../images/emoji/1f916.svg'; // robot
 
 const ProductMain: FC = () => {
   return (
@@ -37,8 +37,8 @@ const ProductMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/studying-laptop.png'
+          alt='Studying with book and laptop'
         />
       </article>
 
@@ -96,8 +96,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/more-effective.png'
+          alt='Effective studying'
         />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
@@ -155,16 +155,16 @@ const ProductMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/toolbox.png'
+          alt='Toolbox'
         />
       </article>
 
       <article className={styles.default_main_container}>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/ai-brain.png'
+          alt='Artifical intelligence'
         />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
@@ -222,8 +222,8 @@ const ProductMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/memory-graph.png'
+          alt='Figure representing spaced repetition'
         />
       </article>
 
@@ -278,8 +278,8 @@ const ProductMain: FC = () => {
       <article className={styles.default_main_container}>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/study-together.png'
+          alt='Students working together'
         />
         <AnimationOnScroll
           className={styles.default_main_container_sub}
@@ -316,8 +316,8 @@ const ProductMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/product/github.png'
+          alt='Open source repository'
         />
       </article>
     </section>

@@ -88,7 +88,7 @@
     width: fit-content;
     font: 1.2rem var(--font-highlight);
     padding: 6px 8px;
-    margin: -1.5rem 0 24px;
+    margin-bottom: 24px;
     background-color: var(--color-hover);
     border-radius: 4px;
   }
@@ -230,7 +230,7 @@
   }
 
   .default_main_badge {
-    margin: 32px 0 24px;
+    margin-top: 32px
   }
 
   .default_main_heading {

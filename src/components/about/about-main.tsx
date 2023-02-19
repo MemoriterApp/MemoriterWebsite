@@ -27,15 +27,15 @@ const AboutMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/about/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/about/stressed.png'
+          alt='An overworked student'
         />
       </article>
       <article className={styles.default_main_container}>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/about/placeholder.jpg'
-          alt='placeholder'
+          src='../../images/about/school.png'
+          alt='Our (former) school'
         />
         <AnimationOnScroll
           className={styles.default_main_container_sub}

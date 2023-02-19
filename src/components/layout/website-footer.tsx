@@ -55,7 +55,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             src={themeIcon === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
             alt='Memoriter'
           />
-          <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
+          <p>Memoriter — the flashcard app that lets you remember more!</p>
         </div>
 
         <div className={styles.website_footer_flex_gap} />

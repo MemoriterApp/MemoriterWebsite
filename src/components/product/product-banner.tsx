@@ -43,9 +43,9 @@ const ProductBanner: FC = () => {
       {/* content */}
       <article className={styles.product_banner_content}>
         {/* slogan */}
-        <p>Study Better, Faster, Smarter - Study with Memoriter!</p>
+        <p>Memoriter — the flashcard app that lets you remember more!</p>
         <p>
-          Work with Memoriter effective memorizing, tools to quickly achieve successful results.
+          Work with the effective memorizing tools of Memoriter to quickly achieve successful results.
         </p>
 
         {/* get started button for redirecting to register page */}

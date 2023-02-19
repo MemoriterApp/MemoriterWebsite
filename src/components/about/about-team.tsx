@@ -145,8 +145,8 @@ const AboutTeam: FC = () => {
           <article>
             <h2>Greg G.</h2>
             <p>
-              Hello, people at Memoriter call me the Guardian of the Backend since I develop the
-              Backend of the app.
+              Hello, I am the CTO of Memoriter, people there call me the Guardian of the Backend
+              since I develop the Backend of the app.
             </p>
           </article>
           <StaticImage
@@ -161,7 +161,7 @@ const AboutTeam: FC = () => {
           animateIn={styles.about_team_animation_fade_in_down}
           animateOut={styles.about_team_animation_fade_in_down}
         >
-          <h2>... and all former contributers and the community.</h2>
+          <h2>... and the community and all former contributors to the project.</h2>
         </AnimationOnScroll>
       </div>
 
