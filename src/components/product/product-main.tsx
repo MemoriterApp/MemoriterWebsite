@@ -100,7 +100,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/effective.png'
+            src='../../images/product/more-effective.png'
             alt='placeholder'
           />
         </div>
@@ -164,7 +164,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/tool-box.png'
             alt='placeholder'
           />
         </div>
@@ -174,7 +174,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/ai-brain.png'
             alt='placeholder'
           />
         </div>
@@ -294,7 +294,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/sharing-folder.png'
             alt='placeholder'
           />
         </div>
@@ -334,7 +334,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/placeholder.jpg'
+            src='../../images/product/github.png'
             alt='placeholder'
           />
         </div>
