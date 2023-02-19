@@ -3,6 +3,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import * as styles from '../../styles/default-main.module.scss';
 import AboutTeam from './about-team';
 import placeholderImage from '../../images/about/placeholder.jpg';
+import stressed from '../../images/about/stressed.png';
+import school from '../../images/about/bvs.png';
 
 const AboutMain: FC = () => {
     return (
@@ -24,7 +26,7 @@ const AboutMain: FC = () => {
                     </AnimationOnScroll>
                 </div>
                 <div className={styles.default_main_container_sub_image}>
-                    <img className={styles.default_main_image} src={placeholderImage} alt='placeholder'/>
+                    <img className={styles.default_main_image} src={stressed} alt='placeholder'/>
                 </div>
             </article>
             <article className={styles.default_main_container}>
@@ -43,7 +45,7 @@ const AboutMain: FC = () => {
                     </AnimationOnScroll>
                 </div>
                 <div className={styles.default_main_container_sub_image}>
-                    <img className={styles.default_main_image} src={placeholderImage} alt='placeholder'/>
+                    <img className={styles.default_main_image} src={school} alt='placeholder'/>
                 </div>
             </article>
 

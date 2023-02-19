@@ -89,7 +89,7 @@ const AboutTeam = () => {
           <div>
             <h2>Greg G.</h2>
             <p>
-              Hello, people at Memoriter call me the guardian of the Backend since I develop the Backend of the app. 
+              Hello, I am the CTO of Memoriter people at Memoriter call me the guardian of the Backend since I develop the Backend of the app. 
             </p>
             <p>contact: greg@memoriter.de</p>
           </div>
