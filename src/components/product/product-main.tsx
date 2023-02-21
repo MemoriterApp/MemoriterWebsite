@@ -39,7 +39,7 @@ const ProductMain: FC = () => {
         <div className={styles.default_main_container_sub_image}>
           <StaticImage
             className={styles.default_main_image}
-            src='../../images/product/studying-laptop.png'
+            src='../../images/product/first.png'
             alt='placeholder'
           />
         </div>

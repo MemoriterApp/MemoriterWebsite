@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import * as styles from '../../styles/about/about-team.module.scss';
 import placeholderImage from '../../images/about/placeholder.jpg';
+import Alex from '../../images/about/alex.png';
+import Saga from '../../images/about/saga.png';
+import Greg from '../../images/about/greg.png';
+import Johan from '../../images/about/johan.png';
 
 const AboutTeam = () => {
   return (
@@ -18,7 +22,7 @@ const AboutTeam = () => {
             </p>
             <p>contact: johan@memoriter.de</p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <img src={Johan} alt='johan' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -44,7 +48,7 @@ const AboutTeam = () => {
             </p>
             <p>contact: alexander@memoriter.de</p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <img src={Alex} alt='Alex' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -64,12 +68,12 @@ const AboutTeam = () => {
           <div>
             <h2>Saga B.</h2>
             <p>
-              Hej, people call me the Graphic Guru General and I am responsible for the design of the app. 
+              Hej, people call me the Graphic Guru General and I am responsible for the design of the app.
               I also run the social media accounts and make sure that we have a good presence on the internet.
             </p>
             <p>contact: saga@memoriter.de</p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <img src={Saga} alt='Saga' />
         </article>
 
         <article className={styles.about_team_card}>
@@ -89,11 +93,11 @@ const AboutTeam = () => {
           <div>
             <h2>Greg G.</h2>
             <p>
-              Hello, I am the CTO of Memoriter people at Memoriter call me the guardian of the Backend since I develop the Backend of the app. 
+              Hello, I am the CTO of Memoriter people at Memoriter call me the guardian of the Backend since I develop the Backend of the app.
             </p>
             <p>contact: greg@memoriter.de</p>
           </div>
-          <img src={placeholderImage} alt='placeholder' />
+          <img src={Greg} alt='Greg' />
         </article>
       </div>
     </section>
