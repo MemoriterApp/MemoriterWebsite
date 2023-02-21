@@ -12,7 +12,7 @@ const Cookies: FC = () => {
         <h1>Memoriter Cookie Policy</h1>
 
         <p>
-          <strong>Last Updated: July 26th, 2022</strong>
+          <strong>Last Updated: July 26, 2022</strong>
         </p>
         <p>Work in Progress.</p>
 
