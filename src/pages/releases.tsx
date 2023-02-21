@@ -59,7 +59,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Release Notes'
-      description='A list of which features were added or changed in the past.'
+      description='The progress of Memoriter over time: a list of which features were added or changed in the past (and which bugs were fixed :D).'
       keywords='releases, patch notes, update'
       type='website'
     />

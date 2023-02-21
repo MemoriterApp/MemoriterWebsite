@@ -76,7 +76,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Impressum'
-      description='How to contact us.'
+      description='How to contact us. Hust some legally required stuff.'
       keywords='impressum, legal'
       type='website'
     />

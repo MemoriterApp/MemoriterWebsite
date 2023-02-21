@@ -138,7 +138,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='FAQ'
-      description='Here you can find more information if you need help.'
+      description='If you need help with Memoriter, you can find more information here.'
       keywords='support, help'
       type='website'
     />

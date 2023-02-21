@@ -76,7 +76,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Cookie Policy'
-      description='This page contains further information how Memoriter uses cookies.'
+      description='This page contains further detailed information how Memoriter uses cookies.'
       keywords='cookies, policy, legal'
       type='website'
     />

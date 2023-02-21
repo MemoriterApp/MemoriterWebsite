@@ -11,14 +11,14 @@ const Donate: FC = () => {
   return (
     <WebsiteLayout currentPage='donate'>
       <section className={styles.donate_main_container}>
-        {/*main content and texts*/}
+        {/* main content and texts */}
         <DonateMain />
 
-        {/*section for donating*/}
+        {/* section for donating */}
         <DonateDonate />
       </section>
 
-      {/*statistics where the money goes (for transparency reasons)*/}
+      {/* statistics where the money goes (for transparency reasons) */}
       <DonateStatistics />
     </WebsiteLayout>
   );
@@ -29,7 +29,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Donate'
-      description='If you want to support our project, please consider donating.'
+      description='If you want to support further improvements to our project, please consider supporting us by a small donation.'
       keywords='donate, support'
       type='website'
     />

@@ -32,8 +32,8 @@ const PageNotFound: FC = (): React.ReactElement => {
           {/* text */}
           <h1>Page Not Found!</h1>
           <p>
-            This URL does not match any page. Please use another link or go back to an existing
-            page.
+            This URL does not match any page. Please use another link or go back to an
+            existing page.
           </p>
 
           {/* button redirects to product page */}
@@ -60,7 +60,7 @@ export default PageNotFound;
 export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
-      title='Page not found'
+      title='404 Page not found'
       description='HTTP Error 404. This page does not exist and the URL does not match any page.'
       keywords='404, error, not found'
       type='website'

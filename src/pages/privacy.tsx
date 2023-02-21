@@ -92,7 +92,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Privacy Policy'
-      description='This page contains information regarding how Memoriter uses and processes personal data.'
+      description='At Memoriter we think privacy and data protection are importent. Therefore this page contains information regarding how we use and process personal data.'
       keywords='privacy, data protection, policy, legal'
       type='website'
     />

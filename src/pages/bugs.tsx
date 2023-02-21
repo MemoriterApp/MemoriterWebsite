@@ -145,7 +145,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Bug Report'
-      description='If you find any technical issues, you can report them here.'
+      description='If you find any technical issues regarding Memoriter, you can report them here.'
       keywords='bugs, report, help'
       type='website'
     />

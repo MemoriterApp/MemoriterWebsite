@@ -22,7 +22,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='MemoriterBot'
-      description='Your personal AI tutor at your fingertips.'
+      description='Your personal AI tutor at your fingertips. Use our powerful AI tools to bring your studying experiece to the next level.'
       keywords='bot, ai, cheatTP-3'
       type='website'
     />
