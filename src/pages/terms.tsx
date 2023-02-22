@@ -247,7 +247,11 @@ const Terms: FC = () => {
             </a>
           </li>
           <li>
-            The Twitter emoji graphics ("Twemoji") are licensed under{' '}
+            The{' '}
+            <a href='https://twemoji.twitter.com/' target='_blank' rel='noreferrer'>
+              Twitter emoji graphics
+            </a>{' '}
+            ("Twemoji") are licensed under{' '}
             <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noreferrer'>
               CC-BY 4.0.
             </a>
