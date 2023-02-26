@@ -32,8 +32,7 @@ const AboutBanner: FC = () => {
 
       {/* content */}
       <p className={styles.about_banner_content}>
-        Find our more about <em>the best</em> team of developers and designers <em>in the world</em>
-        .
+        <em>Behind the scenes:</em> get to know the faces behind the website
       </p>
 
       {/* transition shape at the bottom */}
