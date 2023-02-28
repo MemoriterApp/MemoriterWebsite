@@ -9,10 +9,14 @@ import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
 import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
 import instagramIconLight from '../../images/icons/instagram-icon-light.svg';
 import instagramIconDark from '../../images/icons/instagram-icon-dark.svg';
+import tiktokIconLight from '../../images/icons/tiktok-icon-light.svg';
+import tiktokIconDark from '../../images/icons/tiktok-icon-dark.svg';
 import discordIconLight from '../../images/icons/discord-icon-light.svg';
 import discordIconDark from '../../images/icons/discord-icon-dark.svg';
 import githubIconLight from '../../images/icons/github-icon-light.svg';
 import githubIconDark from '../../images/icons/github-icon-dark.svg';
+import shopIconLight from '../../images/icons/shop-icon-light.svg';
+import shopIconDark from '../../images/icons/shop-icon-dark.svg';
 import sendIcon from '../../images/icons/send-icon.svg';
 import emoji1f36a from '../../images/emoji/1f36a.svg'; // cookie emoji for cookie setting
 import emoji1f1ec_1f1e7 from '../../images/emoji/1f1ec-1f1e7.svg'; // british flag for language select
@@ -61,17 +65,23 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         <div className={styles.website_footer_flex_gap} />
 
         <div className={styles.website_footer_top_social}>
-          <a href='https://instagram.com' target='_blank' rel='noreferrer'>
+          <a href='https://instagram.com/memoriter6' target='_blank' rel='noreferrer'>
             <img
               src={themeIcon === 'light' ? instagramIconDark : instagramIconLight}
-              alt='Github'
+              alt='Instagram'
             />
           </a>
-          <a href='https://discord.com' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? discordIconDark : discordIconLight} alt='Github' />
+          <a href='https://www.tiktok.com/@memoriterofficial' target='_blank' rel='noreferrer'>
+            <img src={themeIcon === 'light' ? tiktokIconDark : tiktokIconLight} alt='TikTok' />
+          </a>
+          <a href='https://discord.gg/wpdYh2CQ4H' target='_blank' rel='noreferrer'>
+            <img src={themeIcon === 'light' ? discordIconDark : discordIconLight} alt='Discord' />
           </a>
           <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? githubIconDark : githubIconLight} alt='Github' />
+            <img src={themeIcon === 'light' ? githubIconDark : githubIconLight} alt='GitHub' />
+          </a>
+          <a href='https://shop-memoriter.myspreadshop.de' target='_blank' rel='noreferrer'>
+            <img src={themeIcon === 'light' ? shopIconDark : shopIconLight} alt='Shop' />
           </a>
         </div>
 

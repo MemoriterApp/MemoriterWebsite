@@ -8,7 +8,7 @@ While working on this update, we redirected our focus to AI and incorporated new
 
 ## New Features
 
-The most notable addition to this update is the incorporation of AI features. The AI now suggests answers for flashcards, enabling faster creation. We've also added CheatPT-3, an AI tutor in the form of a Discord Bot. It assists with homework and flashcard creation. Please note that this feature is currently in beta and may have bugs. Feedback and suggestions are welcome. To further support homework assistance, we created a community on Discord for users to ask questions and receive help. Join the community whith [this link](https://discord.gg/6Z2Z7Y4) and help to grow it to be a helpful place for homework assistance.
+The most notable addition to this update is the incorporation of AI features. The AI now suggests answers for flashcards, enabling faster creation. We've also added CheatPT-3, an AI tutor in the form of a Discord Bot. It assists with homework and flashcard creation. Please note that this feature is currently in beta and may have bugs. Feedback and suggestions are welcome. To further support homework assistance, we created a community on Discord for users to ask questions and receive help. Join the community whith [this link](https://discord.gg/wpdYh2CQ4H) and help to grow it to be a helpful place for homework assistance.
 
 In addition We created this beautiful startpage, which has a lot more features than the old one. It also looks a lot nicer and more modern. We will be adding more features to the startpage in the future, if you have any suggestions, please let us know.
 
