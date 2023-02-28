@@ -6,8 +6,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 
 const Bugs: FC = () => {
-
-  //array with all questions with answers, answers can be typed as string or html objects
+  // array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
@@ -68,23 +67,16 @@ const Bugs: FC = () => {
           </p>
           <ul>
             <li>
-              Report a web application issue on{' '}
+              Report the bug directly to our <a href='https://docs.google.com/forms/d/e/1FAIpQLSdeAzvTo395mzFaHjii-hETrUf9VoRPSqe5u78NgJZueDveSA/viewform?usp=sf_link'>Bug Report Form</a>
+            </li>
+            <li>
+              Discuss issues on{' '}
               <a
                 href='https://github.com/MemoriterApp/Memoriter/issues'
                 target='_blank'
                 rel='noreferrer'
               >
                 GitHub
-              </a>
-            </li>
-            <li>
-              Discuss issues on our GitHub{' '}
-              <a
-                href='https://github.com/MemoriterApp/Memoriter/discussions/categories/general'
-                target='_blank'
-                rel='noreferrer'
-              >
-                discussion forum
               </a>
             </li>
             <li>
@@ -103,26 +95,26 @@ const Bugs: FC = () => {
     },
   ]);
 
-  //function is called when a question is clicked
+  // function is called when a question is clicked
   const openQuestion = (openedQuestion: string): void => {
     setQuestions((questions) =>
       questions.map(
         (
-          question //question array is changed
+          question // question array is changed
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
                 ...question,
-                isOpen: true, //clicked question opens if it is closed
+                isOpen: true, // clicked question opens if it is closed
               }
             : question.question === openedQuestion && question.isOpen
             ? {
                 ...question,
-                isOpen: false, //clicked question closes if it is open
+                isOpen: false, // clicked question closes if it is open
               }
             : {
                 ...question,
-                isOpen: false, //all other questions are closing, only one can be opened at the same time
+                isOpen: false, // all other questions are closing, only one can be opened at the same time
               }
       )
     );
@@ -130,14 +122,18 @@ const Bugs: FC = () => {
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body */}
       <section className={styles.help_main}>
-        <h1 className='help-main-heading'>Bug Report</h1>
-        <hr className='help-main-heading-bottom-space' />
+        <h1>Bug Report</h1>
 
-        {/*displays the list of questions*/}
+        {/* displays the list of questions */}
         {questions.map((question) => (
-          <HelpQuestion styles={styles} key={question.question} question={question} onOpenQuestion={openQuestion} />
+          <HelpQuestion
+            styles={styles}
+            key={question.question}
+            question={question}
+            onOpenQuestion={openQuestion}
+          />
         ))}
       </section>
     </WebsiteLayout>
@@ -149,7 +145,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='Bug Report'
-      description='If you find any technical issues, you can report them here.'
+      description='If you find any technical issues regarding Memoriter, you can report them here.'
       keywords='bugs, report, help'
       type='website'
     />

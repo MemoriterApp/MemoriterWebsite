@@ -1,196 +1,162 @@
 // These styles define the main layout of the most pages
 
-.default_main { // just used for layout adjustment
+// just used for layout adjustment
+.default_main {
   position: relative;
   left: 50%; // centering the content on too large screens
-  transform: translate(-50%);
-  max-width: 1400px; // looks better on large screens
-  margin-top: 100vh;
+  transform: translateX(-50%);
+  width: calc(100% - 144px);
+  max-width: 1400px; // looks better on large screen
+  color: var(--color-font);
   margin-bottom: 120px;
   overflow-x: hidden;
   background-color: var(--color-background);
 
-  &_title { // page heading
-    font-size: 4rem;
-    font-family: var(--font-heading);
+  // page heading
+  &_title {
+    font: 4rem var(--font-heading);
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin: 80px 0 60px;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_top_text { // slogan at the top
+  // slogan at the top
+  &_top_text {
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 840px;
     max-width: calc(100% - 40px);
-    font-size: 1.6rem;
-    color: var(--color-font);
-    font-family: var(--font-default);
+    font: 1.6rem var(--font-default);
     line-height: 2.6rem;
     text-align: center;
     margin-bottom: 80px;
   }
 
-  &_top_image { // large image at the top
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 1000px;
-    max-width: calc(100% - 40px);
-    margin-bottom: 120px;
-    border-radius: 4px;
-  }
-
+  // large image at the top
+  &_top_image,
   &_top_video {
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: 1000px;
-    max-width: calc(100% - 40px);
-    aspect-ratio: 16 / 9;
+    max-width: 100%;
     margin-bottom: 120px;
-    border: none;
     border-radius: 4px;
-
-    &_alt {
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-      width: 936px;
-      max-width: calc(100% - 104px);
-      font-size: 1.2rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
-      text-align: center;
-      line-height: 2rem;
-      padding: 32px;
-      margin-bottom: 120px;
-      background-color: var(--color-container);
-      border-radius: 4px;
-
-      button {
-        font-size: 1.4rem;
-        color: var(--color-font);
-        font-family: var(--font-highlight);
-        text-decoration: none;
-        padding: 4px 6px;
-        margin-top: 24px;
-        background-color: var(--color-transparent);
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 200ms;
-  
-        &:hover { // for the fading background box on hover
-          background-color: var(--color-container-button);
-        }
-      }
-    }
   }
 
-  &_container { // contains all of the main sections, is used for positioning
-    display: flex;
-    margin: 160px 70px 200px 70px;
+  // same as top_image, just with a youtube video container
+  &_top_video {
+    aspect-ratio: 16 / 9;
+    border: none;
+  }
 
-    > * + * { // children of container
+  // contains all of the main sections, is used for positioning
+  &_container {
+    display: flex;
+    margin: 160px 0 200px;
+
+    // children of container
+    > * + * {
       margin-left: 60px;
     }
 
-    &_sub { // sub containers with the text inside
+    // sub containers with the text inside
+    &_sub {
       flex-basis: 45%;
       align-self: center;
+    }
+    
+    // sub containers with the image inside
+    &_image {
+      flex-basis: 55%;
+      align-self: center;
+      width: 100%;
 
-      &_image { // sub containers with the image inside
-        flex-basis: 55%;
-        align-self: center;
+      // image rounded corners
+      img {
+        border-radius: 4px;
       }
     }
   }
 
-  &_badge { // badge over a section advertising supporter only features
+  // badge over a section advertising supporter only features
+  &_badge {
     width: fit-content;
-    font-size: 1.2rem;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
+    font: 1.2rem var(--font-highlight);
     padding: 6px 8px;
-    margin-top: -1.5rem;
     margin-bottom: 24px;
     background-color: var(--color-hover);
     border-radius: 4px;
   }
 
-  &_heading { // heading font styling
-    font-size: 2.8rem;
-    font-family: var(--font-heading);
+  // heading font styling
+  &_heading {
+    font: 2.8rem var(--font-heading);
     line-height: 3.6rem;
-    margin-top: 1.2rem;
-    margin-bottom: 2rem;
+    margin: 1.2rem 0 2rem;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_text { // text font styling
-    font-size: 1.4rem;
-    color: var(--color-font);
-    font-family: var(--font-default);
+  // text font styling
+  &_text {
+    font: 1.4rem var(--font-default);
     line-height: 2rem;
   }
 
-  &_list { // list font styling
+  // list font styling
+  &_list {
     list-style-type: none;
 
+    // list container
     li {
       display: flex;
-      font-size: 1.1rem;
-      color: var(--color-font);
-      margin-top: -0.4rem;
-      margin-bottom: -0.4rem;
+      font: 1.1rem var(--font-default);
+
+      margin-top: -0.4rem 0;
       align-items: center;
 
+      // list icon
       img {
         height: 2.4rem;
         margin: 0 1rem 0 -2.4rem;
         user-select: none;
       }
 
+      // list heading
       h3 {
         font-family: var(--font-highlight);
         margin-bottom: 0.2rem;
         font-weight: 500;
       }
 
+      // list description
       p {
-        font-family: var(--font-default);
         line-height: 2rem;
         margin-top: 0.2rem;
       }
     }
   }
 
-  &_image { // image optimization
-    width: 100%;
-    border-radius: 4px;
-  }
-
-  &_overview { // basic layout of three columns for overview texts at the top
-    display: flex; // creates the clumn layout
+  // basic layout of three columns for overview texts at the top
+  &_overview {
+    display: flex; // creates the column layout
     position: relative;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: fit-content;
     gap: 100px; // gaps between child items
-    margin: 80px 0 240px 0;
+    margin: 80px 0 240px;
 
-    &_heading { // large section headings
-      font-size: 2.8rem;
-      font-family: var(--font-heading);
+    // large section headings
+    &_heading {
+      font: 2.8rem var(--font-heading);
       line-height: 3.6rem;
       text-align: center;
       background: var(--color-highlight-gradient);
@@ -199,206 +165,74 @@
       -webkit-text-fill-color: var(--color-transparent);
     }
 
-    > * { // children of overview
+    // children of overview
+    > * {
       width: 200px;
-      padding: 32px 16px 12px 16px;
+      padding: 32px 16px 12px;
       background-color: var(--color-container);
       border-radius: 4px;
     }
 
-    &_image { // images above the small texts
+    // images above the small texts
+    &_image {
       position: relative;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       height: 100px;
     }
 
-    &_text { // small overview texts
+    // small overview texts
+    &_text {
       position: relative;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       width: 200px;
-      font-size: 1.4rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
+      font: 1.4rem var(--font-default);
       line-height: 2rem;
       text-align: center;
       margin-top: 32px;
     }
 
+    // bottom link button
     &_link {
-      font-size: 1.4rem;
+      font: 1.4rem var(--font-highlight);
       color: var(--color-font);
-      font-family: var(--font-highlight);
       text-decoration: none;
       padding: 4px 6px;
       border-radius: 4px;
       transition: background-color 200ms;
 
-      &:hover { // for the fading background box on hover
+      // for the fading background box on hover
+      &:hover {
         background-color: var(--color-container-button);
       }
 
+      // container thing
       &_container {
         text-align: center;
         margin-top: 28px;
       }
     }
   }
+}
 
-  &_bottom { // positioning for the text and button
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 80vw;
-    max-width: 800px;
-    color: var(--color-font);
-    font-style: italic;
-    font-size: 3.2rem;
-    font-family: var(--font-serif);
-    text-align: center;
-    margin-top: 240px;
-    margin-bottom: 200px;
-
-    span { // highlighted words
-      font-size: 3.4rem;
-      font-family: var(--font-heading);
-      font-style: normal;
-      line-height: 4rem;
-      margin-left: 4px;
-      margin-right: -4px;
-      background: var(--color-highlight-gradient);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: var(--color-transparent);
-    }
-  }
-
-  &_download_footer { // container with download buttons at the bottom
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 800px;
-    max-width: calc(100% - 40px);
-    margin-top: 200px;
-    margin-bottom: 320px;
-  
-    &_text { // text above thw download buttons
-      font-size: 1.8rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
-      line-height: 2.8rem;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-  }
-
-  &_download { // download button, needed to be split in multiple classes, this class is for the positionig of the button
-    background-color: var(--color-transparent);
-    border: none;
-    cursor: pointer;
-  
-    &_icon { // operating system icon
-      position: absolute;
-      left: 40px;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      filter: var(--svg-invert-white); // makes the icon white
-    }
-  
-    &_text { // text which is not supposed to change color
-      position: absolute;
-      left: 80px;
-      top: 0.6rem;
-      font-size: 1.6rem;
-      color: var(--color-white);
-      font-family: var(--font-highlight);
-      white-space: nowrap;
-  
-      &_os { // additional text formatting for the operating system
-        position: absolute;
-        left: 80px;
-        top: 2.6rem;
-        font-size: 1.2rem;
-        color: var(--color-white);
-        font-family: var(--font-highlight);
-        }
-      }
-  
-    &_background { // the hover background was done in React because it did not work in CSS
-      width: 200px;
-      height: 56px;
-      padding: 8px 10px 8px 10px;
-      margin-inline: -6px;
-      border-radius: 4px;
-      background: var(--color-highlight-gradient);
-      transition: filter 200ms;
-    }
-  
-    &_windows { // position for the download for windows button
-      position: absolute;
-      left: calc(50% - 130px);
-      transform: translate(-50%);
-    }
-  
-    &_mac { // position for the download for mac button
-      position: absolute;
-      left: calc(50% + 130px);
-      transform: translate(-50%);
-    }
-  }
-
-  &_download_divider { // divider between mainand mobile section
-    width: calc(100% - 120px);
-    margin-bottom: 180px;
-    background-color: var(--color-container);
-    border: none;
-    border-top: 2px solid var(--color-container);
-  }
-
-  &_bot { // add to discord button from the bot page
-    position: relative;
-    width: 280px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-color: var(--color-transparent);
-    border: none;
-    cursor: pointer;
-
-    &_icon { // discord icon
-      position: absolute;
-      left: 20px;
-      top: 1.2rem;
-      height: 36px;
-    }
-
-    &_text { // text which is not supposed to change color
-      position: absolute;
-      top: 1.3rem;
-      left: 86px;
-      font-size: 1.6rem;
-      color: var(--color-white);
-      font-family: var(--font-highlight);
-      white-space: nowrap;
-    }
-
-    &_background { // the hover background was done in React because it did not work in CSS
-      position: absolute;
-      width: 100%;
-      height: 72px;
-      margin-inline: -6px;
-      border-radius: 4px;
-      background: var(--color-highlight-gradient);
-      transition: filter 200ms;
-    }
+// small fix for medium sized screens
+@media (max-width: 1200px) {
+  .default_main {
+    width: calc(100% - 40px);
   }
 }
 
-@media (max-width: 960px) { // simplyfied layout for smaller screens
+// simplyfied layout for smaller screens
+@media (max-width: 960px) {
   .default_main_overview {
     flex-direction: column; // renders items above each other instead of next to each other
   }
-    
+
+  .default_main_badge {
+    margin-top: 32px
+  }
+
   .default_main_heading {
     font-size: 3rem;
     hyphens: auto; // allows linebreaks within words
@@ -410,91 +244,38 @@
 
   .default_main_container {
     display: block;
-    margin: 120px 20px 20px 20px;
+    margin: 120px 0 20px;
 
-    > * + * { // children of container
+    // children of container
+    > * + * {
       margin-left: unset;
     }
   }
-
-  .default_main_download_divider {
-    width: calc(100% - 40px);
-    margin-bottom: 40px;
-  }
 }
 
-@media (max-width: 720px) { // adjusting too big text
-  .default_main_bottom {
-    font-size: 2.2rem;
-    margin-top: 160px;
-    margin-bottom: 40px;
-
-    span {
-      font-size: 2.4rem;
-    }
-  }
-}
-
-@media (max-width: 660px) { // pushes the footer down when the customer stories disappear
+// pushes the footer down when the customer stories disappear
+@media (max-width: 660px) {
   .default_main {
     margin-bottom: 240px;
   }
 }
 
-@media (max-width: 560px) {
-  .default_main_download_footer_text {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
+// hiding content for too small screens (where the warning displays)
+@media (max-width: 240px) {
+  .default_main {
+    display: none;
   }
-
-  .default_main_download_windows {
-    left: 50%;
-    transform: translate(-50%, -24px) scale(0.9);
-  }
-  .default_main_download_mac {
-    left: 50%;
-    transform: translate(-50%, 80px) scale(0.9);
-  }
-
-  .default_main_download_divider {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 320px) { // fixing the bot button on small screens
-  .default_main_bot {
-    width: 220px;
-
-    &_icon {
-      display: none;
-    }
-
-    &_text {
-      left: 50%;
-      transform: translate(-50%, 0);
-    }
-  }
-}
-
-@media (max-width: 240px) { // hiding content for too small screens (where the warning displays)
-    .default_main {
-      display: none;
-    }
-}
-
-@media (max-height: 600px) { // fixes issues for screens not high enough on small widths
-    .default_main {
-      margin-top: 600px;
-    }
 }
 
 // animation classes
-.default_main_animation_fade_in_right { // class for triggering the fade in right animation
+// class for triggering the fade in right animation
+.default_main_animation_fade_in_right {
   animation: fade-in-right 200ms;
 }
-@keyframes fade-in-right { // the items move a bit to the left and get visible
+// the items move a bit to the left and get visible
+@keyframes fade-in-right {
   from {
-    transform: translateX(8%);
+    transform: translateX(40px);
     opacity: 0;
   }
   to {
@@ -503,26 +284,30 @@
   }
 }
 
-.default_main_animation_fade_out_right { // class for triggering the fade out right animation
+// class for triggering the fade out right animation
+.default_main_animation_fade_out_right {
   animation: fade-out-right 400ms;
 }
-@keyframes fade-out-right { // the items move a bit to the right and get invisible
+// the items move a bit to the right and get invisible
+@keyframes fade-out-right {
   from {
     transform: translateX(0);
     opacity: 1;
   }
   to {
-    transform: translateX(8%);
+    transform: translateX(40px);
     opacity: 0;
   }
 }
 
-.default_main_animation_fade_in_left { // class for triggering the fade in left animation
+// class for triggering the fade in left animation
+.default_main_animation_fade_in_left {
   animation: fade-in-left 200ms;
 }
-@keyframes fade-in-left { // the items move a bit to the right and get visible
+// the items move a bit to the right and get visible
+@keyframes fade-in-left {
   from {
-    transform: translateX(-8%);
+    transform: translateX(-40px);
     opacity: 0;
   }
   to {
@@ -531,44 +316,18 @@
   }
 }
 
-.default_main_animation_fade_out_left { // class for triggering the fade out left animation
+// class for triggering the fade out left animation
+.default_main_animation_fade_out_left {
   animation: fade-out-left 400ms;
 }
-@keyframes fade-out-left { // the items move a bit to the right and get invisible
+// the items move a bit to the right and get invisible
+@keyframes fade-out-left {
   from {
     transform: translateX(0);
     opacity: 1;
   }
   to {
-    transform: translateX(-8%);
-    opacity: 0;
-  }
-}
-
-.default_main_animation_fade_in_down { // class for triggering the fade in down animation
-  animation: fade-in-down 200ms;
-}
-@keyframes fade-in-down { // the items move a bit down and get visible
-  from {
-    transform: translateY(30%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.default_main_animation_fade_out_down { // class for triggering the fade out down animation
-  animation: fade-out-down 400ms;
-}
-@keyframes fade-out-down { // the items move a bit down and get invisible
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30%);
+    transform: translateX(-40px);
     opacity: 0;
   }
 }

@@ -1,60 +1,93 @@
 // styles for the our team section of the about page
 
-.about_team { // main container
-  margin: 200px 80px -80px 80px;
+// main container
+.about_team {
+  color: var(--color-font);
+  margin: 200px 60px -80px;
 
-  &_title { // section title
-    font-size: 4rem;
-    font-family: var(--font-heading);
+  // section title
+  &_title {
+    font: 4rem var(--font-heading);
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin: 80px 0 60px;
     background: var(--color-highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--color-transparent);
   }
 
-  &_container { // container with two cards
+  // container with two cards
+  &_container {
     display: flex;
     margin-bottom: 80px;
-    gap: 80px;
+    gap: 40px;
   }
 
-  &_card { // member card
+  // member card
+  &_card {
     display: flex;
     flex-grow: 1;
-    padding: 16px 42px;
-    gap: 20px;
-    background-color: var(--color-container);
-    border-radius: 4px;
+    width: 50%;
+    align-items: center;
+    padding-inline: 32px;
+    gap: 40px;
 
-    h2 { // card heading
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: var(--color-font);
-      font-family: var(--font-highlight);
+    // card heading
+    h2 {
+      font: 1.6rem var(--font-highlight);
     }
 
-    p { // card content
-      font-size: 1.2rem;
-      color: var(--color-font);
-      font-family: var(--font-default);
+    // card content
+    p {
+      font: 1.2rem var(--font-default);
       line-height: 1.8rem;
     }
 
-    img { // card image
+    // last card
+    h2 {
+      font: 1.4rem var(--font-highlight);
+      text-align: center;
+      line-height: 2.2rem;
+    }
+
+    // card image container
+    &_image {
       position: relative;
-      top: 20px;
       width: 160px;
-      height: calc(100% - 40px);
-      border-radius: 4px;
-      object-fit: cover;
+      min-width: 160px; // small fix
+
+      // image itself
+      img {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  // positioning for the bottom text
+  &_end {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 800px;
+    font: italic 3.2rem var(--font-serif);
+    text-align: center;
+    margin: 180px 0 220px;
+
+    // highlighted words
+    em {
+      font: 3.4rem var(--font-heading);
+      margin-inline: 4px -4px;
+      background: var(--color-highlight-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
     }
   }
 }
 
-@media (max-width: 1160px) { // optimization for medium size screens
+// optimization for medium size screens
+@media (max-width: 1200px) {
   .about_team {
     margin-inline: 40px;
 
@@ -69,36 +102,75 @@
   }
 }
 
-@media (max-width: 960px) { // optimization for small screens
+// optimization for small screens
+@media (max-width: 960px) {
   .about_team_container {
     flex-direction: column;
   }
 
   .about_team_card {
     width: calc(100% - 40px);
+    max-width: unset;
+  }
+}
 
-    img {
-      height: auto;
-      margin-bottom: 40px;
+// adjusting too big text
+@media (max-width: 720px) {
+  .about_team_end {
+    font-size: 2.2rem;
+    margin: 160px 0;
+
+    em {
+      font-size: 2.4rem;
     }
   }
 }
 
-@media (max-width: 480px) { // optimization for small screens
+// optimization for small screens
+@media (max-width: 560px) {
   .about_team {
-    margin-top: 120px;
+    margin: 120px 0 -80px;
 
     &_title {
       font-size: 3rem;
     }
-    
+
     &_card {
       flex-direction: column-reverse;
-  
-      img {
-        width: 100%;
-        margin-bottom: 12px;
-      }
+      margin-top: 60px;
+      gap: 12px;
     }
+  }
+}
+
+// class for triggering the fade in down animation
+.about_team_animation_fade_in_down {
+  animation: fade-in-down 200ms;
+}
+// the items move a bit down and get visible
+@keyframes fade-in-down {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// class for triggering the fade out down animation
+.about_team_animation_fade_out_down {
+  animation: fade-out-down 400ms;
+}
+// the items move a bit down and get invisible
+@keyframes fade-out-down {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-40px);
+    opacity: 0;
   }
 }

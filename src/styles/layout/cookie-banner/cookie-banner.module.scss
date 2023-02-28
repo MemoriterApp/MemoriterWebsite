@@ -54,7 +54,7 @@
       position: absolute;
       left: 50%;
       top: 8px;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       font-size: 1.2rem;
       color: var(--color-white);
       font-family: var(--font-highlight);
@@ -101,7 +101,7 @@
       left: 50%;
       top: 0;
       width: calc(100% - 10px);
-      transform: translate(-50%);
+      transform: translateX(-50%);
       text-align: center;
     }
 

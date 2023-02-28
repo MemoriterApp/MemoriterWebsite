@@ -7,7 +7,6 @@ import CookieSettings from './cookie-banner/cookie-settings';
 import WindowSizeAlert from './window-size-alert';
 import Backdrop from '../backdrop';
 
-// type definitions for props
 interface Props {
   children: React.ReactNode;
   currentPage: string;
@@ -96,8 +95,8 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
       {/* footer */}
       <WebsiteFooter
-        onOpenLanguageSelect={openLanguageSelect}
-        onOpenCookieSettings={openCookieSettings}
+        onOpenLanguageSelect={() => openLanguageSelect()}
+        onOpenCookieSettings={() => openCookieSettings()}
       />
 
       {/* language select modal */}
@@ -105,23 +104,23 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         <>
           <WebsiteLanguageSelect
             onAnimation={modalAnimation}
-            onCloseLanguageSelect={closeLanguageSelect}
+            onCloseLanguageSelect={() => closeLanguageSelect()}
           />
-          <Backdrop onFade={backdropAnimation} onClick={closeLanguageSelect} />
+          <Backdrop onFade={backdropAnimation} onClick={() => closeLanguageSelect()} />
         </>
       )}
 
       {/* cookie banner */}
-      <CookieBanner onOpenCookieSettings={openCookieSettings} />
+      <CookieBanner onOpenCookieSettings={() => openCookieSettings()} />
 
       {/* cookie settings modal */}
       {cookieSettings && (
         <>
           <CookieSettings
             onAnimation={modalAnimation}
-            onCloseCookieSettings={closeCookieSettings}
+            onCloseCookieSettings={() => closeCookieSettings()}
           />
-          <Backdrop onFade={backdropAnimation} onClick={closeCookieSettings} />
+          <Backdrop onFade={backdropAnimation} onClick={() => closeCookieSettings()} />
         </>
       )}
 

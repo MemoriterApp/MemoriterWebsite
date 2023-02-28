@@ -7,51 +7,48 @@ const ProductBanner: FC = () => {
   const [triangleTransition, setTriangleTransition] = useState<string>('none'); // variable for background animation transition (this does not trigger when scrolling)
 
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
-  const onScroll = (): void => { // getting the scroll data
+  // getting the scroll data
+  const onScroll = (): void => {
     const scroll: number = document.documentElement.scrollTop;
     const height: number =
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
     const scrolled: number = (scroll / height) * 100;
-
     setScrollProgress(scrolled);
   };
 
   // the useEffect is important for getting the value if it is scrolling
   useEffect((): any => {
     window.addEventListener('scroll', onScroll);
-
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
     <section className={styles.product_banner}>
-      {/*background triangles*/}
+      {/* background triangles, size changes when you scroll down or hover over the button */}
       <div
         className={styles.product_banner_triangle_top}
         style={{
-          right: `calc(-1 * ${scrollProgress}vh - ${triangleEffect}vh`,
+          right: `calc(-1.5 * ${scrollProgress}vh - ${triangleEffect}vh`,
           transition: triangleTransition,
         }}
       />
       <div
         className={styles.product_banner_triangle_bottom}
         style={{
-          left: `calc(-1 * ${scrollProgress}vh - ${triangleEffect}vh`,
+          left: `calc(-1.5 * ${scrollProgress}vh - ${triangleEffect}vh`,
           transition: triangleTransition,
         }}
       />
-      {/*the size of the triangles changes a bit when you scroll down and when hovering over the get started button*/}
 
-      {/*content*/}
+      {/* content */}
       <article className={styles.product_banner_content}>
-        {/*slogan*/}
-        <p className={styles.product_banner_text}>Study Better, Faster, Smarter - Study with Memoriter!</p>
-        <p className={styles.product_banner_text_sub}>
-          Work with Memoriter effective memorizing, tools to quickly achieve successful results.
+        {/* slogan */}
+        <p>Memoriter — the flashcard app that lets you remember more!</p>
+        <p>
+          Work with the effective memorizing tools of Memoriter to quickly achieve successful results.
         </p>
 
-        {/*get started button for redirecting to register page*/}
+        {/* get started button for redirecting to register page */}
         <a
           className={styles.product_banner_get_started}
           href='https://app.memoriter.de/signup'
@@ -69,14 +66,15 @@ const ProductBanner: FC = () => {
           }}
         >
           Get Started
-          <div className={styles.product_banner_get_started_background} style={{ filter: onHover }} />
+          <div
+            className={styles.product_banner_get_started_background}
+            style={{ filter: onHover }}
+          />
         </a>
       </article>
 
-      {/*transition shape at the bottom*/}
+      {/* transition shape at the bottom */}
       <div className={styles.product_banner_transition} />
-      <div className={styles.product_banner_transition_left} />
-      <div className={styles.product_banner_transition_right} />
     </section>
   );
 };

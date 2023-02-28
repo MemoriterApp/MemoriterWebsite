@@ -5,7 +5,7 @@
   position: relative;
   left: 50%;
   top: 120px;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   max-width: 1400px;
   font: 1.1rem var(--font-default);
   color: var(--color-font);
@@ -17,6 +17,7 @@
   // big page heading
   h1 {
     font: 2.8rem var(--font-heading);
+    text-align: left;
     margin-bottom: 60px;
     background: var(--color-highlight-gradient);
     background-clip: text;
@@ -27,6 +28,7 @@
   // section headings
   h2 {
     font: 1.6rem var(--font-highlight);
+    text-align: left;
     margin: 48px 0 12px;
   }
 
@@ -97,10 +99,10 @@
 }
 
 // removes space at the sides on small screens
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .legal_main {
     top: 60px;
-    padding: 40px 0 80px;
+    padding: 40px 20px 80px;
   }
 }
 

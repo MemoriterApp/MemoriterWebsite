@@ -4,7 +4,7 @@
   display: flex;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   max-width: 2400px;
   gap: 100px;
   margin-bottom: 200px;
@@ -50,7 +50,7 @@
 
   .donate-main {
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 40px);
     padding: 0;
   }

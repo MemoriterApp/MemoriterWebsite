@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import * as styles from '../../../styles/layout/cookie-banner/cookie-settings.module.scss';
 import cookies from '../../../utils/cookies';
 
-interface Props { //type definitions for props
+interface Props {
   onAnimation: React.CSSProperties;
   onCloseCookieSettings: () => void;
 }

@@ -1,233 +1,326 @@
 // These styles are used for the product page (formerly known as start page) footer and some similar pages.
 
-.website_footer { // basic footer styles
+// basic footer container
+.website_footer {
   position: absolute;
   margin-top: auto;
   left: 0;
   width: 100%;
   background-color: var(--color-background-dark);
 
-  &_transition_left { // trapezoid shape at the top left
+  // shape at the top for a better transition between sections
+  &_transition {
     position: absolute;
     left: 0;
-    top: -50px;
-    border-right: 50px solid var(--color-transparent);
-    border-bottom: 50px solid var(--color-background-dark);
-    height: 0;
-    width: 30vw;
-  }
+    top: -40px;
+    width: 100%;
 
-  &_transition_right { // trapezoid shape at the top right
-    position: absolute;
-    right: 0;
-    top: -50px;
-    border-left: 50px solid var(--color-transparent);
-    border-bottom: 50px solid var(--color-background-dark);
-    height: 0;
-    width: 30vw;
-  }
+    // actual shapes
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 0;
+      width: 30vw;
+      border-bottom: 40px solid var(--color-background-dark);
+    }
 
-  &_content { // values for setting up the column layout
-    display: flex; // display: flex creates columns
-    gap: 20px;
-    padding: 80px 8% 180px 8%;
+    // trapezoid shape at the top left
+    &::before {
+      left: 0;
+      border-right: 40px solid var(--color-transparent);
+    }
 
-    > * { // layout optimization
-      flex: 1; // used for equal columns
+    // trapezoid shape at the top right
+    &::after {
+      right: 0;
+      border-left: 40px solid var(--color-transparent);
     }
   }
 
-  &_heading { // column header
-    background: var(--color-highlight-gradient);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    text-decoration: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--color-transparent);
+  // gap between left and right section
+  &_flex_gap {
+    flex-grow: 1;
   }
 
-  &_link { // column list items
-    display: block;
-    width: fit-content;
-    font-size: 1.1rem;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    text-decoration: none;
-    line-height: 1.5;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: color 200ms, transform 400ms;
+  // bar before the navigation links
+  &_top {
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    font: 0.9rem var(--font-default);
+    color: var(--color-font-gray);
+    line-height: 1.4rem;
+    margin-top: 60px;
 
-    &:hover { // hover effect
-      transform: translate(4px);
-      color: var(--color-font-gray);
+    // project logo on the left
+    &_logo {
+      width: 240px;
+
+      // actual logo
+      img {
+        height: 35px;
+        font: 1.4rem var(--font-highlight);
+        color: var(--color-font);
+        line-height: 2.2rem;
+        margin-bottom: -8px;
+      }
+    }
+
+    // social media links
+    &_social {
+      margin: 51px 64px 0 0;
+      height: 32px;
+
+      // social media icon links
+      a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        color: var(--color-font-gray);
+        margin-inline: 8px;
+        border-radius: 4px;
+        transition: background-color 200ms;
+
+        // circle hover effect
+        &:hover {
+          background-color: var(--color-hover-light);
+        }
+
+        // actual icon
+        img {
+          transform: translate(12.5%, 12.5%); // centers the icon
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+
+    // newsletter subscription box
+    &_newsletter {
+      width: 212px;
+
+      // input field for email
+      input {
+        position: absolute;
+        width: 160px;
+        height: 30px;
+        font: 1rem var(--font-default);
+        color: var(--color-font);
+        padding-inline: 10px;
+        background-color: var(--color-hover-light);
+        border: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+      }
+
+      // submit button
+      button {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        margin-left: 180px;
+        background-color: var(--color-transparent);
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        overflow: hidden;
+
+        // send icon
+        img {
+          position: relative;
+          left: 45%;
+          transform: translateX(-50%);
+          height: 100%;
+        }
+
+        // background
+        div {
+          position: relative;
+          left: -6px;
+          top: -34px;
+          width: 32px;
+          height: 32px;
+          background: var(--color-highlight-gradient);
+          transition: filter 200ms;
+          z-index: -1;
+        }
+      }
     }
   }
 
-  &_bottom_box { // dark box at the bottom
+  // values for setting up the column layout
+  &_content {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    padding: 60px 0 140px;
+
+    // layout optimization
+    > * {
+      display: inline-block;
+      width: 160px;
+      margin-right: 40px;
+    }
+
+    // column heading
+    h3 {
+      background: var(--color-highlight-gradient);
+      font: 600 1.2rem var(--font-highlight);
+      color: var(--color-font);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--color-transparent);
+    }
+
+    // list of links
+    ul {
+      margin-left: -40px;
+      list-style: none; // removes bullet points
+    }
+
+    // column list items
+    li,
+    a {
+      font: 1.1rem var(--font-default);
+      color: var(--color-font);
+      text-decoration: none;
+      line-height: 1.5;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color 200ms, transform 400ms;
+
+      // hover effect
+      &:hover {
+        transform: translateX(4px);
+        color: var(--color-font-gray);
+      }
+    }
+  }
+
+  // dark box at the bottom
+  &_bottom {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 80px;
     background-color: var(--color-background-dark-plus);
 
-    &_copyright { // copyright text
-      position: absolute;
-      left: 30px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      white-space: nowrap;
-    }
-
-    &_language { // language select at the bottom of the footer
-      position: absolute;
-      right: 160px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      transition: color 200ms;
-      cursor: pointer;
-
-      &:hover { // hover effect for text
-        color: var(--color-font);
-      }
-    }
-
-    &_theme { // the text to change the theme at the bootom of the footer
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      font-size: 0.8rem;
-      color: var(--color-font-gray);
-      font-family: var(--font-default);
-      transition: color 200ms;
-      cursor: pointer;
-
-      &_:hover { // hover effect for text
-        color: var(--color-font);
-      }
-    }
-
-    &_social_media { // positioning for the social media icons
-      position: absolute;
+    // positioning container for the text inside the box
+    &_content {
+      display: flex;
+      position: relative;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 220px;
-      height: 40px;
+      transform: translateX(-50%);
+      width: calc(100% - 160px);
+      max-width: 1400px;
+      font: 0.9rem var(--font-default);
+      color: var(--color-font-gray);
+      line-height: 1.2rem;
+      gap: 24px;
+    }
 
-      &_circle { // circle around the icons
-        position: absolute;
-        width: 36px;
-        height: 36px;
-        border: 2px solid var(--color-font);
-        border-radius: 50%; // circle shape
-        cursor: pointer;
-        transition: background-color 200ms;
-  
-        &:hover { // background hover effect
-          background-color: var(--color-hover-light);
-        }
+    // cookie settings, language select and change theme links
+    &_link {
+      cursor: pointer;
+      transition: color 200ms;
+
+      // hover effect for text
+      &:hover {
+        color: var(--color-font);
       }
 
-      &_icon { // icons for the different social media platforms
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%;
-        height: 60%;
-        filter: var(--svg-invert); // for making the icons white
+      // icons next to the link
+      img {
+        height: 1.1rem;
+        margin: 0 0.1rem -0.2rem 0.1rem;
       }
     }
   }
 }
 
-@media (max-width: 1160px) { // small optimization for small screens
-  .website_footer_content {
-    padding: 80px 4% 180px 4%;
-  }
-}
-
-@media (max-width: 960px) { // mobile layout
+// mobile layout
+@media (max-width: 960px) {
   // the top transition shapes are smaller on mobile devices to look better
-  .website_footertransition_left {
+  .website_footer_transition::before,
+  .website_footer_transition::after {
     width: 20vw;
   }
-  .website_footer_transition_right {
-    width: 20vw;
+
+  .website_footer_top {
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 40px);
+    margin-top: 80px;
+
+    &_logo img {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &_logo p {
+      text-align: center;
+    }
+
+    &_social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: unset;
+      margin: 24px 0 8px;
+
+      a {
+        margin-bottom: 16px;
+      }
+    }
+
+    &_newsletter {
+      height: 84px;
+    }
   }
 
   .website_footer_content {
-    flex-wrap: wrap;
+    text-align: center;
+    width: calc(100% - 20px);
+
+    > * {
+      margin-inline: 20px;
+    }
   }
 
-  // font size will be smaller
-  .website_footer_heading {
-    font-size: 0.9rem;
-  }
-
-  .website_footer_link {
-    font-size: 0.8rem;
-  }
-
-  .website_footer_bottom_box_language {
-    right: 30px;
-    top: 4px;
-  }
-
-  .website_footer_bottom_box_theme {
-    top: unset;
-    bottom: 4px;
+  .website_footer_bottom_content {
+    width: calc(100% - 20px);
   }
 }
 
-@media (max-width: 660px) { // two rows of items are formed
-  .website_footer_bottom_box {
-    height: 120px;
+// fixes for the bottom links
+@media (max-width: 600px) {
+  .website_footer_flex_gap {
+    display: none;
   }
 
-  .website_footer_bottom_box_copyright {
-    left: 50%;
-    top: unset;
-    bottom: 0;
-    transform: translate(-50%);
+  .website_footer_content {
+    margin-bottom: 100px;
   }
-
-  .website_footer_bottom_box_language {
-    left: 30px;
-    top: unset;
-    bottom: 24px;
-  }
-
-  .website_footer_bottom_box_theme {
-    top: unset;
-    bottom: 24px;
-  }
-
-  .website_footer_bottom_box_social_media {
-    top: 25%;
+  
+  .website_footer_bottom_content {
+    flex-direction: column-reverse;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0;
   }
 }
 
-@media (max-width: 300px) { // small fix
-  .website_footer_bottom_box_language {
-    left: 8px;
-  }
-
-  .website_footer_bottom_box_theme {
-    right: 8px;
-  }
-}
-
-@media (max-width: 240px) { // hides footer on to small screens
+// hides footer on to small screens
+@media (max-width: 240px) {
   .website_footer {
     display: none;
   }

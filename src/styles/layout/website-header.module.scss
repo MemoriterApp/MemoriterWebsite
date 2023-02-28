@@ -16,7 +16,7 @@
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     width: calc(100% - 160px);
     max-width: 1400px;
     height: calc(100% - 1px);
@@ -35,7 +35,7 @@
   &_logo {
     position: absolute;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     height: 35px;
     font: 1.4rem var(--font-highlight);
     color: var(--color-font);
@@ -48,7 +48,7 @@
     position: absolute;
     left: 160px;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     width: calc(100% - 160px);
     height: 40%;
 
@@ -95,7 +95,7 @@
     position: absolute;
     right: 305px;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     width: 30px;
     height: 30px;
     font-size: 1.2rem;
@@ -111,12 +111,12 @@
     }
 
     // language button
-    &:nth-of-type(1) {
+    &:first-of-type {
       right: 305px;
     }
 
     // theme button
-    &:nth-of-type(2) {
+    &:last-of-type {
       right: 255px;
     }
   }
@@ -136,12 +136,13 @@
     position: absolute;
     right: 120px;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     font: 1.2rem var(--font-highlight);
     text-decoration: none;
     padding: 4px 6px 4px 6px;
     border-radius: 4px;
     cursor: pointer;
+    white-space: nowrap; // fix for firefox
     transition: background-color 200ms;
 
     // for the fading background box on hover
@@ -160,7 +161,7 @@
     position: absolute;
     right: 0;
     top: calc(50% - 1px);
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     font: 1.2rem var(--font-highlight);
     color: var(--color-white);
     text-align: center;
@@ -193,7 +194,7 @@
     position: absolute;
     right: 15px;
     top: calc(50% - 1px);
-    transform: translate(0, -50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
     width: 30px;
     height: 30px;
     border: none;
@@ -255,11 +256,11 @@
     }
   }
 
-  .website_header_settings_button:nth-of-type(1) {
+  .website_header_settings_button:first-of-type {
     right: 300px;
   }
 
-  .website_header_settings_button:nth-of-type(2) {
+  .website_header_settings_button:last-of-type {
     right: 245px;
   }
 
@@ -278,7 +279,7 @@
   .website_header_quicklinks { // changes to mobile sidebar
     left: unset;
     top: 62px;
-    transform: translate(0, 0);
+    transform: translateY(0);
     width: 262px;
     max-width: 100%;
     height: calc(100vh - 60px);
@@ -301,7 +302,7 @@
   .website_header_quicklinks_link {
     display: block;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     width: calc(100% - 70px);
     text-align: left;
     padding: 16px 16px 16px 16px;
@@ -313,11 +314,11 @@
     top: 375px;
     transform: translate(-50%, -50%);
 
-    &:nth-of-type(1) {
+    &:first-of-type {
       right: 50px;
     }
 
-    &:nth-of-type(2) {
+    &:last-of-type {
       right: 3px;
     }
   }
@@ -325,7 +326,7 @@
   .website_header_sign_in {
     top: 320px;
     left: 35px;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     width: 62px;
 
     // sign in button staying at the top
@@ -334,7 +335,7 @@
       position: absolute;
       right: 160px;
       top: 50%;
-      transform: translate(0, -50%);
+      transform: translateY(-50%);
       font-size: 1.2rem;
       color: var(--color-font);
       font-family: var(--font-highlight);
@@ -353,7 +354,7 @@
   .website_header_register {
     top: 320px;
     right: 35px;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
 
     // register button staying at the top
     &_alt {
@@ -361,7 +362,7 @@
       position: absolute;
       right: 60px;
       top: 50%;
-      transform: translate(0, -50%);
+      transform: translateY(-50%);
       font-size: 1.2rem;
       color: var(--color-white);
       font-family: var(--font-highlight);

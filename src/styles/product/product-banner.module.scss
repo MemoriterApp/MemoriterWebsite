@@ -1,63 +1,68 @@
 // The product banner is an area at the top with the product page with a slogan and a get started button redirecting to the register page
 
-.product_banner { // banner box, background and position
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 60px);
-  min-height: 540px; // fixes issues for screens not high enough
-  left: 0;
-  top: 62px;
+// banner box, background and position
+.product_banner {
+  display: flex; // for centering content
+  align-items: center; // for centering content
+  justify-content: center; // for centering content
+  position: relative;
+  width: calc(100% + 16px);
+  min-height: calc(100vh - 62px);
+  color: var(--color-font);
+  margin: 54px -8px 64px;
   background: var(--color-banner-gradient);
   overflow: hidden;
 
-  &_triangle_top { // background triangle at the upper right corner
+  // background shapes
+  &_triangle_top,
+  &_triangle_bottom {
     position: absolute;
-    top: 0;
     width: 0;
     height: 0;
+  }
+
+  // background triangle at the upper right corner
+  &_triangle_top {
+    top: 0;
     border-left: 50vh solid var(--color-transparent);
     border-top: 50vh solid var(--color-banner-triangle-light);
   }
 
-  &_triangle_bottom { // background triangle at the lower left corner
-    position: absolute;
+  // background triangle at the lower left corner
+  &_triangle_bottom {
     bottom: 0;
-    width: 0;
-    height: 0;
     border-right: 50vh solid var(--color-transparent);
     border-bottom: 50vh solid var(--color-banner-triangle-dark);
   }
 
-  &_content { // positioning for the text and button
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-  }
-
-  &_text { // text for slogan
-    color: var(--color-font);
+  // positioning for the text and button
+  &_content {
     width: 80vw;
     max-width: 800px;
-    font-style: italic;
-    font-size: 3rem;
-    font-family: var(--font-serif);
-    text-align: center;
-    margin: 0 0 2.4rem 0;
+    padding-bottom: 180px;
+    margin-top: 40px;
+    z-index: 0;
 
-    &_sub { // text under the main text
-      color: var(--color-font);
-      width: 80vw;
-      max-width: 800px;
-      font-size: 1.4rem;
-      font-family: var(--font-default);
+    // text for slogan
+    p {
+      font-style: italic;
+      font-size: 3rem;
+      font-family: var(--font-serif);
       text-align: center;
-      line-height: 2rem;
-      margin-bottom: 80px;
+      margin: 0 0 2.4rem 0;
+
+      // text under the main text
+      &:last-of-type {
+        font: 1.4rem var(--font-default);
+        text-align: center;
+        line-height: 2rem;
+        margin-bottom: 80px;
+      }
     }
   }
 
-  &_get_started { // get started button, needed to be split in multiple classes, this class is for the positionig of the button
+  // get started button, needed to be split in multiple classes, this class is for the positionig of the button
+  &_get_started {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -70,7 +75,8 @@
     padding: 1.2rem 3.6rem;
     cursor: pointer;
 
-    &_background { // the hover background was done in React because it did not work in CSS
+    // the hover background was done in React because it did not work in CSS
+    &_background {
       position: absolute;
       left: 0;
       top: 0;
@@ -83,7 +89,8 @@
     }
   }
 
-  &_transition { // the shape at the bottom is an overlay in the same color as se next section
+  // the shape at the bottom is an overlay in the same color as se next section
+  &_transition {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -91,84 +98,69 @@
     height: 40px;
     background-color: var(--color-background);
 
-    &_left { // trapezoid shape at the left
+    // actual shapes
+    &::before,
+    &::after {
+      content: '';
       position: absolute;
+      border-bottom: 40px solid var(--color-background);
+      height: 0;
+      width: 30vw;
+    }
+
+    // trapezoid shape on the left
+    &::before {
       left: 0;
       bottom: 40px;
-      border-right: 50px solid var(--color-transparent);
-      border-bottom: 50px solid var(--color-background);
-      height: 0;
-      width: 30vw;
+      border-right: 40px solid var(--color-transparent);
     }
 
-    &_right { // trapezoid shape at the left
-      position: absolute;
+    // trapezoid shape on the right
+    &::after {
       right: 0;
       bottom: 40px;
-      border-left: 50px solid var(--color-transparent);
-      border-bottom: 50px solid var(--color-background);
-      height: 0;
-      width: 30vw;
+      border-left: 40px solid var(--color-transparent);
     }
   }
 }
 
-@media (max-width: 960px) { // the bottom transition shapes are smaller on mobile devices to look better
-  .product_banner_transition_left {
-    width: 20vw;
-  }
-  .product_banner_transition_right {
+// the bottom transition shapes are smaller on mobile devices to look better
+@media (max-width: 960px) {
+  .product_banner_transition::before,
+  .product_banner_transition::after {
     width: 20vw;
   }
 }
 
-@media (max-width: 720px) { // adjusting too big text
-  .product_banner_text {
+// adjusting too big text
+@media (max-width: 720px) {
+  .product_banner_content p {
     font-size: 2.2rem;
 
-    &_sub {
+    &:last-of-type {
       font-size: 1.2rem;
     }
   }
+
   .product_banner_get_started {
     font-size: 1.4rem;
     padding: 0.8rem 1.8rem;
   }
 }
 
+// adjusting too big text again
 @media (max-width: 420px) {
-  .product_banner {
-    min-height: 480px;
+  .product_banner_content p {
+    font-size: 1.6rem;
 
-    &_text {
-      font-size: 1.6rem;
-    }
-
-    &_sub {
+    &:last-of-type {
       line-height: 1.8rem;
     }
   }
 }
 
-@media (max-width: 340px) {
-  .product_banner {
-    min-height: 520px;
-  }
-}
-
-@media (max-width: 310px) {
-  .product_banner {
-    min-height: 560px;
-  }
-}
-
-@media (max-width: 256px) {
-  .product_banner {
-    min-height: 620px;
-  }
-}
-
-@media (max-width: 240px) { // hides all at too small screens in order to show no responsive bugs
+// hides everything at too small screens in order to show no responsive bugs
+@media (max-width: 240px) {
   .product_banner {
     display: none;
   }

@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import * as styles from '../../../styles/layout/cookie-banner/cookie-banner.module.scss';
 import cookies from '../../../utils/cookies';
 
-interface props { // type definitions for props
+interface props {
   onOpenCookieSettings: () => void;
 }
 

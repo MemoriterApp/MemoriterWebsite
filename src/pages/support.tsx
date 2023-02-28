@@ -6,8 +6,7 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 
 const Support: FC = () => {
-  
-  //array with all questions with answers, answers can be typed as string or html objects
+  // array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
@@ -48,8 +47,8 @@ const Support: FC = () => {
       question: 'I want to unsubscribe from the newsletter',
       answer: (
         <p>
-          You can use the link at the bottom of each newsletter email to do so. As an alternative
-          you can use the link at the bottom of the <Link to='/newsletter'>Newsletter page</Link>.
+          You can use the link at the bottom of each newsletter email to do so. It will redirect you
+          to the unsubscribe page.
         </p>
       ),
       isOpen: false,
@@ -80,33 +79,35 @@ const Support: FC = () => {
       answer: (
         <p>
           Please check out the <Link to='/faq'>frequently asked questions</Link> or send an email to{' '}
-          <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>.
+          <a href='mailto:contact@memoriter.de'>contact@memoriter.de</a>. Thats dependent on the
+          amount of requests we receive. We try to answer all requests within 48 hours, depending of
+          the type of request, so please excuse us if it takes a bit longer.
         </p>
       ),
       isOpen: false,
     },
   ]);
 
-  //function is called when a question is clicked
+  // function is called when a question is clicked
   const openQuestion = (openedQuestion: string): void => {
     setQuestions((questions) =>
       questions.map(
         (
-          question //question array is changed
+          question // question array is changed
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
                 ...question,
-                isOpen: true, //clicked question opens if it is closed
+                isOpen: true, // clicked question opens if it is closed
               }
             : question.question === openedQuestion && question.isOpen
             ? {
                 ...question,
-                isOpen: false, //clicked question closes if it is open
+                isOpen: false, // clicked question closes if it is open
               }
             : {
                 ...question,
-                isOpen: false, //all other questions are closing, only one can be opened at the same time
+                isOpen: false, // all other questions are closing, only one can be opened at the same time
               }
       )
     );
@@ -114,12 +115,11 @@ const Support: FC = () => {
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body */}
       <section className={styles.help_main}>
         <h1>Support</h1>
-        <hr/>
 
-        {/*displays the list of questions*/}
+        {/* displays the list of questions */}
         {questions.map((question) => (
           <HelpQuestion
             styles={styles}
@@ -138,7 +138,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='FAQ'
-      description='Here you can find more information if you need help.'
+      description='If you need help with Memoriter, you can find more information here.'
       keywords='support, help'
       type='website'
     />

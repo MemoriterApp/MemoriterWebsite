@@ -1,153 +1,147 @@
 // styles for the header with title, date, authoe etc. at the top of each post
 
-.blog_post_header_all_posts { // a back to all posts link
-  position: absolute;
-  left: 65px;
-  top: 10px;
-  width: fit-content;
-  font-size: 1.2rem;
-  color: var(--color-font);
-  font-family: var(--font-highlight);
-  text-decoration: none;
-  text-align: right;
-  padding: 4px 6px 4px 6px;
-  margin-bottom: 12px;
-  border-radius: 4px;
-  transition: background-color 200ms;
+// formatting for all header content
+.blog_post_header {
+  font: 1.2rem var(--font-default);
 
-  &:hover { // hover effect for back to all posts link
-    background-color: var(--color-hover);
-  }
-}
-
-.blog_post_header_content { // container with content
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  max-width: 48%;
-}
-
-.blog_post_header_data { // date of publication and topic (with link)
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--color-font-gray);
-  font-family: var(--font-default);
-
-  &_link { // link to topic on blog page
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    text-decoration: none;
-    transition: color 200ms;
-
-    &:hover { // hover effect for link
-      color: var(--color-font-gray);
-    }
-  }
-}
-
-.blog_post_header_title { // the blog title
-  max-width: 800px;
-  font-size: 2.8rem;
-  color: var(--color-font);
-  font-family: var(--font-heading);
-  line-height: 3.4rem;
-  margin-top: -10px;
-}
-
-.blog_post_header_author { // mention of the author
-  font-size: 1.2rem;
-  color: var(--color-font-gray);
-  font-family: var(--font-default);
-  margin-top: -24px;
-  margin-bottom: 160px;
-}
-
-.blog_post_header_reading_time { // reading time indicator at the side
-  position: relative;
-  left: 65px;
-  font-size: 1.2rem;
-  color: var(--color-font);
-  font-family: var(--font-default);
-  line-height: 2.2rem;
-  margin-top: 100px;
-  margin-bottom: -74px;
-}
-
-.blog_post_header_share { // share links
-  position: relative;
-  left: 65px;
-  top: 80px;
-  height: 90px;
-  color: var(--color-font-gray);
-  font-family: var(--font-default);
-  margin-bottom: -90px;
-
-  &_circle { // circle around the icons
+  // a back to all posts link
+  &_all_posts {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    margin-top: -4px;
-    border: 2px solid var(--color-font);
-    border-radius: 50%; // circle shape
-    transform: scale(0.85); // adjusts the size more precise
-    cursor: pointer;
+    left: 0;
+    top: 12px;
+    color: var(--color-font);
+    font-family: var(--font-highlight);
+    text-decoration: none;
+    padding: 4px 6px;
+    margin-bottom: 12px;
+    border-radius: 4px;
     transition: background-color 200ms;
 
-    &:hover { // background hover effect
-      background-color: var(--color-hover-light);
+    // hover effect for back to all posts link
+    &:hover {
+      background-color: var(--color-hover);
     }
   }
 
-  &_icon { // icons for the different social media platforms
-    position: absolute;
+  // container with content
+  &_content {
+    position: relative;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    filter: var(--svg-invert); // for making the icons white
+    transform: translateX(-50%);
+    max-width: 60%;
+  }
+
+  // date of publication and topic (with link)
+  &_data {
+    color: var(--color-font-gray);
+
+    // link to topic on blog page
+    &_link {
+      color: var(--color-font);
+      text-decoration: none;
+      transition: color 200ms;
+
+      // hover effect for link
+      &:hover {
+        color: var(--color-font-gray);
+      }
+    }
+  }
+
+  // the blog title
+  h1 {
+    font: 2.8rem var(--font-heading);
+    line-height: 3.4rem;
+    margin-top: -10px;
+  }
+
+  // mention of the post author
+  &_author {
+    color: var(--color-font-gray);
+    margin: -28px 0 160px;
+  }
+
+  // reading time indicator at the side
+  &_reading_time {
+    position: relative;
+    left: 0;
+    line-height: 2.2rem;
+    margin: 100px 0 -74px;
+  }
+
+  // share links
+  &_share {
+    position: relative;
+    left: 0;
+    top: 80px;
+    height: 90px;
+    color: var(--color-font-gray);
+    margin-bottom: -90px;
+
+    // share link buttons
+    a {
+      position: relative;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 200ms;
+
+      // background hover effect
+      &:hover {
+        background-color: var(--color-hover-light);
+      }
+
+      // icons for the different social media platforms
+      img {
+        transform: translate(12.5%, 12.5%); // centers the icon
+        width: 80%;
+        height: 80%;
+      }
+    }
   }
 }
 
-@media (max-width: 1160px) { // optimizes layout for smaller screens for better readability
+// optimizes layout for smaller screens for better readability
+@media (max-width: 1200px) {
   .blog_post_header_all_posts {
     position: relative;
-    left: calc(50% - 300px);
+    left: 40px;
     top: 0;
   }
 
   .blog_post_header_content {
-    width: 600px;
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 80px);
   }
 
   .blog_post_header_reading_time {
-    left: calc(50% - 300px);
-    margin-top: -80px;
+    left: 40px;
+    margin-top: -100px;
   }
 
   .blog_post_header_share {
-    left: calc(50% - 300px);
+    left: 40px;
     margin-bottom: 120px;
   }
 }
 
-@media (max-width: 656px) { // fixes some objects moving out of the screen
-  .blog_post_header_all_posts {
-    left: 20px;
-  }
-
-  .blog_post_header_reading_time {
-    left: 20px;
-  }
-
+// fixes some objects moving out of the screen
+@media (max-width: 700px) {
+  .blog_post_header_all_posts,
+  .blog_post_header_reading_time,
   .blog_post_header_share {
-    left: 20px;
+    left: 0;
+  }
+
+  .blog_post_header_content {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 240px) { // hides everything on too small screens
+// hides everything on too small screens
+@media (max-width: 240px) {
   .blog_post_header {
     display: none;
   }

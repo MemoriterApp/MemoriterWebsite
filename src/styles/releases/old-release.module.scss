@@ -1,136 +1,136 @@
 // here are the styles used for the older versions in the release notes, the current version at the top is using a seperate stylesheet
 
-.old_release { // main container
-  position: relative;
-  left: 50%;
-  top: 120px;
-  transform: translate(-50%);
-  width: calc(100% - 320px);
-  max-width: 2400px;
-  padding: 24px 0 80px 0;
-  margin-bottom: 120px;
+// main container
+.old_release {
+  padding: 24px 0 80px;
+  margin: 120px 0;
+  font: 1.1rem var(--font-default);
+  color: var(--color-font);
+  line-height: 1.8rem;
+  text-align: justify;
   background-color: var(--color-container);
-  border-radius: 12px;
+  border-radius: 4px;
 
-  &_date { // date at the top of the section
-    color: var(--color-font-gray) !important;
+  // date at the top of the section
+  &_date {
+    color: var(--color-font-gray);
     text-align: left;
   }
 
-  h1 { // all html headings (<h1/>) of old-release
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    margin: 20px 40px 32px 40px;
+  // release version number
+  h1 {
+    font: 2rem var(--font-highlight);
+    text-align: left;
+    margin: 20px 40px 32px;
   }
 
-  h2 { // all html sub headings (<h2/>) of old-release
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-highlight);
-    margin: 40px 40px 24px 40px;
+  // section heading
+  h2 {
+    font: 1.4rem var(--font-highlight);
+    text-align: left;
+    margin: 40px 40px 24px;
   }
 
-  p { // all html text paragraps (<p/>) of old-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.9rem;
-    text-align: justify;
-    margin: 12px 40px 0 40px;
+  // inline margin for content
+  p, ul, ol {
+    margin-inline: 40px;
   }
 
-  ul { // all html unordered lists (<ul/>) of old-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.9rem;
-    text-align: justify;
-    margin: 12px 40px 0 20px;
-    list-style: disc;
+  // different margin for bullet point and numbered lists
+  ul, ol {
+    margin-left: 24px;
   }
 
-  ol { // all html ordered lists (<ol/>) of old-release
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-font);
-    font-family: var(--font-default);
-    line-height: 1.9rem;
-    text-align: justify;
-    margin: 12px 40px 0 20px;
-    list-style: decimal;
+  // links
+  a {
+    color: var(--color-font-gray);
+    transition: color 200ms;
+
+    // link hover effect
+    &:hover {
+      color: var(--color-font);
+    }
   }
 
-  [class='gatsby-resp-image-wrapper'] { // all locally saved html images (<img/>) of old-release
+  // images
+  [class='gatsby-resp-image-wrapper'] {
     position: relative;
-    width: calc(100% - 80px) !important;
-    margin-top: 40px !important;
-    margin-bottom: 48px !important;
-    border-radius: 10px !important;
+    width: calc(100% - 80px);
+    min-width: calc(100% - 80px);
+    margin: 40px 0 48px;
+    border-radius: 4px;
     overflow: hidden;
   }
 
-  figcaption { // all html image captions (<figcaption/>) of old-release
-    font-size: 1.1rem;
-    font-weight: 500;
+  // image captions
+  figcaption {
     color: var(--color-font-gray);
-    font-family: var(--font-default);
-    line-height: 1.8rem;
-    text-align: justify;
-    margin: -40px 80px 20px 80px;
+    margin: -40px 80px 20px;
   }
 
-  code { // all html inline code (<code/>) of old-release
-    font-size: 1.1rem;
+  // inline code
+  code {
     color: var(--color-font-code);
     padding: 2px 4px;
     background-Color: var(--color-container-button);
     border-Radius: 4px;
   }
 
-  pre { // code block container
-    margin: 40px 40px 40px 40px;
+  // code block container
+  pre {
+    padding: 20px;
+    margin: 40px;
+    background-Color: var(--color-container-button);
+    border-radius: 4px;
   }
 
-  pre code { // code blocks
+  // code block content
+  pre code {
     color: unset;
     padding: 4px 0;
     background-color: unset;
   }
+
+  // greeting at the end
+  &_end {
+    font-family: var(--font-highlight);
+    text-align: left;
+    margin: 42px 0 -42px;
+  }
 }
 
-@media (max-width: 960px) { // removes space at the sides on small screens
+// removes space at the sides on small screens
+@media (max-width: 960px) {
   .old_release {
-    width: calc(100% - 40px);
-    padding: 10px 0 56px 0;
+    width: 100%;
+    padding: 2px 0 56px;
 
     h1 {
-      margin: 20px 20px 32px 20px;
+      margin: 20px 20px 32px;
     }
 
     h2 {
-      margin: 40px 20px 12px 20px;
+      margin: 40px 20px 12px;
     }
 
     p {
-      margin: 20px 20px 0 20px;
+      margin: 20px 20px 0;
     }
 
     ul, ol {
-      margin: 20px 0 0 0;
+      margin: 20px 20px 0 0;
     }
 
     [class='gatsby-resp-image-wrapper'], .old-release img {
-      width: 100% !important;
+      width: 100%;
     }
 
     figcaption {
-      transform: translate(0, -20px);
-      margin: -24px 20px 20px 20px;
+      margin: -40px 20px 0;
+    }
+
+    &_end {
+      margin-bottom: -36px !important;
     }
   }
 }

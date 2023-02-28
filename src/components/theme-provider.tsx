@@ -3,7 +3,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-// type definitions for props
 interface props {
   children: React.ReactNode;
 }

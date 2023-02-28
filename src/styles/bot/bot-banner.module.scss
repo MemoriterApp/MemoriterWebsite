@@ -1,12 +1,11 @@
 // The bot banner is an area at the top with a button to access the memoriter bot.
 
 .bot_banner { // banner box, background and position
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 60px);
+  position: relative;
+  width: calc(100% + 16px);
+  height: calc(100vh - 62px);
   min-height: 540px; // fixes issues for screens not high enough
-  left: 0;
-  top: 62px;
+  margin: 54px -8px 64px;
   background: var(--color-banner-gradient);
   overflow: hidden;
 
@@ -58,7 +57,7 @@
   &_button { // download button, needed to be split in multiple classes, this class is for the positionig of the button
     position: relative;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     font-size: 1.6rem;
     color: var(--color-white);
     font-family: var(--font-highlight);
@@ -125,7 +124,7 @@
     }
 
     .bot_banner_icon {
-      transform: translate(0, 40px);
+      transform: translateY(40px);
       width: 360px;
       height: 360px;
     }

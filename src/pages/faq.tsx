@@ -6,11 +6,12 @@ import WebsiteLayout from '../components/layout/website-layout';
 import HelpQuestion from '../components/help-question';
 import emoji1f609 from '../images/emoji/1f609.svg';
 
-const Faq: FC = () => { // array with all questions with answers, answers can be typed as string or html objects
+const Faq: FC = () => {
+  //  array with all questions with answers, answers can be typed as string or html objects
   const [questions, setQuestions] = useState<
     { section: string; question: string; answer: React.ReactNode; isOpen: boolean }[]
   >([
-    // General FAQ
+    //  General FAQ
     {
       section: 'general',
       question: 'What exactly is Memoriter?',
@@ -66,19 +67,81 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
     },
     {
       section: 'general',
-      question: 'Why are there so many inconsistencies in the visual design?',
+      question: 'What is the purpose of this application?',
       answer: (
         <p>
-          There are multiple reasons for this. Firstly we are mostly developers with little design
-          experience and we hadn't a person creating a proper deisgn in the for a long time, but now
-          the situation should get better. Secondly the beginning of development was very
-          unorganized and everyone implemented their own ideas, leading to different design choices
-          before we acquired a person doing all the visual stuff.
+          During our time in highschool we became increasingly frustrated with the lack of good
+          digital tools for studying. We wanted to create a tool that would help us and other
+          students to study more efficiently. We hope that you will find Memoriter useful and that
+          it will help you to study more effectively. Head over to our{' '}
+          <Link to='/about'>About page</Link> to find out more.
         </p>
       ),
       isOpen: false,
     },
-    // Account
+    {
+      section: 'general',
+      question: 'What inspired the creation of Memoriter?',
+      answer: (
+        <p>
+          During highschool all of us used note taking and study apps regularly, but we noticed that
+          none of them offer a good combination of note taking and studying. We were inspried by the
+          apps we used and wanted to add something on top of their features. A big inspiration for
+          the flashcard system were Anki as well as Quizlet, we were inspired to implement the note
+          taking functionality by apps like Notion and google Keep, overal a lot of different apps
+          inspired us to create Memoriter.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question:
+        'How does this web application differ from other study apps available on the market?',
+      answer: (
+        <p>
+          There are already a lot of good note taking and study apps available on the market, but we
+          think that Memoriter is different in the way that it combines both aspects in one app. We
+          also have a higher focus on helping students study with the power of ai and machine
+          learning, than other apps do. Another key difference is that Memoriter is completely free
+          for most of its features, the features that require a subscription are very cheap and we
+          don't have any ads. The last but most important difference is that Memoriter is a non
+          profit, open source project from students for students, we are not fuled by the profit
+          incentive but by the desire to help students study more efficiently.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How often does Memoriter recieve updates?',
+      answer: (
+        <p>
+          Unfortunately we can't dedicate as much time to Memoriter as we would like to because we
+          have school and other personal obligations. But nevertheless we try to update the app as
+          often as possible, we try to release a new update every few months. Follow us on social
+          media to stay updated on how the development is going.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      section: 'general',
+      question: 'How can I help improving Memoriter?',
+      answer: (
+        <p>
+          There are many ways to support us. Firstly, you can spread awareness about the app.
+          Secondly a small donation can make a huge difference. Finally, you can actively support us
+          with reporting issues, providing ideas or, since the project is{' '}
+          <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
+            open source
+          </a>
+          , you always can create a pull request if you know a bit obout programming.
+        </p>
+      ),
+      isOpen: false,
+    },
+    //  Account
     {
       section: 'account',
       question: 'Can I delete my user data?',
@@ -95,13 +158,25 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       question: 'Is it possible to reopen an account and restore my data?',
       answer: (
         <p>
-          Sadly no. Once an account is closed, all corresponding user data is deleted. It is
+          Sadly not. Once an account is closed, all corresponding user data is deleted. It is
           possible opening an account with the same email address though.
         </p>
       ),
       isOpen: false,
     },
-    // Donating
+    {
+      section: 'account',
+      question: 'Is my data safe?',
+      answer: (
+        <p>
+          Yes, your data is safe. We are using the high security standards and we are very concered
+          about the safety of our app. Take a look at our{' '}
+          <Link to='/privacy'>Privacy Policies</Link> to learn more about our security measures.
+        </p>
+      ),
+      isOpen: false,
+    },
+    //  Donating
     {
       section: 'donating',
       question: 'Can I cancel my monthly subscription?',
@@ -129,7 +204,14 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
     {
       section: 'donating',
       question: 'Are some features reserved for donors only?',
-      answer: <p>No, All features are free!</p>,
+      answer: (
+        <p>
+          We try to keep all important features free, but for some (like the AI features) we need to
+          rely on paid third party technology, so we need to charge a small fee to cover the extra
+          costs of these features at the moment, but we plan to make everything free soon, but until
+          then we are sorry for the inconvenience.
+        </p>
+      ),
       isOpen: false,
     },
     {
@@ -138,7 +220,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       answer: <p>At the moment it is only possible to donate via credit card or PayPal.</p>,
       isOpen: false,
     },
-    // Open Source
+    //  Open Source
     {
       section: 'open-source',
       question: 'Is Memoriter open source?',
@@ -158,7 +240,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       question: 'Can I contribute to the project?',
       answer: (
         <p>
-          If you know a bit about HTML, CSS and JavaScript (React), that's awesome! Feel free to
+          If you know a bit about HTML, CSS and JavaScript/TypeScript, that's awesome! Feel free to
           create a pull request with the changes you want to see implemented.
         </p>
       ),
@@ -198,40 +280,41 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
       ),
       isOpen: false,
     },
-    // Legal
+    //  Legal
     {
       section: 'legal',
       question: 'What is the current legal status of Memoriter?',
       answer: (
         <p>
-          We are no formal organization yet. Currently the Project is represented by us individual
-          people, but we might create one in the future.
+          The institution behind the project is Memoriter LLC (Limited Liability Company), a company
+          registered in Missippi, but we are mostly a community of individuals maintaining and
+          developing the project.
         </p>
       ),
       isOpen: false,
     },
   ]);
 
-  //function is called when a question is clicked
+  // function is called when a question is clicked
   const openQuestion = (openedQuestion: string): void => {
     setQuestions((questions) =>
       questions.map(
         (
-          question //question array is changed
+          question // question array is changed
         ) =>
           question.question === openedQuestion && !question.isOpen
             ? {
                 ...question,
-                isOpen: true, //clicked question opens if it is closed
+                isOpen: true, // clicked question opens if it is closed
               }
             : question.question === openedQuestion && question.isOpen
             ? {
                 ...question,
-                isOpen: false, //clicked question closes if it is open
+                isOpen: false, // clicked question closes if it is open
               }
             : {
                 ...question,
-                isOpen: false, //all other questions are closing, only one can be opened at the same time
+                isOpen: false, // all other questions are closing, only one can be opened at the same time
               }
       )
     );
@@ -239,12 +322,13 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
 
   return (
     <WebsiteLayout currentPage=''>
-      {/*main body*/}
+      {/* main body */}
       <section className={styles.help_main}>
         <h1>Frequently Asked Questions</h1>
+        <div className={styles.help_main_space_reducer} />
 
         <h2 id='general'>General FAQ</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'general')
           .map((question) => (
@@ -257,7 +341,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='account'>Account</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'account')
           .map((question) => (
@@ -270,7 +354,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='donating'>Donating</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'donating')
           .map((question) => (
@@ -283,7 +367,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='open-source'>Open Source</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'open-source')
           .map((question) => (
@@ -296,7 +380,7 @@ const Faq: FC = () => { // array with all questions with answers, answers can be
           ))}
 
         <h2 id='legal'>Legal</h2>
-        {/*displays a list for a section of questions*/}
+        {/* displays a list for a section of questions */}
         {questions
           .filter((question) => question.section === 'legal')
           .map((question) => (
@@ -317,7 +401,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='FAQ'
-      description='Frequently asked questions about the Memoriter project.'
+      description='If you need help, here is a collection of frequently asked questions about the Memoriter project.'
       keywords='faq, help'
       type='website'
     />

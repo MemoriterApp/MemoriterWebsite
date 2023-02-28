@@ -74,7 +74,7 @@
   .page_not_found {
     display: unset;
     top: 20px;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
     width: 400px;
     text-align: center;
 
@@ -87,7 +87,7 @@
     &_button {
       position: absolute;
       left: 50%;
-      transform: translate(-50%);
+      transform: translateX(-50%);
       margin-top: 20px;
     }
   }
@@ -104,6 +104,6 @@
 @media (max-height: 500px) {
   .page_not_found {
     top: 20px;
-    transform: translate(-50%);
+    transform: translateX(-50%);
   }
 }
