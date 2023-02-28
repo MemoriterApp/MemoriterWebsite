@@ -30,4 +30,7 @@ Before contributing to this project, please read our [contributing guidelines](h
 The Memoriter website is licensed under the [GNU General Public License v3.0](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE).
 
 ## Social Media
-[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/memorit.er)
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/memoriter6)
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white)](https://www.tiktok.com/@memoriterofficial)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.com/invite/wpdYh2CQ4H)
+[![Merch](https://img.shields.io/badge/Spreadshirt-00B2A5?style=flat&logo=spreadshirt&logoColor=white)](https://discord.com/invite/wpdYh2CQ4H)
