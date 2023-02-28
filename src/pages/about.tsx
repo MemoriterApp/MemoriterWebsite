@@ -8,13 +8,11 @@ import AboutMain from '../components/about/about-main';
 const About: FC = () => {
   return (
     <WebsiteLayout currentPage='about'>
-      
       {/*banner with introduction*/}
       <AboutBanner />
 
       {/*basic main layout and texts*/}
       <AboutMain />
-      
     </WebsiteLayout>
   );
 };
@@ -24,7 +22,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='About'
-      description='Find out who we are and about our vision.'
+      description='Find out how we contribute to better education for everyone by providing an efficient and accessible all-in-one learning environment.'
       keywords='about, company, vision'
       type='website'
     />

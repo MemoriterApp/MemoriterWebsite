@@ -17,6 +17,7 @@
   // big page heading
   h1 {
     font: 2.8rem var(--font-heading);
+    text-align: left;
     margin-bottom: 60px;
     background: var(--color-highlight-gradient);
     background-clip: text;
@@ -27,6 +28,7 @@
   // section headings
   h2 {
     font: 1.6rem var(--font-highlight);
+    text-align: left;
     margin: 48px 0 12px;
   }
 

@@ -1,7 +1,7 @@
 ---
 link: how-to-study
 topic: Productivity
-thumb: ../../images/thumbs/example-blog-post.jpg
+thumb: ../../images/thumbs/how-to-study.png
 date: 2023-03-01
 author: Saga B.
 title: How to Study

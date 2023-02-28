@@ -25,7 +25,7 @@ const AboutTeam: FC = () => {
           </article>
           <StaticImage
             className={styles.about_team_card_image}
-            src='../../images/about/placeholder-square.jpg'
+            src='../../images/about/johan.jpg'
             alt='placeholder'
           />
         </AnimationOnScroll>
@@ -67,7 +67,7 @@ const AboutTeam: FC = () => {
           </article>
           <StaticImage
             className={styles.about_team_card_image}
-            src='../../images/about/placeholder-square.jpg'
+            src='../../images/about/alexander.jpg'
             alt='placeholder'
           />
         </AnimationOnScroll>
@@ -87,7 +87,7 @@ const AboutTeam: FC = () => {
           </article>
           <StaticImage
             className={styles.about_team_card_image}
-            src='../../images/about/placeholder-square.jpg'
+            src='../../images/about/ale.jpg'
             alt='placeholder'
           />
         </AnimationOnScroll>
@@ -109,7 +109,7 @@ const AboutTeam: FC = () => {
           </article>
           <StaticImage
             className={styles.about_team_card_image}
-            src='../../images/about/placeholder-square.jpg'
+            src='../../images/about/saga.jpg'
             alt='placeholder'
           />
         </AnimationOnScroll>

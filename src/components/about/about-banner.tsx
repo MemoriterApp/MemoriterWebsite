@@ -32,7 +32,7 @@ const AboutBanner: FC = () => {
 
       {/* content */}
       <p className={styles.about_banner_content}>
-        <em>Behind the scenes:</em> get to know the faces behind the website
+        <em>Our goal</em> — find out how we contribute to better <em>education</em> for everyone.
       </p>
 
       {/* transition shape at the bottom */}
@@ -40,5 +40,4 @@ const AboutBanner: FC = () => {
     </section>
   );
 };
-
 export default AboutBanner;

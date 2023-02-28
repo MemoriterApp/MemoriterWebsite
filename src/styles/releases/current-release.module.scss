@@ -96,15 +96,11 @@
 
 @media (max-width: 960px) {
   // removes space at the sides on small screens
-  .current_release {
-    padding: 40px 0 80px;
+  .current_release[class='gatsby-resp-image-wrapper'] {
+    width: 100%;
+  }
 
-    [class='gatsby-resp-image-wrapper'] {
-      width: 100%;
-    }
-
-    figcaption {
-      margin: -24px 0 32px 0;
-    }
+  .current_release figcaption {
+    margin: -24px 0 32px 0;
   }
 }
