@@ -111,7 +111,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
       )}
 
       {/* cookie banner */}
-      <CookieBanner onOpenCookieSettings={() => openCookieSettings()} />
+      {/* -UNUSED- <CookieBanner onOpenCookieSettings={() => openCookieSettings()} /> */}
 
       {/* cookie settings modal */}
       {cookieSettings && (

@@ -122,12 +122,12 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <li>
               <a href='https://app.memoriter.de/signup'>Register</a>
             </li>
-            <li>
+            {/* -UNUSED- <li>
               <Link to='/download'>Download</Link>
             </li>
             <li>
               <Link to='/bot'>Memoriter Bot</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -143,9 +143,9 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <li>
               <Link to='/blog'>Blog</Link>
             </li>
-            <li>
+            {/* -UNUSED- <li>
               <Link to='/donate'>Donate</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -161,9 +161,9 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <li>
               <Link to='/privacy'>Privacy Policy</Link>
             </li>
-            <li>
+            {/* -UNUSED- <li>
               <Link to='/cookies'>Cookie Policy</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -193,7 +193,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
           <span className={styles.website_footer_flex_gap} />
 
-          <span
+          {/* -UNUSED- <span
             className={styles.website_footer_bottom_link}
             onClick={() => onOpenCookieSettings()}
           >
@@ -205,7 +205,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             onClick={() => onOpenLanguageSelect()}
           >
             <img src={emoji1f1ec_1f1e7} /> Language
-          </span>
+          </span> */}
 
           {(themeIcon === 'dark' || !themeIcon) && (
             <span

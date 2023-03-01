@@ -171,7 +171,7 @@ const Faq: FC = () => {
         <p>
           Yes, your data is safe. We are using the high security standards and we are very concered
           about the safety of our app. Take a look at our{' '}
-          <Link to='/privacy'>Privacy Policies</Link> to learn more about our security measures.
+          <Link to='/privacy'>privacy policiy</Link> to learn more about our security measures.
         </p>
       ),
       isOpen: false,
@@ -353,9 +353,9 @@ const Faq: FC = () => {
             />
           ))}
 
-        <h2 id='donating'>Donating</h2>
+        {/* -UNUSED- <h2 id='donating'>Donating</h2> */}
         {/* displays a list for a section of questions */}
-        {questions
+        {/* -UNUSED- {questions
           .filter((question) => question.section === 'donating')
           .map((question) => (
             <HelpQuestion
@@ -364,7 +364,7 @@ const Faq: FC = () => {
               question={question}
               onOpenQuestion={openQuestion}
             />
-          ))}
+          ))} */}
 
         <h2 id='open-source'>Open Source</h2>
         {/* displays a list for a section of questions */}

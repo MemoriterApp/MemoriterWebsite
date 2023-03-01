@@ -42,7 +42,7 @@ const ProductMain: FC = () => {
         />
       </article>
 
-      <h1 className={styles.default_main_overview_heading}>See Memoriter in Action</h1>
+      {/* -UNUSED- <h1 className={styles.default_main_overview_heading}>See Memoriter in Action</h1>
       <p className={styles.default_main_top_text}>
         Watch our video about the Memoriter project, tools and features and what you can use the
         application for.
@@ -51,10 +51,10 @@ const ProductMain: FC = () => {
         className={styles.default_main_top_video}
         src='https://www.youtube-nocookie.com/embed/WXuK6gekU1Y'
         allowFullScreen
-      />
+      /> */}
 
       {/* three small overview items */}
-      <h1 className={styles.default_main_overview_heading}>Explore our Tools and Features</h1>
+      {/* -UNUSED- <h1 className={styles.default_main_overview_heading}>Explore our Tools and Features</h1>
       <article className={styles.default_main_overview}>
         <div>
           <img className={styles.default_main_overview_image} src={emoji1f4a1} alt='Light bulb' />
@@ -91,7 +91,7 @@ const ProductMain: FC = () => {
             </Link>
           </p>
         </div>
-      </article>
+      </article> */}
 
       <article className={styles.default_main_container}>
         <StaticImage
@@ -228,7 +228,7 @@ const ProductMain: FC = () => {
       </article>
 
       {/* three small overview items */}
-      <h1 className={styles.default_main_overview_heading}>Study Anytime and Everywhere</h1>
+      {/* -UNUSED- <h1 className={styles.default_main_overview_heading}>Study Anytime and Everywhere</h1>
       <article className={styles.default_main_overview}>
         <div>
           <img
@@ -273,7 +273,7 @@ const ProductMain: FC = () => {
             </Link>
           </p>
         </div>
-      </article>
+      </article> */}
 
       <article className={styles.default_main_container}>
         <StaticImage
@@ -297,7 +297,7 @@ const ProductMain: FC = () => {
       </article>
 
       {/* slider with customer stories */}
-      <ProductStories />
+      {/* -UNUSED- <ProductStories /> */}
 
       <article className={styles.default_main_container}>
         <AnimationOnScroll

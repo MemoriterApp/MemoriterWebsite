@@ -196,9 +196,10 @@ const Privacy: FC = () => {
 
         <h2>5. Cookies</h2>
         <p>
-          We may use cookies and similar technologies to access or store information. Specific
+          We may use cookies and similar technologies to access or store information.
+          {/* -UNUSED- Specific
           information about how we use such technologies and how you can refuse certain cookies is
-          set out in our Cookie notice: <Link to='/cookies'>https://www.memoriter.de/cookies</Link>.
+            set out in our Cookie notice: <Link to='/cookies'>https://www.memoriter.de/cookies</Link>. */}
         </p>
 
         <h2>6. Storage Period</h2>

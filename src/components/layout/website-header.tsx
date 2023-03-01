@@ -112,7 +112,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
               Blog
             </span>
           </Link>
-          <Link className={styles.website_header_quicklinks_link} to='/download'>
+          {/* -UNUSED- <Link className={styles.website_header_quicklinks_link} to='/download'>
             <span className={currentPage === 'download' ? styles.website_header_text_gradient : ''}>
               Download
             </span>
@@ -121,16 +121,24 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             <span className={currentPage === 'donate' ? styles.website_header_text_gradient : ''}>
               Donate
             </span>
-          </Link>
+          </Link> */}
+          <a
+            className={styles.website_header_quicklinks_link}
+            href='https://discord.gg/wpdYh2CQ4H'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <span style={{ color: '#7289da' }}>Join our Discord!</span>
+          </a>
           {/* change language button */}
-          <button className={styles.website_header_settings_button}>
+          {/* -UNUSED- <button className={styles.website_header_settings_button}>
             <img
               className={styles.website_header_icon}
               src={emoji1f30d}
               alt='🌍'
               onClick={() => onOpenLanguageSelect()}
             />
-          </button>
+          </button> */}
           {/* the if else conditions changes the color of the links depending on the current open page */}
           {/* light and dark mode buttons, icon depends on the current mode */}
           {(themeIcon === 'dark' || !themeIcon) && (

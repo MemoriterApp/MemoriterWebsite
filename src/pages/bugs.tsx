@@ -32,8 +32,8 @@ const Bugs: FC = () => {
             content, checking the browser's developer tools (console) is always a good option.
           </p>
           <p>
-            If you still want to report the issue, please look at the 'I want to report a different
-            bug'-section. It is then useful to provide any unknown error codes to us.
+            If you still want to report the issue, please look at the "I want to report a different
+            bug" section. It is then useful to provide any unknown error codes to us.
           </p>
         </>
       ),

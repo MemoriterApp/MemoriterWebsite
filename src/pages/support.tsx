@@ -33,7 +33,7 @@ const Support: FC = () => {
       ),
       isOpen: false,
     },
-    {
+    /* -UNUSED- {
       question: 'I want to cancel my monthly donation subscription',
       answer: (
         <p>
@@ -42,7 +42,7 @@ const Support: FC = () => {
         </p>
       ),
       isOpen: false,
-    },
+    }, */
     {
       question: 'I want to unsubscribe from the newsletter',
       answer: (
