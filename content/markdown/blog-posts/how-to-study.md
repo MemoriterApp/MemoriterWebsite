@@ -5,7 +5,7 @@ thumb: ../../images/thumbs/how-to-study.png
 date: 2023-03-01
 author: Saga B.
 title: How to Study
-description: In this article we provide some tips on how to study.
+description: Studying is hard. Memoriter is here to help you study more effectively. Here are some tips on how to study more effectively using Memoriter.
 linkedBlogs: ['science-behind-memoriter']
 ---
 

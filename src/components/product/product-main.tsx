@@ -37,7 +37,7 @@ const ProductMain: FC = () => {
         </AnimationOnScroll>
         <StaticImage
           className={styles.default_main_container_image}
-          src='../../images/product/studying-laptop.png'
+          src='../../images/product/study-laptop.png'
           alt='Studying with book and laptop'
         />
       </article>

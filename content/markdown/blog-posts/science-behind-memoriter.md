@@ -1,7 +1,7 @@
 ---
 link: science-behind-memoriter
 topic: Miscellaneous
-thumb: ../../images/thumbs/example-blog-post.jpg
+thumb: ../../images/thumbs/studying-laptop.png
 date: 2023-03-01
 author: Johan T.
 title: The Science Behind Memoriter Explained with Emojis
@@ -65,7 +65,7 @@ Many people rely on cramming to prepare for exams or to learn new information. H
 
 This is where the forgetting curve comes into play. The forgetting curve is a graphical representation of the decline in retention over time.
 
-![placeholder](../../images/blog/example-blog-post.jpg)
+![placeholder](../../images/blog/forgetting-curve.png)
 
 <figcaption>Forgetting curve</figcaption>
 
@@ -73,7 +73,7 @@ The curve shows that retention declines rapidly in the first few days after lear
 
 Spaced repetition is a solution to this problem. It involves reviewing the information at regular intervals, with the intervals between reviews gradually increasing as retention improves. This helps to keep the information fresh in our minds and prevents the forgetting curve from taking effect.
 
-![placeholder](../../images/blog/example-blog-post.jpg)
+![placeholder](../../images/blog/spaced-repetition.png)
 
 <figcaption>Forgetting curve after spaced repetition</figcaption>
 
