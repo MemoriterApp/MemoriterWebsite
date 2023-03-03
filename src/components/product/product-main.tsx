@@ -172,25 +172,26 @@ const ProductMain: FC = () => {
           animateOut={styles.default_main_animation_fade_out_left}
         >
           {/* AnimationOnScroll starts an animation when it enters the viewport */}
-          <p className={styles.default_main_badge}>Supporter Features</p>
           <h1 className={styles.default_main_heading}>Integrated AI Tools</h1>
           <p className={styles.default_main_text}>
-            Support us with only 0.99€ per month and get access to exclusive AI powered features
-            improving your studying experience.
+            Get access to exclusive AI powered features improving your studying experience.
           </p>
           <ul className={styles.default_main_list}>
             <li>
               <img src={emoji1f4ac} alt='Speach bubble' draggable='false' />
               <div>
                 <h3>Memoriter Bot</h3>
-                <p>Study faster using an AI tutor.</p>
+                <p>Study faster using a personal AI tutor.</p>
               </div>
             </li>
             <li>
               <img src={emoji1f5c2} alt='Flashcards' draggable='false' />
               <div>
                 <h3>Flashcard Generation</h3>
-                <p>Get suggestions of flashcards from the content of your note pages.</p>
+                <p>
+                  Get suggestions of flashcards from the content of your note pages, making it
+                  easier to break down knowledge into smaller pieces.
+                </p>
               </div>
             </li>
             <li>

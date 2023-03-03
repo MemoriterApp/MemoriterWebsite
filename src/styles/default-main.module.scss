@@ -83,16 +83,6 @@
     }
   }
 
-  // badge over a section advertising supporter only features
-  &_badge {
-    width: fit-content;
-    font: 1.2rem var(--font-highlight);
-    padding: 6px 8px;
-    margin-bottom: 24px;
-    background-color: var(--color-hover);
-    border-radius: 4px;
-  }
-
   // heading font styling
   &_heading {
     font: 2.8rem var(--font-heading);
@@ -227,10 +217,6 @@
 @media (max-width: 960px) {
   .default_main_overview {
     flex-direction: column; // renders items above each other instead of next to each other
-  }
-
-  .default_main_badge {
-    margin-top: 32px
   }
 
   .default_main_heading {

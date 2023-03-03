@@ -115,12 +115,10 @@
 
       // old blog preview title
       h3 {
-        font-size: 1.8rem;
-        font-weight: 500;
+        font: 1.8rem var(--font-highlight);
         color: var(--color-font);
-        font-family: var(--font-default);
         line-height: 2rem;
-        margin: 20px 16px 24px 16px;
+        margin: 20px 16px 24px;
       }
 
       // old blog preview description

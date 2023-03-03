@@ -1,7 +1,7 @@
 ---
 link: science-behind-memoriter
 topic: Miscellaneous
-thumb: ../../images/thumbs/studying-laptop.png
+thumb: ../../images/thumbs/science-behind-memoriter.png
 date: 2023-03-01
 author: Johan T.
 title: The Science Behind Memoriter Explained with Emojis
