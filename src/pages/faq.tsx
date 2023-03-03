@@ -206,10 +206,7 @@ const Faq: FC = () => {
       question: 'Are some features reserved for donors only?',
       answer: (
         <p>
-          We try to keep all important features free, but for some (like the AI features) we need to
-          rely on paid third party technology, so we need to charge a small fee to cover the extra
-          costs of these features at the moment, but we plan to make everything free soon, but until
-          then we are sorry for the inconvenience.
+          No, all features of Memoriter are free!
         </p>
       ),
       isOpen: false,
