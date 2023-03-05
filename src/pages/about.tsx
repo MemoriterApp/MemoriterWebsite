@@ -23,7 +23,7 @@ export const Head: HeadFC = (): React.ReactElement => {
     <WebsiteHead
       title='About'
       description='Find out how we contribute to better education for everyone by providing an efficient and accessible all-in-one learning environment.'
-      keywords='about, company, vision'
+      keywords='about, company, project, team, vision'
       type='website'
     />
   );
