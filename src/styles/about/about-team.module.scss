@@ -53,8 +53,8 @@
     // card image container
     &_image {
       position: relative;
-      width: 200px;
-      min-width: 200px; // small fix
+      width: 180px;
+      min-width: 180px; // small fix
 
       // image itself
       img {
@@ -93,10 +93,12 @@
 
     &_container {
       margin-bottom: 40px;
-      gap: 40px;
+      flex-direction: column;
     }
 
     &_card {
+      width: calc(100% - 40px);
+      max-width: unset;
       padding: 4px 24px;
     }
   }
@@ -104,14 +106,6 @@
 
 // optimization for small screens
 @media (max-width: 960px) {
-  .about_team_container {
-    flex-direction: column;
-  }
-
-  .about_team_card {
-    width: calc(100% - 40px);
-    max-width: unset;
-  }
 }
 
 // adjusting too big text
