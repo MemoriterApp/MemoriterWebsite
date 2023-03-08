@@ -46,7 +46,7 @@ const AboutTeam: FC = () => {
           </article>
           <StaticImage
             className={styles.about_team_card_image}
-            src='../../images/about/placeholder-square.jpg'
+            src='../../images/about/simon.jpg'
             alt='placeholder'
           />
         </AnimationOnScroll>
