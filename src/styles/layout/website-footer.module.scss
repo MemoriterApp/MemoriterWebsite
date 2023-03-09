@@ -59,7 +59,7 @@
 
     // project logo on the left
     &_logo {
-      width: 240px;
+      width: 220px;
 
       // actual logo
       img {
@@ -73,7 +73,7 @@
 
     // social media links
     &_social {
-      margin: 51px 64px 0 0;
+      margin: 51px 56px 0 0;
       height: 32px;
 
       // social media icon links
@@ -189,6 +189,7 @@
     // column list items
     li,
     a {
+      width: fit-content;
       font: 1.1rem var(--font-default);
       color: var(--color-font);
       text-decoration: none;

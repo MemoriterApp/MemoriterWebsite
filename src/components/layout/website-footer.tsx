@@ -7,6 +7,8 @@ import { changeTheme } from '../../features/theme-slice';
 import cookies from '../../utils/cookies';
 import memoriterLogoWhite from '../../images/memoriter-logo-white.svg';
 import memoriterLogoBlack from '../../images/memoriter-logo-black.svg';
+import twitterIconLight from '../../images/icons/twitter-icon-light.svg';
+import twitterIconDark from '../../images/icons/twitter-icon-dark.svg';
 import instagramIconLight from '../../images/icons/instagram-icon-light.svg';
 import instagramIconDark from '../../images/icons/instagram-icon-dark.svg';
 import tiktokIconLight from '../../images/icons/tiktok-icon-light.svg';
@@ -69,6 +71,12 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         <div className={styles.website_footer_flex_gap} />
 
         <div className={styles.website_footer_top_social}>
+        <a href='https://twitter.com/MemoriterHQ' target='_blank' rel='noreferrer'>
+            <img
+              src={themeIcon === 'light' ? twitterIconDark : twitterIconLight}
+              alt='Twitter'
+            />
+          </a>
           <a href='https://instagram.com/memoriter6' target='_blank' rel='noreferrer'>
             <img
               src={themeIcon === 'light' ? instagramIconDark : instagramIconLight}
