@@ -2,7 +2,7 @@
 link: science-behind-memoriter
 topic: Miscellaneous
 thumb: ../../images/thumbs/science-behind-memoriter.png
-date: 2023-03-01
+date: 2023-03-12
 author: Johan T.
 title: The Science Behind Memoriter Explained with Emojis
 description: Memoriter uses different scientific principles to help you memorize things. In this post, we will explain how Memoriter works with emojis.
