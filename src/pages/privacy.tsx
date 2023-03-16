@@ -12,7 +12,7 @@ const Privacy: FC = () => {
         <h1>Memoriter Privacy Policy</h1>
 
         <p>
-          <strong>Last Updated: March 1, 2023</strong>
+          <strong>Last Updated: March 16, 2023</strong>
         </p>
 
         <p>
@@ -66,7 +66,7 @@ const Privacy: FC = () => {
           <li>
             Performance of a Contract. We may process your personal information when we believe it
             is necessary to fulfill our contractual obligations to you, including providing our
-            Services or at your request prior to entering into a contract with you.
+            services or at your request prior to entering into a contract with you.
           </li>
           <li>
             Legitimate Interests. We may process your information when we believe it is reasonably
@@ -190,8 +190,9 @@ const Privacy: FC = () => {
           </li>
         </ul>
         <p>
-          WE DO NOT SELL OR SHARE YOUR PERSONAL DATA WITH THIRD PARTIES, UNLESS REQUIRED FOR LEGAL
-          OBLIGATIONS.
+          WE DO NOT SELL YOUR PERSONAL DATA. WE DO NOT SHARE YOUR PERSONAL DATA WITH THIRD PARTIES,
+          UNLESS REQUIRED FOR THIRD PARTY TECHNOLOGIES TO PROVIDE THE CORE FEATURES OF MEMORITER OR
+          FOR LEGAL OBLIGATIONS.
         </p>
 
         <h2>5. Cookies</h2>

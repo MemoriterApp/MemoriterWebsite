@@ -12,7 +12,7 @@ const Terms: FC = () => {
         <h1>Memoriter Terms of Use</h1>
 
         <p>
-          <strong>Last Updated: March 1, 2023</strong>
+          <strong>Last Updated: March 16, 2023</strong>
         </p>
 
         <p>
