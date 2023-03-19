@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as styles from '../../styles/blog/blog-main.module.scss';
 import emoji_1f3Af from '../../images/emoji/1f3Af.svg'; // bullseye for project
-import emoji_1f52C from '../../images/emoji/1f52C.svg'; // microscope for productivity
+import emoji_1f52c from '../../images/emoji/1f52c.svg'; // microscope for productivity
 import emoji_1f6f0 from '../../images/emoji/1f6f0.svg'; // satellite for technology
 import emoji_1f4a5 from '../../images/emoji/1f4a5.svg'; // explosion for miscellaneous
 
@@ -59,7 +59,7 @@ const BlogMain: FC<Props> = ({ topic, data }: Props) => {
         </>
       ) : topic === 'Productivity' ? (
         <>
-          <img className={styles.blog_main_topic} src={emoji_1f52C} alt='Productivity' />
+          <img className={styles.blog_main_topic} src={emoji_1f52c} alt='Productivity' />
           <p className={styles.blog_main_topic}>
             <strong>Productivity — </strong>Tips and tricks how to use Memoriter.
           </p>
