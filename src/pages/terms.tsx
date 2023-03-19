@@ -130,7 +130,7 @@ const Terms: FC = () => {
         <h2>Privacy</h2>
         <p>
           You can learn more about how we protect user data under the following link:{' '}
-          <Link to='/privacy'>https://www.memoriter.de/privacy</Link>.
+          <Link to='/privacy'>https://memoriter.de/privacy</Link>.
         </p>
 
         <h2>Disclaimers</h2>

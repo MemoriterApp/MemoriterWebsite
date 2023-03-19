@@ -29,8 +29,8 @@ const Privacy: FC = () => {
         <ul>
           <li>
             Visit our website at{' '}
-            <a href='https://www.memoriter.de' target='_blank' rel='noreferrer'>
-              https://www.memoriter.de
+            <a href='https://memoriter.de' target='_blank' rel='noreferrer'>
+              https://memoriter.de
             </a>{' '}
             or{' '}
             <a href='https://app.memoriter.de' target='_blank' rel='noreferrer'>
@@ -200,7 +200,7 @@ const Privacy: FC = () => {
           We may use cookies and similar technologies to access or store information.
           {/* -UNUSED- Specific
           information about how we use such technologies and how you can refuse certain cookies is
-            set out in our Cookie notice: <Link to='/cookies'>https://www.memoriter.de/cookies</Link>. */}
+            set out in our Cookie notice: <Link to='/cookies'>https://memoriter.de/cookies</Link>. */}
         </p>
 
         <h2>6. Storage Period</h2>
@@ -287,7 +287,7 @@ const Privacy: FC = () => {
           cookies. If you choose to remove cookies or reject cookies, this could affect certain
           features or services of our Services. To opt out of interest-based advertising by
           advertisers on our Services visit http://www.aboutads.info/choices/. For further
-          information, please see our Cookie Notice: http://www.memoriter.de/Cookies.
+          information, please see our Cookie Notice: http://memoriter.de/Cookies.
         </p>
         <p>
           If you have questions or comments about your privacy rights, you may email us at{' '}
@@ -330,7 +330,7 @@ const Privacy: FC = () => {
         <h3>How We Use and Share Your Personal Information</h3>
         <p>
           More information about our data collection and sharing practices can be found in this
-          privacy notice and our Cookie Notice: http://www.memoriter.de/Cookies
+          privacy notice and our Cookie Notice: http://memoriter.de/Cookies
         </p>
         <p>
           You may contact us by email at contact@memoriter.de, or by referring to the contact
