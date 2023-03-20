@@ -11,6 +11,9 @@ const config: GatsbyConfig = {
         siteUrl: `https://memoriter.de`,
     },
     graphqlTypegen: true,
+    flags: {
+        DEV_SSR: true
+    },
     plugins: [
         'gatsby-plugin-sass',
         'gatsby-plugin-sitemap',
