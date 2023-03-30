@@ -22,7 +22,7 @@ export const Head: HeadFC = (): React.ReactElement => {
   return (
     <WebsiteHead
       title='The flashcard app that lets you remember more!'
-      description='Work with the effective memorizing tools of Memoriter to quickly achieve successful results. Find out about one of the most innovative study application.'
+      description='Work with the effective memorizing tools of Memoriter to quickly achieve successful results. Find out about one of the most innovative study applications.'
       keywords='product, index, app'
       type='website'
     />

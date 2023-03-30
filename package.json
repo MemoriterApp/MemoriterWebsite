@@ -2,7 +2,7 @@
   "name": "memoriter-website",
   "version": "1.0.0",
   "private": true,
-  "description": "memoriter-website",
+  "description": "Website for the Memoriter study application",
   "author": "q-Sci",
   "keywords": [
     "gatsby"

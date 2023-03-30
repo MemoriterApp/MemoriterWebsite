@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: `Memoriter`,
         author: `Memoriter`,
-        description: `Discover Memoriter and find out how it will give you a better experience in learning something in school or just to take notes in a different creative way not seen anywhere else on the web.`,
+        description: `Work with the effective memorizing tools of Memoriter to quickly achieve successful results. Find out about one of the most innovative study applications.`,
         keywords: `memoriter, learning, study, notes, school, spaced repetition`,
         siteUrl: `https://memoriter.de`,
     },
