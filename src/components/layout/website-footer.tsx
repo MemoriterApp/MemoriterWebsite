@@ -67,11 +67,8 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
         <div className={styles.website_footer_flex_gap} />
 
         <div className={styles.website_footer_top_social}>
-        <a href='https://twitter.com/MemoriterHQ' target='_blank' rel='noreferrer'>
-            <img
-              src={themeIcon === 'light' ? twitterIconDark : twitterIconLight}
-              alt='Twitter'
-            />
+          <a href='https://twitter.com/MemoriterHQ' target='_blank' rel='noreferrer'>
+            <img src={themeIcon === 'light' ? twitterIconDark : twitterIconLight} alt='Twitter' />
           </a>
           <a href='https://instagram.com/memoriter6' target='_blank' rel='noreferrer'>
             <img
@@ -95,7 +92,10 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
         <div className={styles.website_footer_top_newsletter}>
           <form
-            onSubmit={() => alert('The newsletter has not been set up yet! Please try again later.')}
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert('The newsletter has not been set up yet! Please try again later.');
+            }}
           >
             <p>Subscribe to our newsletter</p>
             <input id='email' type='email' name='email' placeholder='Email address' />
