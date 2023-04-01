@@ -59,7 +59,8 @@ The Memoriter website is licensed under the
 
 ## Social Media
 
-[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/memoriter6)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://www.twitter.com/MemoriterHQ)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/memoriter6)
 [![TikTok](https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white)](https://www.tiktok.com/@memoriterofficial)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.com/invite/wpdYh2CQ4H)
 [![Merch](https://img.shields.io/badge/Spreadshirt-00B2A5?style=flat&logo=spreadshirt&logoColor=white)](https://shop-memoriter.myspreadshop.de)
