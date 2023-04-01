@@ -58,7 +58,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
         <p>Share this post</p>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://twitter.com/intent/tweet?url=${window.location}/&text=${title}`
               : ''
           }
@@ -69,7 +69,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://www.facebook.com/sharer/sharer.php?u=${window.location}/`
               : ''
           }
@@ -83,7 +83,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://api.whatsapp.com/send?text=${title}%0a${window.location}`
               : ''
           }
@@ -97,7 +97,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `mailto:?subject=${title}&body=${title}%0A${window.location}`
               : ''
           }

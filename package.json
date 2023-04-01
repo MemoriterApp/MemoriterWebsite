@@ -20,6 +20,7 @@
     "@reduxjs/toolkit": "^1.8.6",
     "@types/react-animate-on-scroll": "^2.1.5",
     "@types/react-redux": "^7.1.24",
+    "caniuse-lite": "^1.0.30001473",
     "gatsby": "^4.24.4",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",

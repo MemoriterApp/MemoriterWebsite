@@ -30,16 +30,18 @@ const Blog: FC<Props> = ({ data }: Props) => {
   const [topic, setTopic] = useState<string>(''); // currently selected topic filter
 
   // checks selected topic based on the url hash
-  if (location.hash === '#project' && topic !== 'Project') {
-    setTopic('Project');
-  } else if (location.hash === '#productivity' && topic !== 'Productivity') {
-    setTopic('Productivity');
-  } else if (location.hash === '#technology' && topic !== 'Technology') {
-    setTopic('Technology');
-  } else if (location.hash === '#miscellaneous' && topic !== 'Miscellaneous') {
-    setTopic('Miscellaneous');
-  } else if (!location.hash && topic !== 'Latest') {
-    setTopic('Latest');
+  if (typeof location !== 'undefined') {
+    if (location.hash === '#project' && topic !== 'Project') {
+      setTopic('Project');
+    } else if (location.hash === '#productivity' && topic !== 'Productivity') {
+      setTopic('Productivity');
+    } else if (location.hash === '#technology' && topic !== 'Technology') {
+      setTopic('Technology');
+    } else if (location.hash === '#miscellaneous' && topic !== 'Miscellaneous') {
+      setTopic('Miscellaneous');
+    } else if (!location.hash && topic !== 'Latest') {
+      setTopic('Latest');
+    }
   }
 
   return (

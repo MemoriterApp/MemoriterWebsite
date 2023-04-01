@@ -27,7 +27,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
         <p>Share this post</p>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://twitter.com/intent/tweet?url=${window.location}/&text=${title}`
               : ''
           }
@@ -38,7 +38,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://www.facebook.com/sharer/sharer.php?u=${window.location}/`
               : ''
           }
@@ -52,7 +52,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `https://api.whatsapp.com/send?text=${title}%0a${window.location}`
               : ''
           }
@@ -63,7 +63,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
         </a>
         <a
           href={
-            typeof window !== 'undefined'
+            typeof window !== 'undefined' && typeof location !== 'undefined'
               ? `mailto:?subject=${title}&body=${title}%0A${window.location}`
               : ''
           }
