@@ -49,10 +49,6 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
     }
   };
 
-  const handleNewsletterSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
-
   return (
     <footer className={styles.website_footer}>
       {/* transition shape at the top */}
@@ -99,7 +95,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
         <div className={styles.website_footer_top_newsletter}>
           <form
-            onSubmit={handleNewsletterSubmit}
+            onSubmit={() => alert('The newsletter has not been set up yet! Please try again later.')}
           >
             <p>Subscribe to our newsletter</p>
             <input id='email' type='email' name='email' placeholder='Email address' />
