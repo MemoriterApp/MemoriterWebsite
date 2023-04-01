@@ -57,14 +57,22 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
       <div className={styles.blog_post_header_share}>
         <p>Share this post</p>
         <a
-          href={`https://twitter.com/intent/tweet?url=${window.location}/&text=${title}`}
+          href={
+            typeof window !== 'undefined'
+              ? `https://twitter.com/intent/tweet?url=${window.location}/&text=${title}`
+              : ''
+          }
           target='_blank'
           rel='noreferrer'
         >
           <img src={themeIcons === 'light' ? twitterIconBlack : twitterIconWhite} alt='Twitter' />
         </a>
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${window.location}/`}
+          href={
+            typeof window !== 'undefined'
+              ? `https://www.facebook.com/sharer/sharer.php?u=${window.location}/`
+              : ''
+          }
           target='_blank'
           rel='noreferrer'
         >
@@ -74,7 +82,11 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           />
         </a>
         <a
-          href={`https://api.whatsapp.com/send?text=${title}%0a${window.location}`}
+          href={
+            typeof window !== 'undefined'
+              ? `https://api.whatsapp.com/send?text=${title}%0a${window.location}`
+              : ''
+          }
           target='_blank'
           rel='noreferrer'
         >
@@ -84,7 +96,11 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           />
         </a>
         <a
-          href={`mailto:?subject=${title}&body=${title}%0A${window.location}`}
+          href={
+            typeof window !== 'undefined'
+              ? `mailto:?subject=${title}&body=${title}%0A${window.location}`
+              : ''
+          }
           target='_blank'
           rel='noreferrer'
         >
