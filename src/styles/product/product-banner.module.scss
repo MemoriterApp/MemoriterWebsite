@@ -23,6 +23,7 @@
 
   // background triangle at the upper right corner
   &_triangle_top {
+    right: 0;
     top: 0;
     border-left: 50vh solid var(--color-transparent);
     border-top: 50vh solid var(--color-banner-triangle-light);
@@ -30,6 +31,7 @@
 
   // background triangle at the lower left corner
   &_triangle_bottom {
+    left: 0;
     bottom: 0;
     border-right: 50vh solid var(--color-transparent);
     border-bottom: 50vh solid var(--color-banner-triangle-dark);
