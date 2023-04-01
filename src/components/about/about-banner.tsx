@@ -5,17 +5,21 @@ const AboutBanner: FC = () => {
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
   // getting the scroll data
   const onScroll = (): void => {
-    const scroll: number = document.documentElement.scrollTop;
-    const height: number =
-      document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled: number = (scroll / height) * 100;
-    setScrollProgress(scrolled);
+    if (typeof document !== 'undefined') {
+      const scroll: number = document.documentElement.scrollTop;
+      const height: number =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled: number = (scroll / height) * 100;
+      setScrollProgress(scrolled);
+    }
   };
 
   // the useEffect is important for getting the value if it is scrolling
   useEffect((): any => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }
   }, []);
 
   return (

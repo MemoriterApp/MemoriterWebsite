@@ -47,18 +47,23 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
   }
 
   const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
-  // getting the scroll progress data
+  // getting the scroll data
   const onScroll = (): void => {
-    const scroll = document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled: number = (scroll / height) * 100;
-    setScrollProgress(scrolled);
+    if (typeof document !== 'undefined') {
+      const scroll: number = document.documentElement.scrollTop;
+      const height: number =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled: number = (scroll / height) * 100;
+      setScrollProgress(scrolled);
+    }
   };
 
-  // attaching an event listener to detect when the user is scrolling
+  // the useEffect is important for getting the value if it is scrolling
   useEffect((): any => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }
   }, []);
 
   const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode icon based on theme

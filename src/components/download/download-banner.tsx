@@ -9,21 +9,24 @@ const DownloadBanner: FC = () => {
   const [squareEffect, setSquareEffect] = useState<string>('0'); //variable for background animation when hovering on the download buttons
   const [squareTransition, setSquareTransition] = useState<string>('none'); //variable for background animation transition (this does not trigger when scrolling)
 
-  const [scrollProgress, setScrollProgress] = useState<number>(0); //value for the scroll progress
-  const onScroll = (): void => { //getting the scroll data
-    const scroll = document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-    const scrolled: number = (scroll / height) * 100;
-
-    setScrollProgress(scrolled);
+  const [scrollProgress, setScrollProgress] = useState<number>(0); // value for the scroll progress
+  // getting the scroll data
+  const onScroll = (): void => {
+    if (typeof document !== 'undefined') {
+      const scroll: number = document.documentElement.scrollTop;
+      const height: number =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled: number = (scroll / height) * 100;
+      setScrollProgress(scrolled);
+    }
   };
 
   // the useEffect is important for getting the value if it is scrolling
   useEffect((): any => {
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', onScroll);
+      return () => window.removeEventListener('scroll', onScroll);
+    }
   }, []);
 
   const [onHoverWindows, setOnHoverWindows] = useState<string>('brightness(1)'); //variable for the hover effect for the download for windows button

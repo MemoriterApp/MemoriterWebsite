@@ -27,7 +27,9 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
   // function for opening the language select modal
   const openLanguageSelect = (): void => {
-    document.body.style.overflow = 'hidden'; // disables page scrolling
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'hidden'; // disables page scrolling
+    }
     setLanguageSelect(true);
     setTimeout(() => {
       setBackdropAnimation('1');
@@ -40,7 +42,9 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
   // function for closing the language select modal
   const closeLanguageSelect = (): void => {
-    document.body.style.overflow = 'auto'; // re-enables page scrolling
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'auto'; // re-enables page scrolling
+    }
     setTimeout(() => {
       setLanguageSelect(false);
     }, 800); // timeout is needed for finishing the fade effect before closing everything
@@ -55,7 +59,9 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
   // function for opening the cookie settings
   const openCookieSettings = (): void => {
-    document.body.style.overflow = 'hidden'; // disables page scrolling
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'hidden'; // disables page scrolling
+    }
     setCookieSettings(true);
     setTimeout(() => {
       setBackdropAnimation('1');
@@ -68,7 +74,9 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
 
   // function for closing the cookie settings
   const closeCookieSettings = (): void => {
-    document.body.style.overflow = 'auto'; // re-enables page scrolling
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = 'auto'; // re-enables page scrolling
+    }
     setTimeout(() => {
       setCookieSettings(false);
     }, 800); // timeout is needed for finishing the fade effect before closing everything
@@ -111,7 +119,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
       )}
 
       {/* cookie banner */}
-      {/* -UNUSED- <CookieBanner onOpenCookieSettings={() => openCookieSettings()} /> */}
+      {<CookieBanner onOpenCookieSettings={() => openCookieSettings()} />}
 
       {/* cookie settings modal */}
       {cookieSettings && (

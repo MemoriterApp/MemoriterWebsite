@@ -28,7 +28,10 @@ const ThemeProvider: FC<props> = ({ children }: props) => {
     }
   }, [currentTheme, theme]);
 
-  document.body.style.backgroundColor = backgroundColor; // page background color, cannot be accessed otherwise
+  // page background color, cannot be accessed otherwise
+  if (typeof document !== 'undefined') {
+    document.body.style.backgroundColor = backgroundColor;
+  }
 
   return <div id={theme}>{children}</div>; // children refers to the content inside the wrapper (all pages)
 };
