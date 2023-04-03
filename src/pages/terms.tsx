@@ -243,7 +243,7 @@ const Terms: FC = () => {
           <li>
             All fonts are licensed under the{' '}
             <a href='http://scripts.sil.org/OFL' target='_blank' rel='noreferrer'>
-              SIL Open Font License, Version 1.1.
+              SIL Open Font License, Version 1.1
             </a>
           </li>
           <li>
@@ -253,14 +253,30 @@ const Terms: FC = () => {
             </a>{' '}
             ("Twemoji") are licensed under{' '}
             <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noreferrer'>
-              CC-BY 4.0.
+              CC-BY 4.0
             </a>
+            .
+          </li>
+          <li>
+            The{' '}
+            <a href='https://twemoji.twitter.com/' target='_blank' rel='noreferrer'>
+              Material Symbols
+            </a>{' '}
+            by Google are licensed under the{' '}
+            <a
+              href='https://www.apache.org/licenses/LICENSE-2.0.html'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Apache License, Version 2.0
+            </a>
+            .
           </li>
           <li>
             Software libraries, frameworks and similar third party technologies used for the
             development of Memoriter are licensed under the{' '}
             <a href='https://spdx.org/licenses/MIT.html' target='_blank' rel='noreferrer'>
-              MIT license
+              MIT License
             </a>{' '}
             or similar open source licenses. The specific license texts can be found alongside the
             source code files of the corresponding technologies used by Memoriter.
