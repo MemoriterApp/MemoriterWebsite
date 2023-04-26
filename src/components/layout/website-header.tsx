@@ -163,12 +163,12 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
             </button>
           )}
           {/* sign in and register buttons */}
-          <a className={styles.website_header_sign_in} href='https://app.memoriter.de/login'>
+          <a className={styles.website_header_sign_in} href='https://app.memoriter.de'>
             <span className={styles.website_header_text_gradient}>Sign in</span>
           </a>
           <a
             className={styles.website_header_register}
-            href='https://app.memoriter.de/signup'
+            href='https://app.memoriter.de'
             onMouseEnter={() => setOnHover('brightness(0.75)')}
             onMouseLeave={() => setOnHover('brightness(1)')}
           >
