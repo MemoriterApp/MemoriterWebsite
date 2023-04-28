@@ -67,7 +67,7 @@
     margin-top: -0.5px;
     background-color: var(--color-transparent);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     cursor: pointer;
 
     &_text { // text which is not supposed to change color
@@ -84,7 +84,7 @@
     &_background { // the hover background was done in React because it did not work in CSS
       height: 100%;
       margin-inline: -6px;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       background: var(--color-highlight-gradient);
       transition: filter 200ms;
     }
@@ -96,7 +96,7 @@
     margin-left: 14px;
     background-color: var(--color-paypal);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 200ms;
 
@@ -128,7 +128,7 @@
       margin-left: auto;
       margin-top: -20px;
       background-color: var(--color-background-dark);
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       outline: none;
     }
   }

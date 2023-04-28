@@ -64,7 +64,7 @@
     [class='gatsby-resp-image-wrapper'] {
       width: calc(100% + 80px) !important;
       margin: 48px -40px 48px !important;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       overflow: hidden;
     }
 
@@ -74,7 +74,7 @@
       aspect-ratio: 16 / 9;
       margin: 24px -40px 40px;
       border: none;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       overflow: hidden;
     }
 
@@ -98,7 +98,7 @@
       color: var(--color-font-code);
       padding: 4px 6px;
       background-color: var(--color-hover);
-      border-radius: 4px;
+      border-radius: var(--border-radius);
     }
 
     // code blocks
@@ -107,7 +107,7 @@
       line-height: 1.8rem;
       padding: 20px 24px;
       margin: 36px 0;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
 
       // fixes issues with code block component
       code {
@@ -124,7 +124,7 @@
       margin: 36px 0;
       background-color: var(--color-hover);
       border-left: none !important;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
 
       // emoji inserted before the text
       &::before {

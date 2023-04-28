@@ -9,7 +9,7 @@
   line-height: 1.8rem;
   text-align: justify;
   background-color: var(--color-container);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 
   // date at the top of the section
   &_date {
@@ -58,7 +58,7 @@
     width: calc(100% - 80px);
     min-width: calc(100% - 80px);
     margin: 40px 0 48px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
 
@@ -73,7 +73,7 @@
     color: var(--color-font-code);
     padding: 2px 4px;
     background-Color: var(--color-container-button);
-    border-Radius: 4px;
+    border-radius: var(--border-radius);
   }
 
   // code block container
@@ -81,7 +81,7 @@
     padding: 20px;
     margin: 40px;
     background-Color: var(--color-container-button);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
   }
 
   // code block content

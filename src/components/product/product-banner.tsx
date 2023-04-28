@@ -55,7 +55,7 @@ const ProductBanner: FC = () => {
         {/* get started button for redirecting to register page */}
         <a
           className={styles.product_banner_get_started}
-          href='https://app.memoriter.de/signup'
+          href='https://app.memoriter.de'
           onMouseEnter={() => {
             setOnHover('brightness(0.75)');
             setTriangleEffect('10');

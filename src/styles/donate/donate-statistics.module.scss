@@ -102,7 +102,7 @@
       padding: 8px;
       margin-bottom: -8px;
       background-color: var(--color-container);
-      border-radius: 4px;
+      border-radius: var(--border-radius);
     }
 
     &_bottom_text { // text at the bottom of the page

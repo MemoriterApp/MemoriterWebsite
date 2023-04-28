@@ -51,7 +51,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: var(--color-transparent);;
     cursor: pointer;
     transition: background-color 200ms;
@@ -86,7 +86,7 @@
 
       &-thumb { // custom scrollbar design
         background-color: var(--color-background-dark);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
 
         &:hover { // hover effect
           background-color: var(--color-background-dark-plus);

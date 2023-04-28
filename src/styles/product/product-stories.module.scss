@@ -20,7 +20,7 @@
     width: calc(100% - 150px);
     height: calc(100% - 40px);
     margin: 0;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: var(--color-hover);
 
     // quotation mark at the upper left corner

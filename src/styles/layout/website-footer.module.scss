@@ -83,7 +83,7 @@
         height: 32px;
         color: var(--color-font-gray);
         margin-inline: 8px;
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         transition: background-color 200ms;
 
         // circle hover effect
