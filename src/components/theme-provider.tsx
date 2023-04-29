@@ -29,6 +29,8 @@ const ThemeProvider: FC<props> = ({ children }: props) => {
     ) {
       setTheme('dark');
       dispatch(changeTheme('dark')); // changes the theme globally
+    } else {
+      dispatch(changeTheme('light')); // changes the theme globally
     }
 
     // checks which mode is active to adjust page background
