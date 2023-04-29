@@ -26,7 +26,7 @@ const PageNotFound: FC = (): React.ReactElement => {
           {/* logo above the content */}
           <img
             className={styles.page_not_found_logo}
-            src={theme === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
+            src={theme === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
             alt='Memoriter'
           />
           {/* text */}

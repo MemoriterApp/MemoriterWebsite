@@ -20,7 +20,7 @@ interface Props {
 }
 
 const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: Props) => {
-  const themeIcons: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
+  const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
 
   return (
     <section className={styles.blog_post_header}>
@@ -65,7 +65,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? twitterIconBlack : twitterIconWhite} alt='Twitter' />
+          <img src={themeIcon === 'dark' ? twitterIconWhite : twitterIconBlack} alt='Twitter' />
         </a>
         <a
           href={
@@ -77,7 +77,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           rel='noreferrer'
         >
           <img
-            src={themeIcons === 'light' ? facebookIconBlack : facebookIconWhite}
+            src={themeIcon === 'dark' ? facebookIconWhite : facebookIconBlack}
             alt='Facebook'
           />
         </a>
@@ -91,7 +91,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           rel='noreferrer'
         >
           <img
-            src={themeIcons === 'light' ? whatsappIconBlack : whatsappIconWhite}
+            src={themeIcon === 'dark' ? whatsappIconWhite : whatsappIconBlack}
             alt='WhatsApp'
           />
         </a>
@@ -104,7 +104,7 @@ const BlogPostHeader: FC<Props> = ({ title, date, author, topic, minutesRead }: 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? emailIconBlack : emailIconWhite} alt='Email' />
+          <img src={themeIcon === 'dark' ? emailIconWhite : emailIconBlack} alt='Email' />
         </a>
       </div>
     </section>

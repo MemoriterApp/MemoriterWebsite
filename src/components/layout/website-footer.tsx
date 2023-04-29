@@ -58,7 +58,7 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
       <section className={styles.website_footer_top}>
         <div className={styles.website_footer_top_logo}>
           <img
-            src={themeIcon === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
+            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
             alt='Memoriter'
           />
           <p>Memoriter — the flashcard app that lets you remember more!</p>
@@ -68,25 +68,25 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
         <div className={styles.website_footer_top_social}>
           <a href='https://twitter.com/MemoriterHQ' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? twitterIconDark : twitterIconLight} alt='Twitter' />
+            <img src={themeIcon === 'dark' ? twitterIconLight : twitterIconDark} alt='Twitter' />
           </a>
           <a href='https://instagram.com/memoriter6' target='_blank' rel='noreferrer'>
             <img
-              src={themeIcon === 'light' ? instagramIconDark : instagramIconLight}
+              src={themeIcon === 'dark' ? instagramIconLight : instagramIconDark}
               alt='Instagram'
             />
           </a>
           <a href='https://www.tiktok.com/@memoriterofficial' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? tiktokIconDark : tiktokIconLight} alt='TikTok' />
+            <img src={themeIcon === 'dark' ? tiktokIconLight : tiktokIconDark} alt='TikTok' />
           </a>
           <a href='https://discord.gg/wpdYh2CQ4H' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? discordIconDark : discordIconLight} alt='Discord' />
+            <img src={themeIcon === 'dark' ? discordIconLight : discordIconDark} alt='Discord' />
           </a>
           <a href='https://github.com/MemoriterApp' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? githubIconDark : githubIconLight} alt='GitHub' />
+            <img src={themeIcon === 'dark' ? githubIconLight : githubIconDark} alt='GitHub' />
           </a>
           <a href='https://shop-memoriter.myspreadshop.de' target='_blank' rel='noreferrer'>
-            <img src={themeIcon === 'light' ? shopIconDark : shopIconLight} alt='Shop' />
+            <img src={themeIcon === 'dark' ? shopIconLight : shopIconDark} alt='Shop' />
           </a>
         </div>
 
@@ -210,20 +210,20 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <img src={emoji1f1ec_1f1e7} /> Language
           </span> */}
 
-          {(themeIcon === 'dark' || !themeIcon) && (
-            <span
-              className={styles.website_footer_bottom_link}
-              onClick={() => onChangeTheme('light')}
-            >
-              <img src={emoji26c5} /> Theme
-            </span>
-          )}
           {themeIcon === 'light' && (
             <span
               className={styles.website_footer_bottom_link}
               onClick={() => onChangeTheme('dark')}
             >
               <img src={emoji1f312} /> Theme
+            </span>
+          )}
+          {themeIcon === 'dark' && (
+            <span
+              className={styles.website_footer_bottom_link}
+              onClick={() => onChangeTheme('dark')}
+            >
+              <img src={emoji26c5} /> Theme
             </span>
           )}
         </p>

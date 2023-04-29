@@ -19,7 +19,7 @@ interface Props {
 }
 
 const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) => {
-  const themeIcons: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
+  const themeIcon: string = useSelector((state: any) => state.theme.value); // current light or dark mode text based on theme
   return (
     <section className={styles.blog_post_footer}>
       {/* share links, the links are using the title variable and the current url (window.location) */}
@@ -34,7 +34,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? twitterIconBlack : twitterIconWhite} alt='Twitter' />
+          <img src={themeIcon === 'dark' ? twitterIconWhite : twitterIconBlack} alt='Twitter' />
         </a>
         <a
           href={
@@ -46,7 +46,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
           rel='noreferrer'
         >
           <img
-            src={themeIcons === 'light' ? facebookIconBlack : facebookIconWhite}
+            src={themeIcon === 'dark' ? facebookIconWhite : facebookIconBlack}
             alt='Facebook'
           />
         </a>
@@ -59,7 +59,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? whatsappIconBlack : whatsappIconWhite} alt='WhatApp' />
+          <img src={themeIcon === 'dark' ? whatsappIconWhite : whatsappIconBlack} alt='WhatApp' />
         </a>
         <a
           href={
@@ -70,7 +70,7 @@ const BlogPostFooter: FC<Props> = ({ title, linkedBlogs, allBlogPosts }: Props) 
           target='_blank'
           rel='noreferrer'
         >
-          <img src={themeIcons === 'light' ? emailIconBlack : emailIconWhite} alt='Email' />
+          <img src={themeIcon === 'dark' ? emailIconWhite : emailIconBlack} alt='Email' />
         </a>
       </div>
       <hr /> {/* small divider line */}

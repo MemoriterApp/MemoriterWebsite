@@ -88,7 +88,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
         <Link to='/'>
           <img
             className={styles.website_header_logo}
-            src={themeIcon === 'light' ? memoriterLogoBlack : memoriterLogoWhite}
+            src={themeIcon === 'dark' ? memoriterLogoWhite : memoriterLogoBlack}
             alt='Memoriter'
           />
         </Link>
@@ -146,20 +146,20 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
           </button> */}
           {/* the if else conditions changes the color of the links depending on the current open page */}
           {/* light and dark mode buttons, icon depends on the current mode */}
-          {(themeIcon === 'dark' || !themeIcon) && (
-            <button
-              className={styles.website_header_settings_button}
-              onClick={() => onChangeTheme('light')}
-            >
-              <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
-            </button>
-          )}
           {themeIcon === 'light' && (
             <button
               className={styles.website_header_settings_button}
               onClick={() => onChangeTheme('dark')}
             >
               <img className={styles.website_header_icon} src={emoji1f312} alt='🌒' />
+            </button>
+          )}
+          {themeIcon === 'dark' && (
+            <button
+              className={styles.website_header_settings_button}
+              onClick={() => onChangeTheme('light')}
+            >
+              <img className={styles.website_header_icon} src={emoji26c5} alt='⛅' />
             </button>
           )}
           {/* sign in and register buttons */}
