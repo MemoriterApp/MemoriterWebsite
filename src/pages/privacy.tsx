@@ -12,7 +12,7 @@ const Privacy: FC = () => {
         <h1>Memoriter Privacy Policy</h1>
 
         <p>
-          <strong>Last Updated: March 16, 2023</strong>
+          <strong>Last Updated: May 11, 2023</strong>
         </p>
 
         <p>
@@ -159,6 +159,15 @@ const Privacy: FC = () => {
           system, language preferences, referring URLs, device name, country, location, information
           about how and when you use our Services, and other technical information. This information
           is needed to maintain the security and operation of our services.
+        </p>
+        <p>
+          Third party content embedded in the application. For some content embedded in our
+          application we use third party content delivery networks (CDN) such as Cloudflare CDN (
+          <a href='https://cdnjs.cloudflare.com' target='_blank' rel='noreferrer'>
+            https://cdnjs.cloudflare.com
+          </a>
+          ). These types of content are hosted on third party servers and might collect analytics
+          data.
         </p>
 
         <h2>4. How Personal Information Is Used</h2>
