@@ -100,13 +100,13 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
             <p>Subscribe to our newsletter</p>
             <input id='email' type='email' name='email' placeholder='Email address' />
             <button
-              id='send'
+              id='newsletter-send'
               type='submit'
-              name='send'
+              name='Newsletter send'
               onMouseEnter={() => setOnHover('brightness(0.75)')}
               onMouseLeave={() => setOnHover('brightness(1)')}
             >
-              <img src={sendIcon} />
+              <img src={sendIcon} alt='Send' />
               <div style={{ filter: onHover }} />
             </button>
           </form>
@@ -215,15 +215,15 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
               className={styles.website_footer_bottom_link}
               onClick={() => onChangeTheme('dark')}
             >
-              <img src={emoji1f312} /> Theme
+              <img src={emoji1f312} alt='🌒' /> Theme
             </span>
           )}
           {themeIcon === 'dark' && (
             <span
               className={styles.website_footer_bottom_link}
-              onClick={() => onChangeTheme('dark')}
+              onClick={() => onChangeTheme('light')}
             >
-              <img src={emoji26c5} /> Theme
+              <img src={emoji26c5} alt='⛅' /> Theme
             </span>
           )}
         </p>
