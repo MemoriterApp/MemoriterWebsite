@@ -37,9 +37,9 @@ actual repository containing the application can be found
 
 Memoriter is a more personal project of our small team and the informational
 website won't be changed much in the future, so we are unlikely to accept any
-pull requests, yet feel free to report issues or propose changes. Our main focus
+pull larger requests, yet feel free to report issues or propose changes. Our main focus
 lies on the actual web application repository, so please consider reporting
-issues there instead in this repository. You will find our
+issues there instead at this repository. You will find our
 [GitHub discussions](https://github.com/MemoriterApp/Memoriter/discussions)
 there too. Please also check out our own
 [bug report page](https://memoriter.de/bugs).
