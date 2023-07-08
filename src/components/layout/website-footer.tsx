@@ -120,10 +120,10 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
           <h3>Application</h3>
           <ul>
             <li>
-              <a href='https://app.memoriter.de'>Sign In</a>
+              <a href='https://app.memoriter.de/login'>Sign In</a>
             </li>
             <li>
-              <a href='https://app.memoriter.de'>Register</a>
+              <a href='https://app.memoriter.de/signup'>Register</a>
             </li>
             {/* -UNUSED- <li>
               <Link to='/download'>Download</Link>
