@@ -55,7 +55,7 @@ when posting or submitting anything to this site.
 ### License
 
 The Memoriter website is licensed under the
-[GNU General Public License v3.0](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE).
+[GNU Affero General Public License v3.0](https://github.com/MemoriterApp/MemoriterWebsite/blob/main/LICENSE).
 
 ## Social Media
 
