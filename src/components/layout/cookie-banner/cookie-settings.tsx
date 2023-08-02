@@ -102,11 +102,11 @@ const CookieSettings: FC<Props> = ({ onAnimation, onCloseCookieSettings }: Props
                 Privacy Policy
               </Link>
             </div>
-            <div>
+            {/* -UNUSED- <div>
               <Link className={styles.cookie_settings_link} to='/cookies' target='_blank'>
                 Cookie Policy
               </Link>
-            </div>
+            </div> */}
             <div>
               <Link className={styles.cookie_settings_link} to='/impressum' target='_blank'>
                 Impressum
