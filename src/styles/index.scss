@@ -53,7 +53,7 @@
   --color-highlight-gradient-green: #26b294;
   --color-backdrop: #000000bf;
   --color-table: #646464;
-  --color-shadow: #00000066;
+  --color-shadow: #00000040;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-red-light: #ff2828;
@@ -131,6 +131,11 @@
   // values for correcting svg colors
   --svg-invert: invert(0);
   --svg-invert-gray: invert(0.21568627450980392156862745098039);
+}
+
+// default background color (if JS is disabled)
+body {
+  background-color: var(--color-background);
 }
 
 // custom text selection color

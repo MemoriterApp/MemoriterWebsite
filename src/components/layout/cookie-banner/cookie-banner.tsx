@@ -46,21 +46,26 @@ const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
     >
       {/* cookie banner text */}
       <p className={styles.cookie_banner_text}>
-        This website uses cookies for making the site work and to enhance your experience.
+        This website uses cookies for making the site work and to offer enhanced functionality.
       </p>
+
       {/* accept and more information buttons */}
-      <div className={styles.cookie_banner_more_information} onClick={() => onOpenCookieSettings()}>
-        More Information
-      </div>
-      <div
-        className={styles.cookie_banner_accept}
-        onMouseEnter={() => setOnHover('brightness(0.75)')}
-        onMouseLeave={() => setOnHover('brightness(1)')}
-        onClick={() => acceptCookies()}
-      >
-        {/* the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css, the onClick accepts all cookies and closes the banner */}
-        <div className={styles.cookie_banner_accept_background} style={{ filter: onHover }} />
-        <span className={styles.cookie_banner_accept_text}>Accept</span>
+      <div className={styles.cookie_banner_buttons}>
+        <button
+          className={styles.cookie_banner_buttons_more_information}
+          onClick={() => onOpenCookieSettings()}
+        >
+          More Information
+        </button>
+        <button
+          className={styles.cookie_banner_buttons_accept}
+          onMouseEnter={() => setOnHover('brightness(0.75)')}
+          onMouseLeave={() => setOnHover('brightness(1)')}
+          onClick={() => acceptCookies()}
+        >
+          Accept
+          <div className={styles.cookie_banner_buttons_accept_background} style={{ filter: onHover }} />
+        </button>
       </div>
     </section>
   );
