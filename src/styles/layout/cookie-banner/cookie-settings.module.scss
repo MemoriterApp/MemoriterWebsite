@@ -7,7 +7,7 @@
   transform: translate(-50%, -50%);
   width: 540px;
   max-width: calc(100% - 40px);
-  height: 700px;
+  height: 620px;
   max-height: calc(100% - 40px);
   background-color: var(--color-background);
   border-radius: 12px;
@@ -100,7 +100,7 @@
     font-family: var(--font-default);
     line-height: 1.5rem;
     text-align: justify;
-    margin: 12px 30px 30px 40px;
+    margin: 16px 30px 30px 40px;
   }
 
   &_container { // contains toggle switches and labels

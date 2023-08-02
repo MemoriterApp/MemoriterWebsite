@@ -37,7 +37,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         transform: 'translate(-50%, -50%)',
         opacity: '1',
       });
-    }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
+    }, 10); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
   };
 
   // function for closing the language select modal
@@ -54,7 +54,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         transform: 'translate(-50%, calc(-50% - 16px))',
         opacity: '0',
       });
-    }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
+    }, 10); // setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
   };
 
   // function for opening the cookie settings
@@ -69,7 +69,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         transform: 'translate(-50%, -50%)',
         opacity: '1',
       });
-    }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
+    }, 10); // setBackdropAnimation triggers a transition in the backdrop component creating the fade in effect, does not work without timeout
   };
 
   // function for closing the cookie settings
@@ -86,7 +86,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
         transform: 'translate(-50%, calc(-50% - 16px))',
         opacity: '0',
       });
-    }, 0); // setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
+    }, 10); // setBackdropAnimation triggers a transition in the backdrop component creating the fade out effect, does not work without timeout
   };
 
   return (
@@ -119,7 +119,7 @@ const WebsiteLayout: FC<Props> = ({ children, currentPage }: Props) => {
       )}
 
       {/* cookie banner */}
-      {/* -UNUSED- <CookieBanner onOpenCookieSettings={() => openCookieSettings()} /> */}
+      <CookieBanner onOpenCookieSettings={() => openCookieSettings()} />
 
       {/* cookie settings modal */}
       {cookieSettings && (

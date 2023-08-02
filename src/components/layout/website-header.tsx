@@ -36,7 +36,7 @@ const WebsiteHeader: FC<Props> = ({ currentPage, onOpenLanguageSelect }: Props) 
       setMobileSidebarBackdrop({ display: 'block', opacity: '0' });
       setTimeout(() => {
         setMobileSidebarBackdrop({ display: 'block', opacity: '1' });
-      }, 0); // timeout is needed for the transition animation to work
+      }, 10); // timeout is needed for the transition animation to work
     } else {
       setMobileSidebar('-280px');
       setMobileSidebarBackdrop({ opacity: '0' });
