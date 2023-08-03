@@ -111,7 +111,7 @@
       // gray box with content
       width: 100%;
       background-color: var(--color-container);
-      border-radius: 6px;
+      border-radius: var(--border-radius);
 
       // old blog preview title
       h3 {
@@ -136,7 +136,7 @@
         display: inline-block;
         width: 200px;
         object-fit: cover; // optimizes image scaling
-        border-radius: 6px;
+        border-radius: var(--border-radius);
       }
     }
   }

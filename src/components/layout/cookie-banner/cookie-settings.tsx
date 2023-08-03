@@ -42,7 +42,7 @@ const CookieSettings: FC<Props> = ({ onAnimation, onCloseCookieSettings }: Props
   return (
     <section className={styles.cookie_settings} style={animationStyles}>
       <section className={styles.cookie_settings_title}>
-        <p className={styles.cookie_settings_title_text}>Cookie Settings</p>
+        <h1 className={styles.cookie_settings_title_text}>Cookie Settings</h1>
         <div className={styles.cookie_settings_close} onClick={() => onCloseCookieSettings()} />
       </section>
 
@@ -118,20 +118,19 @@ const CookieSettings: FC<Props> = ({ onAnimation, onCloseCookieSettings }: Props
 
       <section className={styles.cookie_settings_buttons}>
         {/* button for saving changes */}
-        <div className={styles.cookie_settings_save} onClick={() => saveCurrentCookies(false)}>
-          <span className={styles.cookie_settings_save_text}>Save Current</span>
-        </div>
+        <button className={styles.cookie_settings_save} onClick={() => saveCurrentCookies(false)}>
+          Save Current
+        </button>
         {/* button for accepting all cookies */}
-        <div
+        <button
           className={styles.cookie_settings_accept}
           onClick={() => saveCurrentCookies(true)}
           onMouseEnter={() => setOnHover('brightness(0.75)')}
           onMouseLeave={() => setOnHover('brightness(1)')}
         >
-          {/* the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css and the background animation. */}
+          Accept All
           <div className={styles.cookie_settings_accept_background} style={{ filter: onHover }} />
-          <span className={styles.cookie_settings_accept_text}>Accept All</span>
-        </div>
+        </button>
       </section>
     </section>
   );

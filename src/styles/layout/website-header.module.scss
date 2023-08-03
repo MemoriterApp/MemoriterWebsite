@@ -304,9 +304,9 @@
     transform: translateX(-50%);
     width: calc(100% - 70px);
     text-align: left;
-    padding: 16px 16px 16px 16px;
+    padding: 16px;
     border-bottom: 1px solid var(--color-font-gray);
-    border-radius: 0;
+    border-radius: unset;
   }
 
   .website_header_settings_button {
