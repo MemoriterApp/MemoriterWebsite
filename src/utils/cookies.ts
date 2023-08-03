@@ -1,4 +1,4 @@
-//This custom function is used for simplifying getting and setting cookies in the cookie storage
+// This custom function is used for simplifying getting and setting cookies in the cookie storage
 
 const cookies: {
   getCookie: (key: string) => any;
@@ -14,9 +14,8 @@ const cookies: {
   // function to set a cookie
   setCookie: (key: string, value: string, expires: Date) => {
     if (typeof document !== 'undefined') {
-      document.cookie = `${key}=${value}; expires=${expires}`;
+      document.cookie = `${key}=${value}; expires=${expires}; sameSite=Strict; Secure`;
     }
   },
 };
-
 export default cookies;

@@ -10,7 +10,7 @@
   max-width: calc(100% - 40px);
   max-height: calc(100% - 40px);
   background-color: var(--color-background);
-  border-radius: 12px;
+  border-radius: var(--border-radius-modal);
   transition: transform 400ms, opacity 400ms; // fade in/out animation transition
   z-index: 4;
   overflow-y: auto;

@@ -196,14 +196,14 @@ const WebsiteFooter: FC<Props> = ({ onOpenLanguageSelect, onOpenCookieSettings }
 
           <span className={styles.website_footer_flex_gap} />
 
-          {/* -UNUSED- <span
+          <span
             className={styles.website_footer_bottom_link}
             onClick={() => onOpenCookieSettings()}
           >
             <img src={emoji1f36a} /> Cookies
           </span>
 
-          <span
+          {/* -UNUSED- <span
             className={styles.website_footer_bottom_link}
             onClick={() => onOpenLanguageSelect()}
           >

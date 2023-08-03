@@ -12,7 +12,8 @@ const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
   const accepted: string = cookies.getCookie('accepted-cookies'); // used for if the banner is first dieplayed or not
 
   const [display, setDisplay] = useState<string>('-180px'); // variable for showing the cookie banner and the move animation
-  if (accepted) { // if else is for only displaying it before accepting cookies
+  if (accepted) {
+    // if else is for only displaying it before accepting cookies
     if (display === '0') {
       setDisplay('-180px'); // if accepted, the banner is hidden
     }
@@ -22,18 +23,15 @@ const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
     }, 600); // executing move animation
   }
 
-  const acceptCookies = (): void => { // item is set in local storage for cookie banner not showng again if accepted
-    // variable stored as a cookie for saving the accepted cookie types for later
+  // item is set in local (cookie) storage for cookie banner not showng again if accepted
+  // variable stored as a cookie for saving the accepted cookie types for later
+  const acceptCookies = (): void => {
     const acceptedAllCookies: {
       necessary: boolean;
       functional: boolean;
-      analytics: boolean;
-      advertising: boolean;
     } = {
       necessary: true,
       functional: true,
-      analytics: true,
-      advertising: true,
     };
 
     const expires: Date = new Date(); // cookie expiration date
@@ -42,27 +40,32 @@ const CookieBanner: FC<props> = ({ onOpenCookieSettings }: props) => {
   };
 
   return (
-    <section className={styles.cookie_banner} style={{ bottom: display }}>
-      {/*style is for if the banner is shown or not*/}
-
-      {/*cookie banner text*/}
+    <section
+      className={styles.cookie_banner}
+      style={{ bottom: display /* style property is for if the banner is shown or not */ }}
+    >
+      {/* cookie banner text */}
       <p className={styles.cookie_banner_text}>
-        This website uses cookies for making the site work and to enhance your experience.
+        This website uses cookies for making the site work and to offer enhanced functionality.
       </p>
 
-      {/*accept and more information buttons*/}
-      <div className={styles.cookie_banner_more_information} onClick={() => onOpenCookieSettings()}>
-        More Information
-      </div>
-      <div
-        className={styles.cookie_banner_accept}
-        onMouseEnter={() => setOnHover('brightness(0.75)')}
-        onMouseLeave={() => setOnHover('brightness(1)')}
-        onClick={acceptCookies}
-      >
-        {/*the onMouseEnter and -Leave is for the fade effect on hover which was not possible in css, the onClick accepts all cookies and closes the banner*/}
-        <div className={styles.cookie_banner_accept_background} style={{ filter: onHover }} />
-        <span className={styles.cookie_banner_accept_text}>Accept</span>
+      {/* accept and more information buttons */}
+      <div className={styles.cookie_banner_buttons}>
+        <button
+          className={styles.cookie_banner_buttons_more_information}
+          onClick={() => onOpenCookieSettings()}
+        >
+          More Information
+        </button>
+        <button
+          className={styles.cookie_banner_buttons_accept}
+          onMouseEnter={() => setOnHover('brightness(0.75)')}
+          onMouseLeave={() => setOnHover('brightness(1)')}
+          onClick={() => acceptCookies()}
+        >
+          Accept
+          <div className={styles.cookie_banner_buttons_accept_background} style={{ filter: onHover }} />
+        </button>
       </div>
     </section>
   );
